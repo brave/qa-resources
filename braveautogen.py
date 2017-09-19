@@ -56,17 +56,17 @@ for issue in repo.get_issues(milestone=milestone_dictionary[key], state="closed"
       output_line = ' - ' + issue_title + '. ([#' + str(issue.number) + '](' + issue.html_url + '))'
       release_notes.append(output_line)
 
-    if('QA/steps-specified' in label_names and 'QA/no-qa-needed' not in label_names):
+    if('QA/test-plan-specified' in label_names and 'QA/no-qa-needed' not in label_names):
       output_line = ' - [ ] ' + issue_title + '. ([#' + str(issue.number) + '](' + issue.html_url + '))'
       checklist.append(output_line)
       checklist.append(issue.html_url)
-      if('QA/checked-macOS' not in label_names and 'QA/checked' not in label_names and 'OS/Windows' not in label_names and 'OS/linux-distros' not in label_names):
+      if('QA/checked-macOS' not in label_names and 'QA/checked' not in label_names and 'OS/Windows' not in label_names and 'OS/unix-like/linux' not in label_names):
         mac_checklist.append(output_line)
 
-      if('QA/checked-Win64' not in label_names and 'OS/macOS' not in label_names and 'OS/linux-distros' not in label_names):
+      if('QA/checked-Win64' not in label_names and 'OS/macOS' not in label_names and 'OS/unix-like/linux' not in label_names):
         win64_checklist.append(output_line)
 
-      if('QA/checked-Win32' not in label_names and 'QA/checked' not in label_names and 'OS/macOS' not in label_names and 'OS/linux-distros' not in label_names):
+      if('QA/checked-Win32' not in label_names and 'QA/checked' not in label_names and 'OS/macOS' not in label_names and 'OS/unix-like/linux' not in label_names):
         win32_checklist.append(output_line)
 
       if('QA/checked-Linux' not in label_names and 'OS/Windows' not in label_names and 'OS/macOS' not in label_names):
@@ -116,7 +116,7 @@ wintitle = "Manual test run on Windows ia-32 for " + key
 winlist = ['OS/Windows', 'release-notes/exclude', 'tests']
 
 if args.test is None:
-  repo.create_issue(title=wintitle,body=bigline,assignee="alexwykoff",milestone=milestone_dictionary[key] ,labels=winlist)
+  repo.create_issue(title=wintitle,body=bigline,assignee="kjozwiak",milestone=milestone_dictionary[key] ,labels=winlist)
 
 print("Win64 Checklist:")
 bigline = "## Per release specialty tests\n"
@@ -139,7 +139,7 @@ bigline = bigline + template
 print(bigline)
 print("")
 lintitle = "Manual test run on Linux for " + key
-linlist = ['OS/linux-distros', 'release-notes/exclude', 'tests']
+linlist = ['OS/unix-like/linux', 'release-notes/exclude', 'tests']
 
 if args.test is None:
   repo.create_issue(title=lintitle,body=bigline,assignee="luixxiul",milestone=milestone_dictionary[key] ,labels=linlist)
