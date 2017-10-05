@@ -2,15 +2,24 @@
 
 - [ ] Check that installer is close to the size of last release.
 - [ ] Check signature: If OS Run `spctl --assess --verbose /Applications/Brave.app/` and make sure it returns `accepted`.  If Windows right click on the installer exe and go to Properties, go to the Digital Signatures tab and double click on the signature.  Make sure it says "The digital signature is OK" in the popup window.
-- [ ] Check Brave, muon, and libchromiumcontent version in About and make sure it is EXACTLY as expected.
+- [ ] Check the libchromiumcontent version in about:brave and make sure it is EXACTLY as expected.
 
-## Last changeset test
+## Printing
 
-- [ ] Test what is covered by the last changeset (you can find this by clicking on the SHA in about:brave).
+- [ ] Test that you can print a PDF
 
 ## Widevine/Netflix test
 
 - [ ] Test that you can log into Netflix and start a show.
+
+## Performance test
+
+_Each start should take less than 7 seconds_
+- [ ] Enable only sync (new sync group).
+- [ ] Enable only sync with a large sync group (many entries).
+- [ ] Enable only payments.
+- [ ] Only import a large set of bookmarks.
+- [ ] Combine sync, payments, and a large set of bookmarks.
 
 # Ledger
 
@@ -40,26 +49,15 @@
 ## Data
 
 - [ ] Make sure that data from the last version appears in the new version OK.
-- [ ] Test that the previous version's cookies are preserved in the next version.
-
-## About pages
-
-- [ ] Test that about:adblock loads
-- [ ] Test that about:autofill loads
-- [ ] Test that about:bookmarks loads bookmarks
-- [ ] Test that about:downloads loads downloads
-- [ ] Test that about:extensions loads
-- [ ] Test that about:history loads history
-- [ ] Test that about:passwords loads
-- [ ] Test that about:styles loads
-- [ ] Test that about:welcome loads
-- [ ] Test that about:preferences changing a preference takes effect right away
-- [ ] Test that about:preferences language change takes effect on re-start
+- [ ] In the next version, test that
+    - [ ] the previous version's cookies are preserved 
+    - [ ] pinned tabs can be opened
+    - [ ] opened tabs can be reloaded
+    - [ ] bookmarks can be opened
 
 ## Bookmarks
 
-- [ ] Test that creating a bookmark on the bookmarks toolbar with the star button works
-- [ ] Test that creating a bookmark on the bookmarks toolbar by dragging the un/lock icon works
+- [ ] Test that creating a bookmark on the bookmarks toolbar works
 - [ ] Test that creating a bookmark folder on the bookmarks toolbar works
 - [ ] Test that moving a bookmark into a folder by drag and drop on the bookmarks folder works
 - [ ] Test that clicking a bookmark in the toolbar loads the bookmark.
@@ -103,10 +101,9 @@
 - [ ] Test that tabs are unpinnable
 - [ ] Test that tabs are draggable to same tabset
 - [ ] Test that tabs are draggable to alternate tabset
-- [ ] Test that tabs can be teared off into a new window
-- [ ] Test that you are able to reattach a tab that is teared off into a new window
-- [ ] Test that tab pages can be closed
-- [ ] Test that tab pages can be muted
+- [ ] Test that tabs can be detached to create a new window
+- [ ] Test that you are able to reattach a tab to an existing window
+- [ ] Test that you can quickly switch tabs
 
 ## Zoom
 
@@ -116,30 +113,13 @@
 - [ ] Test zoom saved when you navigate within a single origin site.
 - [ ] Test that navigating to a different origin resets the zoom
 
-## Bravery settings
-
-- [ ] Check that HTTPS Everywhere works by loading https://https-everywhere.badssl.com/
-- [ ] Turning HTTPS Everywhere off and shields off both disable the redirect to https://https-everywhere.badssl.com/
-- [ ] Check that ad replacement works on http://slashdot.org
-- [ ] Check that toggling to blocking and allow ads works as expected.
-- [ ] Test that clicking through a cert error in https://badssl.com/ works.
-- [ ] Test that Safe Browsing works (http://downloadme.org/)
-- [ ] Turning Safe Browsing off and shields off both disable safe browsing for http://downloadme.org/.
-- [ ] Visit https://brianbondy.com/ and then turn on script blocking, nothing should load. Allow it from the script blocking UI in the URL bar and it should work.
-- [ ] Test that about:preferences default Bravery settings take effect on pages with no site settings.
-- [ ] Test that turning on fingerprinting protection in about:preferences shows 3 fingerprints blocked at https://jsfiddle.net/bkf50r8v/13/. Test that turning it off in the Bravery menu shows 0 fingerprints blocked.
-- [ ] Test that 3rd party storage results are blank at https://jsfiddle.net/7ke9r14a/9/ when 3rd party cookies are blocked and not blank when 3rd party cookies are unblocked.
-- [ ] Test that audio fingerprint is blocked at https://audiofingerprint.openwpm.com/ when fingerprinting protection is on.
-- [ ] Test that browser is not detected on https://extensions.inrialpes.fr/brave/
-
-
 ## Content tests
 
 - [ ] Go to https://brianbondy.com/ and click on the twitter icon on the top right. Test that context menus work in the new twitter tab.
 - [ ] Load twitter and click on a tweet so the popup div shows.   Click to dismiss and repeat with another div. Make sure it shows.
 - [ ] Go to https://www.bennish.net/web-notifications.html and test that clicking on 'Show' pops up a notification asking for permission. Make sure that clicking 'Deny' leads to no notifications being shown.
 - [ ] Go to https://trac.torproject.org/projects/tor/login and make sure that the password can be saved. Make sure the saved password shows up in `about:passwords`. Then reload https://trac.torproject.org/projects/tor/login and make sure the password is autofilled.
-- [ ] Open `about:styles` and type some misspellings on a textbox, make sure they are underlined.
+- [ ] Open a github issue and type some misspellings, make sure they are underlined.
 - [ ] Make sure that right clicking on a word with suggestions gives a suggestion and that clicking on the suggestion replaces the text.
 - [ ] Make sure that Command + Click (Control + Click on Windows, Control + Click on Ubuntu) on a link opens a new tab but does NOT switch to it.  Click on it and make sure it is already loaded.
 - [ ] Open an email on http://mail.google.com/ or inbox.google.com and click on a link. Make sure it works.
@@ -148,8 +128,8 @@
 
 ## Flash tests
 
-- [ ] Turn on Flash in about:preferences#security. Test that clicking on 'Install Flash' banner on myspace.com shows a notification to allow Flash and that the banner disappears when 'Allow' is clicked.
 - [ ] Test that flash placeholder appears on http://www.homestarrunner.com
+- [ ] Test with flash enabled in preferences, auto play option is shown when visiting http://www.homestarrunner.com
 
 ## Autofill tests
 
