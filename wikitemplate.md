@@ -135,15 +135,14 @@
 - [ ] Check that ad replacement works on http://slashdot.org
 - [ ] Check that toggling to blocking and allow ads works as expected.
 - [ ] Test that clicking through a cert error in https://badssl.com/ works.
-- [ ] Test that Safe Browsing works (http://downloadme.org/)
-- [ ] Turning Safe Browsing off and shields off both disable safe browsing for http://downloadme.org/.
+- [ ] Test that Safe Browsing works (https://www.raisegame.com/)
+- [ ] Turning Safe Browsing off and shields off both disable safe browsing for https://www.raisegame.com/.
 - [ ] Visit https://brianbondy.com/ and then turn on script blocking, nothing should load. Allow it from the script blocking UI in the URL bar and it should work.
 - [ ] Test that about:preferences default Bravery settings take effect on pages with no site settings.
 - [ ] Test that turning on fingerprinting protection in about:preferences shows 3 fingerprints blocked at https://jsfiddle.net/bkf50r8v/13/. Test that turning it off in the Bravery menu shows 0 fingerprints blocked.
 - [ ] Test that 3rd party storage results are blank at https://jsfiddle.net/7ke9r14a/9/ when 3rd party cookies are blocked and not blank when 3rd party cookies are unblocked.
 - [ ] Test that audio fingerprint is blocked at https://audiofingerprint.openwpm.com/ when fingerprinting protection is on.
 - [ ] Test that browser is not detected on https://extensions.inrialpes.fr/brave/
-
 
 ## Content tests
 
