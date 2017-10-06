@@ -1,19 +1,35 @@
-
 ## Installer
 
 1. [ ] Check that installer is close to the size of last release.
 2. [ ] Check signature: If OS Run `spctl --assess --verbose /Applications/Brave.app/` and make sure it returns `accepted`.  If Windows right click on the installer exe and go to Properties, go to the Digital Signatures tab and double click on the signature.  Make sure it says "The digital signature is OK" in the popup window.
 3. [ ] Check Brave, muon, and libchromiumcontent version in About and make sure it is EXACTLY as expected.
 
+## Data
+
+1. [ ] Make sure that data from the last version appears in the new version OK.
+2. [ ] With data from the last version, test that
+    - [ ] cookies are preserved
+    - [ ] pinned tabs can be opened
+    - [ ] pinned tabs can be unpinned
+    - [ ] unpinned tabs can be re-pinned
+    - [ ] opened tabs can be reloaded
+    - [ ] bookmarks on the bookmark toolbar can be opened
+    - [ ] bookmarks in the bookmark folder toolbar can be opened
+
 ## Last changeset test
 
 1. [ ] Test what is covered by the last changeset (you can find this by clicking on the SHA in about:brave).
+
+## Per release specialty tests
+
+1. [ ]
 
 ## Widevine/Netflix test
 
 1. [ ] Test that you can log into Netflix and start a show.
 
 ## Ledger
+
 1. [ ] Create a wallet with a value other than $5 selected in the monthly budget dropdown. Click on the 'Add Funds' button and check that Coinbase transactions are blocked.
 2. [ ] Remove all `ledger-*.json` files from `~/Library/Application\ Support/Brave/`. Go to the Payments tab in about:preferences, enable payments, click on `create wallet`. Check that the `add funds` button appears after a wallet is created.
 3. [ ] Click on `add funds` and verify that adding funds through Coinbase increases the account balance.
@@ -24,17 +40,13 @@
 8. [ ] Check that disabling payments and enabling them again does not lose state.
 
 ## Sync
+
 1. [ ] Verify you are able to sync two devices using the secret code
 2. [ ] Visit a site on device 1 and change shield setting, ensure that the saved site preference is synced to device 2
-3. [ ] Enable Browsing history sync on device 1, ensure the history is shown on device 2 
-4. [ ] Import/Add bookmarks on device 1, ensure it is synced on device 2 
+3. [ ] Enable Browsing history sync on device 1, ensure the history is shown on device 2
+4. [ ] Import/Add bookmarks on device 1, ensure it is synced on device 2
 5. [ ] Ensure imported bookmark folder structure is maintained on device 2
 6. [ ] Ensure bookmark favicons are shown after sync
-
-## Data
-
-1. [ ] Make sure that data from the last version appears in the new version OK.
-2. [ ] Test that the previous version's cookies are preserved in the next version.
 
 ## About pages
 
@@ -58,8 +70,13 @@
 4. [ ] Test that moving a bookmark into a folder by drag and drop on the bookmarks folder works
 5. [ ] Test that clicking a bookmark in the toolbar loads the bookmark.
 6. [ ] Test that clicking a bookmark in a bookmark toolbar folder loads the bookmark.
+7. [ ] Test that a bookmark on the bookmark toolbar can be removed via context menu
+8. [ ] Test that a bookmark in a bookmark folder on the bookmark toolbar can be removed via context menu
+9. [ ] Test that a bookmark subfolder can be removed via context menu
+10. [ ] Test that a bookmark folder on the bookmark toolbar can be removed via context menu
 
 ## Context menus
+
 1. [ ] Make sure context menu items in the URL bar work
 2. [ ] Make sure context menu items on content work with no selected text.
 3. [ ] Make sure context menu items on content work with selected text.
@@ -116,8 +133,8 @@
 3. [ ] Check that ad replacement works on http://slashdot.org
 4. [ ] Check that toggling to blocking and allow ads works as expected.
 5. [ ] Test that clicking through a cert error in https://badssl.com/ works.
-6. [ ] Test that Safe Browsing works (http://downloadme.org/)
-7. [ ] Turning Safe Browsing off and shields off both disable safe browsing for http://downloadme.org/.
+6. [ ] Test that Safe Browsing works (https://www.raisegame.com/)
+7. [ ] Turning Safe Browsing off and shields off both disable safe browsing for https://www.raisegame.com/.
 8. [ ] Visit https://brianbondy.com/ and then turn on script blocking, nothing should load. Allow it from the script blocking UI in the URL bar and it should work.
 9. [ ] Test that about:preferences default Bravery settings take effect on pages with no site settings.
 10. [ ] Test that turning on fingerprinting protection in about:preferences shows 3 fingerprints blocked at https://jsfiddle.net/bkf50r8v/13/. Test that turning it off in the Bravery menu shows 0 fingerprints blocked.
@@ -138,12 +155,15 @@
 8. [ ] Open an email on http://mail.google.com/ or inbox.google.com and click on a link. Make sure it works.
 9. [ ] Test that PDF is loaded at http://www.orimi.com/pdf-test.pdf
 10. [ ] Test that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run).
+11. [ ] Test that extension icons can be displayed on the navigation bar
 
 ## Flash tests
+
 1. [ ] Turn on Flash in about:preferences#security. Test that clicking on 'Install Flash' banner on myspace.com shows a notification to allow Flash and that the banner disappears when 'Allow' is clicked.
 2. [ ] Test that flash placeholder appears on http://www.homestarrunner.com
 
 ## Autofill tests
+
 1. [ ] Test that autofill works on http://www.roboform.com/filling-test-all-fields
 
 ## Session storage
