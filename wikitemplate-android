@@ -10,9 +10,11 @@
 1. [ ] Make sure there is no words of Chromium after any merge.
 
 ## Data
-
-1. [ ] Make sure that data from the last version appears in the new version OK.
-2. [ ] Test that the previous version's cookies are preserved in the next version.
+Pre-Requisite: Put previous build shortcut on home screen. Also have several sites 'Added to home screen' (from 3 dots menu). Then update previous build to test build.
+1. [ ] Verify that data from the previous build appears in the updated build as expected (bookmarks, etc)
+2. [ ] Verify that the cookies from the previous build are preserved in the updated build
+3. [ ] Verify shortcut is still available on home screen after updating Brave
+4. [ ] Verify sites added to home screen are still visible and able to be used after updating Brave.
 
 ## Bookmarks
 
