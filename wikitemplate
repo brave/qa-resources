@@ -14,14 +14,16 @@
 1. [ ] Test that you can log into Netflix and start a show.
 
 ## Ledger
-1. [ ] Create a wallet with a value other than $5 selected in the monthly budget dropdown. Click on the 'Add Funds' button and check that Coinbase transactions are blocked.
-2. [ ] Remove all `ledger-*.json` files from `~/Library/Application\ Support/Brave/`. Go to the Payments tab in about:preferences, enable payments, click on `create wallet`. Check that the `add funds` button appears after a wallet is created.
-3. [ ] Click on `add funds` and verify that adding funds through Coinbase increases the account balance.
-4. [ ] Repeat the step above but add funds by scanning the QR code in a mobile bitcoin app instead of through Coinbase.
-5. [ ] Visit nytimes.com for a few seconds and make sure it shows up in the Payments table.
-6. [ ] Go to https://jsfiddle.net/LnwtLckc/5/ and click the register button. In the Payments tab, click `add funds`. Verify that the `transfer funds` button is visible and that clicking on `transfer funds` opens a jsfiddle URL in a new tab.
-7. [ ] Go to https://jsfiddle.net/LnwtLckc/5/ and click `unregister`. Verify that the `transfer funds` button no longer appears in the `add funds` modal.
-8. [ ] Check that disabling payments and enabling them again does not lose state.
+- [ ] Verify wallet is auto created after enabling payments
+- [ ] Verify monthly budget and account balance shows correct BAT and USD value
+- [ ] Verify the wallet overlay is shown when wallet transition is happening upon upgrade 
+- [ ] Click on `add funds` and click on each currency and verify it shows wallet address and QR Code
+- [ ] Verify that Brave BAT wallet address can be copied
+- [ ] Verify adding funds via any of the currencies flows into BAT Wallet after specified amount of time
+- [ ] Verify adding funds to an existing wallet with amount, adjusts the BAT value appropriately 
+- [ ] Change min visit and min time in advance setting and verify if the publisher list gets updated based on new setting
+- [ ] Visit nytimes.com for a few seconds and make sure it shows up in the Payments table.
+- [ ] Check that disabling payments and enabling them again does not lose state.
 
 ## Sync
 1. [ ] Verify you are able to sync two devices using the secret code
