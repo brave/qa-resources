@@ -1,6 +1,3 @@
-#License MPL 2.0
-
-
 <h2>Running Changelog Generator allows you to </h2>
 <ul>
   <li>Create test runs </li>
