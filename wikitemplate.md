@@ -31,12 +31,12 @@
 - [ ] Click on `add funds` and click on each currency and verify it shows wallet address and QR Code
 - [ ] Verify that Brave BAT wallet address can be copied
 - [ ] Verify adding funds via any of the currencies flows into BAT Wallet after specified amount of time
-- [ ] Verify adding funds to an existing wallet with amount, adjusts the BAT value appropriately 
+- [ ] Verify adding funds to an existing wallet with amount, adjusts the BAT value appropriately
 - [ ] Change min visit and min time in advance setting and verify if the publisher list gets updated based on new setting
 - [ ] Visit nytimes.com for a few seconds and make sure it shows up in the Payments table.
 - [ ] Check that disabling payments and enabling them again does not lose state.
 - [ ] Upgrade from older version
-  - [ ] Verify the wallet overlay is shown when wallet transition is happening upon upgrade 
+  - [ ] Verify the wallet overlay is shown when wallet transition is happening upon upgrade
   - [ ] Verify transition overlay is shown post upgrade even if the payment is disabled before upgrade
   - [ ] Verify publishers list is not lost after upgrade when payment is disabled in the older version
 
