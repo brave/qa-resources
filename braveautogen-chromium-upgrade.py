@@ -6,8 +6,6 @@ parser.add_argument("-t", "--test", help="Test Mode, do not create Github issues
 
 args = parser.parse_args()
 
-
-
 secret_file = open('github.secret', 'r')
 token_string = secret_file.readline().rstrip("\n\r")
 

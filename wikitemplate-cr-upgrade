@@ -21,17 +21,24 @@ _Each start should take less than 7 seconds_
 - [ ] Only import a large set of bookmarks.
 - [ ] Combine sync, payments, and a large set of bookmarks.
 
-## Ledger
+# Ledger
+
 - [ ] Verify wallet is auto created after enabling payments
 - [ ] Verify monthly budget and account balance shows correct BAT and USD value
-- [ ] Verify the wallet overlay is shown when wallet transition is happening upon upgrade 
 - [ ] Click on `add funds` and click on each currency and verify it shows wallet address and QR Code
+- [ ] Verify that Brave BAT wallet address can be copied
+- [ ] Verify adding funds via any of the currencies flows into BAT Wallet after specified amount of time
+- [ ] Verify adding funds to an existing wallet with amount, adjusts the BAT value appropriately 
 - [ ] Change min visit and min time in advance setting and verify if the publisher list gets updated based on new setting
 - [ ] Visit nytimes.com for a few seconds and make sure it shows up in the Payments table.
 - [ ] Check that disabling payments and enabling them again does not lose state.
-
+- [ ] Upgrade from older version
+   - [ ] Verify the wallet overlay is shown when wallet transition is happening upon upgrade 
+   - [ ] Verify transition overlay is shown post upgrade even if the payment is disabled before upgrade
+   - [ ] Verify publishers list is not lost after upgrade when payment is disabled in the older version
 
 ## Sync
+
 - [ ] Verify you are able to sync two devices using the secret code
 - [ ] Visit a site on device 1 and change shield setting, ensure that the saved site preference is synced to device 2
 - [ ] Enable Browsing history sync on device 1, ensure the history is shown on device 2 
@@ -57,6 +64,7 @@ _Each start should take less than 7 seconds_
 - [ ] Test that clicking a bookmark in a bookmark toolbar folder loads the bookmark.
 
 ## Context menus
+
 - [ ] Make sure context menu items in the URL bar work
 - [ ] Make sure context menu items on content work with no selected text.
 - [ ] Make sure context menu items on content work with selected text.
@@ -119,10 +127,12 @@ _Each start should take less than 7 seconds_
 - [ ] Test that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run).
 
 ## Flash tests
+
 - [ ] Test that flash placeholder appears on http://www.homestarrunner.com
 - [ ] Test with flash enabled in preferences, auto play option is shown when visiting http://www.homestarrunner.com
 
 ## Autofill tests
+
 - [ ] Test that autofill works on http://www.roboform.com/filling-test-all-fields
 
 ## Session storage
@@ -140,4 +150,4 @@ Do not forget to make a backup of your entire `~/Library/Application\ Support/Br
 
 ## Update tests
 
-- [ ] Test that updating using `BRAVE_UPDATE_VERSION=0.-3` env variable works correctly.
+- [ ] Test that updating using `BRAVE_UPDATE_VERSION=0.8.3` env variable works correctly.
