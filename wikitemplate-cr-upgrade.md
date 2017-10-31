@@ -1,3 +1,4 @@
+
 ## Installer
 
 - [ ] Check that installer is close to the size of last release.
@@ -116,7 +117,7 @@ _Each start should take less than 7 seconds_
 ## Content tests
 
 - [ ] Go to https://brianbondy.com/ and click on the twitter icon on the top right. Test that context menus work in the new twitter tab.
-- [ ] Load twitter and click on a tweet so the popup div shows.   Click to dismiss and repeat with another div. Make sure it shows.
+- [ ] Load twitter and click on a tweet so the popup div shows. Click to dismiss and repeat with another div. Make sure it shows.
 - [ ] Go to https://www.bennish.net/web-notifications.html and test that clicking on 'Show' pops up a notification asking for permission. Make sure that clicking 'Deny' leads to no notifications being shown.
 - [ ] Go to https://trac.torproject.org/projects/tor/login and make sure that the password can be saved. Make sure the saved password shows up in `about:passwords`. Then reload https://trac.torproject.org/projects/tor/login and make sure the password is autofilled.
 - [ ] Open a github issue and type some misspellings, make sure they are underlined.
@@ -125,6 +126,7 @@ _Each start should take less than 7 seconds_
 - [ ] Open an email on http://mail.google.com/ or inbox.google.com and click on a link. Make sure it works.
 - [ ] Test that PDF is loaded at http://www.orimi.com/pdf-test.pdf
 - [ ] Test that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run).
+- [ ] Test that WebSockets are working by ensuring http://slither.io/ runs once "Play" has been clicked.
 
 ## Flash tests
 
