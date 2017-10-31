@@ -9,7 +9,7 @@ args = parser.parse_args()
 secret_file = open('github.secret', 'r')
 token_string = secret_file.readline().rstrip("\n\r")
 
-wiki_file = open('wikitemplate-cr-upgrade', 'r')
+wiki_file = open('wikitemplate-cr-upgrade.md', 'r')
 template = wiki_file.read()
 
 g = Github(token_string, timeout=1000)

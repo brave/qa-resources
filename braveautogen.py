@@ -11,7 +11,7 @@ args = parser.parse_args()
 secret_file = open('github.secret', 'r')
 token_string = secret_file.readline().rstrip("\n\r")
 
-wiki_file = open('wikitemplate', 'r')
+wiki_file = open('wikitemplate.md', 'r')
 template = wiki_file.read()
 
 g = Github(token_string, timeout=1000)
