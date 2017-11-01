@@ -2,7 +2,7 @@
 
 - [ ] Check that installer is close to the size of last release.
 - [ ] Check signature: If OS Run `spctl --assess --verbose /Applications/Brave.app/` and make sure it returns `accepted`.  If Windows right click on the installer exe and go to Properties, go to the Digital Signatures tab and double click on the signature.  Make sure it says "The digital signature is OK" in the popup window.
-- [ ] Check Brave, muon, and libchromiumcontent version in About and make sure it is EXACTLY as expected.
+- [ ] Check Brave, muon, and libchromiumcontent version in `about:brave` and make sure it is EXACTLY as expected.
 
 ## Data
 
@@ -159,8 +159,8 @@
 
 ## Flash tests
 
-- [ ] Turn on Flash in about:preferences#security. Test that clicking on 'Install Flash' banner on myspace.com shows a notification to allow Flash and that the banner disappears when 'Allow' is clicked.
 - [ ] Test that flash placeholder appears on http://www.homestarrunner.com
+- [ ] Test with flash enabled in preferences, auto play option is shown when visiting http://www.homestarrunner.com
 
 ## Autofill tests
 
@@ -170,9 +170,9 @@
 
 Do not forget to make a backup of your entire `~/Library/Application\ Support/Brave` folder.
 
-- [ ] Temporarily move away your `~/Library/Application\ Support/Brave/session-store-1` and test that clean session storage works. (`%appdata%\Brave in Windows`, `./config/brave` in Ubuntu)
+- [ ] Temporarily move away your `~/Library/Application\ Support/Brave/session-store-1` and test that clean session storage works. (`%appdata%\Brave` in Windows, `./config/brave` in Ubuntu)
 - [ ] Test that windows and tabs restore when closed, including active tab.
-- [ ] Move away your entire `~/Library/Application\ Support/Brave` folder (`%appdata%\Brave in Windows`, `./config/brave` in Ubuntu)
+- [ ] Move away your entire `~/Library/Application\ Support/Brave` folder (`%appdata%\Brave` in Windows, `./config/brave` in Ubuntu)
 
 ## Cookie and Cache
 
@@ -182,3 +182,4 @@ Do not forget to make a backup of your entire `~/Library/Application\ Support/Br
 ## Update tests
 
 - [ ] Test that updating using `BRAVE_UPDATE_VERSION=0.8.3` env variable works correctly.
+- [ ] Test that using `BRAVE_ENABLE_PREVIEW_UPDATES=TRUE` env variable works and prompts for preview build updates.
