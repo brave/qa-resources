@@ -116,7 +116,7 @@ iOS11iPadtitle = "Manual test run on iOS11 iPad for " + key
 iOS11iPadlist = ['iPad', 'release-notes/exclude', 'tests']
 
 if args.test is None:
-  repo.create_issue(title=iOS11iPadtitle,body=bigline,assignee="alexwykoff",milestone=milestone_dictionary[key] ,labels=iOS11iPadlist)
+  repo.create_issue(title=iOS11iPadtitle,body=bigline,assignee="srirambv",milestone=milestone_dictionary[key] ,labels=iOS11iPadlist)
 
 print("iOS10 iPhone6 Checklist:")
 bigline = "## Per release specialty tests\n"
