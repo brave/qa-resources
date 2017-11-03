@@ -114,7 +114,7 @@ wintitle = "Manual test run for Chromium upgrade on Windows ia-32 for " + key
 winlist = ['OS/Windows', 'release-notes/exclude', 'tests']
 
 if args.test is None:
-  repo.create_issue(title=wintitle,body=bigline,assignee="kjozwiak",milestone=milestone_dictionary[key] ,labels=winlist)
+  repo.create_issue(title=wintitle,body=bigline,assignee="luixxiul",milestone=milestone_dictionary[key] ,labels=winlist)
 
 print("Win64 Checklist:")
 bigline = "## Per release specialty tests\n"
@@ -140,4 +140,4 @@ lintitle = "Manual test run for Chromium upgrade on Linux for " + key
 linlist = ['OS/unix-like/linux', 'release-notes/exclude', 'tests']
 
 if args.test is None:
-  repo.create_issue(title=lintitle,body=bigline,assignee="luixxiul",milestone=milestone_dictionary[key] ,labels=linlist)
+  repo.create_issue(title=lintitle,body=bigline,assignee="kjozwiak",milestone=milestone_dictionary[key] ,labels=linlist)
