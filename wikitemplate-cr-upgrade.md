@@ -82,6 +82,25 @@ _Each start should take less than 7 seconds_
 - [ ] Test failed find shows 0 results
 - [ ] Test match case find
 
+## Keyboard Shortcuts
+
+- [ ] Open a new window: `Command` + `n` (macOS) || `Ctrl` + `n` (Win/Linux)
+- [ ] Open a new tab: `Command` + `t` (macOS) || `Ctrl` + `t` (Win/Linux)
+- [ ] Open a new private tab: `Command` + `Shift` + `p` (macOS) || `Ctrl` + `Shift` + `p` (Win/Linux)
+- [ ] Reopen the latest closed tab: `Command` + `Shift` + `t` (macOS) || `Ctrl` + `Shift` + `t` (Win/Linux)
+- [ ] Jump to the next tab: `Command` + `Option` + `->` (macOS) || `Ctrl` + `PgDn` (Win/Linux)
+- [ ] Jump to the previous tab: `Command` + `Option` + `<-` (macOS) || `Ctrl` + `PgUp` (Win/Linux)
+- [ ] Jump to the next tab: `Ctrl` + `Tab` (macOS/Win/Linux)
+- [ ] Jump to the previous tab: `Ctrl` + `Shift` + `Tab` (macOS/Win/Linux)
+- [ ] Open Brave preferences: `Command` + `,` (macOS) || `Ctrl` + `,` (Win/Linux)
+- [ ] Jump into the URL bar: `Command` + `l` (macOS) || `Ctrl` + `l` (Win/Linux)
+- [ ] Reload page: `Command` + `r` (macOS) || `Ctrl` + `r` (Win/Linux)
+- [ ] Select All: `Command` + `a` (macOS) || `Ctrl` + `a` (Win/Linux)
+- [ ] Copying text: `Command` + `c` (macOS) || `Ctrl` + `c` (Win/Linux)
+- [ ] Pasting text: `Command` + `v` (macOS) || `Ctrl` + `v` (Win/Linux)
+- [ ] Minimize Brave: `Command` + `m` (macOS) || `Ctrl` + `m` (Win/Linux)
+- [ ] Quit Brave: `Command` + `q` (macOS) || `Ctrl` + `q` (Win/Linux)
+
 ## Geolocation
 
 - [ ] Check that https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation works
@@ -108,6 +127,7 @@ _Each start should take less than 7 seconds_
 - [ ] Test that tabs can be detached to create a new window
 - [ ] Test that you are able to reattach a tab to an existing window
 - [ ] Test that you can quickly switch tabs
+- [ ] Test that tabs can be cloned
 
 ## Zoom
 
