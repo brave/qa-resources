@@ -49,6 +49,7 @@
   - [ ] Ensure YouTube publishers are not listed when `Allow contributions to video` is disabled in adavanced settings
   - [ ] Ensure existing YouTube publishers are not lost when `Allow contributions to video` is disabled in adavanced settings
   - [ ] Ensure YouTube publishers is listed but not included when `auto-include` is disabled
+  - [ ] Update Advanced settings to different time/visit value and ensure YouTube videos are added to ledger table once criteria is met
 
 
 ## Sync
