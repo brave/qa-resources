@@ -39,6 +39,17 @@
   - [ ] Verify the wallet overlay is shown when wallet transition is happening upon upgrade
   - [ ] Verify transition overlay is shown post upgrade even if the payment is disabled before upgrade
   - [ ] Verify publishers list is not lost after upgrade when payment is disabled in the older version
+### Ledger Media
+  - [ ] Visit any YouTube video in a normal/session tab and ensure the video publisher name is listed in ledger table
+  - [ ] Visit any YouTube video in a private tab and ensure the video publisher name is not listed in ledger table
+  - [ ] Visit any live YouTube video and ensure the time spent is shown under ledger table
+  - [ ] Visit any embeded YouTube video and ensure the video publisher name is listed in ledger table
+  - [ ] Ensure total time spent is correctly calculated for each publisher video
+  - [ ] Ensure total time spent is correctly calculated when switching to YouTube video from an embeded video
+  - [ ] Ensure YouTube publishers are not listed when `Allow contributions to video` is disabled in adavanced settings
+  - [ ] Ensure existing YouTube publishers are not lost when `Allow contributions to video` is disabled in adavanced settings
+  - [ ] Ensure YouTube publishers is listed but not included when `auto-include` is disabled
+  - [ ] Update Advanced settings to different time/visit value and ensure YouTube videos are added to ledger table once criteria is met
 
 
 ## Sync
