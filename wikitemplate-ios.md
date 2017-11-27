@@ -104,7 +104,7 @@
 4. [ ] Open an email on http://mail.google.com/ or inbox.google.com and click on a link. Make sure it works
 5. [ ] Test that PDF is loaded at http://www.orimi.com/pdf-test.pdf
 6. [ ] Test that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run)
-7. [ ] Test that news.google.com sites open in a new tab (due to target being _blank)
+7. [ ] Test that https://news.google.com/ sites open in a new tab (due to target being _blank)
 
 ## Top sites view
 
