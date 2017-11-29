@@ -86,7 +86,7 @@ Pre-Requisite: Put previous build shortcut on home screen. Also have several sit
 - [ ] Open a github issue and type some misspellings, make sure they are underlined.
 - [ ] Make sure that right clicking on a word with suggestions gives a suggestion and that clicking on the suggestion replaces the text.
 - [ ] Open an email on http://mail.google.com/ or inbox.google.com and click on a link. Make sure it works.
-- [ ] Test that PDF is loaded over https at https://basicattentiontoken.org/BasicAttentionTokenWhitePaper--pdf
+- [ ] Test that PDF is loaded over https at https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf
 - [ ] Test that PDF is loaded over http at http://www.pdf995.com/samples/pdf.pdf
 - [ ] Test that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run).
 

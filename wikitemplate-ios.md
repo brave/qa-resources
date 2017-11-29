@@ -102,7 +102,7 @@
 - [ ] Load twitter and click on a tweet so the popup div shows.   Click to dismiss and repeat with another div. Make sure it shows
 - [ ] Go to https://trac.torproject.org/projects/tor/login and make sure that the password can be saved.  Make sure the saved password is auto-populated when you visit the site again.
 - [ ] Open an email on http://mail.google.com/ or inbox.google.com and click on a link. Make sure it works
-- [ ] Test that PDF is loaded over https at https://basicattentiontoken.org/BasicAttentionTokenWhitePaper--pdf
+- [ ] Test that PDF is loaded over https at https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf
 - [ ] Test that PDF is loaded over http at http://www.pdf995.com/samples/pdf.pdf
 - [ ] Test that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run)
 - [ ] Test that https://news.google.com/ sites open in a new tab (due to target being _blank)
