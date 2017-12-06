@@ -170,10 +170,14 @@
 - [ ] Turning Safe Browsing off and shields off both disable safe browsing for https://www.raisegame.com/.
 - [ ] Visit https://brianbondy.com/ and then turn on script blocking, nothing should load. Allow it from the script blocking UI in the URL bar and it should work.
 - [ ] Test that about:preferences default Bravery settings take effect on pages with no site settings.
-- [ ] Test that turning on fingerprinting protection in about:preferences shows 3 fingerprints blocked at https://jsfiddle.net/bkf50r8v/13/. Test that turning it off in the Bravery menu shows 0 fingerprints blocked.
 - [ ] Test that 3rd party storage results are blank at https://jsfiddle.net/7ke9r14a/9/ when 3rd party cookies are blocked and not blank when 3rd party cookies are unblocked.
-- [ ] Test that audio fingerprint is blocked at https://audiofingerprint.openwpm.com/ when fingerprinting protection is on.
-- [ ] Test that browser is not detected on https://extensions.inrialpes.fr/brave/
+- [ ] Test that browser is not detected on https://extensions.inrialpes.fr/brave/ and ensures that we're appearing as Chrome
+
+**Fingerprinting Tests (Enable fingerprinting protection in `about:preferences#shields`)**
+- [ ] Visit https://jsfiddle.net/bkf50r8v/13/, ensure 3 blocked items are listed in shields. Result window should show `got canvas fingerprint 0`  and  `got webgl fingerprint 00`
+- [ ] Visit https://audiofingerprint.openwpm.com/, ensure 2 blocked items are listed in shields. Audio fingerprint graph is shown but doens't contain user fingerprint graph represented in blue line
+
+
 
 ## Content tests
 
@@ -185,7 +189,8 @@
 - [ ] Make sure that right clicking on a word with suggestions gives a suggestion and that clicking on the suggestion replaces the text.
 - [ ] Make sure that Command + Click (Control + Click on Windows, Control + Click on Ubuntu) on a link opens a new tab but does NOT switch to it.  Click on it and make sure it is already loaded.
 - [ ] Open an email on http://mail.google.com/ or inbox.google.com and click on a link. Make sure it works.
-- [ ] Test that PDF is loaded at http://www.orimi.com/pdf-test.pdf
+- [ ] Test that PDF is loaded over https at https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf
+- [ ] Test that PDF is loaded over http at http://www.pdf995.com/samples/pdf.pdf
 - [ ] Test that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run).
 
 ## Flash tests
