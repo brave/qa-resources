@@ -171,11 +171,12 @@
 - [ ] Visit https://brianbondy.com/ and then turn on script blocking, nothing should load. Allow it from the script blocking UI in the URL bar and it should work.
 - [ ] Test that about:preferences default Bravery settings take effect on pages with no site settings.
 - [ ] Test that 3rd party storage results are blank at https://jsfiddle.net/7ke9r14a/9/ when 3rd party cookies are blocked and not blank when 3rd party cookies are unblocked.
+- [ ] Test that browser is not detected on https://extensions.inrialpes.fr/brave/ and ensures that we're appearing as Chrome
 
 **Fingerprinting Tests (Enable fingerprinting protection in `about:preferences#shields`)**
 - [ ] Visit https://jsfiddle.net/bkf50r8v/13/, ensure 3 blocked items are listed in shields. Result window should show `got canvas fingerprint 0`  and  `got webgl fingerprint 00`
 - [ ] Visit https://audiofingerprint.openwpm.com/, ensure 2 blocked items are listed in shields. Audio fingerprint graph is shown but doens't contain user fingerprint graph represented in blue line
-- [ ] Test that browser is not detected on https://extensions.inrialpes.fr/brave/
+
 
 
 ## Content tests
