@@ -97,7 +97,6 @@
 - [ ] Test that turning on fingerprinting protection in preferences shows 1 fingerprints blocked at https://browserleaks.com/canvas . Test that turning it off in the Bravery menu shows 0 fingerprints blocked.
 - [ ] Test that audio fingerprint is blocked at https://audiofingerprint.openwpm.com/ when fingerprinting protection is on.
 
-
 ## Content tests
 
 - [ ] Go to https://brianbondy.com/ and click on the twitter icon on the top right. Test that context menus work in the new twitter tab

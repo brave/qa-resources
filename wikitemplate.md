@@ -177,8 +177,6 @@
 - [ ] Visit https://jsfiddle.net/bkf50r8v/13/, ensure 3 blocked items are listed in shields. Result window should show `got canvas fingerprint 0`  and  `got webgl fingerprint 00`
 - [ ] Visit https://audiofingerprint.openwpm.com/, ensure 2 blocked items are listed in shields. Audio fingerprint graph is shown but doens't contain user fingerprint graph represented in blue line
 
-
-
 ## Content tests
 
 - [ ] Go to https://brianbondy.com/ and click on the twitter icon on the top right. Test that context menus work in the new twitter tab.
