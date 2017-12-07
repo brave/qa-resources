@@ -74,10 +74,8 @@ Pre-Requisite: Put previous build shortcut on home screen. Also have several sit
 - [ ] Turning Safe Browsing off and shields off both disable safe browsing for http://downloadme.org/.
 - [ ] Visit https://brianbondy.com/ and then turn on script blocking, nothing should load. Allow it from the script blocking UI in the URL bar and it should work.
 - [ ] Test that about:preferences default Bravery settings take effect on pages with no site settings.
-- [ ] Test that 3rd party storage results are blank at https://jsfiddle.net/7ke9r14a/7/ when 3rd party cookies are blocked.
-
-**Fingerprinting Tests (Enable fingerprinting protection in Settings)**
 - [ ] Not Yet Implemented - Test that turning on fingerprinting protection in about:preferences shows 3 fingerprints blocked at https://jsfiddle.net/bkf50r8v/13/. Test that turning it off in the Bravery menu shows 0 fingerprints blocked.
+- [ ] Test that 3rd party storage results are blank at https://jsfiddle.net/7ke9r14a/7/ when 3rd party cookies are blocked.
 - [ ] Not Yet Implemented - Test that audio fingerprint is blocked at https://audiofingerprint.openwpm.com/ when fingerprinting protection is on.
 
 ## Content tests
