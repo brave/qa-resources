@@ -64,9 +64,6 @@ for issue in repo.get_issues(milestone=milestone_dictionary[key], state="closed"
       if('QA/checked-Win64' not in label_names and 'OS/macOS' not in label_names and 'OS/unix-like/linux' not in label_names):
         win64_checklist.append(output_line)
 
-      if('QA/checked-Win32' not in label_names and 'QA/checked' not in label_names and 'OS/macOS' not in label_names and 'OS/unix-like/linux' not in label_names):
-        win32_checklist.append(output_line)
-
       if('QA/checked-Linux' not in label_names and 'OS/Windows' not in label_names and 'OS/macOS' not in label_names):
         linux_checklist.append(output_line)
 
@@ -102,19 +99,6 @@ maclist = ['OS/macOS', 'release-notes/exclude', 'tests']
 
 if args.test is None:
   repo.create_issue(title=mactitle,body=bigline,assignee="LaurenWags",milestone=milestone_dictionary[key] ,labels=maclist)
-
-print("Win32 Checklist:")
-bigline = "## Per release specialty tests\n"
-for line in win32_checklist:
-  bigline += line + "\n"
-bigline = bigline + template
-print(bigline)
-print("")
-wintitle = "Manual test run for Chromium upgrade on Windows ia-32 for " + key
-winlist = ['OS/Windows', 'release-notes/exclude', 'tests']
-
-if args.test is None:
-  repo.create_issue(title=wintitle,body=bigline,assignee="luixxiul",milestone=milestone_dictionary[key] ,labels=winlist)
 
 print("Win64 Checklist:")
 bigline = "## Per release specialty tests\n"

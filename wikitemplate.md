@@ -51,7 +51,6 @@
   - [ ] Ensure YouTube publishers is listed but not included when `auto-include` is disabled
   - [ ] Update Advanced settings to different time/visit value and ensure YouTube videos are added to ledger table once criteria is met
 
-
 ## Sync
 
 - [ ] Verify you are able to sync two devices using the secret code
@@ -185,7 +184,8 @@
 - [ ] Make sure that right clicking on a word with suggestions gives a suggestion and that clicking on the suggestion replaces the text.
 - [ ] Make sure that Command + Click (Control + Click on Windows, Control + Click on Ubuntu) on a link opens a new tab but does NOT switch to it.  Click on it and make sure it is already loaded.
 - [ ] Open an email on http://mail.google.com/ or inbox.google.com and click on a link. Make sure it works.
-- [ ] Test that PDF is loaded at http://www.orimi.com/pdf-test.pdf
+- [ ] Test that PDF is loaded over https at https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf
+- [ ] Test that PDF is loaded over http at http://www.pdf995.com/samples/pdf.pdf
 - [ ] Test that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run).
 
 ## Flash tests
