@@ -6,8 +6,6 @@ parser.add_argument("-t", "--test", help="Test Mode, do not create Github issues
 
 args = parser.parse_args()
 
-
-
 secret_file = open('github.secret', 'r')
 token_string = secret_file.readline().rstrip("\n\r")
 
@@ -102,7 +100,7 @@ maclist = ['OS/macOS', 'release-notes/exclude', 'tests']
 if args.test is None:
   repo.create_issue(title=mactitle,body=bigline,assignee="LaurenWags",milestone=milestone_dictionary[key] ,labels=maclist)
 
-print("Winx64 Checklist:")
+print("Win64 Checklist:")
 bigline = "## Per release specialty tests\n"
 for line in win64_checklist:
   bigline += line + "\n"

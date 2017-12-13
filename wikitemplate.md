@@ -51,7 +51,6 @@
   - [ ] Ensure YouTube publishers is listed but not included when `auto-include` is disabled
   - [ ] Update Advanced settings to different time/visit value and ensure YouTube videos are added to ledger table once criteria is met
 
-
 ## Sync
 
 - [ ] Verify you are able to sync two devices using the secret code
