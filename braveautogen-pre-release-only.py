@@ -90,7 +90,7 @@ for line in mac_checklist:
   bigline += line + "\n"
 print(bigline)
 print("")
-mactitle = "Manual test run on OS X for " + key
+mactitle = "Per-release specialty test run on OS X for " + key
 maclist = ['OS/macOS', 'release-notes/exclude', 'tests']
 
 if args.test is None:
@@ -102,7 +102,7 @@ for line in win64_checklist:
   bigline += line + "\n"
 print(bigline)
 print("")
-wintitle = "Manual test run on Windows x64 for " + key
+wintitle = "Per-release specialty test run on Windows x64 for " + key
 winlist = ['OS/Windows', 'release-notes/exclude', 'tests']
 
 if args.test is None:
@@ -114,7 +114,7 @@ for line in linux_checklist:
   bigline += line + "\n"
 print(bigline)
 print("")
-lintitle = "Manual test run on Linux for " + key
+lintitle = "Per-release specialty test run on Linux for " + key
 linlist = ['OS/unix-like/linux', 'release-notes/exclude', 'tests']
 
 if args.test is None:
