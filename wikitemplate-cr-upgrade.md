@@ -179,6 +179,10 @@ _Each start should take less than 7 seconds_
 - [ ] Test that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run).
 - [ ] Test that WebSockets are working by ensuring http://slither.io/ runs once "Play" has been clicked.
 
+## Extensions
+
+- [ ] Enable each extension one by one under `about:preferences#extensions` and ensure that the browser doesn't become unresponsive
+
 ## Flash tests
 
 - [ ] Test that flash placeholder appears on http://www.homestarrunner.com
