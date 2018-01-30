@@ -125,14 +125,14 @@
 
 ## Geolocation
 
-- [ ] Check that https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation is blocked due to cross origin iframes
+- [ ] Check that https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation is blocked due to cross-origin iframes
 - [ ] Check that https://browserleaks.com/geo works and shows correct location
-- [ ] Check that  https://html5demos.com/geo/ works but need not be accurate location
+- [ ] Check that https://html5demos.com/geo/ works but doesn't require an accurate location
 
 ## Crash Reporting
 
-- [ ] Check `chrome://crash` causes the new tab to crash 
-- [ ] Check `chrome://crashes` lists all the crash with a crash id
+- [ ] Check that loading `chrome://crash` causes the new tab to crash 
+- [ ] Check that `chrome://crashes` lists all the crashes and includes both Crash Report ID & Local Crash ID
 - [ ] Verify the crash ID matches the report on brave stats
 
 ## Site hacks
@@ -181,9 +181,9 @@
 - [ ] Test that about:preferences default Bravery settings take effect on pages with no site settings.
 - [ ] Test that 3rd party storage results are blank at https://jsfiddle.net/7ke9r14a/9/ when 3rd party cookies are blocked and not blank when 3rd party cookies are unblocked.
 ### Fingerprint Tests
-   - [ ] Visit https://jsfiddle.net/bkf50r8v/13/, ensure 3 blocked items are listed in shields. Result window should show `got canvas fingerprint 0`  and  `got webgl fingerprint 00`
-   - [ ] Test that audio fingerprint is blocked at https://audiofingerprint.openwpm.com/ only when `Block all fingerprinting protection` is on.
-   - [ ] Test that browser is not detected on https://extensions.inrialpes.fr/brave/
+  - [ ] Visit https://jsfiddle.net/bkf50r8v/13/, ensure 3 blocked items are listed in shields. Result window should show `got canvas fingerprint 0`  and  `got webgl fingerprint 00`
+  - [ ] Test that audio fingerprint is blocked at https://audiofingerprint.openwpm.com/ only when `Block all fingerprinting protection` is on.
+  - [ ] Test that Brave browser isn't detected on https://extensions.inrialpes.fr/brave/
 
 ## Content tests
 

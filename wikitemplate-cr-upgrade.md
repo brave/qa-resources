@@ -69,7 +69,7 @@ _Each start should take less than 7 seconds_
   - [ ] opened tabs can be reloaded
   - [ ] bookmarks on the bookmark toolbar can be opened
   - [ ] bookmarks in the bookmark folder toolbar can be opened
-  - [ ] ensure upgrade sets fingerprint to `Block all fingerprint` when global fingerprint is enabled
+  - [ ] ensure upgrading from `0.19.x` to `0.20.x` sets fingerprint to  `Block all fingerprint` when global fingerprint is enabled
 
 ## Bookmarks
 
@@ -115,14 +115,14 @@ _Each start should take less than 7 seconds_
 
 ## Geolocation
 
-- [ ] Check that https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation is blocked due to cross origin iframes
+- [ ] Check that https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation is blocked due to cross-origin iframes
 - [ ] Check that https://browserleaks.com/geo works and shows correct location
-- [ ] Check that  https://html5demos.com/geo/ works but need not be accurate location
+- [ ] Check that https://html5demos.com/geo/ works but doesn't require an accurate location
 
 ## Crash Reporting
 
-- [ ] Check `chrome://crash` causes the new tab to crash 
-- [ ] Check `chrome://crashes` lists all the crash with a crash id
+- [ ] Check that loading `chrome://crash` causes the new tab to crash 
+- [ ] Check that `chrome://crashes` lists all the crashes and includes both Crash Report ID & Local Crash ID
 - [ ] Verify the crash ID matches the report on brave stats
 
 ## Site hacks
@@ -172,7 +172,7 @@ _Each start should take less than 7 seconds_
 ### Fingerprint Tests
   - [ ] Visit https://jsfiddle.net/bkf50r8v/13/, ensure 3 blocked items are listed in shields. Result window should show `got canvas fingerprint 0`  and  `got webgl fingerprint 00`
   - [ ] Test that audio fingerprint is blocked at https://audiofingerprint.openwpm.com/ only when `Block all fingerprinting protection` is on.
-  - [ ] Test that browser is not detected on https://extensions.inrialpes.fr/brave/
+  - [ ] Test that Brave browser isn't detected on https://extensions.inrialpes.fr/brave/
 
 ## Content tests
 
