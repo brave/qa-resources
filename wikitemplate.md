@@ -15,7 +15,6 @@
   - [ ] opened tabs can be reloaded
   - [ ] bookmarks on the bookmark toolbar can be opened
   - [ ] bookmarks in the bookmark folder toolbar can be opened
-  - [ ] ensure upgrade sets fingerprint to `Block all fingerprint` when global fingerprint is enabled
 
 ## Last changeset test
 

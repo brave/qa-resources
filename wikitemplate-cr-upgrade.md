@@ -69,7 +69,6 @@ _Each start should take less than 7 seconds_
   - [ ] opened tabs can be reloaded
   - [ ] bookmarks on the bookmark toolbar can be opened
   - [ ] bookmarks in the bookmark folder toolbar can be opened
-  - [ ] ensure upgrading from `0.19.x` to `0.20.x` sets fingerprint to  `Block all fingerprint` when global fingerprint is enabled
 
 ## Bookmarks
 
