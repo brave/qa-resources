@@ -56,6 +56,7 @@
 - [ ] Verify you are able to sync two devices using the secret code
 - [ ] Visit a site on device 1 and change shield setting, ensure that the saved site preference is synced to device 2
 - [ ] Enable Browsing history sync on device 1, ensure the history is shown on device 2
+- [ ] Clear browsing history on device 1, ensure the history is sync back on device 1 from device 2
 - [ ] Import/Add bookmarks on device 1, ensure it is synced on device 2
 - [ ] Ensure imported bookmark folder structure is maintained on device 2
 - [ ] Ensure bookmark favicons are shown after sync
@@ -123,7 +124,15 @@
 
 ## Geolocation
 
-- [ ] Check that https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation works
+- [ ] Check that https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation is blocked due to cross-origin iframes
+- [ ] Check that https://browserleaks.com/geo works and shows correct location
+- [ ] Check that https://html5demos.com/geo/ works but doesn't require an accurate location
+
+## Crash Reporting
+
+- [ ] Check that loading `chrome://crash` causes the new tab to crash 
+- [ ] Check that `chrome://crashes` lists all the crashes and includes both Crash Report ID & Local Crash ID
+- [ ] Verify the crash ID matches the report on brave stats
 
 ## Site hacks
 
@@ -169,10 +178,11 @@
 - [ ] Turning Safe Browsing off and shields off both disable safe browsing for https://www.raisegame.com/.
 - [ ] Visit https://brianbondy.com/ and then turn on script blocking, nothing should load. Allow it from the script blocking UI in the URL bar and it should work.
 - [ ] Test that about:preferences default Bravery settings take effect on pages with no site settings.
-- [ ] Test that turning on fingerprinting protection in about:preferences shows 3 fingerprints blocked at https://jsfiddle.net/bkf50r8v/13/. Test that turning it off in the Bravery menu shows 0 fingerprints blocked.
 - [ ] Test that 3rd party storage results are blank at https://jsfiddle.net/7ke9r14a/9/ when 3rd party cookies are blocked and not blank when 3rd party cookies are unblocked.
-- [ ] Test that audio fingerprint is blocked at https://audiofingerprint.openwpm.com/ when fingerprinting protection is on.
-- [ ] Test that browser is not detected on https://extensions.inrialpes.fr/brave/
+### Fingerprint Tests
+  - [ ] Visit https://jsfiddle.net/bkf50r8v/13/, ensure 3 blocked items are listed in shields. Result window should show `got canvas fingerprint 0`  and  `got webgl fingerprint 00`
+  - [ ] Test that audio fingerprint is blocked at https://audiofingerprint.openwpm.com/ only when `Block all fingerprinting protection` is on.
+  - [ ] Test that Brave browser isn't detected on https://extensions.inrialpes.fr/brave/
 
 ## Content tests
 
