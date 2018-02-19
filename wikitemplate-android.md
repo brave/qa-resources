@@ -1,5 +1,4 @@
 
-
 ## Installer
 
 - [ ] Check that installer is close to the size of last release.
@@ -49,6 +48,8 @@ Pre-Requisite: Put previous build shortcut on home screen. Also have several sit
 ## Downloads
 
 - [ ] Test downloading a file works and that all actions on the download item works.
+- [ ] Test that PDF is downloaded over https at https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf
+- [ ] Test that PDF is downloaded over http at http://www.pdf995.com/samples/pdf.pdf
 
 ## Fullscreen
 
@@ -67,26 +68,19 @@ Pre-Requisite: Put previous build shortcut on home screen. Also have several sit
 
 - [ ] Check that HTTPS Everywhere works by loading https://https-everywhere.badssl.com/
 - [ ] Turning HTTPS Everywhere off and shields off both disable the redirect to https://https-everywhere.badssl.com/
-- [ ] Not Yet Implemented - Check that ad replacement works on http://slashdot.org
 - [ ] Check that toggling to blocking and allow ads works as expected.
 - [ ] Test that clicking through a cert error in https://badssl.com/ works.
-- [ ] Test that Safe Browsing works (http://downloadme.org)
-- [ ] Turning Safe Browsing off and shields off both disable safe browsing for http://downloadme.org/.
 - [ ] Visit https://brianbondy.com/ and then turn on script blocking, nothing should load. Allow it from the script blocking UI in the URL bar and it should work.
 - [ ] Test that about:preferences default Bravery settings take effect on pages with no site settings.
-- [ ] Not Yet Implemented - Test that turning on fingerprinting protection in about:preferences shows 3 fingerprints blocked at https://jsfiddle.net/bkf50r8v/13/. Test that turning it off in the Bravery menu shows 0 fingerprints blocked.
+- [ ] Visit https://browserleaks.com/webrtc, ensure 2 blocked items are listed in shields
 - [ ] Test that 3rd party storage results are blank at https://jsfiddle.net/7ke9r14a/7/ when 3rd party cookies are blocked.
-- [ ] Not Yet Implemented - Test that audio fingerprint is blocked at https://audiofingerprint.openwpm.com/ when fingerprinting protection is on.
 
 ## Content tests
 
 - [ ] Go to https://brianbondy.com/ and click on the twitter icon on the top right. Test that context menus work in the new twitter tab.
 - [ ] Go to https://trac.torproject.org/projects/tor/login and make sure that the password can be saved. Make sure the saved password is auto-populated when you visit the site again.
-- [ ] Open a github issue and type some misspellings, make sure they are underlined.
-- [ ] Make sure that right clicking on a word with suggestions gives a suggestion and that clicking on the suggestion replaces the text.
+- [ ] Open a github issue and type some misspellings, make sure they aren't autocorrected.
 - [ ] Open an email on http://mail.google.com/ or inbox.google.com and click on a link. Make sure it works.
-- [ ] Test that PDF is loaded over https at https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf
-- [ ] Test that PDF is loaded over http at http://www.pdf995.com/samples/pdf.pdf
 - [ ] Test that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run).
 
 ## Top sites view
@@ -97,10 +91,15 @@ Pre-Requisite: Put previous build shortcut on home screen. Also have several sit
 
 - [ ] Start loading a page, background the app, wait >5 sec, then bring to front, ensure splash screen is not shown
 
-## Per release specialty tests
-
-- [ ] Test each item in release notes for the release that's going out.
 
 ## Session storage
 
 - [ ] Test that tabs restore when closed, including active tab.
+
+## Yet to be implemented
+
+- Check that ad replacement works on http://slashdot.org
+- Test that Safe Browsing works (https://www.raisegame.com/)
+- Turning Safe Browsing off and shields off both disable safe browsing for https://www.raisegame.com/
+- Test that turning on fingerprinting protection in about:preferences shows 3 fingerprints blocked at https://jsfiddle.net/bkf50r8v/13/. Test that turning it off in the Bravery menu shows 0 fingerprints blocked
+- Test that audio fingerprint is blocked at https://audiofingerprint.openwpm.com/ when fingerprinting protection is on.
