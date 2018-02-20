@@ -1,12 +1,12 @@
 ## Installer
 
-- [ ] Check that installer is close to the size of last release.
-- [ ] Check signature: If OS Run `spctl --assess --verbose /Applications/Brave.app/` and make sure it returns `accepted`.  If Windows right click on the installer exe and go to Properties, go to the Digital Signatures tab and double click on the signature.  Make sure it says "The digital signature is OK" in the popup window.
-- [ ] Check Brave, muon, and libchromiumcontent version in `about:brave` and make sure it is EXACTLY as expected.
+- [ ] Check that installer is close to the size of last release
+- [ ] Check signature: If OS Run `spctl --assess --verbose /Applications/Brave.app/` and make sure it returns `accepted`.  If Windows right click on the installer exe and go to Properties, go to the Digital Signatures tab and double click on the signature.  Make sure it says "The digital signature is OK" in the popup window
+- [ ] Check Brave, muon, and libchromiumcontent version in `about:brave` and make sure it is EXACTLY as expected
 
 ## Data
 
-- [ ] Make sure that data from the last version appears in the new version OK.
+- [ ] Make sure that data from the last version appears in the new version OK
 - [ ] With data from the last version, test that
   - [ ] cookies are preserved
   - [ ] pinned tabs can be opened
@@ -18,11 +18,11 @@
 
 ## Last changeset test
 
-- [ ] Test what is covered by the last changeset (you can find this by clicking on the SHA in about:brave).
+- [ ] Test what is covered by the last changeset (you can find this by clicking on the SHA in about:brave)
 
 ## Widevine/Netflix test
 
-- [ ] Test that you can log into Netflix and start a show.
+- [ ] Test that you can log into Netflix and start a show
 
 ## Ledger
 
@@ -33,8 +33,8 @@
 - [ ] Verify adding funds via any of the currencies flows into BAT Wallet after specified amount of time
 - [ ] Verify adding funds to an existing wallet with amount, adjusts the BAT value appropriately
 - [ ] Change min visit and min time in advance setting and verify if the publisher list gets updated based on new setting
-- [ ] Visit nytimes.com for a few seconds and make sure it shows up in the Payments table.
-- [ ] Check that disabling payments and enabling them again does not lose state.
+- [ ] Visit nytimes.com for a few seconds and make sure it shows up in the Payments table
+- [ ] Check that disabling payments and enabling them again does not lose state
 - [ ] Upgrade from older version
   - [ ] Verify the wallet overlay is shown when wallet transition is happening upon upgrade
   - [ ] Verify transition overlay is shown post upgrade even if the payment is disabled before upgrade
@@ -91,9 +91,9 @@
 ## Context menus
 
 - [ ] Make sure context menu items in the URL bar work
-- [ ] Make sure context menu items on content work with no selected text.
-- [ ] Make sure context menu items on content work with selected text.
-- [ ] Make sure context menu items on content work inside an editable control on `about:styles` (input, textarea, or contenteditable).
+- [ ] Make sure context menu items on content work with no selected text
+- [ ] Make sure context menu items on content work with selected text
+- [ ] Make sure context menu items on content work inside an editable control on `about:styles` (input, textarea, or contenteditable)
 
 ## Find on page
 
@@ -140,11 +140,11 @@
 
 ## Downloads
 
-- [ ] Test downloading a file works and that all actions on the download item works.
+- [ ] Test downloading a file works and that all actions on the download item works
 
 ## Fullscreen
 
-- [ ] Test that entering full screen window works View -> Toggle Full Screen. And exit back (Not Esc).
+- [ ] Test that entering full screen window works View -> Toggle Full Screen. And exit back (Not Esc)
 - [ ] Test that entering HTML5 full screen works. And Esc to go back. (youtube.com)
 
 ## Tabs, Pinning and Tear off tabs
@@ -162,9 +162,9 @@
 ## Zoom
 
 - [ ] Test zoom in / out shortcut works
-- [ ] Test hamburger menu zooms.
-- [ ] Test zoom saved when you close the browser and restore on a single site.
-- [ ] Test zoom saved when you navigate within a single origin site.
+- [ ] Test hamburger menu zooms
+- [ ] Test zoom saved when you close the browser and restore on a single site
+- [ ] Test zoom saved when you navigate within a single origin site
 - [ ] Test that navigating to a different origin resets the zoom
 
 ## Bravery settings
@@ -172,31 +172,31 @@
 - [ ] Check that HTTPS Everywhere works by loading https://https-everywhere.badssl.com/
 - [ ] Turning HTTPS Everywhere off and shields off both disable the redirect to https://https-everywhere.badssl.com/
 - [ ] Check that ad replacement works on http://slashdot.org
-- [ ] Check that toggling to blocking and allow ads works as expected.
-- [ ] Test that clicking through a cert error in https://badssl.com/ works.
+- [ ] Check that toggling to blocking and allow ads works as expected
+- [ ] Test that clicking through a cert error in https://badssl.com/ works
 - [ ] Test that Safe Browsing works (https://www.raisegame.com/)
-- [ ] Turning Safe Browsing off and shields off both disable safe browsing for https://www.raisegame.com/.
-- [ ] Visit https://brianbondy.com/ and then turn on script blocking, nothing should load. Allow it from the script blocking UI in the URL bar and it should work.
-- [ ] Test that about:preferences default Bravery settings take effect on pages with no site settings.
-- [ ] Test that 3rd party storage results are blank at https://jsfiddle.net/7ke9r14a/9/ when 3rd party cookies are blocked and not blank when 3rd party cookies are unblocked.
+- [ ] Turning Safe Browsing off and shields off both disable safe browsing for https://www.raisegame.com/
+- [ ] Visit https://brianbondy.com/ and then turn on script blocking, nothing should load. Allow it from the script blocking UI in the URL bar and it should work
+- [ ] Test that about:preferences default Bravery settings take effect on pages with no site settings
+- [ ] Test that 3rd party storage results are blank at https://jsfiddle.net/7ke9r14a/9/ when 3rd party cookies are blocked and not blank when 3rd party cookies are unblocked
 ### Fingerprint Tests
   - [ ] Visit https://jsfiddle.net/bkf50r8v/13/, ensure 3 blocked items are listed in shields. Result window should show `got canvas fingerprint 0`  and  `got webgl fingerprint 00`
-  - [ ] Test that audio fingerprint is blocked at https://audiofingerprint.openwpm.com/ only when `Block all fingerprinting protection` is on.
+  - [ ] Test that audio fingerprint is blocked at https://audiofingerprint.openwpm.com/ only when `Block all fingerprinting protection` is on
   - [ ] Test that Brave browser isn't detected on https://extensions.inrialpes.fr/brave/
 
 ## Content tests
 
-- [ ] Go to https://brianbondy.com/ and click on the twitter icon on the top right. Test that context menus work in the new twitter tab.
-- [ ] Load twitter and click on a tweet so the popup div shows.   Click to dismiss and repeat with another div. Make sure it shows.
-- [ ] Go to https://www.bennish.net/web-notifications.html and test that clicking on 'Show' pops up a notification asking for permission. Make sure that clicking 'Deny' leads to no notifications being shown.
-- [ ] Go to https://trac.torproject.org/projects/tor/login and make sure that the password can be saved. Make sure the saved password shows up in `about:passwords`. Then reload https://trac.torproject.org/projects/tor/login and make sure the password is autofilled.
+- [ ] Go to https://brianbondy.com/ and click on the twitter icon on the top right. Test that context menus work in the new twitter tab
+- [ ] Load twitter and click on a tweet so the popup div shows.   Click to dismiss and repeat with another div. Make sure it shows
+- [ ] Go to https://www.bennish.net/web-notifications.html and test that clicking on 'Show' pops up a notification asking for permission. Make sure that clicking 'Deny' leads to no notifications being shown
+- [ ] Go to https://trac.torproject.org/projects/tor/login and make sure that the password can be saved. Make sure the saved password shows up in `about:passwords`. Then reload https://trac.torproject.org/projects/tor/login and make sure the saved credentials isn't autofilled instead shows saved id as a dropdown under the login field
 - [ ] Open `about:styles` and type some misspellings on a textbox, make sure they are underlined.
-- [ ] Make sure that right clicking on a word with suggestions gives a suggestion and that clicking on the suggestion replaces the text.
-- [ ] Make sure that Command + Click (Control + Click on Windows, Control + Click on Ubuntu) on a link opens a new tab but does NOT switch to it.  Click on it and make sure it is already loaded.
-- [ ] Open an email on http://mail.google.com/ or inbox.google.com and click on a link. Make sure it works.
+- [ ] Make sure that right clicking on a word with suggestions gives a suggestion and that clicking on the suggestion replaces the text
+- [ ] Make sure that Command + Click (Control + Click on Windows, Control + Click on Ubuntu) on a link opens a new tab but does NOT switch to it.  Click on it and make sure it is already loaded
+- [ ] Open an email on http://mail.google.com/ or inbox.google.com and click on a link. Make sure it works
 - [ ] Test that PDF is loaded over https at https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf
 - [ ] Test that PDF is loaded over http at http://www.pdf995.com/samples/pdf.pdf
-- [ ] Test that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run).
+- [ ] Test that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run)
 
 ## Flash tests
 
