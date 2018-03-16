@@ -178,6 +178,7 @@ _Each start should take less than 7 seconds_
 - [ ] Test that PDF is loaded over http at http://www.pdf995.com/samples/pdf.pdf
 - [ ] Test that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run).
 - [ ] Test that WebSockets are working by ensuring http://slither.io/ runs once "Play" has been clicked.
+- [ ] Test that hovering the cursor over a link changes the cursor into a pointer (hand)
 
 ## Extensions
 
