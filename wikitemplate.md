@@ -1,3 +1,4 @@
+
 ## Installer
 
 - [ ] Check that installer is close to the size of last release
@@ -196,7 +197,9 @@
 - [ ] Open an email on http://mail.google.com/ or inbox.google.com and click on a link. Make sure it works
 - [ ] Test that PDF is loaded over https at https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf
 - [ ] Test that PDF is loaded over http at http://www.pdf995.com/samples/pdf.pdf
-- [ ] Test that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run)
+- [ ] Test that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run).
+- [ ] Test that hovering the cursor over a link changes the cursor into a pointer (hand)
+
 
 ## Flash tests
 

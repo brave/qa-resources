@@ -54,6 +54,7 @@ _Each start should take less than 7 seconds_
 - [ ] Verify you are able to sync two devices using the secret code
 - [ ] Visit a site on device 1 and change shield setting, ensure that the saved site preference is synced to device 2
 - [ ] Enable Browsing history sync on device 1, ensure the history is shown on device 2 
+- [ ] Clear browsing history on device 1, ensure the history is sync back on device 1 from device 2
 - [ ] Import/Add bookmarks on device 1, ensure it is synced on device 2 
 - [ ] Ensure imported bookmark folder structure is maintained on device 2
 - [ ] Ensure bookmark favicons are shown after sync
@@ -187,6 +188,7 @@ _Each start should take less than 7 seconds_
 - [ ] Test that PDF is loaded over http at http://www.pdf995.com/samples/pdf.pdf
 - [ ] Test that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run).
 - [ ] Test that WebSockets are working by ensuring http://slither.io/ runs once "Play" has been clicked.
+- [ ] Test that hovering the cursor over a link changes the cursor into a pointer (hand)
 
 ## Extensions
 
