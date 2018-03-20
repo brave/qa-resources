@@ -184,20 +184,23 @@
   - [ ] Visit https://jsfiddle.net/bkf50r8v/13/, ensure 3 blocked items are listed in shields. Result window should show `got canvas fingerprint 0`  and  `got webgl fingerprint 00`
   - [ ] Test that audio fingerprint is blocked at https://audiofingerprint.openwpm.com/ only when `Block all fingerprinting protection` is on
   - [ ] Test that Brave browser isn't detected on https://extensions.inrialpes.fr/brave/
+  - [ ] Test that https://diafygi.github.io/webrtc-ips/ doesn't leak IP address when `Block all fingerprinting protection` is on
 
 ## Content tests
 
 - [ ] Go to https://brianbondy.com/ and click on the twitter icon on the top right. Test that context menus work in the new twitter tab
 - [ ] Load twitter and click on a tweet so the popup div shows.   Click to dismiss and repeat with another div. Make sure it shows
 - [ ] Go to https://www.bennish.net/web-notifications.html and test that clicking on 'Show' pops up a notification asking for permission. Make sure that clicking 'Deny' leads to no notifications being shown
-- [ ] Go to https://trac.torproject.org/projects/tor/login and make sure that the password can be saved. Make sure the saved password shows up in `about:passwords`. Then reload https://trac.torproject.org/projects/tor/login and make sure the saved credentials isn't autofilled instead shows saved id as a dropdown under the login field
+- [ ] Go to https://trac.torproject.org/projects/tor/login and make sure that the password can be saved. Make sure the saved password shows up in `about:passwords`. Then reload https://trac.torproject.org/projects/tor/login and make sure the saved credentials aren't autofilled instead shows saved id as a dropdown under the login field
 - [ ] Open `about:styles` and type some misspellings on a textbox, make sure they are underlined.
 - [ ] Make sure that right clicking on a word with suggestions gives a suggestion and that clicking on the suggestion replaces the text
 - [ ] Make sure that Command + Click (Control + Click on Windows, Control + Click on Ubuntu) on a link opens a new tab but does NOT switch to it.  Click on it and make sure it is already loaded
 - [ ] Open an email on http://mail.google.com/ or inbox.google.com and click on a link. Make sure it works
 - [ ] Test that PDF is loaded over https at https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf
 - [ ] Test that PDF is loaded over http at http://www.pdf995.com/samples/pdf.pdf
-- [ ] Test that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run)
+- [ ] Test that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run).
+- [ ] Test that hovering the cursor over a link changes the cursor into a pointer (hand)
+
 
 ## Flash tests
 
