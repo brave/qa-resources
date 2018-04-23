@@ -200,7 +200,7 @@
 - [ ] Test that PDF is loaded over http at http://www.pdf995.com/samples/pdf.pdf
 - [ ] Test that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run).
 - [ ] Test that hovering the cursor over a link changes the cursor into a pointer (hand)
-
+- [ ] Visit https://dlptest.com/ftp-test/ and ensure that basic authentication is working by clicking on ftp://ftp.dlptest.com/ and ensuring you're prompted for credentials
 
 ## Flash tests
 
