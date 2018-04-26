@@ -119,8 +119,10 @@
 ## Extensions/Plugins tests
 
 - [ ] Enable each extension one by one under `about:preferences#extensions` and ensure that the browser doesn't become unresponsive
+
 ### Widevine
   - [ ] Test that you can log into Netflix and start a show
+  
 ### Flash tests
   - [ ] Test that flash placeholder appears on http://www.homestarrunner.com
   - [ ] Test with flash enabled in preferences, auto play option is shown when visiting http://www.homestarrunner.com
@@ -128,7 +130,7 @@
 ## Autofill tests
 
 - [ ] Test that autofill works on http://www.roboform.com/filling-test-all-fields
-- [ ] Verify clicking submit button on a form doesn't crash the browser
+- [ ] Verify clicking `Next` button on https://www.paypal.com/signin doesn't crash the browser
 
 ## Geolocation
 
@@ -141,6 +143,15 @@
 - [ ] Check that loading `chrome://crash` causes the new tab to crash 
 - [ ] Check that `chrome://crashes` lists all the crashes and includes both Crash Report ID & Local Crash ID
 - [ ] Verify the crash ID matches the report on brave stats
+
+## Performance test
+
+_Each start should take less than 7 seconds_
+- [ ] Enable only sync (new sync group).
+- [ ] Enable only sync with a large sync group (many entries).
+- [ ] Enable only payments.
+- [ ] Only import a large set of bookmarks.
+- [ ] Combine sync, payments, and a large set of bookmarks.
 
 ## Bravery settings
 
@@ -175,6 +186,7 @@
 - [ ] Test that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run).
 - [ ] Test that hovering the cursor over a link changes the cursor into a pointer (hand)
 - [ ] Visit https://dlptest.com/ftp-test/ and ensure that basic authentication is working by clicking on ftp://ftp.dlptest.com/ and ensuring you're prompted for credentials
+- [ ] Test that WebSockets are working by ensuring http://slither.io/ runs once "Play" has been clicked.
 
 ## Ledger
 
@@ -188,9 +200,8 @@
 - [ ] Visit nytimes.com for a few seconds and make sure it shows up in the Payments table
 - [ ] Check that disabling payments and enabling them again does not lose state
 - [ ] Upgrade from older version
-  - [ ] Verify the wallet overlay is shown when wallet transition is happening upon upgrade
-  - [ ] Verify transition overlay is shown post upgrade even if the payment is disabled before upgrade
-  - [ ] Verify publishers list is not lost after upgrade when payment is disabled in the older version
+  - [ ] Verify the wallet isn't corrupted upon upgrade (balance is retained and wallet backup code isn't corrupted)
+  - [ ] Verify publishers list is not lost after upgrade
 ### Ledger Media (To be verified on YouTube and Twitch) 
   - [ ] Visit any YouTube/Twitch video in a normal/session tab and ensure the video publisher name is listed in ledger table
   - [ ] Visit any YouTube/Twitch video in a private tab and ensure the video publisher name is not listed in ledger table
@@ -202,6 +213,10 @@
   - [ ] Ensure existing YouTube/Twitch publishers are not lost when `Allow contributions to video` is disabled in adavanced settings
   - [ ] Ensure YouTube/Twitch publishers is listed but not included when `auto-include` is disabled
   - [ ] Update Advanced settings to different time/visit value and ensure YouTube/Twitch videos are added to ledger table once criteria is met
+  - [ ] Perform a contribution while YouTube/Twitch channels are included on the ledger. Ensure the channels are listed on the contribution statement
+  - [ ] Verify able to delete YouTube/Twitch publishers from ledger table
+  - [ ] Verify able to re-add YouTube/Twitch publishers to ledger table
+  - [ ] Verify if you minimize a Twitch video (Stream/VOD) and navigate around the site, the video is counted in ledger
 
 ## Session storage
 
@@ -220,18 +235,3 @@ Do not forget to make a backup of your entire `~/Library/Application\ Support/Br
 
 - [ ] Test that updating using `BRAVE_UPDATE_VERSION=0.8.3` env variable works correctly.
 - [ ] Test that using `BRAVE_ENABLE_PREVIEW_UPDATES=TRUE` env variable works and prompts for preview build updates.
-
-# CR Upgrade specific tests
-
-## Performance test
-
-_Each start should take less than 7 seconds_
-- [ ] Enable only sync (new sync group).
-- [ ] Enable only sync with a large sync group (many entries).
-- [ ] Enable only payments.
-- [ ] Only import a large set of bookmarks.
-- [ ] Combine sync, payments, and a large set of bookmarks.
-
-## Content test
-
-- [ ] Test that WebSockets are working by ensuring http://slither.io/ runs once "Play" has been clicked.
