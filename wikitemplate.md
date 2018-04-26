@@ -1,9 +1,13 @@
 
 ## Installer
 
-- [ ] Check that installer is close to the size of last release
-- [ ] Check signature: If OS Run `spctl --assess --verbose /Applications/Brave.app/` and make sure it returns `accepted`.  If Windows right click on the installer exe and go to Properties, go to the Digital Signatures tab and double click on the signature.  Make sure it says "The digital signature is OK" in the popup window
-- [ ] Check Brave, muon, and libchromiumcontent version in `about:brave` and make sure it is EXACTLY as expected
+- [ ] Check that installer is close to the size of last release.
+- [ ] Check signature: If OS Run `spctl --assess --verbose /Applications/Brave.app/` and make sure it returns `accepted`.  If Windows right click on the installer exe and go to Properties, go to the Digital Signatures tab and double click on the signature.  Make sure it says "The digital signature is OK" in the popup window.
+- [ ] Check Brave, muon, and libchromiumcontent version in `about:brave` and make sure it is EXACTLY as expected.
+
+## Last changeset test
+
+- [ ] Test what is covered by the last changeset (you can find this by clicking on the SHA in about:brave)
 
 ## Data
 
@@ -16,51 +20,6 @@
   - [ ] opened tabs can be reloaded
   - [ ] bookmarks on the bookmark toolbar can be opened
   - [ ] bookmarks in the bookmark folder toolbar can be opened
-
-## Last changeset test
-
-- [ ] Test what is covered by the last changeset (you can find this by clicking on the SHA in about:brave)
-
-## Widevine/Netflix test
-
-- [ ] Test that you can log into Netflix and start a show
-
-## Ledger
-
-- [ ] Verify wallet is auto created after enabling payments
-- [ ] Verify monthly budget and account balance shows correct BAT and USD value
-- [ ] Click on `add funds` and click on each currency and verify it shows wallet address and QR Code
-- [ ] Verify that Brave BAT wallet address can be copied
-- [ ] Verify adding funds via any of the currencies flows into BAT Wallet after specified amount of time
-- [ ] Verify adding funds to an existing wallet with amount, adjusts the BAT value appropriately
-- [ ] Change min visit and min time in advance setting and verify if the publisher list gets updated based on new setting
-- [ ] Visit nytimes.com for a few seconds and make sure it shows up in the Payments table
-- [ ] Check that disabling payments and enabling them again does not lose state
-- [ ] Upgrade from older version
-  - [ ] Verify the wallet overlay is shown when wallet transition is happening upon upgrade
-  - [ ] Verify transition overlay is shown post upgrade even if the payment is disabled before upgrade
-  - [ ] Verify publishers list is not lost after upgrade when payment is disabled in the older version
-### Ledger Media
-  - [ ] Visit any YouTube video in a normal/session tab and ensure the video publisher name is listed in ledger table
-  - [ ] Visit any YouTube video in a private tab and ensure the video publisher name is not listed in ledger table
-  - [ ] Visit any live YouTube video and ensure the time spent is shown under ledger table
-  - [ ] Visit any embeded YouTube video and ensure the video publisher name is listed in ledger table
-  - [ ] Ensure total time spent is correctly calculated for each publisher video
-  - [ ] Ensure total time spent is correctly calculated when switching to YouTube video from an embeded video
-  - [ ] Ensure YouTube publishers are not listed when `Allow contributions to video` is disabled in adavanced settings
-  - [ ] Ensure existing YouTube publishers are not lost when `Allow contributions to video` is disabled in adavanced settings
-  - [ ] Ensure YouTube publishers is listed but not included when `auto-include` is disabled
-  - [ ] Update Advanced settings to different time/visit value and ensure YouTube videos are added to ledger table once criteria is met
-
-## Sync
-
-- [ ] Verify you are able to sync two devices using the secret code
-- [ ] Visit a site on device 1 and change shield setting, ensure that the saved site preference is synced to device 2
-- [ ] Enable Browsing history sync on device 1, ensure the history is shown on device 2
-- [ ] Clear browsing history on device 1, ensure the history is sync back on device 1 from device 2
-- [ ] Import/Add bookmarks on device 1, ensure it is synced on device 2
-- [ ] Ensure imported bookmark folder structure is maintained on device 2
-- [ ] Ensure bookmark favicons are shown after sync
 
 ## About pages
 
@@ -106,47 +65,23 @@
 
 ## Keyboard Shortcuts
 
-- [ ] Open a new window: `Command` + `n` (macOS) || `Ctrl` + `n` (Win/Linux)
-- [ ] Open a new tab: `Command` + `t` (macOS) || `Ctrl` + `t` (Win/Linux)
-- [ ] Open a new private tab: `Command` + `Shift` + `p` (macOS) || `Ctrl` + `Shift` + `p` (Win/Linux)
+- [ ] Open a new window: `Command` + `N` (macOS) || `Ctrl` + `N` (Win/Linux)
+- [ ] Open a new tab: `Command` + `T` (macOS) || `Ctrl` + `T` (Win/Linux)
+- [ ] Open a new private tab: `Command` + `Shift` + `P` (macOS) || `Ctrl` + `Shift` + `P` (Win/Linux)
 - [ ] Reopen the latest closed tab: `Command` + `Shift` + `t` (macOS) || `Ctrl` + `Shift` + `t` (Win/Linux)
+- [ ] Reopen the latest closed window: `Command` + `Shift` + `Option` + `T` (macOS) || `Ctrl` + `Shift` + `Alt` + `T` (Win/Linux)
 - [ ] Jump to the next tab: `Command` + `Option` + `->` (macOS) || `Ctrl` + `PgDn` (Win/Linux)
 - [ ] Jump to the previous tab: `Command` + `Option` + `<-` (macOS) || `Ctrl` + `PgUp` (Win/Linux)
 - [ ] Jump to the next tab: `Ctrl` + `Tab` (macOS/Win/Linux)
 - [ ] Jump to the previous tab: `Ctrl` + `Shift` + `Tab` (macOS/Win/Linux)
 - [ ] Open Brave preferences: `Command` + `,` (macOS) || `Ctrl` + `,` (Win/Linux)
-- [ ] Jump into the URL bar: `Command` + `l` (macOS) || `Ctrl` + `l` (Win/Linux)
-- [ ] Reload page: `Command` + `r` (macOS) || `Ctrl` + `r` (Win/Linux)
-- [ ] Select All: `Command` + `a` (macOS) || `Ctrl` + `a` (Win/Linux)
-- [ ] Copying text: `Command` + `c` (macOS) || `Ctrl` + `c` (Win/Linux)
-- [ ] Pasting text: `Command` + `v` (macOS) || `Ctrl` + `v` (Win/Linux)
-- [ ] Minimize Brave: `Command` + `m` (macOS) || `Ctrl` + `m` (Win/Linux)
-- [ ] Quit Brave: `Command` + `q` (macOS) || `Ctrl` + `q` (Win/Linux)
-
-## Geolocation
-
-- [ ] Check that https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation is blocked due to cross-origin iframes
-- [ ] Check that https://browserleaks.com/geo works and shows correct location
-- [ ] Check that https://html5demos.com/geo/ works but doesn't require an accurate location
-
-## Crash Reporting
-
-- [ ] Check that loading `chrome://crash` causes the new tab to crash 
-- [ ] Check that `chrome://crashes` lists all the crashes and includes both Crash Report ID & Local Crash ID
-- [ ] Verify the crash ID matches the report on brave stats
-
-## Site hacks
-
-- [ ] Test https://www.twitch.tv/adobe sub-page loads a video and you can play it
-
-## Downloads
-
-- [ ] Test downloading a file works and that all actions on the download item works
-
-## Fullscreen
-
-- [ ] Test that entering full screen window works View -> Toggle Full Screen. And exit back (Not Esc)
-- [ ] Test that entering HTML5 full screen works. And Esc to go back. (youtube.com)
+- [ ] Jump into the URL bar: `Command` + `L` (macOS) || `Ctrl` + `L` (Win/Linux)
+- [ ] Reload page: `Command` + `R` (macOS) || `Ctrl` + `R` (Win/Linux)
+- [ ] Select All: `Command` + `A` (macOS) || `Ctrl` + `A` (Win/Linux)
+- [ ] Copying text: `Command` + `C` (macOS) || `Ctrl` + `C` (Win/Linux)
+- [ ] Pasting text: `Command` + `V` (macOS) || `Ctrl` + `V` (Win/Linux)
+- [ ] Minimize Brave: `Command` + `M` (macOS) || `Ctrl` + `M` (Win/Linux)
+- [ ] Quit Brave: `Command` + `Q` (macOS) || `Ctrl` + `Q` (Win/Linux)
 
 ## Tabs, Pinning and Tear off tabs
 
@@ -160,6 +95,15 @@
 - [ ] Test that tab pages can be muted
 - [ ] Test that tabs can be cloned
 
+## Downloads
+
+- [ ] Test downloading a file works and that all actions on the download item works
+
+## Fullscreen
+
+- [ ] Test that entering full screen window works View -> Toggle Full Screen. And exit back (Not Esc)
+- [ ] Test that entering HTML5 full screen works. And Esc to go back. (youtube.com)
+
 ## Zoom
 
 - [ ] Test zoom in / out shortcut works
@@ -168,9 +112,39 @@
 - [ ] Test zoom saved when you navigate within a single origin site
 - [ ] Test that navigating to a different origin resets the zoom
 
+## Printing
+
+- [ ] Test that you can print a PDF
+
+## Extensions/Plugins tests
+
+- [ ] Enable each extension one by one under `about:preferences#extensions` and ensure that the browser doesn't become unresponsive
+### Widevine
+  - [ ] Test that you can log into Netflix and start a show
+### Flash tests
+  - [ ] Test that flash placeholder appears on http://www.homestarrunner.com
+  - [ ] Test with flash enabled in preferences, auto play option is shown when visiting http://www.homestarrunner.com
+
+## Autofill tests
+
+- [ ] Test that autofill works on http://www.roboform.com/filling-test-all-fields
+- [ ] Verify clicking submit button on a form doesn't crash the browser
+
+## Geolocation
+
+- [ ] Check that https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation is blocked due to cross-origin iframes
+- [ ] Check that https://browserleaks.com/geo works and shows correct location
+- [ ] Check that https://html5demos.com/geo/ works but doesn't require an accurate location
+
+## Crash Reporting
+
+- [ ] Check that loading `chrome://crash` causes the new tab to crash 
+- [ ] Check that `chrome://crashes` lists all the crashes and includes both Crash Report ID & Local Crash ID
+- [ ] Verify the crash ID matches the report on brave stats
+
 ## Bravery settings
 
-- [ ] Check that HTTPS Everywhere works by loading https://https-everywhere.badssl.com/
+- [ ] Check that HTTPS Everywhere works by loading http://https-everywhere.badssl.com/
 - [ ] Turning HTTPS Everywhere off and shields off both disable the redirect to https://https-everywhere.badssl.com/
 - [ ] Check that ad replacement works on http://slashdot.org
 - [ ] Check that toggling to blocking and allow ads works as expected
@@ -202,14 +176,32 @@
 - [ ] Test that hovering the cursor over a link changes the cursor into a pointer (hand)
 - [ ] Visit https://dlptest.com/ftp-test/ and ensure that basic authentication is working by clicking on ftp://ftp.dlptest.com/ and ensuring you're prompted for credentials
 
-## Flash tests
+## Ledger
 
-- [ ] Test that flash placeholder appears on http://www.homestarrunner.com
-- [ ] Test with flash enabled in preferences, auto play option is shown when visiting http://www.homestarrunner.com
-
-## Autofill tests
-
-- [ ] Test that autofill works on http://www.roboform.com/filling-test-all-fields
+- [ ] Verify wallet is auto created after enabling payments
+- [ ] Verify monthly budget and account balance shows correct BAT and USD value
+- [ ] Click on `add funds` and click on each currency and verify it shows wallet address and QR Code
+- [ ] Verify that Brave BAT wallet address can be copied
+- [ ] Verify adding funds via any of the currencies flows into BAT Wallet after specified amount of time
+- [ ] Verify adding funds to an existing wallet with amount, adjusts the BAT value appropriately
+- [ ] Change min visit and min time in advance setting and verify if the publisher list gets updated based on new setting
+- [ ] Visit nytimes.com for a few seconds and make sure it shows up in the Payments table
+- [ ] Check that disabling payments and enabling them again does not lose state
+- [ ] Upgrade from older version
+  - [ ] Verify the wallet overlay is shown when wallet transition is happening upon upgrade
+  - [ ] Verify transition overlay is shown post upgrade even if the payment is disabled before upgrade
+  - [ ] Verify publishers list is not lost after upgrade when payment is disabled in the older version
+### Ledger Media (To be verified on YouTube and Twitch) 
+  - [ ] Visit any YouTube/Twitch video in a normal/session tab and ensure the video publisher name is listed in ledger table
+  - [ ] Visit any YouTube/Twitch video in a private tab and ensure the video publisher name is not listed in ledger table
+  - [ ] Visit any live YouTube/Twitch video and ensure the time spent is shown under ledger table
+  - [ ] Visit any embeded YouTube/Twitch video and ensure the video publisher name is listed in ledger table
+  - [ ] Ensure total time spent is correctly calculated for each publisher video
+  - [ ] Ensure total time spent is correctly calculated when switching to YouTube video from an embeded video
+  - [ ] Ensure YouTube/Twitch publishers are not listed when `Allow contributions to video` is disabled in adavanced settings
+  - [ ] Ensure existing YouTube/Twitch publishers are not lost when `Allow contributions to video` is disabled in adavanced settings
+  - [ ] Ensure YouTube/Twitch publishers is listed but not included when `auto-include` is disabled
+  - [ ] Update Advanced settings to different time/visit value and ensure YouTube/Twitch videos are added to ledger table once criteria is met
 
 ## Session storage
 
@@ -228,3 +220,18 @@ Do not forget to make a backup of your entire `~/Library/Application\ Support/Br
 
 - [ ] Test that updating using `BRAVE_UPDATE_VERSION=0.8.3` env variable works correctly.
 - [ ] Test that using `BRAVE_ENABLE_PREVIEW_UPDATES=TRUE` env variable works and prompts for preview build updates.
+
+# CR Upgrade specific tests
+
+## Performance test
+
+_Each start should take less than 7 seconds_
+- [ ] Enable only sync (new sync group).
+- [ ] Enable only sync with a large sync group (many entries).
+- [ ] Enable only payments.
+- [ ] Only import a large set of bookmarks.
+- [ ] Combine sync, payments, and a large set of bookmarks.
+
+## Content test
+
+- [ ] Test that WebSockets are working by ensuring http://slither.io/ runs once "Play" has been clicked.
