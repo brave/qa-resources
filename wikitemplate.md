@@ -122,7 +122,7 @@
 
 ### Widevine
   - [ ] Test that you can log into Netflix and start a show
-  
+
 ### Flash tests
   - [ ] Test that flash placeholder appears on http://www.homestarrunner.com
   - [ ] Test with flash enabled in preferences, auto play option is shown when visiting http://www.homestarrunner.com
@@ -208,14 +208,14 @@ _Each start should take less than 7 seconds_
   - [ ] Visit any live YouTube/Twitch video and ensure the time spent is shown under ledger table
   - [ ] Visit any embeded YouTube/Twitch video and ensure the video publisher name is listed in ledger table
   - [ ] Ensure total time spent is correctly calculated for each publisher video
-  - [ ] Ensure total time spent is correctly calculated when switching to YouTube video from an embeded video
+  - [ ] Ensure total time spent is correctly calculated when switching to YouTube/Twitch video from an embeded video
   - [ ] Ensure YouTube/Twitch publishers are not listed when `Allow contributions to video` is disabled in adavanced settings
   - [ ] Ensure existing YouTube/Twitch publishers are not lost when `Allow contributions to video` is disabled in adavanced settings
   - [ ] Ensure YouTube/Twitch publishers is listed but not included when `auto-include` is disabled
   - [ ] Update Advanced settings to different time/visit value and ensure YouTube/Twitch videos are added to ledger table once criteria is met
   - [ ] Perform a contribution while YouTube/Twitch channels are included on the ledger. Ensure the channels are listed on the contribution statement
-  - [ ] Verify able to delete YouTube/Twitch publishers from ledger table
-  - [ ] Verify able to re-add YouTube/Twitch publishers to ledger table
+  - [ ] Verify that you  able to delete YouTube/Twitch publishers from ledger table
+  - [ ] Verify that you able to re-add YouTube/Twitch publishers to ledger table
   - [ ] Verify if you minimize a Twitch video (Stream/VOD) and navigate around the site, the video is counted in ledger
 
 ## Session storage
