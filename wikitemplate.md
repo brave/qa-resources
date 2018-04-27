@@ -214,8 +214,8 @@ _Each start should take less than 7 seconds_
   - [ ] Ensure YouTube/Twitch publishers is listed but not included when `auto-include` is disabled
   - [ ] Update Advanced settings to different time/visit value and ensure YouTube/Twitch videos are added to ledger table once criteria is met
   - [ ] Perform a contribution while YouTube/Twitch channels are included on the ledger. Ensure the channels are listed on the contribution statement
-  - [ ] Verify that you  able to delete YouTube/Twitch publishers from ledger table
-  - [ ] Verify that you able to re-add YouTube/Twitch publishers to ledger table
+  - [ ] Verify that you are able to delete YouTube/Twitch publishers from ledger table
+  - [ ] Verify that you are able to re-add YouTube/Twitch publishers to ledger table
   - [ ] Verify if you minimize a Twitch video (Stream/VOD) and navigate around the site, the video is counted in ledger
 
 ## Session storage
