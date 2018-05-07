@@ -218,6 +218,16 @@ _Each start should take less than 7 seconds_
   - [ ] Verify that you are able to re-add YouTube/Twitch publishers to ledger table
   - [ ] Verify if you minimize a Twitch video (Stream/VOD) and navigate around the site, the video is counted in ledger
 
+## Sync
+
+- [ ] Verify you are able to sync two devices using the secret code
+- [ ] Visit a site on device 1 and change shield setting, ensure that the saved site preference is synced to device 2
+- [ ] Enable Browsing history sync on device 1, ensure the history is shown on device 2
+- [ ] Clear browsing history on device 1, ensure the history is sync back on device 1 from device 2
+- [ ] Import/Add bookmarks on device 1, ensure it is synced on device 2
+- [ ] Ensure imported bookmark folder structure is maintained on device 2
+- [ ] Ensure bookmark favicons are shown after sync
+
 ## Session storage
 
 Do not forget to make a backup of your entire `~/Library/Application\ Support/Brave` folder.
