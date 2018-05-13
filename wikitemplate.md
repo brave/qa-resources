@@ -199,6 +199,12 @@ _Each start should take less than 7 seconds_
 - [ ] Change min visit and min time in advance setting and verify if the publisher list gets updated based on new setting
 - [ ] Visit nytimes.com for a few seconds and make sure it shows up in the Payments table
 - [ ] Check that disabling payments and enabling them again does not lose state
+- [ ] Generate 500 ledger table entries using `npm run add-simulated-synopsis-visits 500`
+  - [ ] ensure that disabling/enabling Brave Payments several times doesn't cause any issues
+  - [ ] visit `about:preferences` and switch through all the available preference pages including Payments and ensure they're loading without issues
+  - [ ] ensure that loading/viewing `about:preferences#payments` doesn't cause the CPU to reach 100% of usage and cause performance issues
+  - [ ] ensure that both `Minimum page time` & `Minimum visits` work correctly with the large list of ledger entries
+  - [ ] ensure that you can sort the ledger table using `Site`, `Include`, `Views`, `Time Spent` and `%`
 - [ ] Upgrade from older version
   - [ ] Verify the wallet isn't corrupted upon upgrade (balance is retained and wallet backup code isn't corrupted)
   - [ ] Verify publishers list is not lost after upgrade
