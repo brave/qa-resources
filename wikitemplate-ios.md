@@ -9,7 +9,8 @@
 - [ ] Make sure that data from the last version appears in the new version OK
 - [ ] Test that the previous version's cookies are preserved in the next version
 - [ ] Test that saved passwords are retained upon upgrade
-- [ ] Ensure stats are retained when upgrading from previuos version
+- [ ] Ensure stats are retained when upgrading from previous version
+- [ ] Ensure per site settings are retained when upgrading from preivous version
 
 ## Bookmarks
 
