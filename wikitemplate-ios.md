@@ -10,7 +10,7 @@
 - [ ] Test that the previous version's cookies are preserved in the next version
 - [ ] Test that saved passwords are retained upon upgrade
 - [ ] Ensure stats are retained when upgrading from previous version
-- [ ] Ensure per site settings are retained when upgrading from preivous version
+- [ ] Ensure per site settings are retained when upgrading from previous version
 
 ## Bookmarks
 
@@ -24,7 +24,7 @@
 - [ ] Test that you are able to delete a bookmark folder with bookmarks inside
 - [ ] Test adding a bookmark domain subpaths is retained and you are successfully able to visit the domain subpath in a new tab
 
-## Favourites
+## Favouritesf
 
 - [ ] Test editing favourite and chaning URL updates the favicons accordingly
 - [ ] Test that you are able to remove favourites
@@ -57,7 +57,7 @@
 ## History
 
 - [ ] On youtube.com, thestar.com (or any other site using push state nav), navigate the site and verify history is added. Also note if the progress bar activates and shows progress
-- [ ] Settings > Clear Private Data, and clear all. Check history is cleared, and top sites are cleared
+- [ ] Settings > Clear Private Data, and clear all. Check history is cleared and none of the favourites are cleared
 
 ## Shields Settings
 
