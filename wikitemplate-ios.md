@@ -129,10 +129,9 @@
 - [ ] Test that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run)
 - [ ] Test that https://news.google.com/ sites open in a new tab (due to target being _blank)
 
-## App linker 
+## App linker
 
 - [ ] Long press on a link in the Twitter app to get the share picker, choose Brave. Verify Brave doesn't crash after opening the link
-
 
 ## Background
 
