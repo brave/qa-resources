@@ -24,7 +24,7 @@
 - [ ] Test that you are able to delete a bookmark folder with bookmarks inside
 - [ ] Test adding a bookmark domain subpaths is retained and you are successfully able to visit the domain subpath in a new tab
 
-## Favouritesf
+## Favourites
 
 - [ ] Test editing favourite and chaning URL updates the favicons accordingly
 - [ ] Test that you are able to remove favourites
