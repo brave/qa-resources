@@ -1,13 +1,16 @@
 
 ## Installer
 
-- [ ] Check that installer is close to the size of last release.
-- [ ] Check the Brave version in About and make sure it is EXACTLY as expected.
+- [ ] Check that installer is close to the size of last release
+- [ ] Check the Brave version in About and make sure it is EXACTLY as expected
 
 ## Data
 
-- [ ] Make sure that data from the last version appears in the new version OK.
-- [ ] Test that the previous version's cookies are preserved in the next version.
+- [ ] Make sure that data from the last version appears in the new version OK
+- [ ] Test that the previous version's cookies are preserved in the next version
+- [ ] Test that saved passwords are retained upon upgrade
+- [ ] Ensure stats are retained when upgrading from previous version
+- [ ] Ensure per site settings are retained when upgrading from previous version
 
 ## Bookmarks
 
@@ -21,12 +24,18 @@
 - [ ] Test that you are able to delete a bookmark folder with bookmarks inside
 - [ ] Test adding a bookmark domain subpaths is retained and you are successfully able to visit the domain subpath in a new tab
 
+## Favourites
+
+- [ ] Test editing favourite and chaning URL updates the favicons accordingly
+- [ ] Test that you are able to remove favourites
+- [ ] Test that you are able to add new favourites from share menu
+
 ## Context menus
 
 - [ ] Make sure context menu items in the URL bar work
-- [ ] Make sure context menu items on content work with no selected text.
-- [ ] Make sure context menu items on content work with selected text.
-- [ ] Make sure context menu items on content work inside an editable control (input, textarea, or contenteditable).
+- [ ] Make sure context menu items on content work with no selected text
+- [ ] Make sure context menu items on content work with selected text
+- [ ] Make sure context menu items on content work inside an editable control (input, textarea, or contenteditable)
 - [ ] Context menu: verify you can Open in Background Tab, and Open in Private Tab
 
 ## Find on page
@@ -47,8 +56,8 @@
 
 ## History
 
-- [ ] On youtube.com, thestar.com (or any other site using push state nav), navigate the site and verify history is added. Also note if the progress bar activates and shows progress.
-- [ ] Settings > Clear Private Data, and clear all. Check history is cleared, and top sites are cleared.
+- [ ] On youtube.com, thestar.com (or any other site using push state nav), navigate the site and verify history is added. Also note if the progress bar activates and shows progress
+- [ ] Settings > Clear Private Data, and clear all. Check history is cleared and none of the favourites are cleared
 
 ## Shields Settings
 
@@ -60,7 +69,8 @@
 
 ## Downloads
 
-- [ ] Test that you can save an image from a site.
+- [ ] Test that you can save an image from a site
+- [ ] Test that you are able to save a gif image
 
 ## Fullscreen
 
@@ -93,11 +103,11 @@
 
 ## Bravery settings
 
-- [ ] Check that HTTPS Everywhere works by loading https://https-everywhere.badssl.com/
+- [ ] Check that HTTPS Everywhere works by loading http://https-everywhere.badssl.com/
 - [ ] Turning HTTPS Everywhere off and shields off both disable the redirect to https://https-everywhere.badssl.com/
 - [ ] Check that block ad and unblock ad works on http://slashdot.org
-- [ ] Check that toggling to blocking and allow ads works as expected.
-- [ ] Test that clicking through a cert error in https://badssl.com/ works.
+- [ ] Check that toggling to blocking and allow ads works as expected
+- [ ] Test that clicking through a cert error in https://badssl.com/ works
 - [ ] Test that Safe Browsing works (https://www.raisegame.com/)
 - [ ] Turning Safe Browsing off and shields off both disable safe browsing for https://www.raisegame.com/
 - [ ] Enable block script globally from settings, Visit https://brianbondy.com/, nothing should load. Tap on Shields and disable block script, page should load properly
@@ -111,7 +121,7 @@
 ## Content tests
 
 - [ ] Go to https://brianbondy.com/ and click on the twitter icon on the top right. Test that context menus work in the new twitter tab
-- [ ] Load twitter and click on a tweet so the popup div shows.   Click to dismiss and repeat with another div. Make sure it shows
+- [ ] Load twitter and click on a tweet so the popup div shows. Click to dismiss and repeat with another div. Make sure it shows
 - [ ] Go to https://trac.torproject.org/projects/tor/login and make sure that the password can be saved.  Make sure the saved password is auto-populated when you visit the site again
 - [ ] Open an email on http://mail.google.com/ or inbox.google.com and click on a link. Make sure it works
 - [ ] Test that PDF is loaded over https at https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf
@@ -119,9 +129,9 @@
 - [ ] Test that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run)
 - [ ] Test that https://news.google.com/ sites open in a new tab (due to target being _blank)
 
-## Top sites view
+## App linker
 
-- [ ] Long-press on top sites to get to deletion mode, and delete a top site (note this will stop that site from showing up again on top sites, so you may not want to do this a site you want to keep there)
+- [ ] Long press on a link in the Twitter app to get the share picker, choose Brave. Verify Brave doesn't crash after opening the link
 
 ## Background
 
@@ -129,4 +139,4 @@
 
 ## Session storage
 
-- [ ] Test that tabs restore when closed, including active tab.
+- [ ] Test that tabs restore when closed, including active tab
