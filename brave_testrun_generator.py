@@ -42,21 +42,21 @@ ios_milestone = {}
 for iosmilestone in ios_repo.get_milestones(state="open"):
     ios_milestone.update({iosmilestone.title:iosmilestone})
 
-andriod_milestone = {}
+android_milestone = {}
 for androidmilestone in android_repo.get_milestones(state="open"):
-    andriod_milestone.update({androidmilestone.title:androidmilestone})
+    android_milestone.update({androidmilestone.title:androidmilestone})
 
 wiki_laptop_file = open('wikitemplate.md', 'r')
 laptop_template = wiki_laptop_file.read()
   
 wikitemplate_android = open('wikitemplate-android.md','r')
-andriod_template = wikitemplate_android.read()
+android_template = wikitemplate_android.read()
 
 laptop_key = sorted(laptop_milestone.keys())
 key1 = sorted(laptop_milestone.keys())[0]
 key2 = sorted(laptop_milestone.keys())[1]
 key3 = sorted(laptop_milestone.keys())[2]
-andriod_key = sorted(andriod_milestone.keys())[0]
+android_key = sorted(android_milestone.keys())[0]
 
 def laptop_testruns(milestonever):
 	
@@ -329,7 +329,7 @@ def ios_testruns():
 
 def android_testruns():
 
-  for issue in android_repo.get_issues(milestone=andriod_milestone[andriod_key],  sort="created", direction="asc", state="closed"):
+  for issue in android_repo.get_issues(milestone=android_milestone[android_key],  sort="created", direction="asc", state="closed"):
     if('pull' not in issue.html_url):
       original_issue_title = issue.title
       issue_title = original_issue_title
@@ -355,7 +355,7 @@ def android_testruns():
         if('checked by qa - Android ARM' not in label_names and 'checked by qa' not in label_names):
           android_arm_checklist.append(output_line)
 
-        if('checked by qa - Andriod x86' not in label_names and 'checked by qa' not in label_names):
+        if('checked by qa - android x86' not in label_names and 'checked by qa' not in label_names):
           android_x86_checklist.append(output_line)
 
   print("Release Notes:")
@@ -369,30 +369,30 @@ def android_testruns():
   print("")
 
   print("Android ARM Checklist:")
-  bigline = "## Per release speciality tests\n"
+  bigline = "## Per release specialty tests\n"
   for line in android_arm_checklist:
     bigline += line + "\n"
-  bigline = bigline + andriod_template
+  bigline = bigline + android_template
   print(bigline)
   print("")
-  AndriodARMtitle = "Manual test run on Andriod ARM " + andriod_key
-  AndriodARMlist = ['ARM', 'release-notes/exclude', 'tests']
+  AndroidARMtitle = "Manual test run on Android ARM  for " + android_key
+  AndroidARMlist = ['ARM', 'release-notes/exclude', 'tests']
 
   if args.test is None:
-    andriod_repo.create_issue(title=AndriodARMtitle,body=bigline,assignees="LaruenWags",milestone=andriod_milestone[andriod_key],labels=AndriodARMlist)
+    android_repo.create_issue(title=AndroidARMtitle,body=bigline,assignee="LaurenWags",milestone=android_milestone[android_key] ,labels=AndroidARMlist)
 
   print("Android x86 Checklist:")
-  bigline = "## Per release specilaity tests\n"
-  for line in android_arm_checklist:
+  bigline = "## Per release specialty tests\n"
+  for line in android_x86_checklist:
     bigline += line + "\n"
-  bigline = bigline + andriod_template
+  bigline = bigline + android_template
   print(bigline)
   print("")
-  AndriodARMtitle = "Manual test run on Andriod x86 " + andriod_key
-  AndriodARMlist = ['x86', 'release-notes/exclude', 'tests']
+  Androidx86title = "Manual test run on Android x86 for " + android_key
+  Androidx86list = ['x86', 'release-notes/exclude', 'tests']
 
   if args.test is None:
-    andriod_repo.create_issue(title=AndriodARMtitle,body=bigline,assignee="srirambvs",milestone=andriod_milestone[andriod_key],labels=AndriodARMlist)
+    android_repo.create_issue(title=Androidx86title,body=bigline,assignee="srirambv",milestone=android_milestone[android_key] ,labels=Androidx86list)
 
   return
 
@@ -410,7 +410,7 @@ header = print("Create test runs for:\n")
 laptop = print("1. Laptop Release")
 laptop_per = print("2. Laptop Per-release Checklist")
 ios = print("3. iOS")
-android = print("4. Andriod\n")
+android = print("4. Android\n")
 
 select_checklist = input("Choose the platform for which you want to generate the test run: ")
 
@@ -456,7 +456,7 @@ elif (select_checklist == '3'):
 	generate_ios_test = print("Generating test runs for iOS ",sorted(ios_milestone.keys())[0])
 	ios_testruns()
 elif (select_checklist == '4'):
-	generate_andriod_test = print("Generating test runs for Andriod",sorted(andriod_milestone.keys())[0])
+	generate_android_test = print("Generating test runs for android",sorted(android_milestone.keys())[0])
 	android_testruns()
 else:
 	print("Incorrect selection. Exiting test creation...")
