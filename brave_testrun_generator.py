@@ -74,11 +74,11 @@ def laptop_testruns(milestonever):
 
 			for label in labels:
 				label_names.append(label.name)
-			if('release-notes/include' in label_names or 'release-notes/exclude' in label_names and 'tests' not in label_names):
+			if('release-notes/include' in label_names and 'tests' not in label_names and 'QA/no-qa-needed' not in label_names):
 				output_line = ' - ' + issue_title + '.([#' + str(issue.number) + '](' + issue.html_url + '))'
 				release_notes.append(output_line)
 
-			if('QA/test-plan-specified' in label_names or 'QA/test-plan-required' in label_names or 'release-notes/include' in label_names or 'release-notes/exclude' in label_names and 'QA/no-qa-needed' not in label_names):
+			if('QA/test-plan-specified' in label_names or 'QA/test-plan-required' in label_names or 'release-notes/include' in label_names or 'release-notes/exclude' in label_names and 'QA/no-qa-needed' not in label_names and 'tests' not in label_names ):
 				output_line = ' - [ ] ' + issue_title + '.([#' + str(issue.number) + '](' + issue.html_url + '))'
 				checklist.append(output_line)
 				checklist.append(issue.html_url)
@@ -112,7 +112,7 @@ def laptop_testruns(milestonever):
 	macList = ['OS/macOS', 'release-notes/exclude', 'tests']
 
 	if args.test is None:
-	  repo.create_issue(title=macTitle, body=bigline, assignees="LaurenWags,kjozwiak", milestone=laptop_milestone[milestonever], labels=macList)
+	  laptop_repo.create_issue(title=macTitle, body=bigline, assignee="LaurenWags", milestone=laptop_milestone[milestonever], labels=macList)
 
 	print("Win64 Checklist:")
 	bigline = "## Per release specialty tests\n"
@@ -125,7 +125,7 @@ def laptop_testruns(milestonever):
 	winList = ['OS/Windows', 'release-notes/exclude', 'tests']
 
 	if args.test is None:
-	  repo.create_issue(title=winTitle, body=bigline, assignees="srirambv", milestone=laptop_milestone[milestonever], labels=winList)
+	  laptop_repo.create_issue(title=winTitle, body=bigline, assignee="srirambv", milestone=laptop_milestone[milestonever], labels=winList)
 
 	print("Linux Checklist:")
 	bigline = "## Per release specialty tests\n"
@@ -138,7 +138,7 @@ def laptop_testruns(milestonever):
 	linList = ['OS/unix-like/linux', 'release-notes/exclude', 'tests']
 
 	if args.test is None:
-	  repo.create_issue(title=linTitle, body=bigline, assignees="kjozwiak,btlechowski", milestone=laptop_milestone[milestonever], labels=linList)
+	  laptop_repo.create_issue(title=linTitle, body=bigline, assignee="btlechowski", milestone=laptop_milestone[milestonever], labels=linList)
 
 	return 0 
 
