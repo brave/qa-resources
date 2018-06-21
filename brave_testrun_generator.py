@@ -244,11 +244,11 @@ def ios_testruns():
       for label in labels:
         label_names.append(label.name)
       if('release-notes/include' in label_names or 'release-notes/exclude' in label_names and 'tests' not in label_names):
-        output_line = ' - [ ] ' + issue_title + '. ([#' + str(issue.number) + '](' + issue.html_url + '))'
+        output_line = ' - ' + issue_title + '. ([#' + str(issue.number) + '](' + issue.html_url + '))'
         release_notes.append(output_line)
 
       if('QA/Steps-specified' in label_names or 'QA/Steps-Required' in label_names and 'QA/no-qa-needed' not in label_names):
-        output_line = ' - ' + issue_title + '. ([#' + str(issue.number) + '](' + issue.html_url + '))'
+        output_line = ' - [ ] ' + issue_title + '. ([#' + str(issue.number) + '](' + issue.html_url + '))'
         checklist.append(output_line)
         checklist.append(issue.html_url)
         if('checked by qa - iOS10 iPad' not in label_names and 'checked by qa' not in label_names):
@@ -281,10 +281,10 @@ def ios_testruns():
   print(bigline)
   print("")
   iOS10iPadTitle = "Manual test run for iOS10 iPad for " + ios_key
-  iOS10iPadList = ['ipadp', 'release-notes/exclude', 'tests']
+  iOS10iPadList = ['ipad', 'release-notes/exclude', 'tests']
 
   if args.test is None:
-    ios_repo.create_issue(title=iOS10iPadTitle,body=bigline,asignee="LaurenWags",milestone=milestone_dictionary[ios_key],labels=iOS10iPadList)
+    ios_repo.create_issue(title=iOS10iPadTitle,body=bigline,assignee="LaurenWags",milestone=ios_milestone[ios_key],labels=iOS10iPadList)
 
   print("iOS11 iPad Checklist:")
   bigline = "## Per release speciality tests\n"
@@ -294,10 +294,10 @@ def ios_testruns():
   print(bigline)
   print("")
   iOS11iPadTitle = "Manual test run for iOS11 iPad for " + ios_key
-  iOS11iPadList = ['ipadp', 'release-notes/exclude', 'tests']
+  iOS11iPadList = ['ipad', 'release-notes/exclude', 'tests']
 
   if args.test is None:
-    ios_repo.create_issue(title=iOS11iPadTitle,body=bigline,asignee="srirambv",milestone=milestone_dictionary[ios_key],labels=iOS11iPadList)
+    ios_repo.create_issue(title=iOS11iPadTitle,body=bigline,assignee="srirambv",milestone=ios_milestone[ios_key],labels=iOS11iPadList)
 
   print("iOS10 iPhone6 Checklist:")
   bigline = "## Per release speciality tests\n"
@@ -307,10 +307,10 @@ def ios_testruns():
   print(bigline)
   print("")
   iOS10iPhone6Title = "Manual test run for iOS10 iPhone 6 for " + ios_key
-  iOS10iPhone6List = ['ipadp', 'release-notes/exclude', 'tests']
+  iOS10iPhone6List = ['ipad', 'release-notes/exclude', 'tests']
 
   if args.test is None:
-    ios_repo.create_issue(title=iOS10iPhone6Title,body=bigline,asignee="LaurenWags",milestone=milestone_dictionary[ios_key],labels=iOS10iPhone6List)
+    ios_repo.create_issue(title=iOS10iPhone6Title,body=bigline,assignee="LaurenWags",milestone=ios_milestone[ios_key],labels=iOS10iPhone6List)
 
   print("iOS11 iPhone7 Checklist:")
   bigline = "## Per release speciality tests\n"
@@ -320,10 +320,10 @@ def ios_testruns():
   print(bigline)
   print("")
   iOS11iPhone7Title = "Manual test run for iOS11 iPhone7+ for " + ios_key
-  iOS11iPhone7List = ['ipadp', 'release-notes/exclude', 'tests']
+  iOS11iPhone7List = ['ipad', 'release-notes/exclude', 'tests']
 
   if args.test is None:
-    ios_repo.create_issue(title=iOS11iPhone7Title,body=bigline,asignee="srirambv",milestone=milestone_dictionary[ios_key],labels=iOS11iPhone7List)
+    ios_repo.create_issue(title=iOS11iPhone7Title,body=bigline,assignee="srirambv",milestone=ios_milestone[ios_key],labels=iOS11iPhone7List)
 
   return
 
