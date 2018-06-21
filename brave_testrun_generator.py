@@ -82,13 +82,13 @@ def laptop_testruns(milestonever):
 				output_line = ' - [ ] ' + issue_title + '.([#' + str(issue.number) + '](' + issue.html_url + '))'
 				checklist.append(output_line)
 				checklist.append(issue.html_url)
-				if('QA/checked-macos' not in label_names and 'QA/checked' not in label_names and 'OS/Windows' not in label_names and 'OS/unix-like/linux' not in label_names):
+				if('QA/checked-macOS' not in label_names and 'QA/checked' not in label_names and 'OS/Windows' not in label_names and 'OS/unix-like/linux' not in label_names):
 					mac_checklist.append(output_line)
 
-				if('QA/checked-Win64' not in label_names and 'QA/checked' not in label_names and 'OS/macos' not in label_names and 'OS/unix-like/linux' not in label_names):
+				if('QA/checked-Win64' not in label_names and 'QA/checked' not in label_names and 'OS/macOS' not in label_names and 'OS/unix-like/linux' not in label_names):
 					win64_checklist.append(output_line)
 
-				if('QA/checked-Linux' not in label_names and 'QA/checked' not in label_names and 'OS/Windows' not in label_names and 'OS/macos' not in label_names):
+				if('QA/checked-Linux' not in label_names and 'QA/checked' not in label_names and 'OS/Windows' not in label_names and 'OS/macOS' not in label_names):
 					linux_checklist.append(output_line)
 
 	print("Release Notes ")
