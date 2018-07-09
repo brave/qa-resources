@@ -188,6 +188,24 @@ _Each start should take less than 7 seconds_
 - [ ] Visit https://dlptest.com/ftp-test/ and ensure that basic authentication is working by clicking on ftp://ftp.dlptest.com/ and ensuring you're prompted for credentials
 - [ ] Test that WebSockets are working by ensuring http://slither.io/ runs once "Play" has been clicked.
 
+## Tor Tabs
+
+- [ ] Visit check.torproject.org in a Tor private tab, ensure its shows success message for using a Tor exit node 
+- [ ] Disable Tor to switch to a private tab, visit check.torproject.org, ensure it shows failure message for not using Tor exit node
+- [ ] Search check tor in a normal tab, Open the check.torproject.org link in a private tab, ensure tab uses Tor exit node
+- [ ] Visit check.torproject.org in a tor private tab, note down exit node ip address, Click `New circuit for this site` in shields, ensure the exit node ip address changes after page is reloaded 
+- [ ] Visit https://protonirockerxow.onion/ in a Private tab with TOR enabled, ensure login page is shown
+- [ ] Open Tor tab and disable Tor, visit https://protonirockerxow.onion/ ensure website doesn't load
+- [ ] Visit https://browserleaks.com/geo, ensure location isn't shown
+- [ ] Visit https://diafygi.github.io/webrtc-ips/ in a Tor private tab with block all fingerprinting, ensure local IP is not shown
+- [ ] Visit https://diafygi.github.io/webrtc-ips/ in a Tor private, disable shields, ensure WebRTC is blocked and no IP is shown
+- [ ] Verify flash doesn't work on Tor private tabs even if it is enabled in about:preferences#plugins
+- [ ] Verify torrent viewer doesn't load in a Tor tab and warns when trying to load a torrent/magnet link in a Tor tab
+- [ ] Verify Google Widevine doesn't load in Tor tabs
+- [ ] Ensure you are able to download a file in Tor private tab. Verify all Download/Cancel Download/Retry download works in Tor private tab 
+- [ ] Disconnect network and open a Tor tab, should show modal to retry connection or disconnect Tor 
+- [ ] Visit bing.com in a Tor tab, ensure favicon is loaded over Tor
+
 ## Ledger
 
 - [ ] Verify wallet is auto created after enabling payments
