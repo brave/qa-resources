@@ -67,7 +67,8 @@
 
 - [ ] Open a new window: `Command` + `N` (macOS) || `Ctrl` + `N` (Win/Linux)
 - [ ] Open a new tab: `Command` + `T` (macOS) || `Ctrl` + `T` (Win/Linux)
-- [ ] Open a new private tab: `Command` + `Shift` + `P` (macOS) || `Ctrl` + `Shift` + `P` (Win/Linux)
+- [ ] Open a new private tab: `Command` + `Shift` + `N` (macOS) || `Ctrl` + `Shift` + `N` (Win/Linux)
+- [ ] Open a new Tor private tab: `Command` + `Option` + `N` (macOS) || `Ctrl` + `Alt` + `N` (Win/Linux)
 - [ ] Reopen the latest closed tab: `Command` + `Shift` + `t` (macOS) || `Ctrl` + `Shift` + `t` (Win/Linux)
 - [ ] Reopen the latest closed window: `Command` + `Shift` + `Option` + `T` (macOS) || `Ctrl` + `Shift` + `Alt` + `T` (Win/Linux)
 - [ ] Jump to the next tab: `Command` + `Option` + `->` (macOS) || `Ctrl` + `PgDn` (Win/Linux)
