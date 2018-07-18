@@ -67,7 +67,8 @@
 
 - [ ] Open a new window: `Command` + `N` (macOS) || `Ctrl` + `N` (Win/Linux)
 - [ ] Open a new tab: `Command` + `T` (macOS) || `Ctrl` + `T` (Win/Linux)
-- [ ] Open a new private tab: `Command` + `Shift` + `P` (macOS) || `Ctrl` + `Shift` + `P` (Win/Linux)
+- [ ] Open a new private tab: `Command` + `Shift` + `N` (macOS) || `Ctrl` + `Shift` + `N` (Win/Linux)
+- [ ] Open a new Tor private tab: `Command` + `Option` + `N` (macOS) || `Ctrl` + `Alt` + `N` (Win/Linux)
 - [ ] Reopen the latest closed tab: `Command` + `Shift` + `t` (macOS) || `Ctrl` + `Shift` + `t` (Win/Linux)
 - [ ] Reopen the latest closed window: `Command` + `Shift` + `Option` + `T` (macOS) || `Ctrl` + `Shift` + `Alt` + `T` (Win/Linux)
 - [ ] Jump to the next tab: `Command` + `Option` + `->` (macOS) || `Ctrl` + `PgDn` (Win/Linux)
@@ -187,6 +188,24 @@ _Each start should take less than 7 seconds_
 - [ ] Test that hovering the cursor over a link changes the cursor into a pointer (hand)
 - [ ] Visit https://dlptest.com/ftp-test/ and ensure that basic authentication is working by clicking on ftp://ftp.dlptest.com/ and ensuring you're prompted for credentials
 - [ ] Test that WebSockets are working by ensuring http://slither.io/ runs once "Play" has been clicked.
+
+## Tor Private Tabs
+
+- [ ] Visit https://check.torproject.org in a Tor private tab, ensure its shows success message for using a Tor exit node 
+- [ ] Open a Tor private tab and toggle Tor switch , visit https://check.torproject.org, ensure it shows failure message for not using Tor exit node
+- [ ] Open a normal tab and serach `Check Tor`, open the https://check.torproject.org link in a Tor private tab, ensure tab uses Tor exit node
+- [ ] Visit https://check.torproject.org in a Tor private tab, note down exit node IP address, Click `New circuit for this site` in shields, ensure the exit node IP address changes after page is reloaded 
+- [ ] Visit https://protonirockerxow.onion/ in a Tor private tab, ensure login page is shown
+- [ ] Open Tor private tab and toggle Tor switch, visit https://protonirockerxow.onion/ ensure website doesn't load
+- [ ] Visit https://browserleaks.com/geo in a Tor private tab, ensure location isn't shown
+- [ ] Visit https://diafygi.github.io/webrtc-ips/ in a Tor private tab with block all fingerprinting, ensure WebRTC is blocked and no IP is shown
+- [ ] Visit https://diafygi.github.io/webrtc-ips/ in a Tor private tab, disable shields, ensure WebRTC is blocked and no IP is shown
+- [ ] Verify Flash doesn't work on Tor private tabs even if it is enabled in `about:preferences#plugins`
+- [ ] Verify Torrent viewer doesn't load in a Tor private tab and warns when trying to load a torrent/magnet link in a Tor private tab
+- [ ] Verify Google Widevine doesn't load in Tor private tabs and doesn't prompt to install/run Google Windevine 
+- [ ] Ensure you are able to download a file in Tor private tab. Verify all Download/Cancel, Download/Retry and Download works in Tor private tab 
+- [ ] Disconnect network and open a Tor tab, should show modal to retry connection or disconnect Tor 
+- [ ] Visit https://bing.com in a Tor tab, ensure site favicon is loaded over Tor
 
 ## Ledger
 
