@@ -197,7 +197,7 @@ _Each start should take less than 7 seconds_
 - [ ] Visit https://check.torproject.org in a Tor private tab, note down exit node IP address, Click `New circuit for this site` in shields, ensure the exit node IP address changes after page is reloaded 
 - [ ] Visit https://protonirockerxow.onion/ in a Tor private tab, ensure login page is shown
 - [ ] Open Tor private tab and toggle Tor switch, visit https://protonirockerxow.onion/ ensure website doesn't load
-- [ ] Visit https://browserleaks.com/geo, ensure location isn't shown
+- [ ] Visit https://browserleaks.com/geo in a Tor private tab, ensure location isn't shown
 - [ ] Visit https://diafygi.github.io/webrtc-ips/ in a Tor private tab with block all fingerprinting, ensure WebRTC is blocked and no IP is shown
 - [ ] Visit https://diafygi.github.io/webrtc-ips/ in a Tor private tab, disable shields, ensure WebRTC is blocked and no IP is shown
 - [ ] Verify Flash doesn't work on Tor private tabs even if it is enabled in `about:preferences#plugins`
