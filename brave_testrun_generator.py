@@ -307,7 +307,7 @@ def ios_testruns():
   print(bigline)
   print("")
   iOS10iPhone6Title = "Manual test run for iOS10 iPhone 6 for " + ios_key
-  iOS10iPhone6List = ['ipad', 'release-notes/exclude', 'tests']
+  iOS10iPhone6List = ['iPhone', 'release-notes/exclude', 'tests']
 
   if args.test is None:
     ios_repo.create_issue(title=iOS10iPhone6Title,body=bigline,assignee="LaurenWags",milestone=ios_milestone[ios_key],labels=iOS10iPhone6List)
@@ -320,7 +320,7 @@ def ios_testruns():
   print(bigline)
   print("")
   iOS11iPhone7Title = "Manual test run for iOS11 iPhone7+ for " + ios_key
-  iOS11iPhone7List = ['ipad', 'release-notes/exclude', 'tests']
+  iOS11iPhone7List = ['iPhone', 'release-notes/exclude', 'tests']
 
   if args.test is None:
     ios_repo.create_issue(title=iOS11iPhone7Title,body=bigline,assignee="srirambv",milestone=ios_milestone[ios_key],labels=iOS11iPhone7List)
