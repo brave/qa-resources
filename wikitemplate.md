@@ -161,7 +161,8 @@ _Each start should take less than 7 seconds_
 - [ ] Check that ad replacement works on http://slashdot.org
 - [ ] Check that toggling to blocking and allow ads works as expected
 - [ ] Test that clicking through a cert error in https://badssl.com/ works
-- [ ] Test that Safe Browsing works (https://www.raisegame.com/)
+- [ ] Visit several popular websites and ensure that the certificate viewer is working correctly (macOS/Windows only)
+  - [ ] Ignore the certificate warning under https://expired.badssl.com and ensure that the certificate viewer is working correctly once the page loads
 - [ ] Turning Safe Browsing off and shields off both disable safe browsing for https://www.raisegame.com/
 - [ ] Visit https://brianbondy.com/ and then turn on script blocking, nothing should load. Allow it from the script blocking UI in the URL bar and it should work
 - [ ] Test that about:preferences default Bravery settings take effect on pages with no site settings
