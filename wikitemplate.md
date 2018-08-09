@@ -95,6 +95,8 @@
 - [ ] Test that tab pages can be closed
 - [ ] Test that tab pages can be muted
 - [ ] Test that tabs can be cloned
+- [ ] Test that tab discarding works as expected and doesn't cause crashes/unexpected behaviour
+  - [ ] using `BRAVE_ENABLE_DEBUG_MENU=1`, disable tab preview via `about:preferences#tabs`, select `Allow manual tab discarding` using the `Debug` menu and manually discard a tab
 
 ## Downloads
 
