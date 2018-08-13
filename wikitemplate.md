@@ -190,7 +190,7 @@ _Each start should take less than 7 seconds_
 - [ ] Test that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run).
 - [ ] Test that hovering the cursor over a link changes the cursor into a pointer (hand)
 - [ ] Test that WebSockets are working by ensuring http://slither.io/ runs once "Play" has been clicked.
-- [ ] Visit https://www.httpwatch.com/httpgallery/authentication/#showExample10 and ensure "HTTP Basic Authenticaion" is working correctly when clicked on `Display Image` button. Follow the steps mentioned on page to verify it works correctly 
+- [ ] Visit https://www.httpwatch.com/httpgallery/authentication/#showExample10 and ensure "HTTP Basic Authentication" is working correctly when clicking on `Display Image` button. Follow the steps mentioned on the page to verify it works correctly 
 
 ## Tor Private Tabs
 
