@@ -263,6 +263,8 @@ Do not forget to make a backup of your entire `~/Library/Application\ Support/Br
 
 - [ ] Temporarily move away your `~/Library/Application\ Support/Brave/session-store-1` and test that clean session storage works. (`%appdata%\Brave` in Windows, `./config/brave` in Ubuntu)
 - [ ] Test that windows and tabs restore when closed, including active tab.
+  - [ ] Ensure that the tabs in the above session are being lazy loaded when the session is restored
+  - [ ] Ensure that hovering over lazy loaded tabs correctly loads the tab without any issues
 - [ ] Move away your entire `~/Library/Application\ Support/Brave` folder (`%appdata%\Brave` in Windows, `./config/brave` in Ubuntu)
 
 ## Cookie and Cache
