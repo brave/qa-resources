@@ -122,6 +122,10 @@
 ## Extensions/Plugins tests
 
 - [ ] Enable each extension one by one under `about:preferences#extensions` and ensure that the browser doesn't become unresponsive
+- [ ] Enable 1Password and ensure that the basic functionality is working
+- [ ] Enable LastPass and ensure that the basic functionality is working
+- [ ] Enable Dashlane and ensure that the basic functionality is working
+- [ ] Enable bitwarden and ensure that the basic functionality is working
 
 ### Widevine
   - [ ] Test that you can log into Netflix and start a show
