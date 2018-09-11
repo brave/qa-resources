@@ -164,7 +164,7 @@ def laptop_perrel_checklist(milestonever):
 				output_line = ' - ' + issue_title + '.([#' + str(issue.number) + '](' + issue.html_url + '))'
 				release_notes.append(output_line)
 
-			if('QA/test-plan-specified' in label_names or 'QA/test-plan-required' in label_names or 'release-notes/include' in label_names or 'release-notes/exclude' in label_names and 'QA/no-qa-needed' not in label_names and 'tests' not in label_names):
+			if('QA/test-plan-specified' in label_names or 'QA/test-plan-required' in label_names or 'QA/Needed' in label_names or 'QA/no-qa-needed' not in label_names and 'tests' not in label_names ):
 				output_line = ' - [ ] ' + issue_title + '.([#' + str(issue.number) + '](' + issue.html_url + '))'
 				checklist.append(output_line)
 				checklist.append(issue.html_url)
