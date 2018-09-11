@@ -17,7 +17,7 @@ remaining = rate.rate.remaining
 print("Rate Limit: " + str(limit))
 print("Rate Remaining: " + str(remaining))
 
-laptop_repo = g.get_organization("brave").get_repo("browser-laptop")
+laptop_repo = g.get_organization("brave").get_repo("brave-browser")
 ios_repo = g.get_organization("brave").get_repo("browser-ios")
 android_repo = g.get_organization("brave").get_repo("browser-android-tabs")
 
@@ -46,7 +46,7 @@ android_milestone = {}
 for androidmilestone in android_repo.get_milestones(state="open"):
     android_milestone.update({androidmilestone.title:androidmilestone})
 
-wiki_laptop_file = open('wikitemplate.md', 'r')
+wiki_laptop_file = open('bc-wikitemplate.md', 'r')
 laptop_template = wiki_laptop_file.read()
   
 wikitemplate_android = open('wikitemplate-android.md','r')
@@ -56,6 +56,8 @@ laptop_key = sorted(laptop_milestone.keys())
 key1 = sorted(laptop_milestone.keys())[0]
 key2 = sorted(laptop_milestone.keys())[1]
 key3 = sorted(laptop_milestone.keys())[2]
+key4 = sorted(laptop_milestone.keys())[3]
+key5 = sorted(laptop_milestone.keys())[4]
 android_key = sorted(android_milestone.keys())[0]
 
 def laptop_testruns(milestonever):
@@ -78,17 +80,17 @@ def laptop_testruns(milestonever):
 				output_line = ' - ' + issue_title + '.([#' + str(issue.number) + '](' + issue.html_url + '))'
 				release_notes.append(output_line)
 
-			if('QA/test-plan-specified' in label_names or 'QA/test-plan-required' in label_names or 'release-notes/include' in label_names or 'release-notes/exclude' in label_names and 'QA/no-qa-needed' not in label_names and 'tests' not in label_names ):
+			if('QA/test-plan-specified' in label_names or 'QA/test-plan-required' in label_names or 'QA/Needed' in label_names or 'QA/no-qa-needed' not in label_names and 'tests' not in label_names ):
 				output_line = ' - [ ] ' + issue_title + '.([#' + str(issue.number) + '](' + issue.html_url + '))'
 				checklist.append(output_line)
 				checklist.append(issue.html_url)
-				if('QA/checked-macOS' not in label_names and 'QA/checked' not in label_names and 'OS/Windows' not in label_names and 'OS/unix-like/linux' not in label_names and 'QA/no-qa-needed' not in label_names):
+				if('QA Pass-macOS' not in label_names and 'QA/Checked' not in label_names and 'OS/Windows' not in label_names and 'OS/Linux' not in label_names and 'QA/No-QA-Needed' not in label_names):
 					mac_checklist.append(output_line)
 
-				if('QA/checked-Win64' not in label_names and 'QA/checked' not in label_names and 'OS/macOS' not in label_names and 'OS/unix-like/linux' not in label_names and 'QA/no-qa-needed' not in label_names):
+				if('QA Pass-Win64' not in label_names and 'QA/Checked' not in label_names and 'OS/macOS' not in label_names and 'OS/Linux' not in label_names and 'QA/No-QA-Needed' not in label_names):
 					win64_checklist.append(output_line)
 
-				if('QA/checked-Linux' not in label_names and 'QA/checked' not in label_names and 'OS/Windows' not in label_names and 'OS/macOS' not in label_names and 'QA/no-qa-needed' not in label_names):
+				if('QA Pass-Linux' not in label_names and 'QA/Checked' not in label_names and 'OS/Windows' not in label_names and 'OS/macOS' not in label_names and 'QA/No-QA-Needed' not in label_names):
 					linux_checklist.append(output_line)
 
 	print("Release Notes ")
@@ -436,6 +438,14 @@ if(select_checklist == '1' or select_checklist == '2'):
   	print("\nGenerating test runs for " + str(sorted(laptop_milestone.keys())[2]) +  " on all platforms")
   	print(sorted(laptop_milestone.keys())[2])
   	laptop_testruns(key3)
+  elif(select_checklist == "1" and generate_test == "4"):
+    print("\nGenerating test runs for " + str(sorted(laptop_milestone.keys())[3]) +  " on all platforms")
+    print(sorted(laptop_milestone.keys())[3])
+    laptop_testruns(key4)
+  elif(select_checklist == "1" and generate_test == "5"):
+    print("\nGenerating test runs for " + str(sorted(laptop_milestone.keys())[4]) +  " on all platforms")
+    print(sorted(laptop_milestone.keys())[4])
+    laptop_testruns(key5)
   elif(select_checklist == "2" and generate_test == "1"):
   	print("\nGenerating Per-release checklist for " + str(sorted(laptop_milestone.keys())[0]) +  " on all platforms")
   	print(sorted(laptop_milestone.keys())[0])
@@ -448,6 +458,14 @@ if(select_checklist == '1' or select_checklist == '2'):
   	print("\nGenerating Per-release checklist for " + str(sorted(laptop_milestone.keys())[2]) +  " on all platforms")
   	print(sorted(laptop_milestone.keys())[2])
   	laptop_perrel_checklist(key3)
+  elif(select_checklist == "2" and generate_test == "4"):
+    print("\nGenerating Per-release checklist for " + str(sorted(laptop_milestone.keys())[3]) +  " on all platforms")
+    print(sorted(laptop_milestone.keys())[3])
+    laptop_perrel_checklist(key4)
+  elif(select_checklist == "2" and generate_test == "5"):
+    print("\nGenerating Per-release checklist for " + str(sorted(laptop_milestone.keys())[4]) +  " on all platforms")
+    print(sorted(laptop_milestone.keys())[4])
+    laptop_perrel_checklist(key5)
   else:
   	print("Nothing to create in this milestone. Run the script again.")
   	exit()
