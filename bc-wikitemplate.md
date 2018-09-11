@@ -1,15 +1,10 @@
 
 
-### Crash verification
-- [ ] Verify these [crash issues](https://github.com/brave/brave-browser/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22Releasable+builds+0.55.x%22+label%3Acrash+is%3Aclosed++label%3AQA%2FNeeded) have not regressed 
-- [ ] Verify these [webview crash issues](https://github.com/brave/brave-browser/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22Releasable+builds+0.55.x%22+label%3Acrash/webview+is%3Aclosed++label%3AQA%2FNeeded) have not regressed 
-
-
 ### Installer
 
 - [ ] Check that installer is close to the size of last release.
-- [ ] Check signature: If OS Run `spctl --assess --verbose /Applications/Brave-Browser.app/` and make sure it returns `accepted`.  If Windows right click on the installer exe and go to Properties, go to the Digital Signatures tab and double click on the signature.  Make sure it says "The digital signature is OK" in the popup window.
-- [ ] Check Brave and Chromium version in chrome://about
+- [ ] Check signature: If OS Run `spctl --assess --verbose /Applications/Brave-Browser-Beta.app/` and make sure it returns `accepted`.  If Windows right click on the `brave_installer-x64.exe` and go to Properties, go to the Digital Signatures tab and double click on the signature.  Make sure it says "The digital signature is OK" in the popup window.
+
 
 ### Data
 
@@ -24,12 +19,12 @@
 
 ### About pages
 
-- [ ] Test that brave:// forwards to chrome://
-- [ ] Test chrome://adblock loads adblock page
-- [ ] Test chrome://rewards loads Brave rewards page 
-- [ ] Test chrome://newtab loads a new tab
-- [ ] Test chrome://welcome loads the welcome page 
-- [ ] Test chrome://version correctly shows Brave version and Chromium version 
+- [ ] Test that `brave://` forwards to `chrome://`
+- [ ] Test `chrome://adblock` loads adblock page
+- [ ] Test `chrome://rewards` loads Brave rewards page 
+- [ ] Test `chrome://newtab` loads a new tab
+- [ ] Test `chrome://welcome` loads the welcome page 
+- [ ] Test `chrome://version` correctly shows Brave version and Chromium version 
 
 ### Import
 
@@ -52,11 +47,11 @@
 - [ ] Verify PDFJS, Torrent viewer extensions are installed automatically on fresh profile and cannot be disabled
 - [ ] Test that an old extension gets updated to a new one from an old profile on Google server
 - [ ] Test that an old extension gets updated to a new one from an old profile on Brave server
-- [ ] Verify magnet links loads Torrent viewer page and able to download torrent
+- [ ] Verify magnet links and .torrent files loads Torrent viewer page and able to download torrent
 
 ### CWS
 
-- [ ] Verify installing uBO/ABP from CWS shows warning message `NOT A RECOMMENDED BRAVE EXTESION!`but still gets installed
+- [ ] Verify installing ABP from CWS shows warning message `NOT A RECOMMENDED BRAVE EXTESION!`but still gets installed
 - [ ] Verify installing LastPass from CWS doesn't show any warning message 
 - [ ] Verify installing an extesion that is not vetted by Brave gets blocked 
 
@@ -68,8 +63,8 @@
 ### PDF
 
 - [ ] Test that you can print a PDF
-- [ ] Test that PDF is loaded over https at https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf
-- [ ] Test that PDF is loaded over http at http://www.pdf995.com/samples/pdf.pdf
+- [ ] Test that PDF is loaded over HTTPS at https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf
+- [ ] Test that PDF is loaded over HTTP at http://www.pdf995.com/samples/pdf.pdf
 
 ### Widevine
 
@@ -135,7 +130,6 @@ _Each start should take less than 7 seconds_
 
 #### Adblock
 
-- [ ] Verify the execeptions in `brave/common/shield_exceptions.cc` work 
 - [ ] Verify referrer blocking works properly for TLD+1 
 
 #### Components
