@@ -141,7 +141,7 @@
 
 ## Geolocation
 
-- [ ] Check that https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation is blocked due to cross-origin iframes
+- [ ] Check that https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation works and shows correct location
 - [ ] Check that https://browserleaks.com/geo works and shows correct location
 - [ ] Check that https://html5demos.com/geo/ works but doesn't require an accurate location
 
