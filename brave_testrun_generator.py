@@ -17,7 +17,7 @@ remaining = rate.rate.remaining
 print("Rate Limit: " + str(limit))
 print("Rate Remaining: " + str(remaining))
 
-laptop_repo = g.get_organization("brave").get_repo("browser-laptop")
+laptop_repo = g.get_organization("brave").get_repo("brave-browser")
 ios_repo = g.get_organization("brave").get_repo("browser-ios")
 android_repo = g.get_organization("brave").get_repo("browser-android-tabs")
 
@@ -46,7 +46,7 @@ android_milestone = {}
 for androidmilestone in android_repo.get_milestones(state="open"):
     android_milestone.update({androidmilestone.title:androidmilestone})
 
-wiki_laptop_file = open('wikitemplate.md', 'r')
+wiki_laptop_file = open('bc-wikitemplate.md', 'r')
 laptop_template = wiki_laptop_file.read()
   
 wikitemplate_android = open('wikitemplate-android.md','r')
