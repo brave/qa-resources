@@ -19,12 +19,12 @@
 
 ### About pages
 
-- [ ] Verify that `brave://` forwards to `chrome://`
-- [ ] Verify `chrome://adblock` loads adblock page
-- [ ] Verify `chrome://rewards` loads Brave rewards page 
-- [ ] Verify `chrome://newtab` loads a new tab
-- [ ] Verify `chrome://welcome` loads the welcome page 
-- [ ] Verify `chrome://version` correctly shows Brave version and Chromium version 
+- [ ] Verify that `chrome://` forwards to `brave://`
+- [ ] Verify `brave://adblock` loads adblock page
+- [ ] Verify `brave://rewards` loads Brave rewards page 
+- [ ] Verify `brave://newtab` loads a new tab
+- [ ] Verify `brave://welcome` loads the welcome page 
+- [ ] Verify `brave://version` correctly shows Brave version and Chromium version 
 
 ### Import tests
 
@@ -82,8 +82,8 @@
 
 ### Crash Reporting
 
-- [ ] Check that loading `chrome://crash` causes the new tab to crash
-- [ ] Check that `chrome://crashes` lists all the crashes and includes both Crash Report ID & Local Crash ID
+- [ ] Check that loading `brave://crash` causes the new tab to crash
+- [ ] Check that `brave://crashes` lists all the crashes and includes both Crash Report ID & Local Crash ID
 - [ ] Verify the crash ID matches the report on brave stats
 
 ### Performance test
@@ -128,7 +128,7 @@ _Each start should take less than 7 seconds_
 - [ ] Visit https://browserleaks.com/geo in a Tor window, ensure location isn't shown
 - [ ] Visit https://diafygi.github.io/webrtc-ips/ in a Tor window with block all fingerprinting, ensure WebRTC is blocked and no IP is shown
 - [ ] Visit https://diafygi.github.io/webrtc-ips/ in a Tor window, disable shields, ensure WebRTC is blocked and no IP is shown
-- [ ] Verify Flash doesn't work on Tor window even if it is enabled in `chrome://settings/content/flash`
+- [ ] Verify Flash doesn't work on Tor window even if it is enabled in `brave://settings/content/flash`
 - [ ] Verify Torrent viewer doesn't load in a Tor window and warns when trying to load a torrent/magnet link in a Tor window
 - [ ] Verify Google Widevine doesn't load in Tor window and doesn't prompt Google Windevine notification in URL bar
 - [ ] Ensure you are able to download a file in Tor window. Verify all Download/Cancel, Download/Retry and Download works in Tor window
@@ -155,7 +155,7 @@ _Each start should take less than 7 seconds_
 
 ## Update tests
 
-- [ ] Verify visiting `chrome://settings/help` triggers update check
+- [ ] Verify visiting `brave://settings/help` triggers update check
 - [ ] Verify once update is downloaded, prompts to `Relaunch` to install update
 
 
@@ -166,5 +166,5 @@ _Each start should take less than 7 seconds_
 - [ ] Verify referrer blocking works properly for TLD+1 
 
 #### Components
-- [ ]  Delete Adblock folder from browser profile and restart browser. Visit `chrome://components` and verify `Brave Ad Block Updater` downloads and update the component. Repeat for all Brave components
+- [ ]  Delete Adblock folder from browser profile and restart browser. Visit `brave://components` and verify `Brave Ad Block Updater` downloads and update the component. Repeat for all Brave components
 
