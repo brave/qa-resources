@@ -79,13 +79,13 @@ def laptop_testruns(milestonever):
 			if('QA/Yes' in label_names and 'QA/No' not in label_names and 'tests' not in label_names ):
 				output_line = ' - [ ] ' + issue_title + '.([#' + str(issue.number) + '](' + issue.html_url + '))'
 				checklist.append(output_line)
-				if('QA Pass-macOS' not in label_names and 'QA/Checked' not in label_names and 'OS/Windows' not in label_names and 'OS/Linux' not in label_names and 'QA/No-QA-Needed' not in label_names):
+				if('QA Pass-macOS' not in label_names and 'OS/Windows' not in label_names and 'OS/Linux' not in label_names and 'QA/No' not in label_names):
 					mac_checklist.append(output_line)
 
-				if('QA Pass-Win64' not in label_names and 'QA/Checked' not in label_names and 'OS/macOS' not in label_names and 'OS/Linux' not in label_names and 'QA/No-QA-Needed' not in label_names):
+				if('QA Pass-Win64' not in label_names and 'OS/macOS' not in label_names and 'OS/Linux' not in label_names and 'QA/No' not in label_names):
 					win64_checklist.append(output_line)
 
-				if('QA Pass-Linux' not in label_names and 'QA/Checked' not in label_names and 'OS/Windows' not in label_names and 'OS/macOS' not in label_names and 'QA/No-QA-Needed' not in label_names):
+				if('QA Pass-Linux' not in label_names aand 'OS/Windows' not in label_names and 'OS/macOS' not in label_names and 'QA/No' not in label_names):
 					linux_checklist.append(output_line)
 
 	print("Release Notes ")
