@@ -376,19 +376,20 @@ def android_changelog():
     return
 
 
-print("*********************************************************************\
-      ********************************")
-print("								Changelog Generator														")
-print("*********************************************************************\
-      ********************************")
+print("**********************************************************************"
+      "*******************")
+print("                                      Changelog Generator             "
+      "                  ")
+print("**********************************************************************"
+      "*******************")
 
 header = print("Generate changelog for:\n")
 laptop = print("1. Laptop Release")
 ios = print("2. iOS")
 android = print("3. Android\n")
 
-select_checklist = input("Choose the platform for which you want to generate\
-                         the changelog: ")
+select_checklist = input("Choose the platform for which you want to generate "
+                         "the changelog: ")
 
 if select_checklist == "1":
     print("\nSelect the milestone to generate changelog \n")
