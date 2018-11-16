@@ -224,8 +224,6 @@ def ios_testruns():
   wikitemplate_ios = open('wikitemplate-ios.md', 'r')
   ios_template = wikitemplate_ios.read()
 
-  print(sorted(ios_milestone.keys()))
-  
   ios_key = sorted(ios_milestone.keys())[0]
 
   for issue in ios_repo.get_issues(milestone=ios_milestone[ios_key],  sort="created", direction="asc", state="closed"):
