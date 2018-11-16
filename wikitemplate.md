@@ -6,7 +6,7 @@
 - [ ] Check signature: If OS Run `spctl --assess --verbose /Applications/Brave-Browser-Beta.app/` and make sure it returns `accepted`.  If Windows right click on the `brave_installer-x64.exe` and go to Properties, go to the Digital Signatures tab and double click on the signature.  Make sure it says "The digital signature is OK" in the popup window
 
 
-### Data
+### Data(Upgrade from previous release)
 
 - [ ] Make sure that data from the last version appears in the new version OK
 - [ ] With data from the last version, verify that
@@ -21,14 +21,15 @@
 
 - [ ] Verify that `chrome://` forwards to `brave://`
 - [ ] Verify `brave://adblock` loads adblock page
-- [ ] Verify `brave://rewards` loads Brave rewards page 
 - [ ] Verify `brave://newtab` loads a new tab
-- [ ] Verify `brave://welcome` loads the welcome page 
+- [ ] Verify `brave://rewards` loads Brave rewards page 
+- [ ] Verify `brave://settings` loads Brave settings page 
 - [ ] Verify `brave://version` correctly shows Brave version and Chromium version 
+- [ ] Verify `brave://welcome` loads the welcome page 
 
 ### Import tests
 
-- [ ] Verify that you can import bookmarks, cookies, history, passwords and stats from Brave(browser-laptop)
+- [ ] Verify that you can import bookmarks, cookies, history, passwords and stats from `muon`
 - [ ] Verify that you can import bookmarks, cookies, history, passwords from Google Chrome 
 - [ ] Verify that you can import bookmarks, cookies, history, passwords, autofill and search engines from Firefox
 - [ ] Verify that you can import bookmarks from Edge
@@ -40,13 +41,10 @@
 - [ ] Verify `Clear all CSS rules for this sites` removes the blocked element after page reload
 - [ ] Verify `Clear all CSS rules for all sites` removes the rule and loads all elements for all pages
 
-### Keyboard Shortcuts (WIP)
-
-
 ## Extensions/Plugins tests
 
 - [ ] Verify one item from Brave Update server is installable (Example: Ad-block DAT file on fresh extension)
-- [ ] Verify one item from Google Update server is installable(Example: Extensions from CWS)
+- [ ] Verify one item from Google Update server is installable (Example: Extensions from CWS)
 - [ ] Verify PDFJS, Torrent viewer extensions are installed automatically on fresh profile and cannot be disabled
 - [ ] Verify older version of an extension gets updated to new version via Google server
 - [ ] Verify older version of an extension gets updated to new version via Brave server 
@@ -54,9 +52,9 @@
 
 ### CWS
 
-- [ ] Verify installing ABP from CWS shows warning message `NOT A RECOMMENDED BRAVE EXTESION!`but still allows to install the extension
+- [ ] Verify installing ABP from CWS shows warning message `NOT A RECOMMENDED BRAVE EXTENSION!`but still allows to install the extension
 - [ ] Verify installing LastPass from CWS doesn't show any warning message 
-- [ ] Verify installing an extesion that is not vetted by Brave gets blocked
+- [ ] Verify installing an extension that is not vetted by Brave gets blocked
 
 ### Flash tests
 
@@ -89,18 +87,15 @@
 ### Performance test
 
 _Each start should take less than 7 seconds_
-- [ ] Enable only sync (new sync group)
-- [ ] Enable only sync with a large sync group (many entries)
 - [ ] Enable only rewards
 - [ ] Only import a large set of bookmarks
-- [ ] Combine sync, rewards, and a large set of bookmarks
-- [ ] Ensure that hovering over lazy loaded tabs correctly loads the tab without any issues 
+- [ ] Combine rewards, and a large set of bookmarks
 
 ### Bravery settings
 
 - [ ] Verify that HTTPS Everywhere works by loading http://https-everywhere.badssl.com/
 - [ ] Turning HTTPS Everywhere off and shields off both disable the redirect to https://https-everywhere.badssl.com/
-- [ ] Verify that toggling `Ad Control` works as expected
+- [ ] Verify that toggling `Ads and trackers blocked` works as expected
 - [ ] Visit https://testsafebrowsing.appspot.com/s/phishing.html, verify that Safe Browsing (via our Proxy) works for all the listed items
 - [ ] Visit https://brianbondy.com/ and then turn on script blocking, page should not load. Allow it from the script blocking UI in the URL bar and it should load the page correctly
 - [ ] Test that 3rd party storage results are blank at https://jsfiddle.net/7ke9r14a/9/ when 3rd party cookies are blocked and not blank when 3rd party cookies are unblocked
@@ -134,22 +129,16 @@ _Each start should take less than 7 seconds_
 - [ ] Ensure you are able to download a file in Tor window. Verify all Download/Cancel, Download/Retry and Download works in Tor window
 - [ ] Disconnect network and open a Tor window, should show modal to retry connection or relaunch Tor window to connect 
 
-### Sync (WIP)
-
-### Rewards (WIP)
-
-####Rewards Media (To be verified on YouTube and Twitch) (WIP)
-
 ### Cookie and Cache
 
-- [ ] Go to http://samy.pl/evercookie/ and set an evercookie. Check that going to prefs, clearing site data and cache, and going back to the Evercookie site does not remember the old evercookie value
+- [ ] Go to http://samy.pl/evercookie/ and set an evercookie. Check that going to prefs, clearing site data and cache, and going back to the evercookie site does not remember the old evercookie value
 
 ### Session storage
 
 - [ ] Temporarily move away your browser profile and test that a new profile is created when browser is launched 
   - macOS - `~/Library/Application\ Support/BraveSoftware/Brave-Browser-Beta/`
   - Windows - `%userprofile%\appdata\Local\BraveSoftware\Brave-Browser-Beta\` 
-  - Linux(Ubuntu) -  `./config/BraveSoftware/Brave-Browser-Beta/`
+  - Linux(Ubuntu) - `./config/BraveSoftware/Brave-Browser-Beta/`
 - [ ] Test that windows and tabs restore when closed, including active tab
   - [ ] Ensure that the tabs in the above session are being lazy loaded when the session is restored
 
@@ -163,8 +152,17 @@ _Each start should take less than 7 seconds_
 
 #### Adblock
 
-- [ ] Verify referrer blocking works properly for TLD+1 
+- [ ] Verify referrer blocking works properly for TLD+1. Visit `https://technology.slashdot.org/` and verify adblock works properly similar to `https://slashdot.org/`
 
 #### Components
 - [ ]  Delete Adblock folder from browser profile and restart browser. Visit `brave://components` and verify `Brave Ad Block Updater` downloads and update the component. Repeat for all Brave components
+
+
+### Keyboard Shortcuts (WIP)
+
+### Sync (WIP)
+
+### Rewards (WIP)
+
+####Rewards Media (To be verified on YouTube and Twitch) (WIP)
 
