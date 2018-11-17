@@ -136,9 +136,9 @@ _Each start should take less than 7 seconds_
 ### Session storage
 
 - [ ] Temporarily move away your browser profile and test that a new profile is created when browser is launched 
-  - macOS - `~/Library/Application\ Support/BraveSoftware/Brave-Browser-Beta/`
-  - Windows - `%userprofile%\appdata\Local\BraveSoftware\Brave-Browser-Beta\` 
-  - Linux(Ubuntu) - `./config/BraveSoftware/Brave-Browser-Beta/`
+  - macOS - `~/Library/Application\ Support/BraveSoftware/`
+  - Windows - `%userprofile%\appdata\Local\BraveSoftware\` 
+  - Linux(Ubuntu) - `~/.config/BraveSoftware/`
 - [ ] Test that windows and tabs restore when closed, including active tab
   - [ ] Ensure that the tabs in the above session are being lazy loaded when the session is restored
 
