@@ -113,6 +113,38 @@ _Each start should take less than 7 seconds_
 - [ ] Make sure that right clicking on a word with suggestions gives a suggestion and that clicking on the suggestion replaces the text
 - [ ] Test that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run)
 
+### Rewards
+
+- [ ] Verify wallet is auto created after enabling rewards
+- [ ] Verify account balance shows correct BAT and USD value
+- [ ] Verify you are able to restore a wallet
+- [ ] Verify wallet address matches the QR code that is generated under `Add funds`
+- [ ] Verify actions taken (claiming grant, tipping, auto-contribute) display in wallet panel
+- [ ] Verify adding funds via any of the currencies flows into wallet after specified amount of time
+- [ ] Verify adding funds to an existing wallet with amount, adjusts the BAT value appropriately
+- [ ] Verify monthly budget shows correct BAT and USD value
+- [ ] Verify you are able to exclude a publisher from the auto-contribute table by clicking on the `x` in auto-contribute table and popup list of sites
+- [ ] Verify you are able to exclude a publisher by using the toggle on the Rewards Panel
+- [ ] Verify when you click on the BR panel while on a site, the panel displays site specific information (site favicon, domain, attention %)
+- [ ] Verify when you click on `Send a tip`, the custom tip banner displays
+- [ ] Verify you are able to make one-time tip and they display in tips panel
+- [ ] Verify you are able to make recurring tip and they display in tips panel
+- [ ] Verify you can tip a verified publisher
+- [ ] Verify you can tip a verified YouTube creator
+- [ ] Verify tip panel shows a verified checkmark for a verified publisher/verified YouTube creator
+- [ ] Verify tip panel shows a message about unverified publisher
+- [ ] Verify BR panel shows message about an unverified publisher
+- [ ] Verify you are able to perform a contribution
+- [ ] Verify if you disable auto-contribute you are still able to tip regular sites and YouTube creators
+- [ ] Verify that disabling Rewards and enabling it again does not lose state
+- [ ] Verify that disabling auto-contribute and enabling it again does not lose state
+- [ ] Adjust min visit/time in settings. Visit some sites and YouTube channels to verify they are added to the table after the specified settings
+- [ ] Upgrade from older version
+  - [ ] Verify the wallet balance is retained and wallet backup code isn't corrupted
+  - [ ] Verify auto-contribute list is not lost after upgrade
+  - [ ] Verify tips list is not lost after upgrade
+  - [ ] Verify wallet panel transactions list is not lost after upgrade
+
 ### Tor Tabs
 
 - [ ] Visit https://check.torproject.org in a Tor window, ensure its shows success message for using a Tor exit node
@@ -161,8 +193,6 @@ _Each start should take less than 7 seconds_
 ### Keyboard Shortcuts (WIP)
 
 ### Sync (WIP)
-
-### Rewards (WIP)
 
 ####Rewards Media (To be verified on YouTube and Twitch) (WIP)
 
