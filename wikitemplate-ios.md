@@ -104,7 +104,7 @@
 ## Bravery settings
 
 - [ ] Check that HTTPS Everywhere works by loading http://https-everywhere.badssl.com/
-- [ ] Turning HTTPS Everywhere off and shields off both disable the redirect to https://https-everywhere.badssl.com/
+- [ ] Turning HTTPS Everywhere off or shields off both disable the redirect to https://https-everywhere.badssl.com/
 - [ ] Check that block ad and unblock ad works on http://slashdot.org
 - [ ] Check that toggling to blocking and allow ads works as expected
 - [ ] Test that clicking through a cert error in https://badssl.com/ works
@@ -127,7 +127,7 @@
 - [ ] Test that PDF is loaded over https at https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf
 - [ ] Test that PDF is loaded over http at http://www.pdf995.com/samples/pdf.pdf
 - [ ] Test that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run)
-- [ ] Test that https://news.google.com/ sites open in a new tab (due to target being _blank)
+- [ ] Test that search results from https://startpage.com/ opens in a new tab (due to target being _blank)
 
 ## App linker
 
