@@ -276,7 +276,7 @@ def ios_testruns():
   bigline = bigline + ios_template
   print(bigline)
   print("")
-  iPad5GiOS12Title = "Manual test run for " + ios_key + "on iPad 5th Gen running iOS12" 
+  iPad5GiOS12Title = "Manual test run for " + ios_key + "on iPad Pro/5th Gen running iOS12" 
   iPad5GiOS12List = ['ipad', 'release-notes/exclude', 'tests']
 
   if args.test is None:
@@ -302,7 +302,7 @@ def ios_testruns():
   bigline = bigline + ios_template
   print(bigline)
   print("")
-  iPhone6iOS12Title = "Manual test run for " + ios_key + "on iPhone 6 running iOS12"
+  iPhone6iOS12Title = "Manual test run for " + ios_key + "on iPhone 6/SE running iOS12"
   iPhone6iOS12List = ['iPhone', 'release-notes/exclude', 'tests']
 
   if args.test is None:
