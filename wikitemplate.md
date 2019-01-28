@@ -182,6 +182,8 @@ _Each start should take less than 7 seconds_
 
 ## Chromium upgrade tests
 
+- [ ] Verify `brave://gpu` on Brave and `chrome://gpu` on Chrome are similar for the same Chromium version on both browsers
+
 #### Adblock
 
 - [ ] Verify referrer blocking works properly for TLD+1. Visit `https://technology.slashdot.org/` and verify adblock works properly similar to `https://slashdot.org/`
