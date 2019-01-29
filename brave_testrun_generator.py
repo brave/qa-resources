@@ -276,7 +276,7 @@ def ios_testruns():
   bigline = bigline + ios_template
   print(bigline)
   print("")
-  iPad5GiOS12Title = "Manual test run for " + ios_key + "on iPad Pro/5th Gen running iOS12" 
+  iPad5GiOS12Title = "Manual test run for " + ios_key + " on iPad Pro/5th Gen running iOS12" 
   iPad5GiOS12List = ['ipad', 'release-notes/exclude', 'tests']
 
   if args.test is None:
@@ -289,7 +289,7 @@ def ios_testruns():
   bigline = bigline + ios_template
   print(bigline)
   print("")
-  iPadMiniiOS12Title = "Manual test run for " + ios_key + "on iPad Mini running iOS12" 
+  iPadMiniiOS12Title = "Manual test run for " + ios_key + " on iPad Mini running iOS12" 
   iPadMiniiOS12List = ['ipad', 'release-notes/exclude', 'tests']
 
   if args.test is None:
@@ -302,7 +302,7 @@ def ios_testruns():
   bigline = bigline + ios_template
   print(bigline)
   print("")
-  iPhone6iOS12Title = "Manual test run for " + ios_key + "on iPhone 6/SE running iOS12"
+  iPhone6iOS12Title = "Manual test run for " + ios_key + " on iPhone 6/SE running iOS12"
   iPhone6iOS12List = ['iPhone', 'release-notes/exclude', 'tests']
 
   if args.test is None:
@@ -315,8 +315,8 @@ def ios_testruns():
   bigline = bigline + ios_template
   print(bigline)
   print("")
-  iOS11iPhone7Title = "Manual test run for " + ios_key + "on iPhone 7/8 running iOS12"
-  iOS11iPhone7List = ['iPhone', 'release-notes/exclude', 'tests']
+  iPhone8iOS12Title = "Manual test run for " + ios_key + " on iPhone 7/8 running iOS12"
+  iPhone8iOS12List = ['iPhone', 'release-notes/exclude', 'tests']
 
   if args.test is None:
     ios_repo.create_issue(title=iPhone8iOS12Title,body=bigline,assignee="GeetaSarvadnya",milestone=ios_milestone[ios_key],labels=iPhone8iOS12List)
