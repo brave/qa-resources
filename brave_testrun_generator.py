@@ -33,6 +33,7 @@ iOS10_iPhone6_checklist = []
 iOS11_iPhone7_checklist = []
 android_x86_checklist = []
 android_arm_checklist = []
+android_tab_checklist = []
 
 laptop_milestone = {}
 for laptopmilestone in laptop_repo.get_milestones(state="open"):
@@ -357,6 +358,9 @@ def android_testruns():
         if('checked by qa - android x86' not in label_names and 'checked by qa' not in label_names):
           android_x86_checklist.append(output_line)
 
+        if('checked by qa - Android Tab' not in label_names and 'checked by qa' not in label_names):
+          android_tab_checklist.append(output_line)
+
   print("Release Notes:")
   for line in release_notes:
     print(line)
@@ -378,7 +382,7 @@ def android_testruns():
   AndroidARMlist = ['ARM', 'release-notes/exclude', 'tests']
 
   if args.test is None:
-    android_repo.create_issue(title=AndroidARMtitle,body=bigline,assignee="LaurenWags",milestone=android_milestone[android_key] ,labels=AndroidARMlist)
+    android_repo.create_issue(title=AndroidARMtitle,body=bigline,assignee="GeetaSarvadnya",milestone=android_milestone[android_key] ,labels=AndroidARMlist)
 
   print("Android x86 Checklist:")
   bigline = "## Per release specialty tests\n"
@@ -391,7 +395,20 @@ def android_testruns():
   Androidx86list = ['x86', 'release-notes/exclude', 'tests']
 
   if args.test is None:
-    android_repo.create_issue(title=Androidx86title,body=bigline,assignee="srirambv",milestone=android_milestone[android_key] ,labels=Androidx86list)
+    android_repo.create_issue(title=Androidx86title,body=bigline,assignee="LaurenWags",milestone=android_milestone[android_key] ,labels=Androidx86list)
+
+  print("Android Tab Checklist:")
+  bigline = "## Per release specialty tests\n"
+  for line in android_tab_checklist:
+    bigline += line + "\n"
+  bigline = bigline + android_template
+  print(bigline)
+  print("")
+  AndroidTabtitle = "Manual test run on Android Tab  for " + android_key
+  AndroidTablist = ['ARM', 'release-notes/exclude', 'tests']
+
+  if args.test is None:
+    android_repo.create_issue(title=AndroidTabtitle,body=bigline,assignee="srirambv",milestone=android_milestone[android_key] ,labels=AndroidTablist)
 
   return
 
