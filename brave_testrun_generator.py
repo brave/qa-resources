@@ -27,10 +27,10 @@ mac_checklist = []
 win32_checklist = []
 win64_checklist = []
 linux_checklist = []
-iOS10_iPad_checklist = []
-iOS11_iPad_checklist = []
-iOS10_iPhone6_checklist = []
-iOS11_iPhone7_checklist = []
+iOS12_iPad5G_checklist = []
+iPadMini_iOS12_checklist = []
+iPhone6_iOS12_checklist = []
+iPhone8_iOS12_checklist = []
 android_x86_checklist = []
 android_arm_checklist = []
 android_tab_checklist = []
@@ -248,17 +248,17 @@ def ios_testruns():
         output_line = ' - [ ] ' + issue_title + '. ([#' + str(issue.number) + '](' + issue.html_url + '))'
         checklist.append(output_line)
         checklist.append(issue.html_url)
-        if('checked by qa - iOS10 iPad' not in label_names and 'checked by qa' not in label_names):
-          iOS10_iPad_checklist.append(output_line)
+        if('QA Pass - iPad Pro' not in label_names):
+          iOS12_iPad5G_checklist.append(output_line)
 
-        if('checked by qa - iOS11 iPad' not in label_names and 'checked by qa' not in label_names):
-          iOS11_iPad_checklist.append(output_line)  
+        if('QA Pass - iPad Mini' not in label_names):
+          iPadMini_iOS12_checklist.append(output_line)  
 
-        if('checked by qa - iPhone 6 (iOS10)' not in label_names and 'checked by qa' not in label_names):
-          iOS10_iPhone6_checklist.append(output_line)
+        if('QA Pass - iPhone 6' not in label_names):
+          iPhone6_iOS12_checklist.append(output_line)
 
-        if('checked by qa - iPhone 7+ (iOS11)' not in label_names and 'checked by qa' not in label_names):
-          iOS11_iPhone7_checklist.append(output_line)
+        if('QA Pass - iPhone 8' not in label_names):
+          iPhone8_iOS12_checklist.append(output_line)
 
   print("Release Note:")
   for line in release_notes:
@@ -270,57 +270,57 @@ def ios_testruns():
     print(line)
   print("")
 
-  print("iOS10 iPad Checklist:")
+  print("iPad Pro/5G iOS12 Checklist:")
   bigline = "## Per release speciality tests\n"
-  for line in iOS10_iPad_checklist:
+  for line in iOS12_iPad5G_checklist:
     bigline += line + "\n"
   bigline = bigline + ios_template
   print(bigline)
   print("")
-  iOS10iPadTitle = "Manual test run for iOS10 iPad for " + ios_key
-  iOS10iPadList = ['ipad', 'release-notes/exclude', 'tests']
+  iPad5GiOS12Title = "Manual test run for " + ios_key + " on iPad Pro/5th Gen running iOS12" 
+  iPad5GiOS12List = ['ipad', 'release-notes/exclude', 'tests']
 
   if args.test is None:
-    ios_repo.create_issue(title=iOS10iPadTitle,body=bigline,assignee="LaurenWags",milestone=ios_milestone[ios_key],labels=iOS10iPadList)
+    ios_repo.create_issue(title=iPad5GiOS12Title,body=bigline,assignee="LaurenWags",milestone=ios_milestone[ios_key],labels=iPad5GiOS12List)
 
-  print("iOS11 iPad Checklist:")
+  print("iPad Mini iOS12 Checklist:")
   bigline = "## Per release speciality tests\n"
-  for line in iOS11_iPad_checklist:
+  for line in iPadMini_iOS12_checklist:
     bigline += line + "\n"
   bigline = bigline + ios_template
   print(bigline)
   print("")
-  iOS11iPadTitle = "Manual test run for iOS11 iPad for " + ios_key
-  iOS11iPadList = ['ipad', 'release-notes/exclude', 'tests']
+  iPadMiniiOS12Title = "Manual test run for " + ios_key + " on iPad Mini running iOS12" 
+  iPadMiniiOS12List = ['ipad', 'release-notes/exclude', 'tests']
 
   if args.test is None:
-    ios_repo.create_issue(title=iOS11iPadTitle,body=bigline,assignee="srirambv",milestone=ios_milestone[ios_key],labels=iOS11iPadList)
+    ios_repo.create_issue(title=iPadMiniiOS12Title,body=bigline,assignee="kjozwiak",milestone=ios_milestone[ios_key],labels=iPadMiniiOS12List)
 
-  print("iOS10 iPhone6 Checklist:")
+  print("iPhone 6 iOS 12 Checklist:")
   bigline = "## Per release speciality tests\n"
-  for line in iOS10_iPhone6_checklist:
+  for line in iPhone6_iOS12_checklist:
     bigline += line + "\n"
   bigline = bigline + ios_template
   print(bigline)
   print("")
-  iOS10iPhone6Title = "Manual test run for iOS10 iPhone 6 for " + ios_key
-  iOS10iPhone6List = ['iPhone', 'release-notes/exclude', 'tests']
+  iPhone6iOS12Title = "Manual test run for " + ios_key + " on iPhone 6/SE running iOS12"
+  iPhone6iOS12List = ['iPhone', 'release-notes/exclude', 'tests']
 
   if args.test is None:
-    ios_repo.create_issue(title=iOS10iPhone6Title,body=bigline,assignee="LaurenWags",milestone=ios_milestone[ios_key],labels=iOS10iPhone6List)
+    ios_repo.create_issue(title=iPhone6iOS12Title,body=bigline,assignee="srirambv",milestone=ios_milestone[ios_key],labels=iPhone6iOS12List)
 
-  print("iOS11 iPhone7 Checklist:")
+  print("iPhone 7/8 iOS 12 Checklist:")
   bigline = "## Per release speciality tests\n"
-  for line in iOS11_iPhone7_checklist:
+  for line in iPhone8_iOS12_checklist:
     bigline += line + "\n"
   bigline = bigline + ios_template
   print(bigline)
   print("")
-  iOS11iPhone7Title = "Manual test run for iOS11 iPhone7+ for " + ios_key
-  iOS11iPhone7List = ['iPhone', 'release-notes/exclude', 'tests']
+  iPhone8iOS12Title = "Manual test run for " + ios_key + " on iPhone 7/8 running iOS12"
+  iPhone8iOS12List = ['iPhone', 'release-notes/exclude', 'tests']
 
   if args.test is None:
-    ios_repo.create_issue(title=iOS11iPhone7Title,body=bigline,assignee="srirambv",milestone=ios_milestone[ios_key],labels=iOS11iPhone7List)
+    ios_repo.create_issue(title=iPhone8iOS12Title,body=bigline,assignee="GeetaSarvadnya",milestone=ios_milestone[ios_key],labels=iPhone8iOS12List)
 
   return
 
