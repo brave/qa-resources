@@ -55,7 +55,7 @@ key1 = sorted(laptop_milestone.keys())[0]
 key2 = sorted(laptop_milestone.keys())[1]
 key3 = sorted(laptop_milestone.keys())[2]
 key4 = sorted(laptop_milestone.keys())[3]
-key5 = sorted(laptop_milestone.keys())[4]
+#key5 = sorted(laptop_milestone.keys())[4]
 
 def laptop_testruns(milestonever):
 	
@@ -456,10 +456,10 @@ if(select_checklist == '1' or select_checklist == '2'):
     print("\nGenerating test runs for " + str(sorted(laptop_milestone.keys())[3]) +  " on all platforms")
     print(sorted(laptop_milestone.keys())[3])
     laptop_testruns(key4)
-  elif(select_checklist == "1" and generate_test == "5"):
-    print("\nGenerating test runs for " + str(sorted(laptop_milestone.keys())[4]) +  " on all platforms")
-    print(sorted(laptop_milestone.keys())[4])
-    laptop_testruns(key5)
+  #elif(select_checklist == "1" and generate_test == "5"):
+    #print("\nGenerating test runs for " + str(sorted(laptop_milestone.keys())[4]) +  " on all platforms")
+    #print(sorted(laptop_milestone.keys())[4])
+    #laptop_testruns(key5)
   elif(select_checklist == "2" and generate_test == "1"):
   	print("\nGenerating Per-release checklist for " + str(sorted(laptop_milestone.keys())[0]) +  " on all platforms")
   	print(sorted(laptop_milestone.keys())[0])
@@ -476,10 +476,10 @@ if(select_checklist == '1' or select_checklist == '2'):
     print("\nGenerating Per-release checklist for " + str(sorted(laptop_milestone.keys())[3]) +  " on all platforms")
     print(sorted(laptop_milestone.keys())[3])
     laptop_perrel_checklist(key4)
-  elif(select_checklist == "2" and generate_test == "5"):
-    print("\nGenerating Per-release checklist for " + str(sorted(laptop_milestone.keys())[4]) +  " on all platforms")
-    print(sorted(laptop_milestone.keys())[4])
-    laptop_perrel_checklist(key5)
+  #elif(select_checklist == "2" and generate_test == "5"):
+    #print("\nGenerating Per-release checklist for " + str(sorted(laptop_milestone.keys())[4]) +  " on all platforms")
+    #print(sorted(laptop_milestone.keys())[4])
+    #laptop_perrel_checklist(key5)
   else:
   	print("Nothing to create in this milestone. Run the script again.")
   	exit()
