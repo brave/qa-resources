@@ -97,9 +97,15 @@
 
 ## Sync
 
-- [ ] Ensure you are able to scan the QR code and sync with laptop
-- [ ] Ensure the bookmarks from laptop shows up on the mobile after sync completes
-- [ ] Add a bookmark on mobile and check if it gets synced to the laptop
+- [ ] Ensure you are able to join sync chain by scanning the QR code
+- [ ] Ensure you are able to join sync chain using code words
+- [ ] Ensure you are able to create a sycn chain on the device and add other devices to the chain via QR code/Code words
+- [ ] Ensure the bookmarks from other devices on the chain show up on the mobile after sync completes
+- [ ] Verify new bookmarks added gets sync'd to all devices on the sync chain
+- [ ] Verify existing bookmarks before joining sync chain also gets sync'd to all devices on the sync chain
+- [ ] Ensure sync chain created in previous version is still retained on upgrade
+- [ ] Ensure sync works on a upgrade profile and new bookmarks added post upgrade sync's across devices on the chain
+- [ ] Verify you are able to create a standalone sync chain with one device
 
 ## Bravery settings
 
