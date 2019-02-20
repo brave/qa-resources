@@ -110,7 +110,7 @@ def laptop_testruns(milestonever):
 	macList = ['OS/macOS', 'release-notes/exclude', 'tests']
 
 	if args.test is None:
-	  laptop_repo.create_issue(title=macTitle, body=bigline, assignee="LaurenWags", milestone=laptop_milestone[milestonever], labels=macList)
+	  laptop_repo.create_issue(title=macTitle, body=bigline, assignees=["LaurenWags","kjozwiak"], milestone=laptop_milestone[milestonever], labels=macList)
 
 	print("Win64 Checklist:")
 	bigline = "## Per release specialty tests\n"
@@ -123,7 +123,7 @@ def laptop_testruns(milestonever):
 	winList = ['OS/Windows', 'release-notes/exclude', 'tests']
 
 	if args.test is None:
-	  laptop_repo.create_issue(title=winTitle, body=bigline, assignee="srirambv", milestone=laptop_milestone[milestonever], labels=winList)
+	  laptop_repo.create_issue(title=winTitle, body=bigline, assignees=["btlechowski","GeetaSarvadnya"], milestone=laptop_milestone[milestonever], labels=winList)
 
 	print("Linux Checklist:")
 	bigline = "## Per release specialty tests\n"
@@ -136,7 +136,7 @@ def laptop_testruns(milestonever):
 	linList = ['OS/unix-like/linux', 'release-notes/exclude', 'tests']
 
 	if args.test is None:
-	  laptop_repo.create_issue(title=linTitle, body=bigline, assignee="btlechowski", milestone=laptop_milestone[milestonever], labels=linList)
+	  laptop_repo.create_issue(title=linTitle, body=bigline, assignee="srirambv", milestone=laptop_milestone[milestonever], labels=linList)
 
 	return 0 
 
@@ -248,16 +248,16 @@ def ios_testruns():
         output_line = ' - [ ] ' + issue_title + '. ([#' + str(issue.number) + '](' + issue.html_url + '))'
         checklist.append(output_line)
         checklist.append(issue.html_url)
-        if('QA Pass - iPad Pro' not in label_names):
+        if('QA Pass - iPad Pro' not in label_names and 'QA Pass - iPad 5th Gen' not in label_names):
           iOS12_iPad5G_checklist.append(output_line)
 
         if('QA Pass - iPad Mini' not in label_names):
           iPadMini_iOS12_checklist.append(output_line)  
 
-        if('QA Pass - iPhone 6' not in label_names):
+        if('QA Pass - iPhone 6' not in label_names and 'QA Pass - iPhone SE' not in label_names):
           iPhone6_iOS12_checklist.append(output_line)
 
-        if('QA Pass - iPhone 8' not in label_names):
+        if('QA Pass - iPhone 8' not in label_names and 'QA Pass - iPhone 7' not in label_names):
           iPhone8_iOS12_checklist.append(output_line)
 
   print("Release Note:")
