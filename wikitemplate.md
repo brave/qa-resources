@@ -1,5 +1,3 @@
-
-
 ### Installer
 
 - [ ] Check that installer is close to the size of last release
@@ -49,6 +47,7 @@
 - [ ] Verify older version of an extension gets updated to new version via Google server
 - [ ] Verify older version of an extension gets updated to new version via Brave server 
 - [ ] Verify magnet links and .torrent files loads Torrent viewer page and able to download torrent
+- [ ] Use an old profile to verify extension updates work correctly.
 
 ### CWS
 
@@ -190,7 +189,8 @@ _Each start should take less than 7 seconds_
 
 #### Components
 - [ ]  Delete Adblock folder from browser profile and restart browser. Visit `brave://components` and verify `Brave Ad Block Updater` downloads and update the component. Repeat for all Brave components
-
+- [ ] Restart the browser, load brave://components, wait for 8 mins and verify that no component shows any errors
+- [ ] Verify Brave Local Data Updater, Brave Ad Block Updater, Brave Tor Client Updater (Mac), PDF Viewer (PDF.js), Brave HTTPS Everywhere Updater have non-zero version numbers
 
 ### Keyboard Shortcuts (WIP)
 
