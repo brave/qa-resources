@@ -14,6 +14,7 @@ Pre-Requisite: Put previous build shortcut on home screen. Also have several sit
 - [ ] Verify that the cookies from the previous build are preserved in the updated build
 - [ ] Verify shortcut is still available on home screen after updating Brave
 - [ ] Verify sites added to home screen are still visible and able to be used after updating Brave
+- [ ] Verify sync chain created in previous version is still retained on upgrade
 
 ## Bookmarks
 
@@ -35,6 +36,10 @@ Pre-Requisite: Put previous build shortcut on home screen. Also have several sit
 - [ ] Make sure context menu items on content work with selected text
 - [ ] Make sure context menu items on content work inside an editable control (input, textarea, or contenteditable)
 
+## Developer Tools
+
+- [ ] Verify you are able to inspect sublinks via dev tools
+
 ## Find in page
 
 - [ ] Ensure search box is shown when selected via the hamburger menu
@@ -44,7 +49,7 @@ Pre-Requisite: Put previous build shortcut on home screen. Also have several sit
 
 ## Site hacks
 
-- [ ] Test https://www.twitch.tv/adobe sub-page loads a video and you can play it
+- [ ] Verify https://www.twitch.tv/adobe sub-page loads a video and you can play it
 
 ## Downloads
 
@@ -58,7 +63,7 @@ Pre-Requisite: Put previous build shortcut on home screen. Also have several sit
 
 ## Autofill tests
 
-- [ ] Test that autofill works on http://www.roboform.com/filling-test-all-fields
+- [ ] Test that autofill works on https://srirambv.github.io/formfiller.html
 
 ## Zoom
 
@@ -70,17 +75,16 @@ Pre-Requisite: Put previous build shortcut on home screen. Also have several sit
 - [ ] Verify you are able to join sync chain by scanning the QR code
 - [ ] Verify you are able to join sync chain using code words
 - [ ] Verify you are able to create a sycn chain on the device and add other devices to the chain via QR code/Code words
-- [ ] Verify the bookmarks from other devices on the chain show up on the mobile after sync completes
-- [ ] Verify new bookmarks added gets sync'd to all devices on the sync chain
+- [ ] Verify that bookmarks from other devices on the chain show up on the mobile device after sync completes
+- [ ] Verify newly created bookmarks gets sync'd to all devices on the sync chain
 - [ ] Verify existing bookmarks before joining sync chain also gets sync'd to all devices on the sync chain
-- [ ] Verify sync chain created in previous version is still retained on upgrade
 - [ ] Verify sync works on a upgrade profile and new bookmarks added post upgrade sync's across devices on the chain
 - [ ] Verify add a bookmark on custom tab gets sync'd across all devices in the chain
 - [ ] Verify you are able to create a standalone sync chain with one device
 
 ## Bravery settings
 
-- [ ] Check that HTTPS Everywhere works by loading https://https-everywhere.badssl.com/
+- [ ] Check that HTTPS Everywhere works by loading http://https-everywhere.badssl.com/
 - [ ] Turning HTTPS Everywhere off and shields off both disable the redirect to https://https-everywhere.badssl.com/
 - [ ] Check that toggling to blocking and allow ads works as expected
 - [ ] Test that clicking through a cert error in https://badssl.com/ works

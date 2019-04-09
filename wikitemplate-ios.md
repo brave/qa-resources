@@ -9,8 +9,9 @@
 - [ ] Make sure that data from the last version appears in the new version OK
 - [ ] Test that the previous version's cookies are preserved in the next version
 - [ ] Test that saved passwords are retained upon upgrade
-- [ ] Ensure stats are retained when upgrading from previous version
-- [ ] Ensure per site settings are retained when upgrading from previous version
+- [ ] Verify stats are retained when upgrading from previous version
+- [ ] Verify per site settings are retained when upgrading from previous version
+- [ ] Verify sync chain created in previous version is still retained on upgrade
 
 ## Bookmarks
 
@@ -40,7 +41,7 @@
 
 ## Find on page
 
-- [ ] Ensure search box is shown when selected via the share menu
+- [ ] Verify search box is shown when selected via the share menu
 - [ ] Test successful find
 - [ ] Test forward and backward find navigation
 - [ ] Test failed find shows 0 results
@@ -78,8 +79,8 @@
 
 ## Gestures
 
-- [ ] Test zoom in / out gestures work
-- [ ] Test that navigating to a different origin resets the zoom
+- [ ] Verify zoom in / out gestures work on https://www.homedepot.com/
+- [ ] Verify that navigating to a different origin resets the zoom
 - [ ] Swipe back and forward to navigate, verify this works as expected
 
 ## Password Managers
@@ -97,14 +98,13 @@
 
 ## Sync
 
-- [ ] Ensure you are able to join sync chain by scanning the QR code
-- [ ] Ensure you are able to join sync chain using code words
-- [ ] Ensure you are able to create a sycn chain on the device and add other devices to the chain via QR code/Code words
-- [ ] Ensure the bookmarks from other devices on the chain show up on the mobile after sync completes
-- [ ] Verify new bookmarks added gets sync'd to all devices on the sync chain
+- [ ] Verify you are able to join sync chain by scanning the QR code
+- [ ] Verify you are able to join sync chain using code words
+- [ ] Verify you are able to create a sycn chain on the device and add other devices to the chain via QR code/Code words
+- [ ] Verify that bookmarks from other devices on the chain show up on the mobile device after sync completes
+- [ ] Verify newly created bookmarks get sync'd to all devices on the sync chain
 - [ ] Verify existing bookmarks before joining sync chain also gets sync'd to all devices on the sync chain
-- [ ] Ensure sync chain created in previous version is still retained on upgrade
-- [ ] Ensure sync works on a upgrade profile and new bookmarks added post upgrade sync's across devices on the chain
+- [ ] Verify sync works on a upgrade profile and new bookmarks added post upgrade sync's across devices on the chain
 - [ ] Verify you are able to create a standalone sync chain with one device
 
 ## Bravery settings
@@ -141,7 +141,7 @@
 
 ## Background
 
-- [ ] Start loading a page, background the app, wait >5 sec, then bring to front, ensure splash screen is not shown
+- [ ] Start loading a page, background the app, wait >5 sec, then bring to front, Verify splash screen is not shown
 
 ## Session storage
 

@@ -14,6 +14,7 @@
   - [ ] opened tabs can be reloaded
   - [ ] stored passwords are preserved
   - [ ] unpinned tabs can be pinned
+  - [ ] Sync chain created in previous version is retained 
 
 ### About pages
 
@@ -150,7 +151,7 @@ _Each start should take less than 7 seconds_
 - [ ] Verify you are able to join an existing sync chain using code words
 - [ ] Verify the device name is shown properly when sync chain is created
 - [ ] Verify you are able to add a new mobile device to the chain via QR code/code words
-- [ ] Verify new bookmarks added gets sync'd to all devices on the sync chain
+- [ ] Verify newly created bookmarks get sync'd to all devices on the sync chain
 - [ ] Verify existing bookmarks on current profile gets sync'd to all devices on the sync chain
 - [ ] Verify folder structure is retained after sync completes
 - [ ] Verify bookmarks don't duplicate when sync'd from other devices
