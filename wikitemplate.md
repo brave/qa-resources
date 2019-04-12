@@ -14,6 +14,7 @@
   - [ ] opened tabs can be reloaded
   - [ ] stored passwords are preserved
   - [ ] unpinned tabs can be pinned
+  - [ ] Sync chain created in previous version is retained 
 
 ### About pages
 
@@ -144,6 +145,20 @@ _Each start should take less than 7 seconds_
   - [ ] Verify tips list is not lost after upgrade
   - [ ] Verify wallet panel transactions list is not lost after upgrade
 
+### Sync
+
+- [ ] Verify you are able to create a sync chain and add a mobile/computer to the chain
+- [ ] Verify you are able to join an existing sync chain using code words
+- [ ] Verify the device name is shown properly when sync chain is created
+- [ ] Verify you are able to add a new mobile device to the chain via QR code/code words
+- [ ] Verify newly created bookmarks get sync'd to all devices on the sync chain
+- [ ] Verify existing bookmarks on current profile gets sync'd to all devices on the sync chain
+- [ ] Verify folder structure is retained after sync completes
+- [ ] Verify bookmarks don't duplicate when sync'd from other devices
+- [ ] Verify removing bookmark from device gets sync'd to all devices on the sync chain
+- [ ] Verify adding/removing a bookmark in offline mode gets sync'd to all devices on the sync chain when device comes online
+- [ ] With only two device in chain, verify removing the other device resets the sync on b-c as well
+
 ### Tor Tabs
 
 - [ ] Visit https://check.torproject.org in a Tor window, ensure its shows success message for using a Tor exit node
@@ -194,7 +209,7 @@ _Each start should take less than 7 seconds_
 
 ### Keyboard Shortcuts (WIP)
 
-### Sync (WIP)
 
-####Rewards Media (To be verified on YouTube and Twitch) (WIP)
+
+#### Rewards Media (To be verified on YouTube and Twitch) (WIP)
 
