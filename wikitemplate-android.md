@@ -6,7 +6,9 @@
 
 ## Visual look
 
-- [ ] Make sure there is no words of Chromium after any merge
+- [ ] Make sure there after any merge
+  - [ ] No Chromium words appear on normal or private tabs
+  - [ ] No Chromium icons are shown in normal or private tabs
 
 ## Data
 Pre-Requisite: Put previous build shortcut on home screen. Also have several sites 'Added to home screen' (from 3 dots menu) and then upgrade to new build
@@ -52,9 +54,10 @@ Pre-Requisite: Put previous build shortcut on home screen. Also have several sit
 
 - [ ] Verify https://www.twitch.tv/adobe sub-page loads a video and you can play it
 
-## Settings
+## Settings and Bottom bar
 
 - [ ] Verify changing default settings are retained and doesn't cause the browser to crash
+- [ ] Verify bottom bar buttons(Home/Bookmark/Search/Tabs) work as expected 
 
 ## Downloads
 
