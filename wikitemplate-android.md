@@ -9,7 +9,7 @@
 - [ ] Make sure there is no words of Chromium after any merge
 
 ## Data
-Pre-Requisite: Put previous build shortcut on home screen. Also have several sites 'Added to home screen' (from 3 dots menu). Then update previous build to Verify build
+Pre-Requisite: Put previous build shortcut on home screen. Also have several sites 'Added to home screen' (from 3 dots menu) and then upgrade to new build
 - [ ] Verify that data from the previous build appears in the updated build as expected (bookmarks, etc)
 - [ ] Verify that the cookies from the previous build are preserved after upgrade
 - [ ] Verify shortcut is still available on home screen after upgrade
