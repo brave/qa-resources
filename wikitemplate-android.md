@@ -54,7 +54,7 @@ Pre-Requisite: Put previous build shortcut on home screen. Also have several sit
 
 ## Settings
 
-- [ ] Verify settings changes are retained during upgrade and any changes made doesn't cause the browser to crash
+- [ ] Verify changing default settings are retained and doesn't cause the browser to crash
 
 ## Downloads
 
