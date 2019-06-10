@@ -6,9 +6,9 @@
 
 ## Visual look
 
-- [ ] Make sure there after any merge
-  - [ ] No Chromium words appear on normal or private tabs
-  - [ ] No Chromium icons are shown in normal or private tabs
+- [ ] Make sure there after every merge
+  - [ ] No Chrome/Chromium words appear on normal or private tabs
+  - [ ] No Chrome/Chromium icons are shown in normal or private tabs
 
 ## Data
 Pre-Requisite: Put previous build shortcut on home screen. Also have several sites 'Added to home screen' (from 3 dots menu) and then upgrade to new build
@@ -46,8 +46,8 @@ Pre-Requisite: Put previous build shortcut on home screen. Also have several sit
 ## Find in page
 
 - [ ] Ensure search box is shown when selected via the hamburger menu
-- [ ] Verify successful find
-- [ ] Verify forward and backward find navigation
+- [ ] Verify that you can successfully find a word on the page
+- [ ] Verify that the forward and backward navigation icons under find are working
 - [ ] Verify failed find shows 0 results
 
 ## Site hacks
@@ -57,7 +57,7 @@ Pre-Requisite: Put previous build shortcut on home screen. Also have several sit
 ## Settings and Bottom bar
 
 - [ ] Verify changing default settings are retained and doesn't cause the browser to crash
-- [ ] Verify bottom bar buttons(Home/Bookmark/Search/Tabs) work as expected 
+- [ ] Verify bottom bar buttons (Home/Bookmark/Search/Tabs) work as expected 
 
 ## Downloads
 
