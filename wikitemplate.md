@@ -167,7 +167,7 @@ _Each start should take less than 7 seconds_
 
 ### Social-media blocking settings
 
-- [ ] Verify individual `Social media blocking` buttons works as intended when enabled/disabled
+- [ ] Verify individual `Social media blocking` buttons works as intended when enabled/disabled by visiting https://fmarier.github.io/brave-testing/social-widgets.html
 
 ### Sync
 
