@@ -8,13 +8,14 @@
 
 - [ ] Make sure that data from the last version appears in the new version OK
 - [ ] With data from the last version, verify that
-  - [ ] bookmarks on the bookmark toolbar and bookmark folders can be opened
-  - [ ] cookies are preserved
-  - [ ] installed extensions are retained and work correctly
-  - [ ] opened tabs can be reloaded
-  - [ ] stored passwords are preserved
-  - [ ] unpinned tabs can be pinned
+  - [ ] Bookmarks on the bookmark toolbar and bookmark folders can be opened
+  - [ ] Cookies are preserved
+  - [ ] Installed extensions are retained and work correctly
+  - [ ] Opened tabs can be reloaded
+  - [ ] Stored passwords are preserved
+  - [ ] Unpinned tabs can be pinned
   - [ ] Sync chain created in previous version is retained 
+  - [ ] Social media blocking buttons changes are retained
 
 ### About pages
 
@@ -113,6 +114,25 @@ _Each start should take less than 7 seconds_
 - [ ] Make sure that right clicking on a word with suggestions gives a suggestion and that clicking on the suggestion replaces the text
 - [ ] Test that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run)
 
+### Brave Ads
+
+- [ ] Verify when you enable Rewards from panel or brave://rewards, Ads are enabled by default
+- [ ] Verify Ads UI (panel, settings, etc) shows when in a region with Ads support
+- [ ] Verify Ads UI (panel, settings, etc) does not show when in a region without Ads support. Verify the Ads panel does show the 'Sorry! Ads are not yet available in your region.' message.
+- [ ] Verify when the system language is English, the Browser language is French, and you are in one of the supported regions, Ad notifications are still served to you.
+- [ ] Verify you are served Ad notifications when Ads are enabled
+- [ ] Windows only: Verify when `Focus Assist` is set to alarms only, Ads are not served to the user but are available in the `Notification Center`
+- [ ] Verify when Ads are toggled off, there are no Ad messages in the logs
+- [ ] Verify when Rewards are toggled off (but Ads were not explicitly toggled off), there are no Ads logs recorded
+- [ ] Verify view/click/dismiss/landed ad notifications show in confirmations.json
+- [ ] Verify pages you browse to are being classified in the logs
+- [ ] Verify tokens are redeemed by viewing the logs (you can use --rewards=debug=true to shorten redemption time) 
+- [ ] Verify Ad is not shown if a tab is playing media and is only shown after it stops playing
+- [ ] Upgrade Cases
+  - [ ] Verify when updating from the previous version Ads info in the panel is not lost
+  - [ ] Update to latest version from 0.62.51 (or a version without Ads available). Verify you are notified to try ads via a BAT logo notification but Ads are not automatically turned on for you.
+  - [ ] Update to latest version from some Ads enabled versions (0.63.x, 0.64.x). Verify Ads status (on/off) is the same as it was prior to update.
+
 ### Rewards
 
 - [ ] Verify wallet is auto created after enabling rewards
@@ -144,6 +164,10 @@ _Each start should take less than 7 seconds_
   - [ ] Verify auto-contribute list is not lost after upgrade
   - [ ] Verify tips list is not lost after upgrade
   - [ ] Verify wallet panel transactions list is not lost after upgrade
+
+### Social-media blocking settings
+
+- [ ] Verify individual `Social media blocking` buttons works as intended when enabled/disabled by visiting https://fmarier.github.io/brave-testing/social-widgets.html
 
 ### Sync
 
