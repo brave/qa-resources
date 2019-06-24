@@ -10,12 +10,12 @@ secret_file = open('github.secret', 'r')
 token_string = secret_file.readline().rstrip("\n\r")
 
 g = Github(token_string, timeout=1000)
-rate = g.get_rate_limit()
-limit = rate.rate.limit
-remaining = rate.rate.remaining
+#rate = g.get_rate_limit()
+#limit = rate.rate.limit
+#remaining = rate.rate.remaining
 
-print("Rate Limit: " + str(limit))
-print("Rate Remaining: " + str(remaining))
+#print("Rate Limit: " + str(limit))
+#print("Rate Remaining: " + str(remaining))
 
 laptop_repo = g.get_organization("brave").get_repo("brave-browser")
 ios_repo = g.get_organization("brave").get_repo("brave-ios")
@@ -49,6 +49,8 @@ for androidmilestone in android_repo.get_milestones(state="open"):
 
 wiki_laptop_file = open('wikitemplate.md', 'r')
 laptop_template = wiki_laptop_file.read()
+wiki_laptop_hf = open('wikitemplate-hotfix.md', 'r')
+laptop_hf_template = wiki_laptop_hf.read()
   
 laptop_key = sorted(laptop_milestone.keys())
 key1 = sorted(laptop_milestone.keys())[0]
@@ -219,6 +221,102 @@ def laptop_perrel_checklist(milestonever):
 	  repo.create_issue(title=linTitle, body=bigline, assignees="kjozwiak,btlechowski", milestone=laptop_milestone[milestonever], labels=linList)
 
 	return 0 
+
+def laptop_hf_testruns(milestonever):
+  
+  for issue in laptop_repo.get_issues(milestone=laptop_milestone[milestonever], sort="created", direction="asc", state="closed"):
+    if('pull' not in issue.html_url):
+      original_issue_title =  issue.title
+      issue_title = original_issue_title
+      if(original_issue_title[0].islower()):
+        lower = original_issue_title[0]
+        upper = original_issue_title[0].upper()
+        issue_title = original_issue_title.replace(lower, upper, 1)
+
+      labels = issue.get_labels()
+      label_names = []
+
+      for label in labels:
+        label_names.append(label.name)
+      if('release-notes/include' in label_names and 'QA/No' not in label_names and 'tests' not in label_names):
+        output_line = ' - ' + issue_title + '.([#' + str(issue.number) + '](' + issue.html_url + '))'
+        release_notes.append(output_line)
+
+      if('QA/Yes' in label_names and 'QA/No' not in label_names and 'tests' not in label_names ):
+        output_line = ' - [ ] ' + issue_title + '.([#' + str(issue.number) + '](' + issue.html_url + '))'
+        checklist.append(output_line)
+        if('QA Pass-macOS' not in label_names and 'OS/Windows' not in label_names and 'OS/Linux' not in label_names and 'QA/No' not in label_names):
+          mac_checklist.append(output_line)
+
+        if('QA Pass-Win64' not in label_names and 'OS/macOS' not in label_names and 'OS/Linux' not in label_names and 'QA/No' not in label_names):
+          win64_checklist.append(output_line)
+
+        if('QA Pass-Linux' not in label_names and 'OS/Windows' not in label_names and 'OS/macOS' not in label_names and 'QA/No' not in label_names):
+          linux_checklist.append(output_line)
+
+  print("Checklist: ")
+  for line in checklist:
+    print(line)
+  print("")
+  
+  print("Mac Checklist:")
+  if(len(mac_checklist) != 0):
+    bigline = "## Per release specialty tests\n"
+    for line in mac_checklist:
+      bigline += line + "\n"
+    bigline = bigline + laptop_hf_template
+    print(bigline)
+    print("")
+    macTitle = "Manual test run on OS X for " + milestonever
+    macList = ['OS/macOS', 'release-notes/exclude', 'tests']
+  else:
+    print(laptop_hf_template)
+    print("")
+    macTitle = "Manual test run on OS X for " + milestonever
+    macList = ['OS/macOS', 'release-notes/exclude', 'tests']
+
+  if args.test is None:
+    laptop_repo.create_issue(title=macTitle, body=bigline, assignees=["LaurenWags","kjozwiak"], milestone=laptop_milestone[milestonever], labels=macList)
+
+  print("Win64 Checklist:")
+  if(len(win64_checklist) !=0):
+    bigline = "## Per release specialty tests\n"
+    for line in win64_checklist:
+      bigline += line + "\n"
+    bigline = bigline + laptop_hf_template
+    print(bigline)
+    print("")
+    winTitle = "Manual test run on Windows x64 for " + milestonever
+    winList = ['OS/Windows', 'release-notes/exclude', 'tests']
+  else:
+    print(laptop_hf_template)
+    print("")
+    winTitle = "Manual test run on Windows x64 for " + milestonever
+    winList = ['OS/Windows', 'release-notes/exclude', 'tests']
+
+  if args.test is None:
+    laptop_repo.create_issue(title=winTitle, body=bigline, assignees=["btlechowski","GeetaSarvadnya"], milestone=laptop_milestone[milestonever], labels=winList)
+
+  print("Linux Checklist:")
+  if(len(linux_checklist) != 0):
+    bigline = "## Per release specialty tests\n"
+    for line in linux_checklist:
+      bigline += line + "\n"
+    bigline = bigline + laptop_hf_template
+    print(bigline)
+    print("")
+    linTitle = "Manual test run on Linux for " + milestonever
+    linList = ['OS/unix-like/linux', 'release-notes/exclude', 'tests']
+  else:
+    print(laptop_hf_template)
+    print("")
+    linTitle = "Manual test run on Linux for " + milestonever
+    linList = ['OS/unix-like/linux', 'release-notes/exclude', 'tests']  
+
+  if args.test is None:
+    laptop_repo.create_issue(title=linTitle, body=bigline, assignee="srirambv", milestone=laptop_milestone[milestonever], labels=linList)
+
+  return 0 
 
 def ios_testruns():
 
@@ -419,14 +517,15 @@ print('1. Ensure all closed items have QA/Yes and QA/No labels added to include 
 print('')
 print('2. For Laptop - Test runs will be generated upto 5 milestones')
 print('')
-print('3. Manually change milestone.keys value to generate for a specific milestone on any platform')
+print('3. Manually change "milestone.keys" value to generate for a specific milestone on any platform')
 print('**************************************************************************************************************************')
 
 header = print("Create test runs for:\n")
 laptop = print("1. Laptop Release")
 laptop_per = print("2. Laptop Per-release Checklist")
-ios = print("3. iOS")
-android = print("4. Android\n")
+laptop_hf = print("3. Laptop HotFix Checklist")
+ios = print("4. iOS")
+android = print("5. Android\n")
 
 select_checklist = input("Choose the platform for which you want to generate the test run: ")
 
@@ -483,11 +582,14 @@ if(select_checklist == '1' or select_checklist == '2'):
   else:
   	print("Nothing to create in this milestone. Run the script again.")
   	exit()
-
-elif (select_checklist == '3'):
+elif(select_checklist == '3'):
+    print("\nGenerating test runs for " + str(sorted(laptop_milestone.keys())[0]) +  " on all platforms")
+    print(sorted(laptop_milestone.keys())[0])
+    laptop_hf_testruns(key1)
+elif (select_checklist == '4'):
 	generate_ios_test = print("Generating test runs for iOS ",sorted(ios_milestone.keys())[0])
 	ios_testruns()
-elif (select_checklist == '4'):
+elif (select_checklist == '5'):
 	generate_android_test = print("Generating test runs for android",sorted(android_milestone.keys())[0])
 	android_testruns()
 else:
