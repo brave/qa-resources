@@ -450,13 +450,13 @@ def android_testruns():
         output_line = ' - [ ] ' + issue_title + '. ([#' + str(issue.number) + '](' + issue.html_url + '))'
         checklist.append(output_line)
         checklist.append(issue.html_url)
-        if('checked by qa - Android ARM' not in label_names and 'checked by qa' not in label_names):
+        if('QA Pass - Android ARM' not in label_names and 'checked by qa' not in label_names and 'tests' not in label_names and 'x86' not in label_names and 'tablet-specific' not in label_names):
           android_arm_checklist.append(output_line)
 
-        if('checked by qa - android x86' not in label_names and 'checked by qa' not in label_names):
+        if('QA Pass - Android x86' not in label_names and 'checked by qa' not in label_names and 'tests' not in label_names and 'ARM' not in label_names and 'tablet-specific' not in label_names and 'bug/ads' not in label_names and 'bug/BR' not in label_names):
           android_x86_checklist.append(output_line)
 
-        if('checked by qa - Android Tab' not in label_names and 'checked by qa' not in label_names):
+        if('QA Pass - Android Tab' not in label_names and 'checked by qa' not in label_names and 'tests' not in label_names and 'x86' not in label_names and 'phone-specific' not in label_names):
           android_tab_checklist.append(output_line)
 
   print("Release Notes:")
