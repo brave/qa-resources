@@ -29,7 +29,6 @@
 
 ### Import tests
 
-- [ ] Verify that you can import bookmarks, cookies, history, passwords and stats from `muon`
 - [ ] Verify that you can import bookmarks, cookies, history, passwords from Google Chrome 
 - [ ] Verify that you can import bookmarks, cookies, history, passwords, autofill and search engines from Firefox
 - [ ] Verify that you can import bookmarks from Edge
