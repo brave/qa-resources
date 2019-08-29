@@ -1,7 +1,7 @@
 
 ## Installer
 
-- [ ] Check that installer is close to the size of last release
+- [ ] Check that installer is close to the size of the last release
 - [ ] Check the Brave version in About and make sure it is EXACTLY as expected
 
 ## Data
@@ -9,27 +9,27 @@
 - [ ] Make sure that data from the last version appears in the new version OK
 - [ ] Test that the previous version's cookies are preserved in the next version
 - [ ] Test that saved passwords are retained upon upgrade
-- [ ] Verify stats are retained when upgrading from previous version
-- [ ] Verify per site settings are retained when upgrading from previous version
-- [ ] Verify sync chain created in previous version is still retained on upgrade
+- [ ] Verify stats are retained when upgrading from the previous version
+- [ ] Verify per-site settings are retained when upgrading from the previous version
+- [ ] Verify sync chain created in the previous version is still retained on upgrade
 
 ## Bookmarks
 
-- [ ] Test that creating a bookmark in the left well works
-- [ ] Test that clicking a bookmark in the left well loads the bookmark
-- [ ] Test that deleting a bookmark in the left well works
+- [ ] Test that creating a bookmark works
+- [ ] Test that clicking a bookmark from bookmark manager loads the bookmark
+- [ ] Test that deleting a bookmark works
 - [ ] Test that creating a bookmark folder works
 - [ ] Test that creating a bookmark inside the created folder works
-- [ ] Test that you are able to add a bookmark directly inside a bookmark folder
-- [ ] Test that you are able to delete a bookmark in edit mode
-- [ ] Test that you are able to delete a bookmark folder with bookmarks inside
-- [ ] Test adding a bookmark domain subpaths is retained and you are successfully able to visit the domain subpath in a new tab
+- [ ] Test that you can add a bookmark directly inside a bookmark folder
+- [ ] Test that you can delete a bookmark in edit mode
+- [ ] Test that you can delete a bookmark folder with bookmarks inside
+- [ ] Test adding a bookmark domain, subpaths is retained and you are successfully able to visit the domain subpath in a new tab
 
 ## Favourites
 
-- [ ] Test editing favourite and chaning URL updates the favicons accordingly
-- [ ] Test that you are able to remove favourites
-- [ ] Test that you are able to add new favourites from share menu
+- [ ] Test editing favourite and changing URL updates the favicons accordingly
+- [ ] Test that you can remove favourites
+- [ ] Test that you can add new favourites from the share menu
 
 ## Context menus
 
@@ -44,7 +44,7 @@
 - [ ] Verify search box is shown when selected via the share menu
 - [ ] Test successful find
 - [ ] Test forward and backward find navigation
-- [ ] Test failed find shows 0 results
+- [ ] Test failed to find shows 0 results
 
 ## Private Mode
 
@@ -57,12 +57,12 @@
 
 ## History
 
-- [ ] On youtube.com, thestar.com (or any other site using push state nav), navigate the site and verify history is added. Also note if the progress bar activates and shows progress
-- [ ] Settings > Clear Private Data, and clear all. Check history is cleared and none of the favourites are cleared
+- [ ] On youtube.com, thestar.com (or any other site using push state nav), navigate the site and verify history is added. Also, note if the progress bar activates and shows progress
+- [ ] Settings > Clear Private Data, and clear all. Check only the history is cleared and favourites are retained
 
 ## Shields Settings
 
-- [ ] Enable all switches in settings and visit a site and disable block scripts. Kill and relaunch app and verify if the site shield settings are retained
+- [ ] Enable all switches in settings and visit a site and disable block scripts. Kill and relaunch the app and verify if the site shield settings are retained
 
 ## Site hacks
 
@@ -75,7 +75,7 @@
 
 ## Fullscreen
 
-- [ ] Test that entering HTML5 full screen works. And pressing restore to go back exits full screen. (youtube.com)
+- [ ] Test that entering HTML5 fullscreen works. And pressing restore to go back exits full screen. (youtube.com)
 
 ## Gestures
 
@@ -85,27 +85,27 @@
 
 ## Password Managers
 
-- [ ] Test tapping on 1Password on the slide out keyboard launches 1Password App and able to select the stored credentials
-- [ ] Test tapping on bitwarden password manager in the autofill field launches the app and autofills the stored data
+- [ ] Test tapping on 1Password on the slide-out keyboard launches 1Password App and able to select the stored credentials
+- [ ] Test tapping on bitwarden password manager in the autofill field launches the app and auto-fills the stored data
 
 ## Browser Lock
 
 - [ ] Test enabling browser pin settings asks for pin confirmation followed by reconfirm
-- [ ] Test swipe up/swip down with browser in focus doesn't ask for pin confirmation
-- [ ] Test clicking on set pin asks for pin to unlock before setting a new pin
-- [ ] Remove app from memory and relaunch, enter wrong pin, browser should not be unlocked
-- [ ] Test cancel fingerprint confirmation shows enter pin window when fingerprint unlock is setup on device
+- [ ] Test swipe up/swipe down with browser in focus doesn't ask for pin confirmation
+- [ ] Test clicking on set pin asks for the pin to unlock before setting a new pin
+- [ ] Remove the app from memory and relaunch, enter a wrong pin, the browser should not be unlocked
+- [ ] Test cancel fingerprint confirmation shows enter pin window when fingerprint unlock is set up on the device
 
 ## Sync
 
 - [ ] Verify you are able to join sync chain by scanning the QR code
 - [ ] Verify you are able to join sync chain using code words
-- [ ] Verify you are able to create a sycn chain on the device and add other devices to the chain via QR code/Code words
+- [ ] Verify you are able to create a sync chain on the device and add other devices to the chain via QR code/Codewords
 - [ ] Verify that bookmarks from other devices on the chain show up on the mobile device after sync completes
-- [ ] Verify newly created bookmarks get sync'd to all devices on the sync chain
+- [ ] Verify newly created bookmarks get synced to all devices on the sync chain
 - [ ] Verify existing bookmarks before joining sync chain also gets sync'd to all devices on the sync chain
-- [ ] Verify sync works on a upgrade profile and new bookmarks added post upgrade sync's across devices on the chain
-- [ ] Verify you are able to create a standalone sync chain with one device
+- [ ] Verify sync works on an upgrade profile and new bookmarks added post-upgrade sync's across devices on the chain
+- [ ] Verify you can create a standalone sync chain with one device
 
 ## Bravery settings
 
@@ -116,11 +116,11 @@
 - [ ] Test that clicking through a cert error in https://badssl.com/ works
 - [ ] Test that Safe Browsing works (https://www.raisegame.com/)
 - [ ] Turning Safe Browsing off and shields off both disable safe browsing for https://www.raisegame.com/
-- [ ] Enable block script globally from settings, Visit https://brianbondy.com/, nothing should load. Tap on Shields and disable block script, page should load properly
+- [ ] Enable block script globally from settings, Visit https://brianbondy.com/, nothing should load. Tap on Shields and disable block script, the page should load properly
 - [ ] Test that preferences default Bravery settings take effect on pages with no site settings
 - [ ] Test that 3rd party storage results are blank at https://jsfiddle.net/7ke9r14a/7/ when 3rd party cookies are blocked
 ### Fingerprint Tests
-  - [ ] Test that turning on fingerprinting protection in preferences shows 1 fingerprints blocked at https://browserleaks.com/canvas . Test that turning it off in the Bravery menu shows 0 fingerprints blocked
+  - [ ] Test that turning on fingerprinting protection in preferences shows 1 fingerprint blocked at https://browserleaks.com/canvas . Test that turning it off in the Bravery menu shows 0 fingerprints blocked
   - [ ] Test that audio fingerprint is blocked at https://audiofingerprint.openwpm.com/ when fingerprinting protection is on
   - [ ] Test that https://diafygi.github.io/webrtc-ips/ doesn't leak IP address when `Block all fingerprinting protection` is on
 
@@ -131,9 +131,9 @@
 - [ ] Go to https://trac.torproject.org/projects/tor/login and make sure that the password can be saved.  Make sure the saved password is auto-populated when you visit the site again
 - [ ] Open an email on http://mail.google.com/ or inbox.google.com and click on a link. Make sure it works
 - [ ] Test that PDF is loaded over https at https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf
-- [ ] Test that PDF is loaded over http at http://www.pdf995.com/samples/pdf.pdf
+- [ ] Test that PDF is loaded over HTTP at http://www.pdf995.com/samples/pdf.pdf
 - [ ] Test that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run)
-- [ ] Test that search results from https://startpage.com/ opens in a new tab (due to target being _blank)
+- [ ] Test that search results from https://startpage.com/ open in a new tab (due to target being _blank_)
 
 ## App linker
 
