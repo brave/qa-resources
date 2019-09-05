@@ -498,7 +498,7 @@ def ios_testruns():
     if args.test is None:
         ios_repo.create_issue(title=iPad_Title,
                               body=bigline,
-                              assignee="LaurenWags",
+                              assignees=["srirambv", "kjozwiak"],
                               milestone=ios_milestone[ios_key],
                               labels=iPad_List)
 
@@ -535,7 +535,7 @@ def ios_testruns():
     if args.test is None:
         ios_repo.create_issue(title=iPhoneX_Title,
                               body=bigline,
-                              assignee="GeetaSarvadnya",
+                              assignee="srirambv",
                               milestone=ios_milestone[ios_key],
                               labels=iPhoneX_List)
 
