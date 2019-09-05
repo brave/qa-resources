@@ -469,10 +469,10 @@ def ios_testruns():
                     "tests" not in label_names):
                 iPhone_checklist.append(output_line)
 
-        if("QA Pass - iPhone X" not in label_names and
-                "iPad" not in label_names and
-                "tests" not in label_names):
-            iPhoneX_checklist.append(output_line)
+            if("QA Pass - iPhone X" not in label_names and
+                    "iPad" not in label_names and
+                    "tests" not in label_names):
+                iPhoneX_checklist.append(output_line)
 
     print("Release Note:")
     for line in release_notes:
