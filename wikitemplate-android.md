@@ -17,7 +17,7 @@ Pre-Requisite: Put previous build shortcut on the home screen. Also, have severa
 - [ ] Verify shortcut is still available on the home screen after upgrade
 - [ ] Verify sites added to home screen are still visible and able to be used after upgrade
 - [ ] Verify sync chain created in the previous version is still retained on upgrade
-- [ ] Verify settings changes done in the previous version is still retained on upgrade
+- [ ] Verify settings changes done in the previous version are still retained on upgrade
 
 ## Bookmarks
 
@@ -142,15 +142,15 @@ Pre-Requisite: Put previous build shortcut on the home screen. Also, have severa
 
 ## Sync
 
-- [ ] Verify you can join sync chain by scanning the QR code
-- [ ] Verify you can join sync chain using code words
-- [ ] Verify you can create a sync chain on the device and add other devices to the chain via QR code/Codewords
+- [ ] Verify you are able to join sync chain by scanning the QR code
+- [ ] Verify you are able to join sync chain using code words
+- [ ] Verify you are able to create a sync chain on the device and add other devices to the chain via QR code/Code words
 - [ ] Verify that bookmarks from other devices on the chain show up on the mobile device after sync completes
 - [ ] Verify newly created bookmarks gets sync'd to all devices on the sync chain
 - [ ] Verify existing bookmarks before joining sync chain also gets sync'd to all devices on the sync chain
 - [ ] Verify sync works on an upgrade profile and new bookmarks added post-upgrade sync's across devices on the chain
-- [ ] Verify add a bookmark on custom tab gets synced across all devices in the chain
-- [ ] Verify you can create a standalone sync chain with one device
+- [ ] Verify adding a bookmark on custom tab gets synced across all devices in the chain
+- [ ] Verify you are able to create a standalone sync chain with one device
 
 ## Top sites view
 
