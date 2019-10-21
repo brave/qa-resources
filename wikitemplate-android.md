@@ -1,23 +1,23 @@
 
 ## Installer
 
-- [ ] Check that installer is close to the size of last release
+- [ ] Check that installer is close to the size of the last release
 - [ ] Check the Brave version in About and make sure it is EXACTLY as expected
 
 ## Visual look
 
-- [ ] Make sure there after every merge
+- [ ] Make sure thereafter every merge
   - [ ] No Chrome/Chromium words appear on normal or private tabs
   - [ ] No Chrome/Chromium icons are shown in normal or private tabs
 
 ## Data
-Pre-Requisite: Put previous build shortcut on home screen. Also have several sites 'Added to home screen' (from 3 dots menu) and then upgrade to new build
+Pre-Requisite: Put previous build shortcut on the home screen. Also, have several sites 'Added to home screen' (from 3 dots menu) and then upgrade to new build
 - [ ] Verify that data from the previous build appears in the updated build as expected (bookmarks, etc)
 - [ ] Verify that the cookies from the previous build are preserved after upgrade
-- [ ] Verify shortcut is still available on home screen after upgrade
+- [ ] Verify shortcut is still available on the home screen after upgrade
 - [ ] Verify sites added to home screen are still visible and able to be used after upgrade
-- [ ] Verify sync chain created in previous version is still retained on upgrade
-- [ ] Verify settings changes done in previous version is still retained on upgrade
+- [ ] Verify sync chain created in the previous version is still retained on upgrade
+- [ ] Verify settings changes done in the previous version are still retained on upgrade
 
 ## Bookmarks
 
@@ -28,8 +28,8 @@ Pre-Requisite: Put previous build shortcut on home screen. Also have several sit
 
 ## Custom tabs
 
-- [ ] Make sure Brave handles links from gmail, slack
-- [ ] Make sure Brave works as custom tabs provide with Chromer browser
+- [ ] Make sure Brave handles links from Gmail, Slack
+- [ ] Make sure Brave works as custom tabs provide with Chrome browser
 - [ ] Ensure custom tabs work even with sync enabled/disabled
 
 ## Context menus
@@ -41,14 +41,14 @@ Pre-Requisite: Put previous build shortcut on home screen. Also have several sit
 
 ## Developer Tools
 
-- [ ] Verify you are able to inspect sublinks via dev tools
+- [ ] Verify you can inspect sublinks via dev tools
 
 ## Find in page
 
 - [ ] Ensure search box is shown when selected via the hamburger menu
 - [ ] Verify that you can successfully find a word on the page
 - [ ] Verify that the forward and backward navigation icons under find are working
-- [ ] Verify failed find shows 0 results
+- [ ] Verify failed to find shows 0 results
 
 ## Site hacks
 
@@ -56,18 +56,18 @@ Pre-Requisite: Put previous build shortcut on home screen. Also have several sit
 
 ## Settings and Bottom bar
 
-- [ ] Verify changing default settings are retained and doesn't cause the browser to crash
+- [ ] Verify changing default settings are retained and don't cause the browser to crash
 - [ ] Verify bottom bar buttons (Home/Bookmark/Search/Tabs) work as expected 
 
 ## Downloads
 
-- [ ] Verify downloading a file works and that all actions on the download item works.
-- [ ] Verify that PDF is downloaded over https at https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf
-- [ ] Verify that PDF is downloaded over http at http://www.pdf995.com/samples/pdf.pdf
+- [ ] Verify downloading a file works and that all actions on the download item work.
+- [ ] Verify that PDF is downloaded over HTTPS at https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf
+- [ ] Verify that PDF is downloaded over HTTP at http://www.pdf995.com/samples/pdf.pdf
 
 ## Fullscreen
 
-- [ ] Verify that entering HTML5 full screen works. And pressing restore to go back exits full screen. (youtube.com)
+- [ ] Verify that entering HTML5 fullscreen works and pressing restore to go back exits full screen. (youtube.com)
 
 ## Autofill Tests
 
@@ -78,18 +78,6 @@ Pre-Requisite: Put previous build shortcut on home screen. Also have several sit
 - [ ] Verify zoom in / out gestures work
 - [ ] Verify that navigating to a different origin resets the zoom
 
-## Sync
-
-- [ ] Verify you are able to join sync chain by scanning the QR code
-- [ ] Verify you are able to join sync chain using code words
-- [ ] Verify you are able to create a sycn chain on the device and add other devices to the chain via QR code/Code words
-- [ ] Verify that bookmarks from other devices on the chain show up on the mobile device after sync completes
-- [ ] Verify newly created bookmarks gets sync'd to all devices on the sync chain
-- [ ] Verify existing bookmarks before joining sync chain also gets sync'd to all devices on the sync chain
-- [ ] Verify sync works on a upgrade profile and new bookmarks added post upgrade sync's across devices on the chain
-- [ ] Verify add a bookmark on custom tab gets sync'd across all devices in the chain
-- [ ] Verify you are able to create a standalone sync chain with one device
-
 ## Bravery settings
 
 - [ ] Check that HTTPS Everywhere works by loading http://https-everywhere.badssl.com/
@@ -97,7 +85,7 @@ Pre-Requisite: Put previous build shortcut on home screen. Also have several sit
 - [ ] Check that toggling to blocking and allow ads works as expected
 - [ ] Verify that clicking through a cert error in https://badssl.com/ works
 - [ ] Visit https://brianbondy.com/ and then turn on script blocking, nothing should load. Allow it from the script blocking UI in the URL bar and it should work.
-- [ ] Verify that about:preferences default Bravery settings take effect on pages with no site settings
+- [ ] Verify that default Bravery settings take effect on pages with no site settings
 - [ ] Verify that 3rd party storage results are blank at https://jsfiddle.net/7ke9r14a/7/ when 3rd party cookies are blocked
 ### Fingerprint Tests
   - [ ] Visit https://browserleaks.com/webrtc, ensure 2 blocked items are listed in shields
@@ -107,9 +95,62 @@ Pre-Requisite: Put previous build shortcut on home screen. Also have several sit
 
 - [ ] Go to https://brianbondy.com/ and click on the twitter icon on the top right. Verify that context menus work in the new twitter tab
 - [ ] Go to https://trac.torproject.org/projects/tor/login and make sure that the password can be saved. Make sure the saved password is auto-populated when you visit the site again
-- [ ] Open a github issue and type some misspellings, make sure they aren't autocorrected
+- [ ] Open a GitHub issue and type some misspellings, make sure they aren't autocorrected
 - [ ] Open an email on http://mail.google.com/ or inbox.google.com and click on a link. Make sure it works
 - [ ] Verify that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run)
+
+## Brave Rewards/Ads
+
+- [ ] Verify wallet is auto-created after enabling rewards(either via Panel or Rewards page)
+- [ ] Verify account balance shows correct BAT and USD value
+- [ ] Verify actions taken (claiming grant, tipping, auto-contribute) display in wallet panel
+- [ ] Verify `Check back soon for a free token` grant is shown in the panel when grants are not available for ads unsupported region only
+- [ ] Verify grant details are shown in expanded view when a grant is claimed
+- [ ] Verify monthly budget shows correct BAT and USD value
+- [ ] Verify you can exclude a publisher from the auto-contribute table by clicking on the trash bin icon in the auto-contribute table
+- [ ] Verify you can exclude a publisher by using the toggle on the Rewards Panel
+- [ ] Verify you can remove excluded sites via `Restore All` button
+- [ ] Verify when you click on the BR panel while on a site, the panel displays site-specific information (site favicon, domain, attention %)
+- [ ] Verify when you click on `Send a tip`, the custom tip banner displays
+- [ ] Verify you can make a one-time tip and they display in tips panel
+- [ ] Verify you can make a recurring tip and they display in tips panel
+- [ ] Verify you can tip a verified publisher
+- [ ] Verify you can tip a verified YouTube creator
+- [ ] Verify tip panel shows a verified checkmark for a verified publisher/verified YouTube creator
+- [ ] Verify tip panel shows a message about the unverified publisher
+- [ ] Verify BR panel shows the message about an unverified publisher
+- [ ] Verify you can perform a contribution
+- [ ] Verify if you disable auto-contribute you are still able to tip regular sites and YouTube creators
+- [ ] Verify that disabling Rewards and enabling it again does not lose state
+- [ ] Verify that disabling auto-contribute and enabling it again does not lose state
+- [ ] Verify unchecking `Allow contribution to videos` option doesn't list any YouTube creator in ac list
+- [ ] Adjust min visit/time in settings. Visit some sites and YouTube channels to verify they are added to the table after the specified settings
+- [ ] Verify you can reset rewards from advance setting. Resetting should delete wallet and bring it back to the pre-optin state
+- [ ] Upgrade from an older version
+  - [ ] Verify the wallet balance (if available) is retained
+  - [ ] Verify auto-contribute list is not lost after upgrade
+  - [ ] Verify tips list is not lost after upgrade
+  - [ ] Verify wallet panel transactions list is not lost after upgrade
+### Brave Ads
+- [ ] Verify ads is auto-enabled when rewards is enabled for the supported region
+- [ ] Verify ads are only shown when the app is being used
+- [ ] Verify ad notification are shown based on ads per hour setting
+- [ ] Verify ad notifications stack up in notification tray
+- [ ] Verify swipe left/right dismisses the ad notification when shown and is not stored in the notification tray
+- [ ] Verify clicking on an ad notification shows the landing page
+- [ ] Verify `view`,`clicked` and `landed` and `dismiss` states are logged based on the action
+
+## Sync
+
+- [ ] Verify you are able to join sync chain by scanning the QR code
+- [ ] Verify you are able to join sync chain using code words
+- [ ] Verify you are able to create a sync chain on the device and add other devices to the chain via QR code/Code words
+- [ ] Verify that bookmarks from other devices on the chain show up on the mobile device after sync completes
+- [ ] Verify newly created bookmarks gets sync'd to all devices on the sync chain
+- [ ] Verify existing bookmarks before joining sync chain also gets sync'd to all devices on the sync chain
+- [ ] Verify sync works on an upgrade profile and new bookmarks added post-upgrade sync's across devices on the chain
+- [ ] Verify adding a bookmark on custom tab gets synced across all devices in the chain
+- [ ] Verify you are able to create a standalone sync chain with one device
 
 ## Top sites view
 
@@ -129,5 +170,5 @@ Pre-Requisite: Put previous build shortcut on home screen. Also have several sit
 - Check that ad replacement works on http://slashdot.org
 - Verify that Safe Browsing works (https://www.raisegame.com/)
 - Turning Safe Browsing off and shields off both disable safe browsing for https://www.raisegame.com/
-- Verify that turning on fingerprinting protection in about:preferences shows 3 fingerprints blocked at https://jsfiddle.net/bkf50r8v/13/. Verify that turning it off in the Bravery menu shows 0 fingerprints blocked
+- Verify that turning on fingerprinting protection in `Privacy` shows 3 fingerprints blocked at https://jsfiddle.net/bkf50r8v/13/. Verify that turning it off in the Bravery menu shows 0 fingerprints blocked
 - Verify that audio fingerprint is blocked at https://audiofingerprint.openwpm.com/ when fingerprinting protection is on
