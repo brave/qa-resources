@@ -29,10 +29,13 @@
 
 ### Import tests
 
-- [ ] Verify that you can import bookmarks, cookies, history, passwords from Google Chrome 
-- [ ] Verify that you can import bookmarks, cookies, history, passwords, autofill and search engines from Firefox
-- [ ] Verify that you can import bookmarks from Edge
-- [ ] Verify importing `Bookmark HTML` file retains the folder structure on a clean profile
+- [ ] Verify that you can import `History`, `Favorites/Bookmarks` and `Passwords` from Google Chrome 
+- [ ] Verify that you can import `History`, `Favorites/Bookmarks`, `Passwords`, `Search Engines` and `Autofill` from Firefox
+- [ ] Verify that you can import `Favorites/Bookmarks` from Mirosoft Edge
+- [ ] Verify that importing bookmarks using `Bookmark HTML File` retains the folder structure on a clean profile
+- [ ] Verify that exporting `Passwords` using the `Export passwords...` feature under `brave://settings/passwords` works as expected
+- [ ] Verify that importing `Passwords` using the `Import` feature under `brave://settings/passwords` works as expected and is correctly displaying the imported passwords under `Saved Passwords`
+
 
 ### Context menus
 
