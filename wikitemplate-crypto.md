@@ -21,6 +21,7 @@
 
 - [ ] Verify you can import Brave Crypto Wallet using 24 seed words 
 - [ ] Verify you can import MetaMask Wallet using only 12 seed words
+- [ ] Verify you can restore Brave CW/MM account from the login screen
 
 ## Transactions
 
