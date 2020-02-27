@@ -37,4 +37,4 @@
 ## Responsive Screen
 
 - [ ] Verify vertical scroll bars are shown when browser resolution is smaller than the page viewport
-- [ ] Verify all the screens on Crypto Wallet are responsive when browser resolution is changed 
+- [ ] Verify all controls/buttons on Crypto Wallet are responsive when browser resolution is changed 
