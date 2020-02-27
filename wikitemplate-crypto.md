@@ -33,3 +33,8 @@
 
 - [ ] Verify you can link hardware wallet using Trezor and unlock the wallet 
 - [ ] Verify you can link hardware wallet using Ledger Nano and unlock the wallet
+
+## Responsive Screen
+
+- [ ] Verify vertical scroll bars are shown when browser resolution is smaller than the page viewport
+- [ ] Verify all controls/buttons on Crypto Wallet are responsive when browser resolution is changed 
