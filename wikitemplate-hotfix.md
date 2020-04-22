@@ -71,6 +71,7 @@
   - [ ] Verify custom tip banner is also displayed for monthly contribution.
 - [ ] Verify you are able to make one-time tip and they display in Tips panel.
   - [ ] Verify tip is reflected in the rewards widget on the NTP.
+  - [ ] Verify when you tip an unverified publisher, the one time tip is recorded in the Pending Contributions list.  
 - [ ] Verify you are able to make recurring tip and they display in Monthly Contributions panel.
   - [ ] Verify you are able to adjust your recurring tip amount from the BR panel.
   - [ ] Verify recurring tip is reflected in the rewards widget on the NTP.
