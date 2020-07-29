@@ -20,7 +20,6 @@ print("Rate Remaining: " + str(remaining))
 
 laptop_repo = g.get_organization("brave").get_repo("brave-browser")
 ios_repo = g.get_organization("brave").get_repo("brave-ios")
-android_repo = g.get_organization("brave").get_repo("browser-android-tabs")
 
 checklist = []
 release_notes = []
@@ -44,10 +43,6 @@ ios_milestone = {}
 for iosmilestone in ios_repo.get_milestones(state="open"):
     ios_milestone.update({iosmilestone.title: iosmilestone})
 
-android_milestone = {}
-for androidmilestone in android_repo.get_milestones(state="open"):
-    android_milestone.update({androidmilestone.title: androidmilestone})
-
 wiki_laptop_file = open("wikitemplate.md", "r")
 laptop_template = wiki_laptop_file.read()
 wiki_laptop_hf = open("wikitemplate-hotfix.md", "r")
@@ -64,6 +59,12 @@ if (len(ethmilestone) == 0):
     ethkey = ""
 else:
     ethkey = ethmilestone[0]
+
+androidmilestone = [s for s in laptop_milestone if "Android" in s]
+if (len(androidmilestone) == 0):
+    androidkey = ""
+else:
+    androidkey = androidmilestone[0]
 
 def laptop_testruns(milestonever):
 
@@ -536,15 +537,13 @@ def ios_testruns():
     return
 
 
-def android_testruns():
+def android_testruns(milestonever):
 
     wikitemplate_android = open("wikitemplate-android.md", "r")
     android_template = wikitemplate_android.read()
 
-    android_key = sorted(android_milestone.keys())[0]
-
-    for issue in android_repo.get_issues(
-            milestone=android_milestone[android_key],
+    for issue in laptop_repo.get_issues(
+            milestone=laptop_milestone[milestonever],
             sort="created",
             direction="asc",
             state="closed"):
@@ -558,9 +557,13 @@ def android_testruns():
 
             labels = issue.get_labels()
             label_names = []
+
             for label in labels:
                 label_names.append(label.name)
-            if("QA/Yes" in label_names):
+            if("QA/Yes" in label_names and 
+                    "OS/Android" in label_names and
+                    "tests" not in label_names and
+                    "QA/No" not in label_names):
                 output_line = " - " + issue_title + ".([#" +\
                     str(issue.number) + "])" + issue.html_url + "))"
                 release_notes.append(output_line)
@@ -610,14 +613,14 @@ def android_testruns():
     bigline = bigline + android_template
     print(bigline)
     print("")
-    AndroidARMtitle = "Manual test run on Android ARM  for " + android_key
+    AndroidARMtitle = "Manual test run on Android ARM  for " + androidkey
     AndroidARMlist = ["ARM", "release-notes/exclude", "tests", "QA/Yes"]
 
     if args.test is None:
-        android_repo.create_issue(title=AndroidARMtitle,
+        laptop_repo.create_issue(title=AndroidARMtitle,
                                   body=bigline,
-                                  assignee="GeetaSarvadnya",
-                                  milestone=android_milestone[android_key],
+                                  assignee="srirambv",
+                                  milestone=laptop_milestone[androidkey],
                                   labels=AndroidARMlist)
 
     print("Android x86 Checklist:")
@@ -627,14 +630,14 @@ def android_testruns():
     bigline = bigline + android_template
     print(bigline)
     print("")
-    Androidx86title = "Manual test run on Android x86 for " + android_key
+    Androidx86title = "Manual test run on Android x86 for " + androidkey
     Androidx86list = ["x86", "release-notes/exclude", "tests", "QA/Yes"]
 
     if args.test is None:
-        android_repo.create_issue(title=Androidx86title,
+        laptop_repo.create_issue(title=Androidx86title,
                                   body=bigline,
                                   assignee="LaurenWags",
-                                  milestone=android_milestone[android_key],
+                                  milestone=laptop_milestone[androidkey],
                                   labels=Androidx86list)
 
     print("Android Tab Checklist:")
@@ -644,17 +647,17 @@ def android_testruns():
     bigline = bigline + android_template
     print(bigline)
     print("")
-    AndroidTabtitle = "Manual test run on Android Tab  for " + android_key
+    AndroidTabtitle = "Manual test run on Android Tab  for " + androidkey
     AndroidTablist = ["ARM", "release-notes/exclude", "tests", "QA/Yes"]
 
     if args.test is None:
-        android_repo.create_issue(title=AndroidTabtitle,
+        laptop_repo.create_issue(title=AndroidTabtitle,
                                   body=bigline,
                                   assignee="srirambv",
-                                  milestone=android_milestone[android_key],
+                                  milestone=laptop_milestone[androidkey],
                                   labels=AndroidTablist)
 
-    return
+    return 0
 
 
 def cryptowallet_testruns(milestonever):
@@ -861,9 +864,8 @@ elif (select_checklist == "4"):
                               sorted(ios_milestone.keys())[0])
     ios_testruns()
 elif (select_checklist == "5"):
-    generate_android_test = print("\nGenerating test runs for android",
-                                  sorted(android_milestone.keys())[0])
-    android_testruns()
+    generate_android_test = print("\nGenerating test runs for " + androidkey)
+    android_testruns(androidkey)
 elif (select_checklist == "6"):
     if (ethkey == ""):
         print("No open milestone to generate tests")
