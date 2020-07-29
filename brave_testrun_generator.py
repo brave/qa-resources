@@ -621,7 +621,7 @@ def android_testruns(milestonever):
         android_repo.create_issue(title=AndroidARMtitle,
                                   body=bigline,
                                   assignee="srirambv",
-                                  milestone=android_milestone[androidkey],
+                                  milestone=laptop_milestone[androidkey],
                                   labels=AndroidARMlist)
 
     print("Android x86 Checklist:")
@@ -638,7 +638,7 @@ def android_testruns(milestonever):
         android_repo.create_issue(title=Androidx86title,
                                   body=bigline,
                                   assignee="LaurenWags",
-                                  milestone=android_milestone[androidkey],
+                                  milestone=laptop_milestone[androidkey],
                                   labels=Androidx86list)
 
     print("Android Tab Checklist:")
@@ -655,7 +655,7 @@ def android_testruns(milestonever):
         android_repo.create_issue(title=AndroidTabtitle,
                                   body=bigline,
                                   assignee="srirambv",
-                                  milestone=android_milestone[androidkey],
+                                  milestone=laptop_milestone[androidkey],
                                   labels=AndroidTablist)
 
     return 0
