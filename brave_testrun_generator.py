@@ -20,7 +20,6 @@ print("Rate Remaining: " + str(remaining))
 
 laptop_repo = g.get_organization("brave").get_repo("brave-browser")
 ios_repo = g.get_organization("brave").get_repo("brave-ios")
-android_repo = g.get_organization("brave").get_repo("browser-android-tabs")
 
 checklist = []
 release_notes = []
@@ -618,7 +617,7 @@ def android_testruns(milestonever):
     AndroidARMlist = ["ARM", "release-notes/exclude", "tests", "QA/Yes"]
 
     if args.test is None:
-        android_repo.create_issue(title=AndroidARMtitle,
+        laptop_repo.create_issue(title=AndroidARMtitle,
                                   body=bigline,
                                   assignee="srirambv",
                                   milestone=laptop_milestone[androidkey],
@@ -635,7 +634,7 @@ def android_testruns(milestonever):
     Androidx86list = ["x86", "release-notes/exclude", "tests", "QA/Yes"]
 
     if args.test is None:
-        android_repo.create_issue(title=Androidx86title,
+        laptop_repo.create_issue(title=Androidx86title,
                                   body=bigline,
                                   assignee="LaurenWags",
                                   milestone=laptop_milestone[androidkey],
@@ -652,7 +651,7 @@ def android_testruns(milestonever):
     AndroidTablist = ["ARM", "release-notes/exclude", "tests", "QA/Yes"]
 
     if args.test is None:
-        android_repo.create_issue(title=AndroidTabtitle,
+        laptop_repo.create_issue(title=AndroidTabtitle,
                                   body=bigline,
                                   assignee="srirambv",
                                   milestone=laptop_milestone[androidkey],
