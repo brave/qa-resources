@@ -19,40 +19,15 @@ Pre-Requisite: Put previous build shortcut on the home screen. Also, have severa
 - [ ] Verify sync chain created in the previous version is still retained on upgrade
 - [ ] Verify settings changes done in the previous version are still retained on upgrade
 
-## Bookmarks
-
-- [ ] Verify that creating a bookmark works
-- [ ] Verify that clicking a bookmark loads the bookmark
-- [ ] Verify that deleting a bookmark works
-- [ ] Verify that creating a bookmark folder works
-
 ## Custom tabs
 
 - [ ] Make sure Brave handles links from Gmail, Slack
 - [ ] Make sure Brave works as custom tabs provide with Chrome browser
 - [ ] Ensure custom tabs work even with sync enabled/disabled
 
-## Context menus
-
-- [ ] Make sure context menu items in the URL bar work
-- [ ] Make sure context menu items on content work with no selected text
-- [ ] Make sure context menu items on content work with selected text
-- [ ] Make sure context menu items on content work inside an editable control (input, textarea, or contenteditable)
-
 ## Developer Tools
 
-- [ ] Verify you can inspect sublinks via dev tools
-
-## Find in page
-
-- [ ] Ensure search box is shown when selected via the hamburger menu
-- [ ] Verify that you can successfully find a word on the page
-- [ ] Verify that the forward and backward navigation icons under find are working
-- [ ] Verify failed to find shows 0 results
-
-## Site hacks
-
-- [ ] Verify https://www.twitch.tv/adobe sub-page loads a video and you can play it
+- [ ] Verify you can inspect sub-links via dev tools
 
 ## Settings and Bottom bar
 
@@ -62,49 +37,35 @@ Pre-Requisite: Put previous build shortcut on the home screen. Also, have severa
 ## Downloads
 
 - [ ] Verify downloading a file works and that all actions on the download item work.
-- [ ] Verify that PDF is downloaded over HTTPS at https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf
-- [ ] Verify that PDF is downloaded over HTTP at http://www.pdf995.com/samples/pdf.pdf
-
-## Fullscreen
-
-- [ ] Verify that entering HTML5 fullscreen works and pressing restore to go back exits full screen. (youtube.com)
-
-## Autofill Tests
-
-- [ ] Verify that autofill works on https://srirambv.github.io/formfiller.html
-
-## Zoom
-
-- [ ] Verify zoom in / out gestures work
-- [ ] Verify that navigating to a different origin resets the zoom
+- [ ] Verify that PDF is downloaded over HTTPS at `https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf`
+- [ ] Verify that PDF is downloaded over HTTP at `http://www.pdf995.com/samples/pdf.pdf`
 
 ## Bravery settings
 
-- [ ] Check that HTTPS Everywhere works by loading http://https-everywhere.badssl.com/
-- [ ] Turning HTTPS Everywhere off and shields off both disable the redirect to https://https-everywhere.badssl.com/
+- [ ] Check that HTTPS Everywhere works by loading `http://https-everywhere.badssl.com/`
+- [ ] Turning HTTPS Everywhere off and shields off both disable the redirect to `https://https-everywhere.badssl.com/`
 - [ ] Check that toggling to blocking and allow ads works as expected
-- [ ] Verify that clicking through a cert error in https://badssl.com/ works
-- [ ] Visit https://brianbondy.com/ and then turn on script blocking, nothing should load. Allow it from the script blocking UI in the URL bar and it should work.
+- [ ] Verify that clicking through a cert error in `https://badssl.com/` works
+- [ ] Visit `https://brianbondy.com/` and then turn on script blocking, nothing should load. Allow it from the script blocking UI in the URL bar and it should work.
 - [ ] Verify that default Bravery settings take effect on pages with no site settings
-- [ ] Verify that 3rd party storage results are blank at https://jsfiddle.net/7ke9r14a/7/ when 3rd party cookies are blocked
+- [ ] Verify that 3rd party storage results are blank at `https://jsfiddle.net/7ke9r14a/7/` when 3rd party cookies are blocked
 ### Fingerprint Tests
-  - [ ] Visit https://browserleaks.com/webrtc, ensure 2 blocked items are listed in shields
-  - [ ] Verify that https://diafygi.github.io/webrtc-ips/ doesn't leak IP address when `Block all fingerprinting protection` is on
+  - [ ] Visit `https://browserleaks.com/webrtc`, ensure 2 blocked items are listed in shields
+  - [ ] Verify that `https://diafygi.github.io/webrtc-ips/` doesn't leak IP address when `Block all fingerprinting protection` is on
 
 ## Content Tests
 
-- [ ] Go to https://brianbondy.com/ and click on the twitter icon on the top right. Verify that context menus work in the new twitter tab
-- [ ] Go to https://trac.torproject.org/projects/tor/login and make sure that the password can be saved. Make sure the saved password is auto-populated when you visit the site again
+- [ ] Go to `https://brianbondy.com/` and click on the twitter icon on the top right. Verify that context menus work in the new twitter tab
+- [ ] Go to `https://trac.torproject.org/projects/tor/login` and make sure that the password can be saved. Make sure the saved password is auto-populated when you visit the site again
 - [ ] Open a GitHub issue and type some misspellings, make sure they aren't autocorrected
-- [ ] Open an email on http://mail.google.com/ or inbox.google.com and click on a link. Make sure it works
-- [ ] Verify that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run)
+- [ ] Open an email on `http://mail.google.com/` or inbox.google.com and click on a link. Make sure it works
+- [ ] Verify that `https://mixed-script.badssl.com/` shows up as grey not red (no mixed content scripts are run)
 
 ## Brave Rewards/Ads
 
 - [ ] Verify wallet is auto-created after enabling rewards(either via Panel or Rewards page)
 - [ ] Verify account balance shows correct BAT and USD value
 - [ ] Verify actions taken (claiming grant, tipping, auto-contribute) display in wallet panel
-- [ ] Verify `Check back soon for a free token` grant is shown in the panel when grants are not available for ads unsupported region only
 - [ ] Verify grant details are shown in expanded view when a grant is claimed
 - [ ] Verify monthly budget shows correct BAT and USD value
 - [ ] Verify you can exclude a publisher from the auto-contribute table by clicking on the trash bin icon in the auto-contribute table
@@ -116,7 +77,7 @@ Pre-Requisite: Put previous build shortcut on the home screen. Also, have severa
 - [ ] Verify you can make a recurring tip and they display in tips panel
 - [ ] Verify you can tip a verified publisher
 - [ ] Verify you can tip a verified YouTube creator
-- [ ] Verify tip panel shows a verified checkmark for a verified publisher/verified YouTube creator
+- [ ] Verify tip panel shows a verified check mark for a verified publisher/verified YouTube creator
 - [ ] Verify tip panel shows a message about the unverified publisher
 - [ ] Verify BR panel shows the message about an unverified publisher
 - [ ] Verify you can perform a contribution
@@ -126,6 +87,8 @@ Pre-Requisite: Put previous build shortcut on the home screen. Also, have severa
 - [ ] Verify unchecking `Allow contribution to videos` option doesn't list any YouTube creator in ac list
 - [ ] Adjust min visit/time in settings. Visit some sites and YouTube channels to verify they are added to the table after the specified settings
 - [ ] Verify you can reset rewards from advance setting. Resetting should delete wallet and bring it back to the pre-optin state
+- [ ] Verify on BR panel `Verify wallet` button only enables when balance in >=25 BAT
+- [ ] Verify you are able to disconnect/re-connect a user wallet when min balance is available
 - [ ] Upgrade from an older version
   - [ ] Verify the wallet balance (if available) is retained
   - [ ] Verify auto-contribute list is not lost after upgrade
@@ -145,30 +108,24 @@ Pre-Requisite: Put previous build shortcut on the home screen. Also, have severa
 - [ ] Verify you are able to join sync chain by scanning the QR code
 - [ ] Verify you are able to join sync chain using code words
 - [ ] Verify you are able to create a sync chain on the device and add other devices to the chain via QR code/Code words
-- [ ] Verify that bookmarks from other devices on the chain show up on the mobile device after sync completes
-- [ ] Verify newly created bookmarks gets sync'd to all devices on the sync chain
+- [ ] Verify once sync chain is created, `Categories` option is shown in devices list
+- [ ] Verify only `Bookmarks` is enabled in `Categories` by default
+- [ ] Verify enabling `Sync everything` enables all other switches
 - [ ] Verify existing bookmarks before joining sync chain also gets sync'd to all devices on the sync chain
+- [ ] Verify `Autofill` data is sync'd to all devices when enabled
+- [ ] Verify `History` is sync'd to all devices 
+- [ ] Verify `Open tab` form other devices shows up under history below the device name
+- [ ] Verify `Password` is sync'd to all devices
+- [ ] Verify `Settings` sync's site settings on all devices
 - [ ] Verify sync works on an upgrade profile and new bookmarks added post-upgrade sync's across devices on the chain
-- [ ] Verify adding a bookmark on custom tab gets synced across all devices in the chain
+- [ ] Verify adding a bookmark on custom tab gets sync'd across all devices in the chain
 - [ ] Verify you are able to create a standalone sync chain with one device
+- [ ] Verify `Remove this device` shows a confirmation alert before removing the sync chain on the device
 
 ## Top sites view
 
 - [ ] Long-press on top sites to get to deletion mode, and delete a top site (note this will stop that site from showing up again on top sites, so you may not want to do this a site you want to keep there)
 
-## Background
-
-- [ ] Start loading a page, background the app, wait > 5 sec, then bring to front, ensure splash screen is not shown
-
-
 ## Session storage
 
 - [ ] Verify that tabs restore when closed, including active tab
-
-## Yet to be implemented
-
-- Check that ad replacement works on http://slashdot.org
-- Verify that Safe Browsing works (https://www.raisegame.com/)
-- Turning Safe Browsing off and shields off both disable safe browsing for https://www.raisegame.com/
-- Verify that turning on fingerprinting protection in `Privacy` shows 3 fingerprints blocked at https://jsfiddle.net/bkf50r8v/13/. Verify that turning it off in the Bravery menu shows 0 fingerprints blocked
-- Verify that audio fingerprint is blocked at https://audiofingerprint.openwpm.com/ when fingerprinting protection is on
