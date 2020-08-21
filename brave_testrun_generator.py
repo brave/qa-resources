@@ -45,7 +45,7 @@ for iosmilestone in ios_repo.get_milestones(state="open"):
 
 wiki_laptop_file = open("wikitemplate.md", "r")
 laptop_template = wiki_laptop_file.read()
-wiki_laptop_hf = open("wikitemplate-hotfix.md", "r")
+wiki_laptop_hf = open("wikitemplate-minorCRbump.md", "r")
 laptop_hf_template = wiki_laptop_hf.read()
 
 laptop_key = sorted(laptop_milestone.keys())
@@ -791,9 +791,9 @@ print("***********************************************************************"
       "***************************************************")
 
 header = print("Create test runs for:\n")
-laptop = print("1. Laptop Release")
-laptop_per = print("2. Laptop Per-release Checklist")
-laptop_hf = print("3. Laptop HotFix Checklist")
+laptop = print("1. Desktop Release")
+laptop_per = print("2. Desktop Per-release Checklist")
+laptop_hf = print("3. Desktop CR minor bump")
 ios = print("4. iOS")
 android = print("5. Android")
 cryptowallet = print("6. Brave Crypto Wallet - Ethereum Client\n")
