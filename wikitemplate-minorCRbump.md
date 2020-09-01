@@ -2,16 +2,6 @@
 
 - [ ]  Check signature: If OS Run `spctl --assess --verbose /Applications/Brave-Browser-Beta.app/` and make sure it returns `accepted`.  If Windows right click on the `brave_installer-x64.exe` and go to Properties, go to the Digital Signatures tab and double click on the signature.  Make sure it says "The digital signature is OK" in the popup window
 
-### Data(Upgrade from previous release)
-
-- [ ]  Make sure that data from the last version appears in the new version OK
-- [ ]  With data from the last version, verify that
-  - [ ]  bookmarks on the bookmark toolbar and bookmark folders can be opened
-  - [ ]  cookies are preserved
-  - [ ]  installed extensions are retained and work correctly
-  - [ ]  opened tabs can be reloaded
-  - [ ]  stored passwords are preserved
-  - [ ]  unpinned tabs can be pinned
 
 ### Widevine
 
@@ -30,11 +20,6 @@
 - [ ]  Verify you can tip a verified YouTube creator
 - [ ]  Verify you are able to perform a contribution
 - [ ]  Verify if you disable auto-contribute you are still able to tip regular sites and YouTube creators
-- [ ]  Upgrade from older version
-  - [ ]  Verify the wallet balance is retained and wallet backup code isn't corrupted
-  - [ ]  Verify auto-contribute list is not lost after upgrade
-  - [ ]  Verify tips list is not lost after upgrade
-  - [ ]  Verify wallet panel transactions list is not lost after upgrade
 
 ## Update tests
 
@@ -43,3 +28,27 @@
 
 #### Components
 - [ ]   Delete Adblock folder from browser profile and restart browser. Visit `brave://components` and verify `Brave Ad Block Updater` downloads and update the component. Repeat for all Brave components
+
+### Upgrade
+
+- [ ] Make sure that data from the last version appears in the new version OK
+- [ ] Ensure that `brave://version` lists the expected Brave & Chromium versions
+- [ ] With data from the last version, verify that
+  - [ ] Bookmarks on the bookmark toolbar and bookmark folders can be opened
+  - [ ] Cookies are preserved
+  - [ ] Installed extensions are retained and work correctly
+  - [ ] Opened tabs can be reloaded
+  - [ ] Stored passwords are preserved
+  - [ ] Sync chain created in previous version is retained 
+  - [ ] Social media blocking buttons changes are retained
+  - [ ] Rewards
+    - [ ] Wallet balance is retained
+    - [ ] Auto-contribute list is retained
+    - [ ] Both Tips and Monthly Contributions are retained
+    - [ ] Wallet panel transactions list is retained
+    - [ ] Changes to rewards settings are retained
+  - [ ] Ads
+    - [ ] Both `Estimated pending rewards` & `Ad notifications received this month` are retained
+    - [ ] Changes to ads settings are retained
+    - [ ] Ensure that ads are not being enabled when upgrading to a new version if they were disabled
+    - [ ] Ensure that ads are not disabled when upgrading to a new version if they were enabled
