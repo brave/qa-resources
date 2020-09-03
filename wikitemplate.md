@@ -87,7 +87,7 @@
 - [ ] Verify Ads UI (panel, settings, etc) does not show when in a region without Ads support. Verify the Ads panel does show the 'Sorry! Ads are not yet available in your region.' message.
 - [ ] Verify when the system language is English, the Browser language is French, and you are in one of the supported regions, Ad notifications are still served to you.
 - [ ] Verify you are served Ad notifications when Ads are enabled
-- [ ] Windows only: Verify when `Focus Assist` is set to alarms only, Ads are not served to the user but are available in the `Notification Center`
+  - [ ] Verify ad earnings are reflected in the rewards widget on the NTP.
 - [ ] Verify when Ads are toggled off, there are no Ad messages in the logs
 - [ ] Verify when Rewards are toggled off (but Ads were not explicitly toggled off), there are no Ads logs recorded
 - [ ] Verify view/click/dismiss/landed ad notifications show in confirmations.json
@@ -97,30 +97,55 @@
 
 ### Rewards
 
-- [ ] Verify wallet is auto created after enabling rewards
-- [ ] Verify account balance shows correct BAT and USD value
-- [ ] Verify you are able to restore a wallet
-- [ ] Verify wallet address matches the QR code that is generated under `Add funds`
-- [ ] Verify actions taken (claiming grant, tipping, auto-contribute) display in wallet panel
-- [ ] Verify adding funds via any of the currencies flows into wallet after specified amount of time
-- [ ] Verify adding funds to an existing wallet with amount, adjusts the BAT value appropriately
-- [ ] Verify monthly budget shows correct BAT and USD value
-- [ ] Verify you are able to exclude a publisher from the auto-contribute table by clicking on the `x` in auto-contribute table and popup list of sites
-- [ ] Verify you are able to exclude a publisher by using the toggle on the Rewards Panel
-- [ ] Verify when you click on the BR panel while on a site, the panel displays site specific information (site favicon, domain, attention %)
-- [ ] Verify when you click on `Send a tip`, the custom tip banner displays
-- [ ] Verify you are able to make one-time tip and they display in tips panel
-- [ ] Verify you are able to make recurring tip and they display in tips panel
-- [ ] Verify you can tip a verified publisher
-- [ ] Verify you can tip a verified YouTube creator
-- [ ] Verify tip panel shows a verified checkmark for a verified publisher/verified YouTube creator
-- [ ] Verify tip panel shows a message about unverified publisher
-- [ ] Verify BR panel shows message about an unverified publisher
-- [ ] Verify you are able to perform a contribution
-- [ ] Verify if you disable auto-contribute you are still able to tip regular sites and YouTube creators
-- [ ] Verify that disabling Rewards and enabling it again does not lose state
-- [ ] Verify that disabling auto-contribute and enabling it again does not lose state
-- [ ] Adjust min visit/time in settings. Visit some sites and YouTube channels to verify they are added to the table after the specified settings
+- [ ] Verify you are able to create a new wallet.
+- [ ] Verify you are able to restore a wallet.
+- [ ] Verify account balance shows correct BAT and USD value.
+- [ ] Verify actions taken (claiming grant, tipping, auto-contribute) display in wallet panel.
+- [ ] Verify AC monthly budget shows correct BAT and USD value.
+- [ ] Verify you are able to exclude a publisher from the auto-contribute table and popup list of sites.
+- [ ] Verify you are able to exclude a publisher by using the toggle on the Rewards Panel.
+- [ ] Verify you are able to perform an auto contribution.
+  - [ ] Verify auto contribution is reflected in the rewards widget on the NTP.
+- [ ] Verify monthly statement shows expected data.
+- [ ] Verify when you click on the BR panel while on a site, the panel displays site specific information (site favicon, domain, attention %).
+- [ ] Verify BR panel shows message about an unverified publisher.
+- [ ] Verify one time and monthly tip banners show a message about unverified publisher.
+- [ ] Verify one time tip and monthly tip banners show a verified checkmark for a verified creator.
+- [ ] Verify when you click on `Send a tip`, the custom tip banner displays if set up.
+  - [ ] Verify custom tip banner is also displayed for monthly contribution.
+- [ ] Verify you are able to make one-time tip and they display in Tips panel.
+  - [ ] Verify tip is reflected in the rewards widget on the NTP.
+  - [ ] Verify when you tip an unverified publisher, the one time tip is recorded in the Pending Contributions list.
+- [ ] Verify you are able to make recurring tip and they display in Monthly Contributions panel.
+  - [ ] Verify you are able to adjust your recurring tip amount from the BR panel.
+  - [ ] Verify recurring tip is reflected in the rewards widget on the NTP.
+- [ ] Verify you can tip a verified website.
+  - [ ] Verify the website displays in the auto-contribute list after specified amount of time/visits per settings.
+- [ ] Verify you can tip a verified YouTube creator.
+  - [ ] Verify the YouTube creator displays in the auto-contribute list after specified amount of time/visits per settings.
+- [ ] Verify you can tip a verified Vimeo creator.
+  - [ ] Verify the Vimeo creator displays in the auto-contribute list after specified amount of time/visits per settings.
+- [ ] Verify you can tip a verified Twitch creator.
+  - [ ] Verify the Twitch creator displays in the auto-contribute list after specified amount of time/visits per settings.
+- [ ] Verify you can tip a verified Twitter user from the panel.
+- [ ] Verify you can tip a verified Twitter user via inline tip button.
+  - [ ] Verify the in-line tip button is spaced properly.
+- [ ] Verify you can tip a verified Github user from the panel.
+- [ ] Verify you can tip a verified Github user via inline tip button.
+  - [ ] Verify the Github creator displays in the auto-contribute list after specified amount of time/visits per settings.
+- [ ] Verify you can tip a verified Reddit user from the panel.
+- [ ] Verify you can tip a verified Reddit user via inline tip button.
+- [ ] Verify if you disable auto-contribute you are still able to tip creators.
+- [ ] Verify if auto-contribute is disabled AC does not occur.
+- [ ] Verify if Rewards is disabled AC does not occur.
+- [ ] Verify that disabling Rewards and enabling it again does not lose state.
+- [ ] Adjust min visit/time in settings. Visit some sites to verify they are added to the table after the specified settings.
+- [ ] Uphold cases
+  - [ ] Verify you are able to connect a KYC'd Uphold wallet to Rewards.  
+  - [ ] Verify wallet balance in Brave updates when BAT is added to the Brave Browser card. 
+  - [ ] Verify if you only have user controlled BAT (BAT in Uphold only), you can only tip KYC'd creators, any tips to non-KYC'd creators go to the Pending Contributions list.
+  - [ ] Verify connected (verified but not KYC'd) publishers display messaging on panel and tip banner.
+  - [ ] Verify you are able to perform an auto contribute using Uphold BAT.
 
 ### Social-media blocking settings
 
