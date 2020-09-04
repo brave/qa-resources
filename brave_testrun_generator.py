@@ -135,7 +135,11 @@ def laptop_testruns(milestonever):
     print(bigline)
     print("")
     macTitle = "Manual test run on OS X for " + milestonever
-    macList = ["OS/macOS", "release-notes/exclude", "tests", "QA/Yes"]
+    macList = ["OS/macOS",
+               "release-notes/exclude",
+               "tests",
+               "QA/Yes",
+               "OS/Desktop"]
 
     if args.test is None:
         laptop_repo.create_issue(title=macTitle,
@@ -152,7 +156,11 @@ def laptop_testruns(milestonever):
     print(bigline)
     print("")
     winTitle = "Manual test run on Windows x64 for " + milestonever
-    winList = ["OS/Windows", "release-notes/exclude", "tests", "QA/Yes"]
+    winList = ["OS/Windows",
+               "release-notes/exclude",
+               "tests", 
+               "QA/Yes",
+               "OS/Desktop"]
 
     if args.test is None:
         laptop_repo.create_issue(title=winTitle,
@@ -169,10 +177,11 @@ def laptop_testruns(milestonever):
     print(bigline)
     print("")
     linTitle = "Manual test run on Linux for " + milestonever
-    linList = ["OS/unix-like/linux",
+    linList = ["OS/Linux",
                "release-notes/exclude",
                "tests",
-               "QA/Yes"]
+               "QA/Yes",
+               "OS/Desktop"]
 
     if args.test is None:
         laptop_repo.create_issue(title=linTitle,
@@ -219,13 +228,13 @@ def laptop_perrel_checklist(milestonever):
                 if("QA/checked-macOS" not in label_names and
                         "QA/checked" not in label_names and
                         "OS/Windows" not in label_names and
-                        "OS/unix-like/linux" not in label_names):
+                        "OS/Linux" not in label_names):
                     mac_checklist.append(output_line)
 
                 if("QA/checked-Win64" not in label_names and
                         "QA/checked" not in label_names and
                         "OS/macOS" not in label_names and
-                        "OS/unix-like/linux" not in label_names):
+                        "OS/Linux" not in label_names):
                     win64_checklist.append(output_line)
 
                 if("QA/checked-Linux" not in label_names and
@@ -240,7 +249,10 @@ def laptop_perrel_checklist(milestonever):
     print(bigline)
     print("")
     macTitle = "Manual test run on OS X for " + milestonever
-    macList = ["OS/macOS", "release-notes/exclude", "tests"]
+    macList = ["OS/macOS",
+               "release-notes/exclude",
+               "tests",
+               "OS/Desktop"]
 
     if args.test is None:
         repo.create_issue(title=macTitle,
@@ -256,7 +268,11 @@ def laptop_perrel_checklist(milestonever):
     print(bigline)
     print("")
     winTitle = "Manual test run on Windows x64 for " + milestonever
-    winList = ["OS/Windows", "release-notes/exclude", "tests", "QA/Yes"]
+    winList = ["OS/Windows",
+               "release-notes/exclude",
+               "tests",
+               "QA/Yes",
+               "OS/Desktop"]
 
     if args.test is None:
         repo.create_issue(title=winTitle,
@@ -272,10 +288,11 @@ def laptop_perrel_checklist(milestonever):
     print(bigline)
     print("")
     linTitle = "Manual test run on Linux for " + milestonever
-    linList = ["OS/unix-like/linux",
+    linList = ["OS/Linux",
                "release-notes/exclude",
                "tests",
-               "QA/Yes"]
+               "QA/Yes",
+               "OS/Desktop"]
 
     if args.test is None:
         repo.create_issue(title=linTitle,
@@ -352,12 +369,20 @@ def laptop_hf_testruns(milestonever):
         print(bigline)
         print("")
         macTitle = "Manual test run on OS X for " + milestonever
-        macList = ["OS/macOS", "release-notes/exclude", "tests", "QA/Yes"]
+        macList = ["OS/macOS",
+                   "release-notes/exclude",
+                   "tests",
+                   "QA/Yes",
+                   "OS/Desktop"]
     else:
         print(laptop_hf_template)
         print("")
         macTitle = "Manual test run on OS X for " + milestonever
-        macList = ["OS/macOS", "release-notes/exclude", "tests", "QA/Yes"]
+        macList = ["OS/macOS", 
+                   "release-notes/exclude",
+                   "tests",
+                   "QA/Yes",
+                   "OS/Desktop"]
 
     if args.test is None:
         laptop_repo.create_issue(title=macTitle,
@@ -375,12 +400,20 @@ def laptop_hf_testruns(milestonever):
         print(bigline)
         print("")
         winTitle = "Manual test run on Windows x64 for " + milestonever
-        winList = ["OS/Windows", "release-notes/exclude", "tests", "QA/Yes"]
+        winList = ["OS/Windows",
+                   "release-notes/exclude",
+                   "tests",
+                   "QA/Yes",
+                   "OS/Desktop"]
     else:
         print(laptop_hf_template)
         print("")
         winTitle = "Manual test run on Windows x64 for " + milestonever
-        winList = ["OS/Windows", "release-notes/exclude", "tests", "QA/Yes"]
+        winList = ["OS/Windows",
+                   "release-notes/exclude",
+                   "tests",
+                   "QA/Yes",
+                   "OS/Desktop"]
 
     if args.test is None:
         laptop_repo.create_issue(title=winTitle,
@@ -398,18 +431,20 @@ def laptop_hf_testruns(milestonever):
         print(bigline)
         print("")
         linTitle = "Manual test run on Linux for " + milestonever
-        linList = ["OS/unix-like/linux",
+        linList = ["OS/Linux",
                    "release-notes/exclude",
                    "tests",
-                   "QA/Yes"]
+                   "QA/Yes",
+                   "OS/Desktop"]
     else:
         print(laptop_hf_template)
         print("")
         linTitle = "Manual test run on Linux for " + milestonever
-        linList = ["OS/unix-like/linux",
+        linList = ["OS/Linux",
                    "release-notes/exclude",
                    "tests",
-                   "QA/Yes"]
+                   "QA/Yes",
+                   "OS/Desktop"]
 
     if args.test is None:
         laptop_repo.create_issue(title=linTitle,
@@ -488,7 +523,10 @@ def ios_testruns():
     print("")
     iPad_Title = "Manual test run for " + ios_key +\
         " on iPad running iOS12"
-    iPad_List = ["ipad", "release-notes/exclude", "tests", "QA/Yes"]
+    iPad_List = ["ipad",
+                 "release-notes/exclude",
+                 "tests",
+                 "QA/Yes"]
 
     if args.test is None:
         ios_repo.create_issue(title=iPad_Title,
@@ -506,7 +544,10 @@ def ios_testruns():
     print("")
     iPhone_Title = "Manual test run for " + ios_key +\
         " on iPhone running iOS12"
-    iPhone_List = ["iPhone", "release-notes/exclude", "tests", "QA/Yes"]
+    iPhone_List = ["iPhone",
+                   "release-notes/exclude",
+                   "tests",
+                   "QA/Yes"]
 
     if args.test is None:
         ios_repo.create_issue(title=iPhone_Title,
@@ -525,7 +566,10 @@ def ios_testruns():
     print("")
     iPhoneX_Title = "Manual test run for " + ios_key +\
         " on iPhone X running iOS12"
-    iPhoneX_List = ["iPhone", "release-notes/exclude", "tests", "QA/Yes"]
+    iPhoneX_List = ["iPhone",
+                    "release-notes/exclude",
+                    "tests",
+                    "QA/Yes"]
 
     if args.test is None:
         ios_repo.create_issue(title=iPhoneX_Title,
@@ -614,7 +658,11 @@ def android_testruns(milestonever):
     print(bigline)
     print("")
     AndroidARMtitle = "Manual test run on Android ARM  for " + androidkey
-    AndroidARMlist = ["ARM", "release-notes/exclude", "tests", "QA/Yes"]
+    AndroidARMlist = ["ARM",
+                      "release-notes/exclude",
+                      "tests",
+                      "QA/Yes",
+                      "OS/Android"]
 
     if args.test is None:
         laptop_repo.create_issue(title=AndroidARMtitle,
@@ -631,7 +679,11 @@ def android_testruns(milestonever):
     print(bigline)
     print("")
     Androidx86title = "Manual test run on Android x86 for " + androidkey
-    Androidx86list = ["x86", "release-notes/exclude", "tests", "QA/Yes"]
+    Androidx86list = ["x86",
+                      "release-notes/exclude",
+                      "tests",
+                      "QA/Yes",
+                      "OS/Android"]
 
     if args.test is None:
         laptop_repo.create_issue(title=Androidx86title,
@@ -648,7 +700,11 @@ def android_testruns(milestonever):
     print(bigline)
     print("")
     AndroidTabtitle = "Manual test run on Android Tab  for " + androidkey
-    AndroidTablist = ["ARM", "release-notes/exclude", "tests", "QA/Yes"]
+    AndroidTablist = ["ARM",
+                      "release-notes/exclude",
+                      "tests",
+                      "QA/Yes",
+                      "OS/Android"]
 
     if args.test is None:
         laptop_repo.create_issue(title=AndroidTabtitle,
@@ -726,12 +782,16 @@ def cryptowallet_testruns(milestonever):
     print(bigline)
     print("")
     macTitle = "Manual test run on OS X for " + milestonever
-    macList = ["OS/macOS", "release-notes/exclude", "tests", "QA/Yes"]
+    macList = ["OS/macOS",
+               "release-notes/exclude",
+               "tests",
+               "QA/Yes",
+               "OS/Desktop"]
 
     if args.test is None:
         laptop_repo.create_issue(title=macTitle,
                                  body=bigline,
-                                 assignee="kjozwiak",
+                                 assignee="srirambv",
                                  milestone=laptop_milestone[milestonever],
                                  labels=macList)
 
@@ -743,7 +803,11 @@ def cryptowallet_testruns(milestonever):
     print(bigline)
     print("")
     winTitle = "Manual test run on Windows x64 for " + milestonever
-    winList = ["OS/Windows", "release-notes/exclude", "tests", "QA/Yes"]
+    winList = ["OS/Windows",
+               "release-notes/exclude",
+               "tests",
+               "QA/Yes",
+               "OS/Desktop"]
 
     if args.test is None:
         laptop_repo.create_issue(title=winTitle,
@@ -760,10 +824,11 @@ def cryptowallet_testruns(milestonever):
     print(bigline)
     print("")
     linTitle = "Manual test run on Linux for " + milestonever
-    linList = ["OS/unix-like/linux",
+    linList = ["OS/Linux",
                "release-notes/exclude",
                "tests",
-               "QA/Yes"]
+               "QA/Yes",
+               "OS/Desktop"]
 
     if args.test is None:
         laptop_repo.create_issue(title=linTitle,
