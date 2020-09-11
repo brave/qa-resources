@@ -170,7 +170,7 @@
 - [ ] Visit https://check.torproject.org in a Tor window, ensure its shows success message for using a Tor exit node
 - [ ] Visit https://check.torproject.org in a Tor window, note down exit node IP address. Do a hard refresh (Ctrl+Shift+R/Cmd+Shift+R), ensure exit IP changes after page reloads
 - [ ] Visit https://check.torproject.org in a Tor window, note down exit node IP address. Click `New Tor Identity for this site` in app menu, ensure the exit node IP address changes after page is reloaded
-- [ ] Visit https://protonirockerxow.onion/ in a Tor window, ensure login page is shown
+- [ ] Visit https://protonirockerxow.onion & https://brave5t5rjjg3s6k.onion/ in a Tor window and ensure both pages resolve
 - [ ] Visit https://browserleaks.com/geo in a Tor window, ensure location isn't shown
 - [ ] Verify Torrent viewer doesn't load in a Tor window
 - [ ] Ensure you are able to download a file in Tor window. Verify all Download/Cancel, Download/Retry and Download works in Tor window
