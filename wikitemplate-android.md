@@ -8,6 +8,7 @@
 
 - [ ] Make sure thereafter every merge
   - [ ] No Chrome/Chromium words appear on normal or private tabs
+  - [ ] No Chrome/Chromium words appear on site settings for default search engine
   - [ ] No Chrome/Chromium icons are shown in normal or private tabs
 
 ## Data
