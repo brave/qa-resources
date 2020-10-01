@@ -9,11 +9,13 @@
 ## Component
 
 - [ ] Verify Ethereum client component is downloaded when you open brave://wallet for the first time
+- [ ] Verify Ethereum client component is only loaded when brave://wallet page is loaded after install
 - [ ] Verify Ethereum client component is successfully updated and doesn't corrupt the browser wallet
 - [ ] Delete component folder. Verify the component is downloaded successfully after browser relaunch
 
 ## Ðapps
 
+- [ ] Verify visiting web3 page triggers a check for setting up Crypto Wallet if not already done
 - [ ] Verify Ðapp can successfully connect to your crypto wallets account, signed via a pop-up notification
 - [ ] Verify Ðapp transactions where assets are set/received show up in the account activity view within the extension
 
@@ -28,6 +30,7 @@
 - [ ] Verify Eth/ERC-20 tokens can be received at the addresses generated for your account
 - [ ] Verify Eth/ERC-20 tokens can be sent to other addresses from your account
 - [ ] Verify a successful transaction can be done on a restored wallet
+- [ ] Verify JS Ethereum Signature work as expected in `https://danfinlay.github.io/js-eth-personal-sign-examples/`
 
 ## Hardware
 
