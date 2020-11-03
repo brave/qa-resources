@@ -150,6 +150,11 @@
 ### Social-media blocking settings
 
 - [ ] Verify individual `Social media blocking` buttons works as intended when enabled/disabled by visiting https://fmarier.github.io/brave-testing/social-widgets.html
+- [ ] visit `brave://settings/privacy` -> `Site and Shields Settings` -> `Cookies and site data` and ensure that
+  - [ ] both `https://[*.]firebaseapp.com` & `https://accounts.google.com` are added into `Sites that can always use cookies` when `Allow Google login buttons on third party sites` is enabled
+  - [ ] both `https://[*.]firebaseapp.com` & `https://accounts.google.com` are removed from `Sites that can always use cookies` when `Allow Google login buttons on third party sites` is disabled
+- [ ] ensure that you can login into https://www.expensify.com while `Allow Google login buttons on third party sites` is enabled
+- [ ] ensure that once `Allow Google login buttons on third party sites` has been disabled, you can't login into https://www.expensify.com
 
 ### Sync
 
