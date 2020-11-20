@@ -1,6 +1,6 @@
 ## Tor Client Updater 
 
-- [ ] For development go-update-server. Run brave-browser with `--user-data-dir=/tmp/component-dev --use-dev-goupdater-url` (These flags are only available in v1.7.x). Once the crx is pushed to production run without these flags.
+- [ ] For development go-update-server. Run brave-browser with `--user-data-dir=component-dev --use-dev-goupdater-url` (These flags are only available in v1.7.x). Once the crx is pushed to production run without these flags.
 - [ ] Navigate to `brave://components` and verify `Tor Client Updater (OS)` is updated successfully.
 - [ ] Open `New Private Window with Tor` and confirm that it starts without any errors.
 - [ ] Navigate to `check.torproject.org` and verify that tor is working successfully.
