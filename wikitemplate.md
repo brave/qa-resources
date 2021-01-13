@@ -69,7 +69,7 @@
 - [ ] Turning HTTPS Everywhere off and shields off both disable the redirect to https://https-everywhere.badssl.com/
 - [ ] Verify that toggling `Ads and trackers blocked` works as expected
 - [ ] Visit https://testsafebrowsing.appspot.com/s/phishing.html, verify that Safe Browsing (via our Proxy) works for all the listed items
-- [ ] Visit https://brianbondy.com/ and then turn on script blocking, page should not load. Allow it from the script blocking UI in the URL bar and it should load the page correctly
+- [ ] Visit https://www.blizzard.com and then turn on script blocking, page should not load.
 - [ ] Test that 3rd party storage results are blank at https://jsfiddle.net/7ke9r14a/9/ when 3rd party cookies are blocked and not blank when 3rd party cookies are unblocked
 - [ ] Test that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run)
 
@@ -229,6 +229,7 @@
     - [ ] Both Tips and Monthly Contributions are retained
     - [ ] Wallet panel transactions list is retained
     - [ ] Changes to rewards settings are retained
+    - [ ] Ensure that Auto Contribute is not being enabled when upgrading to a new version if AC was disabled
   - [ ] Ads
     - [ ] Both `Estimated pending rewards` & `Ad notifications received this month` are retained
     - [ ] Changes to ads settings are retained
