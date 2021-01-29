@@ -2,11 +2,12 @@
 
 - [ ]  Check signature: If OS Run `spctl --assess --verbose /Applications/Brave-Browser-Beta.app/` and make sure it returns `accepted`.  If Windows right click on the `brave_installer-x64.exe` and go to Properties, go to the Digital Signatures tab and double click on the signature.  Make sure it says "The digital signature is OK" in the popup window
 
-
 ### Widevine
 
 - [ ]  Verify `Widevine Notification` is shown when you visit Netflix for the first time
-- [ ]  Test that you can stream on Netflix on a fresh profile after installing Widevine 
+- [ ]  Test that you can stream on Netflix on a fresh profile after installing Widevine
+- [ ]  Verify `Widevine Notification` is shown when you visit HBO Max for the first time
+- [ ]  Test that you can stream on HBO Max on a fresh profile after installing Widevine
 
 ### Rewards
 
@@ -39,7 +40,7 @@
   - [ ] Installed extensions are retained and work correctly
   - [ ] Opened tabs can be reloaded
   - [ ] Stored passwords are preserved
-  - [ ] Sync chain created in previous version is retained 
+  - [ ] Sync chain created in previous version is retained
   - [ ] Social media blocking buttons changes are retained
   - [ ] Rewards
     - [ ] Wallet balance is retained
