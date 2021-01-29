@@ -44,6 +44,8 @@
 
 - [ ] Verify `Widevine Notification` is shown when you visit Netflix for the first time
 - [ ] Test that you can stream on Netflix on a fresh profile after installing Widevine
+- [ ] Verify `Widevine Notification` is shown when you visit HBO Max for the first time
+- [ ] Test that you can stream on HBO Max on a fresh profile after installing Widevine
 
 ### Geolocation
 
