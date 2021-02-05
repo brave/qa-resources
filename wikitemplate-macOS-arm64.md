@@ -40,6 +40,7 @@
     - [ ] Both Tips and Monthly Contributions are retained
     - [ ] Wallet panel transactions list is retained
     - [ ] Changes to rewards settings are retained
+    - [ ] Ensure that Auto Contribute is not being enabled when upgrading to a new version if AC was disabled
   - [ ] Ads
     - [ ] Both `Estimated pending rewards` & `Ad notifications received this month` are retained
     - [ ] Changes to ads settings are retained
@@ -64,6 +65,7 @@
     - [ ] Both Tips and Monthly Contributions are retained
     - [ ] Wallet panel transactions list is retained
     - [ ] Changes to rewards settings are retained
+    - [ ] Ensure that Auto Contribute is not being enabled when upgrading to a new version if AC was disabled
   - [ ] Ads
     - [ ] Both `Estimated pending rewards` & `Ad notifications received this month` are retained
     - [ ] Changes to ads settings are retained
