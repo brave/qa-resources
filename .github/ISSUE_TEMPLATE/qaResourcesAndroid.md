@@ -1,8 +1,8 @@
 ---
-name: Requesting QA Resources Desktop
+name: Requesting QA Resources Android
 about: 'Template for requesting QA resources'
 title: ""
-labels: OS/Desktop
+labels: OS/Android
 assignees: ''
 ---
 
