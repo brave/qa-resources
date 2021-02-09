@@ -1,12 +1,12 @@
 ---
-name: Desktop Release
-about: 'Template for Desktop releases'
+name: Component Release
+about: 'Template for component releases'
 title: ""
 labels: OS/Desktop
 assignees: ''
 ---
 
-### <img src="https://www.rebron.org/wordpress/wp-content/uploads/2019/06/release-1.png"> `[add release number]`
+### <img src="https://raw.githubusercontent.com/kjozwiak/kjozwiak.github.io/master/puzzle.png"> `[add release/component number]`
 
 #### Release Date/Target:
 
@@ -14,10 +14,6 @@ assignees: ''
 
 #### Summary:
 
-Includes the following features/fixes:
-
-*
-*
 
 **Milestone:**
 
@@ -31,6 +27,5 @@ Includes the following features/fixes:
 **Manual Passes:**
 
 * macOS x64 -->
-* macOS Arm64 -->
 * Win -->
 * Linux -->
