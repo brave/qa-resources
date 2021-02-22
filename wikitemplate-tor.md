@@ -13,5 +13,8 @@
 ### MacOS
 - [ ] Navigate to `/Users/<user>/Library/Application Support/BraveSoftware/Brave-Browser-<channel>/cldoidikboihgcjfkhdeidbpclkineef/<version>`
 - [ ] Run `codesign -vvvv tor-<version-tor>-darwin-brave-<version-brave>` to confirm codesign is valid
+- [ ] For MacOS Catalina (10.15+) - Run `spctl -a -vv -t install tor-<version-tor>-darwin-brave-<version-brave>` to verify that the binary is notarized.
 
-
+### Linux
+- [ ] Navigate to `<user-data-dir>/biahpgbdmdkfgndcmfiipgcebobojjkp`
+- [ ] Run `ldd tor-<version-tor>-linux-brave-<version-brave>` to confirm tor client is a static binary
