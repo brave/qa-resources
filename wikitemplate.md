@@ -185,8 +185,9 @@
 
 - [ ] Verify that `brave://gpu` (Brave) matches `chrome://gpu` (Chrome) when using the same Chromium version
 
-### Components
+### Startup & Components
 
+- [ ] Verify that Brave is only contacting `*.brave.com` endpoints on first launch using either `Charles Proxy`, `Fiddler`, `Wireshark` or `LittleSnitch` (or a similar application)
 - [ ] Remove the following component folders and ensure that they're being re-downloaded after restarting the browser:
   - [ ] `afalakplffnnnlkncjhbmahjfjhmlkal`: `AutoplayWhitelist.dat`, `ExtensionWhitelist.dat`, `ReferrerWhitelist.json` and `Greaselion.json`
   - [ ] `CertificateRevocation`
