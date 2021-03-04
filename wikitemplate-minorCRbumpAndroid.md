@@ -3,6 +3,10 @@
 - [ ] Check that installer is close to the size of the last release
 - [ ] Check the Brave version in About and make sure it is EXACTLY as expected
 
+## Startup
+
+- [ ] Verify that Brave is only contacting `*.brave.com` endpoints on first launch using either `Charles Proxy`, `Fiddler` or `Wireshark` (or a similar application)
+
 ## Custom tabs
 
 - [ ] Make sure Brave handles links from Gmail, Slack

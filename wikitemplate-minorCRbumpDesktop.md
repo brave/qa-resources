@@ -27,8 +27,10 @@
 - [ ]  Verify visiting `brave://settings/help` triggers update check
 - [ ]  Verify once update is downloaded, prompts to `Relaunch` to install update
 
-#### Components
-- [ ]   Delete Adblock folder from browser profile and restart browser. Visit `brave://components` and verify `Brave Ad Block Updater` downloads and update the component. Repeat for all Brave components
+#### Startup & Components
+
+- [ ] Verify that Brave is only contacting `*.brave.com` endpoints on first launch using either `Charles Proxy`, `Fiddler`, `Wireshark` or `LittleSnitch` (or a similar application)
+- [ ] Delete Adblock folder from browser profile and restart browser. Visit `brave://components` and verify `Brave Ad Block Updater` downloads and update the component. Repeat for all Brave components
 
 ### Upgrade
 
