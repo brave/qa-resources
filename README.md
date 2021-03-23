@@ -25,7 +25,7 @@
   <li><p>Press Enter/Return. You have now cloned the qa-resources repo onto your machine.</p></li>
   <li><p>Next, you’ll need to install the pygithub package. This gives you the shared code needed to use github’s public api. 
     
-   - Open a Terminal and type: pip3 install PyGithub Then select Enter/Return.</p>
+   - Open a Terminal and type: `pip3 install PyGithub` Then select Enter/Return.</p>
    - FYI - You can get information on this pygithub package here: http://pygithub.readthedocs.io/en/latest/introduction.html <br />and the main library of packages can be found here: https://pypi.python.org/pypi </p></li>
   <li><p>In the qa-resources folder, create a file called <code>github.secret</code>. To do this in your Terminal session change directory to qa-resources if you are not already inside the directory. Then type `touch github.secret` and select Enter/Return.</p></li>
   <li><p>Next, you have to create a github key. 
