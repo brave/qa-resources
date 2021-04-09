@@ -94,6 +94,8 @@
 
 ### Rewards
 
+- [ ] Verify that none of the reward endpoints are being contacted when a user visits a media publisher (`youtube.com`, `reddit.com`, `twitter.com`, `github.com`) and hasn't interacted with rewards
+  - [ ] Verify that `rewards.brave.com`, `pcdn.brave.com`, `grant.rewards.brave.com` or `api.rewards.brave.com` are not being contacted
 - [ ] Verify you are able to create a new wallet.
 - [ ] Verify you are able to restore a wallet.
 - [ ] Verify account balance shows correct BAT and USD value.
