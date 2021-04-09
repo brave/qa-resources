@@ -16,9 +16,9 @@
 
 ### Context menus
 
-- [ ] Verify `Block element via selector` removes a CSS element from page without reloading
-- [ ] Verify `Clear all CSS rules for this sites` removes the blocked element after page reload
-- [ ] Verify `Clear all CSS rules for all sites` removes the rule and loads all elements for all pages
+- [ ] Verify you can block a page element using `Block element via selector` context-menu item
+- [ ] Verify selecting `Manage custom filters` opens `brave://adblock` in a NTP
+- [ ] Verify removing the rule from `brave://adblock` reflects the change on the website, after reload
 
 ### Extensions/Plugins
 
