@@ -32,6 +32,10 @@
 - [ ] Verify on BR panel that the `Verify wallet` button only enables when balance is >=25 BAT
 - [ ] Verify you can reset rewards from advance setting. Resetting should delete wallet and bring it back to the pre-optin state
 
+## Brave Shields
+
+- [ ] Run all six test configurations on `https://dev-pages.brave.software/storage/ephemeral-storage.html` and confirm results are as expected per each test listed.
+
 ### Brave Ads
 
 - [ ] Verify ads is auto-enabled when rewards is enabled for the supported region
