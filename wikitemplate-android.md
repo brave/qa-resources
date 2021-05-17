@@ -56,6 +56,7 @@ Pre-Requisite: Put previous build shortcut on the home screen. Also, have severa
 - [ ] Verify that default Bravery settings take effect on pages with no site settings
 - [ ] Verify that 3rd party storage results are blank at `https://jsfiddle.net/7ke9r14a/7/` when 3rd party cookies are blocked
 - [ ] Choose a DNS provider from the list in Settings | Privacy | Use Secure DNS, load `https://browserleaks.com/dns`, and verify your ISP's DNS resolvers aren't detected and shown; only your chosen DoH provider should appear.
+- [ ] Run all six test configurations on `https://dev-pages.brave.software/storage/ephemeral-storage.html` and confirm results are as expected per each test listed.
 ### Fingerprint Tests
   - [ ] Visit `https://browserleaks.com/webrtc`, ensure 2 blocked items are listed in shields
   - [ ] Verify that `https://diafygi.github.io/webrtc-ips/` doesn't leak IP address when `Block all fingerprinting protection` is on
