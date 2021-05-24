@@ -20,12 +20,10 @@ assignees: ''
 
 **Current Progress:**
 
-* iOS 12 -->
 * iOS 13-->
 * iOS 14 -->
 
 **Manual Passes:**
 
-* iOS 12 -->
 * iOS 13-->
 * iOS 14 -->
