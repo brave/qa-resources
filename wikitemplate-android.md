@@ -24,13 +24,23 @@ Pre-Requisite: Put previous build shortcut on the home screen. Also, have severa
 - [ ] Verify sites added to home screen are still visible and able to be used after upgrade
 - [ ] Verify sync chain created in the previous version is still retained on upgrade
 - [ ] Verify settings changes done in the previous version are still retained on upgrade
+<<<<<<< HEAD
 - [ ] Verify IPFS, ENS & Unstoppable Domain settings is retained after upgrade
+=======
+- [ ] Verify tab-group setting doesn't reset upon upgrade
+>>>>>>> Add tab-group test for Android
 
 ## Custom tabs
 
 - [ ] Make sure Brave handles links from Gmail, Slack
 - [ ] Make sure Brave works as custom tabs provide with Chrome browser
 - [ ] Ensure custom tabs work even with sync enabled/disabled
+
+## Tab Groups
+
+- [ ] Ensure tab-group is enabled by default
+- [ ] Verify toggle tab-group setting triggers a relaunch request
+- [ ] Verify tab-group is not reverted back to default setting after browser restart
 
 ## Developer Tools
 
