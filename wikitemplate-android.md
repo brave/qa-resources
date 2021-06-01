@@ -24,6 +24,7 @@ Pre-Requisite: Put previous build shortcut on the home screen. Also, have severa
 - [ ] Verify sites added to home screen are still visible and able to be used after upgrade
 - [ ] Verify sync chain created in the previous version is still retained on upgrade
 - [ ] Verify settings changes done in the previous version are still retained on upgrade
+- [ ] Verify IPFS, ENS & Unstoppable Domain settings is retained after upgrade
 
 ## Custom tabs
 
@@ -39,6 +40,10 @@ Pre-Requisite: Put previous build shortcut on the home screen. Also, have severa
 
 - [ ] Verify changing default settings are retained and don't cause the browser to crash
 - [ ] Verify bottom bar buttons (Home/Bookmark/Search/Tabs) work as expected 
+
+## IPFS, ENS & Unstoppable Domain
+
+- [ ] Verify settings for IPFS, ENS & Unstoppable Domain show up under Brave Shields & Privacy settings
 
 ## Downloads
 
