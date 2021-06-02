@@ -51,13 +51,13 @@
     
    - For browser-laptop:
     
-      - In the terminal type python3 braveautogen.py --test true and select Enter/Return. This just displays the output in the terminal and does NOT create github issues. 
-      - To create github issues, leave off the ‘--test true’ flag and github issues will be created and assigned out.
+    - In the terminal type <code>python3 braveautogen.py --test true</code> and select Enter/Return. This just displays the output in the terminal and does NOT create github issues. 
+    - To create github issues, leave off the <code>--test true</code> flag and github issues will be created and assigned out.
 
   - For Android:
 
      - <code>python3 braveautogen-androdid.py --test true </code>(no github issues)
-     - <code>python3 braveautogen-androdid.py </code>  (github issues created)
+     - <code>python3 braveautogen-androdid.py</code>  (github issues created)
      
    - For iOS:
    
