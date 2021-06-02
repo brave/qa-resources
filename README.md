@@ -5,7 +5,7 @@
   <li>Generate the exclusion list</li>
 </ul>
 
-<h2>Before you begin (MacOS)</h2>
+<h2>Before you begin</h2>
 <ol>
   <li><p>Download and install Python3 (3.5.2): https://www.python.org/downloads/release/python-352/</p></li>
   <li><p>If you haven’t already set up a ‘Development’ directory for github so you can clone repositories, 
@@ -18,7 +18,7 @@
 </ol>
 
 
-<h2>First time stuff - getting set up (MacOS)</h2>
+<h2>First time stuff - getting set up</h2>
 <ol>
   <li><p>Open Terminal and navigate to your ‘Development’ directory.</p></li>
   <li><p>Type: <code>git clone git@github.com:brave/qa-resources.git</code></p></li>
