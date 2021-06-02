@@ -27,12 +27,12 @@
     
    - Open a Terminal and type: `pip3 install PyGithub` Then select Enter/Return.</p>
    - FYI - You can get information on this pygithub package here: http://pygithub.readthedocs.io/en/latest/introduction.html <br />and the main library of packages can be found here: https://pypi.python.org/pypi </p></li>
-  <li><p>In the qa-resources folder, create a file called <code>github.secret</code>. To do this in your Terminal session change directory to qa-resources if you are not already inside the directory. Then type `touch github.secret` and select Enter/Return.</p></li>
+  <li><p>In the qa-resources folder, create a file called <code>github.secret</code>. To do this in your Terminal session change directory to qa-resources if you are not already inside the directory. Then type <code>touch github.secret</code> and select Enter/Return.</p></li>
   <li><p>Next, you have to create a github key. 
   
    - Login to your github account and navigate to https://github.com/settings/profile</p>
    - Open new tab and navigate to https://github.com/settings/tokens </p>
-   - Click on Generate new token** button. Give the token a meaningful name and select the checkboxes below for your token.</p>
+   - Click on **Generate new token** button. Give the token a meaningful name and select the checkboxes below for your token.</p>
    - Select ‘Generate token’ button. Your token is now generated, it looks similar to an SHA. Copy the token. Do not exit this page yet.</p>
 <li><p>Add this token to your github.secret file. 
   
