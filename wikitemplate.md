@@ -235,3 +235,9 @@
     - [ ] Changes to ads settings are retained
     - [ ] Ensure that ads are not being enabled when upgrading to a new version if they were disabled
     - [ ] Ensure that ads are not disabled when upgrading to a new version if they were enabled
+
+## Hardware Wallet Test (To be checked on each major CR bump)
+
+- [ ] Verify you can link hardware wallet using Trezor and unlock the wallet 
+- [ ] Verify you can link hardware wallet using Ledger Nano and unlock the wallet
+- [ ] Verify you can perform a transaction with hardware wallet using Ledger Nano or Trezor
