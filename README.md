@@ -5,7 +5,7 @@
   <li>Generate the exclusion list</li>
 </ul>
 
-<h2>Before you begin (MacOS)</h2>
+<h2>Before you begin</h2>
 <ol>
   <li><p>Download and install Python3 (3.5.2): https://www.python.org/downloads/release/python-352/</p></li>
   <li><p>If you haven’t already set up a ‘Development’ directory for github so you can clone repositories, 
@@ -18,7 +18,7 @@
 </ol>
 
 
-<h2>First time stuff - getting set up (MacOS)</h2>
+<h2>First time stuff - getting set up</h2>
 <ol>
   <li><p>Open Terminal and navigate to your ‘Development’ directory.</p></li>
   <li><p>Type: <code>git clone git@github.com:brave/qa-resources.git</code></p></li>
@@ -27,12 +27,12 @@
     
    - Open a Terminal and type: `pip3 install PyGithub` Then select Enter/Return.</p>
    - FYI - You can get information on this pygithub package here: http://pygithub.readthedocs.io/en/latest/introduction.html <br />and the main library of packages can be found here: https://pypi.python.org/pypi </p></li>
-  <li><p>In the qa-resources folder, create a file called <code>github.secret</code>. To do this in your Terminal session change directory to qa-resources if you are not already inside the directory. Then type `touch github.secret` and select Enter/Return.</p></li>
+  <li><p>In the qa-resources folder, create a file called <code>github.secret</code>. To do this in your Terminal session change directory to qa-resources if you are not already inside the directory. Then type <code>touch github.secret</code> and select Enter/Return.</p></li>
   <li><p>Next, you have to create a github key. 
   
    - Login to your github account and navigate to https://github.com/settings/profile</p>
    - Open new tab and navigate to https://github.com/settings/tokens </p>
-   - Click on Generate new token** button. Give the token a meaningful name and select the checkboxes below for your token.</p>
+   - Click on **Generate new token** button. Give the token a meaningful name and select the checkboxes below for your token.</p>
    - Select ‘Generate token’ button. Your token is now generated, it looks similar to an SHA. Copy the token. Do not exit this page yet.</p>
 <li><p>Add this token to your github.secret file. 
   
@@ -51,13 +51,13 @@
     
    - For browser-laptop:
     
-      - In the terminal type python3 braveautogen.py --test true and select Enter/Return. This just displays the output in the terminal and does NOT create github issues. 
-      - To create github issues, leave off the ‘--test true’ flag and github issues will be created and assigned out.
+    - In the terminal type <code>python3 braveautogen.py --test true</code> and select Enter/Return. This just displays the output in the terminal and does NOT create github issues. 
+    - To create github issues, leave off the <code>--test true</code> flag and github issues will be created and assigned out.
 
   - For Android:
 
      - <code>python3 braveautogen-androdid.py --test true </code>(no github issues)
-     - <code>python3 braveautogen-androdid.py </code>  (github issues created)
+     - <code>python3 braveautogen-androdid.py</code>  (github issues created)
      
    - For iOS:
    
