@@ -50,7 +50,7 @@ Pre-Requisite: Put previous build shortcut on the home screen. Also, have severa
 ## Settings and Bottom bar
 
 - [ ] Verify changing default settings are retained and don't cause the browser to crash
-- [ ] Verify bottom bar buttons (Home/Bookmark/Search/Tabs) work as expected 
+- [ ] Verify bottom bar buttons (Home/Bookmark/Search/Tabs) work as expected
 
 ## IPFS, ENS & Unstoppable Domain
 
@@ -111,7 +111,7 @@ Pre-Requisite: Put previous build shortcut on the home screen. Also, have severa
 - [ ] Verify unchecking `Allow contribution to videos` option doesn't list any YouTube creator in ac list
 - [ ] Adjust min visit/time in settings. Visit some sites and YouTube channels to verify they are added to the table after the specified settings
 - [ ] Verify you can reset rewards from advance setting. Resetting should delete wallet and bring it back to the pre-optin state
-- [ ] Verify on BR panel `Verify wallet` button only enables when balance in >=25 BAT
+- [ ] Verify on BR panel `Verify wallet` button only enables when balance in >=15 BAT
 - [ ] Verify you are able to disconnect/re-connect a user wallet when min balance is available
 - [ ] Upgrade from an older version
   - [ ] Verify the wallet balance (if available) is retained
@@ -137,7 +137,7 @@ Pre-Requisite: Put previous build shortcut on the home screen. Also, have severa
 - [ ] Verify enabling `Sync everything` enables all other switches
 - [ ] Verify existing bookmarks before joining sync chain also gets sync'd to all devices on the sync chain
 - [ ] Verify `Autofill` data is sync'd to all devices when enabled
-- [ ] Verify `History` is sync'd to all devices 
+- [ ] Verify `History` is sync'd to all devices
 - [ ] Verify `Open tab` form other devices shows up under history below the device name
 - [ ] Verify `Password` is sync'd to all devices
 - [ ] Verify `Settings` sync's site settings on all devices
