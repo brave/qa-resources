@@ -114,11 +114,7 @@ def laptop_testruns(milestonever):
     print("")
 
     print("Mac Checklist (Intel):")
-    bigline = "## Per release specialty tests\n"
-    for line in mac_checklist:
-        bigline += line + "\n"
-    bigline = bigline + laptop_template
-    print(bigline)
+    print(laptop_template)
     print("")
     macTitle = "Manual test run on macOS (Intel) for " + milestonever
     macList = ["OS/macOS",
@@ -129,19 +125,15 @@ def laptop_testruns(milestonever):
 
     if args.test is None:
         bc_repo.create_issue(title=macTitle,
-                                 body=bigline,
-                                 assignees="stephendonner",
+                                 body=laptop_template,
+                                 assignee="stephendonner",
                                  milestone=bc_milestone[milestonever],
                                  labels=macList)
 
     print("--------------------------------------------------------")
 
     print("Mac Checklist (arm64):")
-    bigline = "## Per release specialty tests\n"
-    for line in mac_checklist:
-        bigline += line + "\n"
-    bigline = bigline + macOS_arm64
-    print(bigline)
+    print(macOS_arm64)
     print("")
     macarm64Title = "Manual test run on macOS (arm64) for " + milestonever
     macarm64List = ["OS/macOS",
@@ -152,19 +144,15 @@ def laptop_testruns(milestonever):
 
     if args.test is None:
         bc_repo.create_issue(title=macarm64Title,
-                                 body=bigline,
-                                 assignees="LaurenWags",
+                                 body=macOS_arm64,
+                                 assignee="LaurenWags",
                                  milestone=bc_milestone[milestonever],
                                  labels=macarm64List)
 
     print("--------------------------------------------------------")
 
     print("Win64 Checklist:")
-    bigline = "## Per release specialty tests\n"
-    for line in win64_checklist:
-        bigline += line + "\n"
-    bigline = bigline + laptop_template
-    print(bigline)
+    print(laptop_template)
     print("")
     winTitle = "Manual test run on Windows x64 for " + milestonever
     winList = ["OS/Windows",
@@ -175,19 +163,15 @@ def laptop_testruns(milestonever):
 
     if args.test is None:
         bc_repo.create_issue(title=winTitle,
-                                 body=bigline,
-                                 assignees="GeetaSarvadnya",
+                                 body=laptop_template,
+                                 assignee="GeetaSarvadnya",
                                  milestone=bc_milestone[milestonever],
                                  labels=winList)
 
     print("--------------------------------------------------------")
 
     print("Linux Checklist:")
-    bigline = "## Per release specialty tests\n"
-    for line in linux_checklist:
-        bigline += line + "\n"
-    bigline = bigline + laptop_template
-    print(bigline)
+    print(laptop_template)
     print("")
     linTitle = "Manual test run on Linux for " + milestonever
     linList = ["OS/Linux",
@@ -198,7 +182,7 @@ def laptop_testruns(milestonever):
 
     if args.test is None:
         bc_repo.create_issue(title=linTitle,
-                                 body=bigline,
+                                 body=laptop_template,
                                  assignee="btlechowski",
                                  milestone=bc_milestone[milestonever],
                                  labels=linList)
@@ -267,11 +251,7 @@ def laptop_hf_testruns(milestonever):
     print("")
 
     print("Mac Checklist (Intel):")
-    bigline = "## Per release specialty tests\n"
-    for line in mac_checklist:
-        bigline += line + "\n"
-    bigline = bigline + laptop_hf_template
-    print(bigline)
+    print(laptop_hf_template)
     print("")
     macTitle = "Manual test run on macOS (Intel) for " + milestonever
     macList = ["OS/macOS",
@@ -282,19 +262,15 @@ def laptop_hf_testruns(milestonever):
 
     if args.test is None:
         bc_repo.create_issue(title=macTitle,
-                                 body=bigline,
-                                 assignees="stephendonner",
+                                 body=laptop_hf_template,
+                                 assignee="stephendonner",
                                  milestone=bc_milestone[milestonever],
                                  labels=macList)
 
     print("--------------------------------------------------------")
 
     print("Mac Checklist(arm64):")
-    bigline = "## Per release specialty tests\n"
-    for line in macarm64_checklist:
-        bigline += line + "\n"
-    bigline = bigline + macOS_arm64
-    print(bigline)
+    print(macOS_arm64)
     print("")
     macarm64Title = "Manual test run on macOS (arm64) for " + milestonever
     macarm64List = ["OS/macOS",
@@ -305,19 +281,15 @@ def laptop_hf_testruns(milestonever):
 
     if args.test is None:
         bc_repo.create_issue(title=macarm64Title,
-                                 body=bigline,
-                                 assignees="LaurenWags",
+                                 body=macOS_arm64,
+                                 assignee="LaurenWags",
                                  milestone=bc_milestone[milestonever],
                                  labels=macarm64List)
 
     print("--------------------------------------------------------")
 
     print("Win64 Checklist:")
-    bigline = "## Per release specialty tests\n"
-    for line in win64_checklist:
-        bigline += line + "\n"
-    bigline = bigline + laptop_hf_template
-    print(bigline)
+    print(laptop_hf_template)
     print("")
     winTitle = "Manual test run on Windows x64 for " + milestonever
     winList = ["OS/Windows",
@@ -328,19 +300,15 @@ def laptop_hf_testruns(milestonever):
 
     if args.test is None:
         bc_repo.create_issue(title=winTitle,
-                                 body=bigline,
-                                 assignees="GeetaSarvadnya",
+                                 body=laptop_hf_template,
+                                 assignee="GeetaSarvadnya",
                                  milestone=bc_milestone[milestonever],
                                  labels=winList)
 
     print("--------------------------------------------------------")
 
     print("Linux Checklist:")
-    bigline = "## Per release specialty tests\n"
-    for line in linux_checklist:
-        bigline += line + "\n"
-    bigline = bigline + laptop_hf_template
-    print(bigline)
+    print(laptop_hf_template)
     print("")
     linTitle = "Manual test run on Linux for " + milestonever
     linList = ["OS/Linux",
@@ -351,7 +319,7 @@ def laptop_hf_testruns(milestonever):
 
     if args.test is None:
         bc_repo.create_issue(title=linTitle,
-                                 body=bigline,
+                                 body=laptop_hf_template,
                                  assignee="btlechowski",
                                  milestone=bc_milestone[milestonever],
                                  labels=linList)
@@ -430,11 +398,7 @@ def android_testruns(milestonever):
     print("")
 
     print("Android ARM Checklist:")
-    bigline = "## Per release specialty tests\n"
-    for line in android_arm_checklist:
-        bigline += line + "\n"
-    bigline = bigline + android_template
-    print(bigline)
+    print(android_template)
     print("")
     AndroidARMtitle = "Manual test run on Android ARM  for " + milestonever
     AndroidARMlist = ["ARM",
@@ -445,7 +409,7 @@ def android_testruns(milestonever):
 
     if args.test is None:
         bc_repo.create_issue(title=AndroidARMtitle,
-                                  body=bigline,
+                                  body=android_template,
                                   assignee="srirambv",
                                   milestone=bc_milestone[milestonever],
                                   labels=AndroidARMlist)
@@ -453,11 +417,7 @@ def android_testruns(milestonever):
     print("--------------------------------------------------------")
 
     print("Android Tab Checklist:")
-    bigline = "## Per release specialty tests\n"
-    for line in android_tab_checklist:
-        bigline += line + "\n"
-    bigline = bigline + android_template
-    print(bigline)
+    print(android_template)
     print("")
     AndroidTabtitle = "Manual test run on Android Tab  for " + milestonever
     AndroidTablist = ["ARM",
@@ -468,7 +428,7 @@ def android_testruns(milestonever):
 
     if args.test is None:
         bc_repo.create_issue(title=AndroidTabtitle,
-                                  body=bigline,
+                                  body=android_template,
                                   assignee="srirambv",
                                   milestone=bc_milestone[milestonever],
                                   labels=AndroidTablist)
@@ -476,10 +436,6 @@ def android_testruns(milestonever):
     print("--------------------------------------------------------")
 
     print("Android x86 Checklist:")
-    #bigline = "## Per release specialty tests\n"
-    #for line in android_x86_checklist:
-    #    bigline += line + "\n"
-    #bigline = bigline + android_x86_template
     print(android_x86_template)
     print("")
     Androidx86title = "Manual test run on Android x86 for " + milestonever
@@ -570,11 +526,7 @@ def android_hf_testruns(milestonever):
     print("")
 
     print("Android ARM Checklist:")
-    bigline = "## Per release specialty tests\n"
-    for line in android_arm_checklist:
-        bigline += line + "\n"
-    bigline = bigline + android_hf_template
-    print(bigline)
+    print(android_hf_template)
     print("")
     AndroidARMtitle = "Manual test run on Android ARM  for " + milestonever
     AndroidARMlist = ["ARM",
@@ -585,7 +537,7 @@ def android_hf_testruns(milestonever):
 
     if args.test is None:
         bc_repo.create_issue(title=AndroidARMtitle,
-                                  body=bigline,
+                                  body=android_hf_template,
                                   assignee="srirambv",
                                   milestone=bc_milestone[milestonever],
                                   labels=AndroidARMlist)
@@ -593,11 +545,7 @@ def android_hf_testruns(milestonever):
     print("--------------------------------------------------------")
 
     print("Android Tab Checklist:")
-    bigline = "## Per release specialty tests\n"
-    for line in android_tab_checklist:
-        bigline += line + "\n"
-    bigline = bigline + android_hf_template
-    print(bigline)
+    print(android_hf_template)
     print("")
     AndroidTabtitle = "Manual test run on Android Tab  for " + milestonever
     AndroidTablist = ["ARM",
@@ -608,7 +556,7 @@ def android_hf_testruns(milestonever):
 
     if args.test is None:
         bc_repo.create_issue(title=AndroidTabtitle,
-                                  body=bigline,
+                                  body=android_hf_template,
                                   assignee="srirambv",
                                   milestone=bc_milestone[milestonever],
                                   labels=AndroidTablist)
@@ -617,11 +565,6 @@ def android_hf_testruns(milestonever):
     print("--------------------------------------------------------")
 
     print("Android x86 Checklist:")
-    #bigline = "## Per release specialty tests\n"
-    #for line in android_x86_checklist:
-    #    bigline += line + "\n"
-    #bigline = bigline + android_x86_template
-    #print(bigline)
     print(android_x86_template)
     print("")
     Androidx86title = "Manual test run on Android x86 for " + milestonever
@@ -701,14 +644,10 @@ def iOS_testruns():
     print("")
 
     print("iPad Checklist:")
-    bigline = "## Per release speciality tests\n"
-    for line in iPad_checklist:
-        bigline += line + "\n"
-    bigline = bigline + ios_template
-    print(bigline)
+    print(ios_template)
     print("")
     iPad_Title = "Manual test run for " + ios_key +\
-        " on iPad running iOS12"
+        " on iPad"
     iPad_List = ["ipad",
                  "release-notes/exclude",
                  "tests",
@@ -716,7 +655,7 @@ def iOS_testruns():
 
     if args.test is None:
         ios_repo.create_issue(title=iPad_Title,
-                              body=bigline,
+                              body=ios_template,
                               assignees=["srirambv", "kjozwiak"],
                               milestone=ios_milestone[ios_key],
                               labels=iPad_List)
@@ -724,14 +663,10 @@ def iOS_testruns():
     print("--------------------------------------------------------")
 
     print("iPhone Checklist:")
-    bigline = "## Per release speciality tests\n"
-    for line in iPhone_checklist:
-        bigline += line + "\n"
-    bigline = bigline + ios_template
-    print(bigline)
+    print(ios_template)
     print("")
     iPhone_Title = "Manual test run for " + ios_key +\
-        " on iPhone running iOS12"
+        " on iPhone"
     iPhone_List = ["iPhone",
                    "release-notes/exclude",
                    "tests",
@@ -739,7 +674,7 @@ def iOS_testruns():
 
     if args.test is None:
         ios_repo.create_issue(title=iPhone_Title,
-                              body=bigline,
+                              body=ios_template,
                               assignee="srirambv",
                               milestone=ios_milestone[ios_key],
                               labels=iPhone_List)
@@ -747,15 +682,10 @@ def iOS_testruns():
     print("--------------------------------------------------------")
 
     print("iPhone X Checklist:")
-    bigline = "## Per release speciality tests\n"
-
-    for line in iPhoneX_checklist:
-        bigline += line + "\n"
-    bigline = bigline + ios_template
-    print(bigline)
+    print(ios_template)
     print("")
     iPhoneX_Title = "Manual test run for " + ios_key +\
-        " on iPhone X running iOS12"
+        " on iPhone X"
     iPhoneX_List = ["iPhone",
                     "release-notes/exclude",
                     "tests",
@@ -763,7 +693,7 @@ def iOS_testruns():
 
     if args.test is None:
         ios_repo.create_issue(title=iPhoneX_Title,
-                              body=bigline,
+                              body=ios_template,
                               assignee="srirambv",
                               milestone=ios_milestone[ios_key],
                               labels=iPhoneX_List)
@@ -795,7 +725,7 @@ def tor_testruns(tor_rel):
     if args.test is None:
         bc_repo.create_issue(title=macTitle,
                                  body=macOS_intel_template,
-                                 assignees="stephendonner",
+                                 assignee="stephendonner",
                                  milestone=bc_milestone[tor_rel],
                                  labels=macList)
 
@@ -814,7 +744,7 @@ def tor_testruns(tor_rel):
     if args.test is None:
         bc_repo.create_issue(title=macarm64Title,
                                  body=macOS_arm64_template,
-                                 assignees="LaurenWags",
+                                 assignee="LaurenWags",
                                  milestone=bc_milestone[tor_rel],
                                  labels=macarm64List)
 
@@ -833,7 +763,7 @@ def tor_testruns(tor_rel):
     if args.test is None:
         bc_repo.create_issue(title=winTitle,
                                  body=windows_template,
-                                 assignees="GeetaSarvadnya",
+                                 assignee="GeetaSarvadnya",
                                  milestone=bc_milestone[tor_rel],
                                  labels=winList)
 
