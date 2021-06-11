@@ -126,7 +126,6 @@ def laptop_testruns(milestonever):
     if args.test is None:
         bc_repo.create_issue(title=macTitle,
                                  body=laptop_template,
-                                 assignee="stephendonner",
                                  milestone=bc_milestone[milestonever],
                                  labels=macList)
 
@@ -145,7 +144,6 @@ def laptop_testruns(milestonever):
     if args.test is None:
         bc_repo.create_issue(title=macarm64Title,
                                  body=macOS_arm64,
-                                 assignee="LaurenWags",
                                  milestone=bc_milestone[milestonever],
                                  labels=macarm64List)
 
@@ -164,7 +162,6 @@ def laptop_testruns(milestonever):
     if args.test is None:
         bc_repo.create_issue(title=winTitle,
                                  body=laptop_template,
-                                 assignee="GeetaSarvadnya",
                                  milestone=bc_milestone[milestonever],
                                  labels=winList)
 
@@ -183,7 +180,6 @@ def laptop_testruns(milestonever):
     if args.test is None:
         bc_repo.create_issue(title=linTitle,
                                  body=laptop_template,
-                                 assignee="btlechowski",
                                  milestone=bc_milestone[milestonever],
                                  labels=linList)
 
@@ -263,7 +259,6 @@ def laptop_hf_testruns(milestonever):
     if args.test is None:
         bc_repo.create_issue(title=macTitle,
                                  body=laptop_hf_template,
-                                 assignee="stephendonner",
                                  milestone=bc_milestone[milestonever],
                                  labels=macList)
 
@@ -282,7 +277,6 @@ def laptop_hf_testruns(milestonever):
     if args.test is None:
         bc_repo.create_issue(title=macarm64Title,
                                  body=macOS_arm64,
-                                 assignee="LaurenWags",
                                  milestone=bc_milestone[milestonever],
                                  labels=macarm64List)
 
@@ -301,7 +295,6 @@ def laptop_hf_testruns(milestonever):
     if args.test is None:
         bc_repo.create_issue(title=winTitle,
                                  body=laptop_hf_template,
-                                 assignee="GeetaSarvadnya",
                                  milestone=bc_milestone[milestonever],
                                  labels=winList)
 
@@ -320,7 +313,6 @@ def laptop_hf_testruns(milestonever):
     if args.test is None:
         bc_repo.create_issue(title=linTitle,
                                  body=laptop_hf_template,
-                                 assignee="btlechowski",
                                  milestone=bc_milestone[milestonever],
                                  labels=linList)
 
@@ -410,7 +402,6 @@ def android_testruns(milestonever):
     if args.test is None:
         bc_repo.create_issue(title=AndroidARMtitle,
                                   body=android_template,
-                                  assignee="srirambv",
                                   milestone=bc_milestone[milestonever],
                                   labels=AndroidARMlist)
 
@@ -429,7 +420,6 @@ def android_testruns(milestonever):
     if args.test is None:
         bc_repo.create_issue(title=AndroidTabtitle,
                                   body=android_template,
-                                  assignee="srirambv",
                                   milestone=bc_milestone[milestonever],
                                   labels=AndroidTablist)
 
@@ -448,7 +438,6 @@ def android_testruns(milestonever):
     if args.test is None:
         bc_repo.create_issue(title=Androidx86title,
                                   body=android_x86_template,
-                                  assignee="LaurenWags",
                                   milestone=bc_milestone[milestonever],
                                   labels=Androidx86list)
 
@@ -538,7 +527,6 @@ def android_hf_testruns(milestonever):
     if args.test is None:
         bc_repo.create_issue(title=AndroidARMtitle,
                                   body=android_hf_template,
-                                  assignee="srirambv",
                                   milestone=bc_milestone[milestonever],
                                   labels=AndroidARMlist)
 
@@ -557,7 +545,6 @@ def android_hf_testruns(milestonever):
     if args.test is None:
         bc_repo.create_issue(title=AndroidTabtitle,
                                   body=android_hf_template,
-                                  assignee="srirambv",
                                   milestone=bc_milestone[milestonever],
                                   labels=AndroidTablist)
 
@@ -577,7 +564,6 @@ def android_hf_testruns(milestonever):
     if args.test is None:
         bc_repo.create_issue(title=Androidx86title,
                                   body=android_x86_template,
-                                  assignee="LaurenWags",
                                   milestone=bc_milestone[milestonever],
                                   labels=Androidx86list)
 
@@ -656,7 +642,6 @@ def iOS_testruns():
     if args.test is None:
         ios_repo.create_issue(title=iPad_Title,
                               body=ios_template,
-                              assignees=["srirambv", "kjozwiak"],
                               milestone=ios_milestone[ios_key],
                               labels=iPad_List)
 
@@ -675,7 +660,6 @@ def iOS_testruns():
     if args.test is None:
         ios_repo.create_issue(title=iPhone_Title,
                               body=ios_template,
-                              assignee="srirambv",
                               milestone=ios_milestone[ios_key],
                               labels=iPhone_List)
 
@@ -694,7 +678,6 @@ def iOS_testruns():
     if args.test is None:
         ios_repo.create_issue(title=iPhoneX_Title,
                               body=ios_template,
-                              assignee="srirambv",
                               milestone=ios_milestone[ios_key],
                               labels=iPhoneX_List)
 
@@ -725,7 +708,6 @@ def tor_testruns(tor_rel):
     if args.test is None:
         bc_repo.create_issue(title=macTitle,
                                  body=macOS_intel_template,
-                                 assignee="stephendonner",
                                  milestone=bc_milestone[tor_rel],
                                  labels=macList)
 
@@ -744,7 +726,6 @@ def tor_testruns(tor_rel):
     if args.test is None:
         bc_repo.create_issue(title=macarm64Title,
                                  body=macOS_arm64_template,
-                                 assignee="LaurenWags",
                                  milestone=bc_milestone[tor_rel],
                                  labels=macarm64List)
 
@@ -763,7 +744,6 @@ def tor_testruns(tor_rel):
     if args.test is None:
         bc_repo.create_issue(title=winTitle,
                                  body=windows_template,
-                                 assignee="GeetaSarvadnya",
                                  milestone=bc_milestone[tor_rel],
                                  labels=winList)
 
@@ -782,7 +762,6 @@ def tor_testruns(tor_rel):
     if args.test is None:
         bc_repo.create_issue(title=linTitle,
                                  body=linux_template,
-                                 assignee="btlechowski",
                                  milestone=bc_milestone[tor_rel],
                                  labels=linList)
 
