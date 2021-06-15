@@ -135,7 +135,7 @@ def laptop_testruns(milestonever):
     print(macOS_arm64)
     print("")
     macarm64Title = "Manual test run on macOS (arm64) for " + milestonever
-    macarm64List = ["OS/macOS",
+    macarm64List = ["OS/macOS-arm64",
                "release-notes/exclude",
                "tests",
                "QA/Yes",
@@ -268,7 +268,7 @@ def laptop_hf_testruns(milestonever):
     print(macOS_arm64)
     print("")
     macarm64Title = "Manual test run on macOS (arm64) for " + milestonever
-    macarm64List = ["OS/macOS",
+    macarm64List = ["OS/macOS-arm64",
                "release-notes/exclude",
                "tests",
                "QA/Yes",
@@ -718,7 +718,7 @@ def tor_testruns(tor_rel):
     print(macOS_arm64_template)
     print("")
     macarm64Title = "Manual test run on macOS (arm64) for " + tor_rel
-    macarm64List = ["OS/macOS",
+    macarm64List = ["OS/macOS-arm64",
                "release-notes/exclude",
                "tests",
                "QA/Yes",
