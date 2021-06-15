@@ -703,7 +703,8 @@ def tor_testruns(tor_rel):
                "release-notes/exclude",
                "tests",
                "QA/Yes",
-               "OS/Desktop"]
+               "OS/Desktop",
+               "feature/tor"]
 
     if args.test is None:
         bc_repo.create_issue(title=macTitle,
@@ -721,7 +722,8 @@ def tor_testruns(tor_rel):
                "release-notes/exclude",
                "tests",
                "QA/Yes",
-               "OS/Desktop"]
+               "OS/Desktop",
+               "feature/tor"]
 
     if args.test is None:
         bc_repo.create_issue(title=macarm64Title,
@@ -739,7 +741,8 @@ def tor_testruns(tor_rel):
                "release-notes/exclude",
                "tests", 
                "QA/Yes",
-               "OS/Desktop"]
+               "OS/Desktop",
+               "feature/tor"]
 
     if args.test is None:
         bc_repo.create_issue(title=winTitle,
@@ -757,7 +760,8 @@ def tor_testruns(tor_rel):
                "release-notes/exclude",
                "tests",
                "QA/Yes",
-               "OS/Desktop"]
+               "OS/Desktop",
+               "feature/tor"]
 
     if args.test is None:
         bc_repo.create_issue(title=linTitle,
