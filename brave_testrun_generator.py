@@ -736,7 +736,7 @@ def tor_testruns(tor_rel):
     print("Win64 Checklist:")
     print(windows_template)
     print("")
-    winTitle = "Manual test run on Windows x64 for " + tor_rel
+    winTitle = "Manual test run on Windows x64 & x86 for " + tor_rel
     winList = ["OS/Windows",
                "release-notes/exclude",
                "tests", 
@@ -795,10 +795,12 @@ print("#######################################################################"
       "###################################################")
 
 header = print("\nCreate test runs for:\n")
-laptop = print("1. Desktop Release")
-laptop_hf = print("2. Desktop Hotfix")
-android = print("3. Android Release")
-android_hf = print("4. Android Hotfix")
+laptop = print("1. Desktop Release (Full manual pass)")
+laptop_hf = print("2. Desktop Release (Reduced manual pass for" 
+                  " Hotfix/minor CR bump)")
+android = print("3. Android Release (Full manual pass)")
+android_hf = print("4. Android Release (Reduced manual pass for" 
+                  " Hotfix/minor CR bump)")
 ios = print("5. iOS Release")
 tor = print("6. Tor Release")
 
