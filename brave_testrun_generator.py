@@ -808,7 +808,7 @@ def ipfs_testruns(ipfs_rel):
 
     if args.test is None:
         bc_repo.create_issue(title=winTitle,
-                                 body=windows_template,
+                                 body=ipfs_template,
                                  milestone=bc_milestone[ipfs_rel],
                                  labels=winList)
 
@@ -827,7 +827,7 @@ def ipfs_testruns(ipfs_rel):
 
     if args.test is None:
         bc_repo.create_issue(title=linTitle,
-                                 body=linux_template,
+                                 body=ipfs_template,
                                  milestone=bc_milestone[ipfs_rel],
                                  labels=linList)
 
