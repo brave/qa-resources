@@ -103,17 +103,17 @@ def laptop_testruns(milestonever):
                         "tests" not in label_names):
                     linux_checklist.append(output_line)
 
-    print("Release Notes ")
+    print("\nRelease Notes ")
     for line in release_notes:
         print(line)
     print("")
 
-    print("Checklist: ")
+    print("\nChecklist: ")
     for line in checklist:
         print(line)
     print("")
 
-    print("Mac Checklist (Intel):")
+    print("\nMac Checklist (Intel):")
     print(laptop_template)
     print("")
     macTitle = "Manual test run on macOS (Intel) for " + milestonever
@@ -129,7 +129,7 @@ def laptop_testruns(milestonever):
                                  milestone=bc_milestone[milestonever],
                                  labels=macList)
 
-    print("--------------------------------------------------------")
+    print("--------------------------------------------------------\n")
 
     print("Mac Checklist (arm64):")
     print(macOS_arm64)
@@ -147,7 +147,7 @@ def laptop_testruns(milestonever):
                                  milestone=bc_milestone[milestonever],
                                  labels=macarm64List)
 
-    print("--------------------------------------------------------")
+    print("--------------------------------------------------------\n")
 
     print("Win64 Checklist:")
     print(laptop_template)
@@ -165,7 +165,7 @@ def laptop_testruns(milestonever):
                                  milestone=bc_milestone[milestonever],
                                  labels=winList)
 
-    print("--------------------------------------------------------")
+    print("--------------------------------------------------------\n")
 
     print("Linux Checklist:")
     print(laptop_template)
@@ -241,12 +241,12 @@ def laptop_hf_testruns(milestonever):
                         "tests" not in label_names):
                     linux_checklist.append(output_line)
 
-    print("Release Notes ")
+    print("\nRelease Notes ")
     for line in release_notes:
         print(line)
     print("")
 
-    print("Mac Checklist (Intel):")
+    print("\nMac Checklist (Intel):")
     print(laptop_hf_template)
     print("")
     macTitle = "Manual test run on macOS (Intel) for " + milestonever
@@ -262,7 +262,7 @@ def laptop_hf_testruns(milestonever):
                                  milestone=bc_milestone[milestonever],
                                  labels=macList)
 
-    print("--------------------------------------------------------")
+    print("--------------------------------------------------------\n")
 
     print("Mac Checklist(arm64):")
     print(macOS_arm64)
@@ -280,7 +280,7 @@ def laptop_hf_testruns(milestonever):
                                  milestone=bc_milestone[milestonever],
                                  labels=macarm64List)
 
-    print("--------------------------------------------------------")
+    print("--------------------------------------------------------\n")
 
     print("Win64 Checklist:")
     print(laptop_hf_template)
@@ -298,7 +298,7 @@ def laptop_hf_testruns(milestonever):
                                  milestone=bc_milestone[milestonever],
                                  labels=winList)
 
-    print("--------------------------------------------------------")
+    print("--------------------------------------------------------\n")
 
     print("Linux Checklist:")
     print(laptop_hf_template)
@@ -379,17 +379,17 @@ def android_testruns(milestonever):
                         "phone-specific" not in label_names):
                     android_tab_checklist.append(output_line)
 
-    print("Release Notes:")
+    print("\nRelease Notes:")
     for line in release_notes:
         print(line)
     print("")
 
-    print("Checklist:")
+    print("\nChecklist:")
     for line in checklist:
         print(line)
     print("")
 
-    print("Android ARM Checklist:")
+    print("\nAndroid ARM Checklist:")
     print(android_template)
     print("")
     AndroidARMtitle = "Manual test run on Android ARM  for " + milestonever
@@ -405,7 +405,7 @@ def android_testruns(milestonever):
                                   milestone=bc_milestone[milestonever],
                                   labels=AndroidARMlist)
 
-    print("--------------------------------------------------------")
+    print("--------------------------------------------------------\n")
 
     print("Android Tab Checklist:")
     print(android_template)
@@ -423,7 +423,7 @@ def android_testruns(milestonever):
                                   milestone=bc_milestone[milestonever],
                                   labels=AndroidTablist)
 
-    print("--------------------------------------------------------")
+    print("--------------------------------------------------------\n")
 
     print("Android x86 Checklist:")
     print(android_x86_template)
@@ -504,17 +504,17 @@ def android_hf_testruns(milestonever):
                         "phone-specific" not in label_names):
                     android_tab_checklist.append(output_line)
 
-    print("Release Notes:")
+    print("\nRelease Notes:")
     for line in release_notes:
         print(line)
     print("")
 
-    print("Checklist:")
+    print("\nChecklist:")
     for line in checklist:
         print(line)
     print("")
 
-    print("Android ARM Checklist:")
+    print("\nAndroid ARM Checklist:")
     print(android_hf_template)
     print("")
     AndroidARMtitle = "Manual test run on Android ARM  for " + milestonever
@@ -530,7 +530,7 @@ def android_hf_testruns(milestonever):
                                   milestone=bc_milestone[milestonever],
                                   labels=AndroidARMlist)
 
-    print("--------------------------------------------------------")
+    print("--------------------------------------------------------\n")
 
     print("Android Tab Checklist:")
     print(android_hf_template)
@@ -549,7 +549,7 @@ def android_hf_testruns(milestonever):
                                   labels=AndroidTablist)
 
 
-    print("--------------------------------------------------------")
+    print("--------------------------------------------------------\n")
 
     print("Android x86 Checklist:")
     print(android_x86_template)
@@ -622,14 +622,14 @@ def iOS_testruns():
                     "tests" not in label_names):
                 iPhoneX_checklist.append(output_line)
 
-    print("Release Notes:")
+    print("\nRelease Notes:")
     print(release_notes)
     for line in release_notes:
         relline += line +"\n"
         print(relline)
     print("")
 
-    print("iPad Checklist:")
+    print("\niPad Checklist:")
     print(ios_template)
     print("")
     iPad_Title = "Manual test run for " + ios_key +\
@@ -645,7 +645,7 @@ def iOS_testruns():
                               milestone=ios_milestone[ios_key],
                               labels=iPad_List)
 
-    print("--------------------------------------------------------")
+    print("--------------------------------------------------------\n")
 
     print("iPhone Checklist:")
     print(ios_template)
@@ -663,7 +663,7 @@ def iOS_testruns():
                               milestone=ios_milestone[ios_key],
                               labels=iPhone_List)
 
-    print("--------------------------------------------------------")
+    print("--------------------------------------------------------\n")
 
     print("iPhone X Checklist:")
     print(ios_template)
@@ -695,7 +695,7 @@ def tor_testruns(tor_rel):
     linux_tor_wiki = open("wikitemplate-tor-Linux.md", "r")
     linux_template = linux_tor_wiki.read()
 
-    print("Mac Checklist (Intel):")
+    print("\nMac Checklist (Intel):")
     print(macOS_intel_template)
     print("")
     macTitle = "Manual test run on macOS (Intel) for " + tor_rel
@@ -712,7 +712,7 @@ def tor_testruns(tor_rel):
                                  milestone=bc_milestone[tor_rel],
                                  labels=macList)
 
-    print("--------------------------------------------------------")
+    print("--------------------------------------------------------\n")
 
     print("Mac Checklist(arm64):")
     print(macOS_arm64_template)
@@ -731,7 +731,7 @@ def tor_testruns(tor_rel):
                                  milestone=bc_milestone[tor_rel],
                                  labels=macarm64List)
 
-    print("--------------------------------------------------------")
+    print("--------------------------------------------------------\n")
 
     print("Win64 Checklist:")
     print(windows_template)
@@ -750,7 +750,7 @@ def tor_testruns(tor_rel):
                                  milestone=bc_milestone[tor_rel],
                                  labels=winList)
 
-    print("--------------------------------------------------------")
+    print("--------------------------------------------------------\n")
 
     print("Linux Checklist:")
     print(linux_template)
@@ -767,6 +767,68 @@ def tor_testruns(tor_rel):
         bc_repo.create_issue(title=linTitle,
                                  body=linux_template,
                                  milestone=bc_milestone[tor_rel],
+                                 labels=linList)
+
+    return 0
+
+def ipfs_testruns(ipfs_rel):
+
+    ipfs_wiki = open("wikitemplate-IPFS.md", "r")
+    ipfs_template = ipfs_wiki.read()
+
+    print("\nMac Checklist (Intel/arm64):")
+    print(ipfs_template)
+    print("")
+    macTitle = "Manual test run on macOS (Intel/arm64) for " + ipfs_rel
+    macList = ["OS/macOS",
+               "release-notes/exclude",
+               "tests",
+               "QA/Yes",
+               "OS/Desktop",
+               "feature/ipfs"]
+
+    if args.test is None:
+        bc_repo.create_issue(title=macTitle,
+                                 body=ipfs_template,
+                                 milestone=bc_milestone[ipfs_rel],
+                                 labels=macList)
+
+    print("--------------------------------------------------------\n")
+
+    print("Win64 Checklist:")
+    print(ipfs_template)
+    print("")
+    winTitle = "Manual test run on Windows x64 & x86 for " + ipfs_rel
+    winList = ["OS/Windows",
+               "release-notes/exclude",
+               "tests", 
+               "QA/Yes",
+               "OS/Desktop",
+               "feature/ipfs"]
+
+    if args.test is None:
+        bc_repo.create_issue(title=winTitle,
+                                 body=ipfs_template,
+                                 milestone=bc_milestone[ipfs_rel],
+                                 labels=winList)
+
+    print("--------------------------------------------------------\n")
+
+    print("Linux Checklist:")
+    print(ipfs_template)
+    print("")
+    linTitle = "Manual test run on Linux for " + ipfs_rel
+    linList = ["OS/Linux",
+               "release-notes/exclude",
+               "tests",
+               "QA/Yes",
+               "OS/Desktop",
+               "feature/ipfs"]
+
+    if args.test is None:
+        bc_repo.create_issue(title=linTitle,
+                                 body=ipfs_template,
+                                 milestone=bc_milestone[ipfs_rel],
                                  labels=linList)
 
     return 0
@@ -788,7 +850,10 @@ while ioslength < len(ios_key):
     print(str(ioslength+1) + ". " + sorted(ios_milestone.keys())[ioslength])
     ioslength += 1
 
-print("\n Note: For Tor Release make sure you type \"Tor\" or \"tor\" instead "
+print("\nNOTE:")
+print("\n For Tor Release make sure you type \"Tor\" or \"tor\" instead "
+      "of the number")
+print("\n For IPFS Release make sure you type \"IPFS\" or \"ipfs\" instead "
       "of the number")
 
 print("#######################################################################"
@@ -803,6 +868,7 @@ android_hf = print("4. Android Release (Reduced manual pass for"
                   " Hotfix/minor CR bump)")
 ios = print("5. iOS Release")
 tor = print("6. Tor Release")
+ipfs = print("7. IPFS Release")
 
 select_checklist = input("\nChoose the platform for which you want to" +
                          " generate the test run: ")
@@ -835,9 +901,20 @@ elif (select_checklist == "Tor" or select_checklist == "tor"):
               "and then generate test runs")
     else:
         torkey = tormilestone[0]
-        generate_ios_test = print("\nGenerating test runs for Tor ",
-                              sorted(bc_milestone.keys())[0])
+        generate_ios_test = print("\nGenerating test runs for Tor",
+                              (tormilestone)[0])
         tor_testruns(torkey)
+elif (select_checklist == "IPFS" or select_checklist == "ipfs"):
+    ipfsmilestone = [i for i in bc_milestone if "IPFS" in i]
+    if (len(ipfsmilestone) == 0):
+        ipfskey = ""
+        print("No IPFS milestone exists. Please create milestone "
+              "and then generate test runs")
+    else:
+        ipfskey = ipfsmilestone[0]
+        generate_ipfs_test = print("\nGenerating test runs for",
+                                (ipfsmilestone)[0])
+        ipfs_testruns(ipfskey)
 else:
     print("Incorrect selection. " + select_checklist + " is not a valid input\n")
     exit()
