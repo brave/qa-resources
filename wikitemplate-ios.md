@@ -157,7 +157,7 @@
 - [ ] Verify that clicking through a cert error in https://badssl.com/ works
 - [ ] Verify that Safe Browsing works (https://www.raisegame.com/)
 - [ ] Turning Safe Browsing off and shields off both disable safe browsing for https://www.raisegame.com/
-- [ ] Enable block script globally from settings, Visit https://brianbondy.com/, nothing should load. Tap on Shields and disable block script, the page should load properly
+- [ ] Enable block script globally from settings, Visit https://blizzard.com/, nothing should load. Tap on Shields and disable block script, the page should load properly
 - [ ] Verify that preferences default Bravery settings take effect on pages with no site settings
 - [ ] Verify that 3rd party storage results are blank at https://jsfiddle.net/7ke9r14a/7/ when 3rd party cookies are blocked
 ### Fingerprint Tests
