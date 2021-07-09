@@ -61,7 +61,7 @@
 ## History
 
 - [ ] On youtube.com, thestar.com (or any other site using push state nav), navigate the site and verify history is added. Also, note if the progress bar activates and shows progress
-- [ ] Settings > Clear Private Data, and clear all. Check only the history is cleared and favourites are retained
+- [ ] Settings > Brave Shields & Privacy > Clear Private Data, and clear all. Check only the history is cleared and favourites are retained
 
 ## Shields Settings
 
