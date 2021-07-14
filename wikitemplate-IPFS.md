@@ -5,9 +5,8 @@
 
    ### `go-updater node update`
 
-   - [ ] Verify going to `brave://ipfs` and clicking on `Install and start` installs and shows the latest `go-ipfs` release (`https://github.com/ipfs/go-ipfs/blob/master/CHANGELOG.md`), via the `Version:` section under `Node info`.
+   - [ ] Verify going to `brave://ipfs` and clicking on `Install and start` installs and shows the latest [`go-ipfs` release](https://github.com/ipfs/go-ipfs/blob/master/CHANGELOG.md), via the `Version:` section under `Node info`.
    - [ ] Verify, using the above profile, that restarting Brave with `--use-dev-goupdater-url`, and clicking on `Restart` via `brave://ipfs` downloads and installs the latest in-development (release) candidate.
-   - [ ] Verify, after installing the latest update, that you still have the in-development version, upon restart, running without `--use-dev-goupdater-url`.  (Doing so will cause problems with installing IPFS Companion, later.)
 
    ### `Config`
 
@@ -138,9 +137,11 @@
 
 ## Gateway
 
-- [ ] Verify, on a new profile, you can load `brave://settings/ipfs`, click on the `Change` button for `IPFS public gateway address`, enter `https://cloudflare-ipfs.com/` and are presented with an interstitial page after loading `ipns://brantly.eth`.  Click `Use a public gateway` and confirm you're taken to `https://cloudflare-ipfs.com/ipns/brantly.eth/#/`.  (Alternatively, use one from `https://ipfs.github.io/public-gateway-checker/`.)
+- [ ] Verify, on a new profile, you can change the IPFS public gateway address to `https://cloudflare-ipfs.com/` via `Settings -> IPFS -> Change`.
+- [ ] Verify visiting `ipns://en.wikipedia-on-ipfs` loads the interstitial page.
+- [ ] Verify selecting `Use a public gateway` loads `https://cloudflare-ipfs.com/ipns/en.wikipedia-on-ipfs.org/wiki/`.
 - [ ] Verify, on a new profile, you can load `https://en.wikipedia-on-ipfs.org`, switch `Method to resolve IPFS resources` to either `Gateway` or `Local node` in `brave://settings/ipfs`, and then see an `Open using IPFS` badge/icon in the URL bar.
-- [ ] Verify clicking on `Open using IPFS` on `https://blog.ipfs.io/24-uncensorable-wikipedia` loads `ipfs://bafybeiaieqdmhtnehaau7kqoj2lmdfqc7juk34cjyb7dxr35vahp22bquu/24-uncensorable-wikipedia/`
+- [ ] Verify clicking on `Open using IPFS` on `https://blog.ipfs.io/24-uncensorable-wikipedia` loads `ipfs://bafybeiaieqdmhtnehaau7kqoj2lmdfqc7juk34cjyb7dxr35vahp22bquu/24-uncensorable-wikipedia/`.
 
 ### Protocol system handler/OS integration
 
@@ -171,14 +172,14 @@
    - [ ] Verify you're able to share a local file via `IPFS > Share local file using IPFS`.
    - [ ] Verify once the file is imported, the import folder is opened and the file can be downloaded.
    - [ ] Once the import is successful, verify a shareable link is copied to the clipboard by opening a new tab and pasting from the context menu or `CTRL+V`.
-   - [ ] Verify you see your key before the `?filename=filename.ext` in the copied text, e.g. `https://dweb.link/ipns/k51qzi5uqu5dgxhiv8w8cdvmgdhbvy3t9gn4jwpwwro18fots0xtdabpcxxzwc?filename=Big_Buck_Bunny_4K.webm` (the key is `k51qzi5uqu5dgxhiv8w8cdvmgdhbvy3t9gn4jwpwwro18fots0xtdabpcxxzwc`).
+   - [ ] Verify you see the IPFS key (e.g. `k51qzi5uqu5dgxhiv8w8cdvmgdhbvy3t9gn4jwpwwro18fots0xtdabpcxxzwc`) before the `?filename=filename.ext` from the copied text.
 
    ### `Sharing a local folder using an IPFS key`
 
    - [ ] Verify you're able to share a local file via `IPFS > Share local folder using IPFS`.
    - [ ] Verify once the file is imported, the import folder is opened and the file can be downloaded.
    - [ ] Once the import is successful, verify a shareable link is copied to clipboard by opening a new tab and pasting from context menu or `CTRL+V`.
-   - [ ] Verify you see your key before the `?filename=Downloads` part, e.g. `https://dweb.link/ipns/k51qzi5uqu5djfh24zd6m4e8fm6d9rju48fyokc13achcfo4hz9fmioev0xln6?filename=Downloads` (`k51qzi5uqu5djfh24zd6m4e8fm6d9rju48fyokc13achcfo4hz9fmioev0xln6` is the key here)
+   - [ ] Verify you see the IPFS key (e.g. `k51qzi5uqu5dgxhiv8w8cdvmgdhbvy3t9gn4jwpwwro18fots0xtdabpcxxzwc`) before the `?filename=filename.ext` from the copied text.
 
    ### `Importing keys`
 
