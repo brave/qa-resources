@@ -93,11 +93,11 @@
 
 ## Browser Lock
 
-- [ ] Verify enabling browser pin settings asks for pin confirmation followed by reconfirm
-- [ ] Verify swipe up/swipe down with browser in focus doesn't ask for pin confirmation
-- [ ] Verify clicking on set pin asks for the pin to unlock before setting a new pin
-- [ ] Remove the app from memory and relaunch, enter a wrong pin, the browser should not be unlocked
-- [ ] Verify cancel fingerprint confirmation shows enter pin window when fingerprint unlock is set up on the device
+- [ ] Verify enabling browser passcode settings asks for passcode confirmation followed by reconfirm
+- [ ] Verify swipe up/swipe down with browser in focus doesn't ask for passcode confirmation
+- [ ] Verify clicking on set passcode asks for the pin to unlock before setting a new passcode
+- [ ] Remove the app from memory and relaunch, enter a wrong passcode, the browser should not be unlocked
+- [ ] Verify cancel fingerprint confirmation shows enter passcode window when fingerprint unlock is set up on the device
 
 ## Brave Rewards/Ads
 
