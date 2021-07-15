@@ -75,7 +75,7 @@
 - [ ] Visit https://jsfiddle.net/bkf50r8v/13/, ensure 3 blocked items are listed in Shields. Result window should show `got canvas fingerprint 0` and `got webgl fingerprint 00`
 - [ ] Test that audio fingerprint is blocked at https://audiofingerprint.openwpm.com/ only when `Block all fingerprinting protection` is on
 - [ ] Test that Brave browser isn't detected via user-agent, on https://www.whatismybrowser.com.  The site **will** say "Looks like Brave on [Windows/Linux/macOS]", and yet, "But it's announcing that it's Chrome [version] on [platform]"
-- [ ] Test that https://diafygi.github.io/webrtc-ips/ doesn't leak IP address when `Block all fingerprinting protection` is on
+- [ ] Test that https://diafygi.github.io/webrtc-ips/ doesn't leak IP address when `Fingerprinting blocked (strict, may break sites)` is on
 
 ### Brave Ads
 
