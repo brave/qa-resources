@@ -62,7 +62,7 @@
 
 - [ ] Verify that HTTPS Everywhere works by loading http://https-everywhere.badssl.com/
 - [ ] Turning HTTPS Everywhere off and Shields off both disable the redirect to https://https-everywhere.badssl.com/
-- [ ] Verify that toggling `Ads and trackers blocked` works as expected
+- [ ] Verify that toggling `Trackers & ads blocked` works as expected
 - [ ] Visit https://testsafebrowsing.appspot.com/s/phishing.html, verify that Safe Browsing (via our Proxy) works for all the listed items
 - [ ] Visit https://www.blizzard.com and then turn on script blocking, page should not load.
 - [ ] Test that 3rd party storage results are blank at https://jsfiddle.net/7ke9r14a/9/ when 3rd party cookies are blocked and not blank when 3rd party cookies are unblocked
