@@ -75,7 +75,7 @@ Pre-Requisite: Put previous build shortcut on the home screen. Also, have severa
 - [ ] Run all six test configurations on `https://dev-pages.brave.software/storage/ephemeral-storage.html` and confirm results are as expected per each test listed.
 ### Fingerprint Tests
   - [ ] Visit `https://browserleaks.com/webrtc`, ensure 2 blocked items are listed in shields
-  - [ ] Verify that `https://diafygi.github.io/webrtc-ips/` doesn't leak IP address when `Block all fingerprinting protection` is on
+  - [ ] Test that https://diafygi.github.io/webrtc-ips/ doesn't leak IP address for each option under `Settings -> Privacy and Security -> WebRTC IP handling policy`
 
 ## Content Tests
 
