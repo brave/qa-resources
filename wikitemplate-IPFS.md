@@ -189,7 +189,7 @@
 
    ### `Pinning content with IPNS key`
 
-   - [ ] Verify keys are available in all import menus in order to pin content by selected ke; the import link should contain the selected key.
+   - [ ] Verify keys are available in all import menus in order to pin content by selected key; the import link should contain the selected key.
 
    ### `Add/Remove/Rotate keys`
 
