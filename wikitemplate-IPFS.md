@@ -138,8 +138,8 @@
 ## Gateway
 
 - [ ] Verify, on a new profile, you can change the IPFS public gateway address to `https://cloudflare-ipfs.com/` via `Settings -> IPFS -> Change`.
-- [ ] Verify visiting `ipns://en.wikipedia-on-ipfs` loads the interstitial page.
-- [ ] Verify selecting `Use a public gateway` loads `https://cloudflare-ipfs.com/ipns/en.wikipedia-on-ipfs.org/wiki/`.
+- [ ] Verify visiting `ipns://en.wikipedia-on-ipfs.org` loads the interstitial page.
+- [ ] Verify selecting `Use a public gateway` with `ipns://en.wikipedia-on-ipfs.org` loaded opens `https://cloudflare-ipfs.com/ipns/en.wikipedia-on-ipfs.org/wiki/`.
 - [ ] Verify, on a new profile, you can load `https://en.wikipedia-on-ipfs.org`, switch `Method to resolve IPFS resources` to either `Gateway` or `Local node` in `brave://settings/ipfs`, and then see an `Open using IPFS` badge/icon in the URL bar.
 - [ ] Verify clicking on `Open using IPFS` on `https://blog.ipfs.io/24-uncensorable-wikipedia` loads `ipfs://bafybeiaieqdmhtnehaau7kqoj2lmdfqc7juk34cjyb7dxr35vahp22bquu/24-uncensorable-wikipedia/`.
 
@@ -185,20 +185,19 @@
 
    - [ ] Verify adding a new key by clicking on the `Import` button and choosing an existing key file to import.
    - [ ] Verify imported key is available with entered name; verify entering `self` will yield `This name cannot be used`.
-   - [ ] Verify you cannot import the same key twice.
+   - [ ] Verify you cannot import keys with the same name; each key name must be unique.
 
    ### `Pinning content with IPNS key`
 
-   - [ ] Verify keys are available in all import menus in order to pin content by selected key. the import link should contain the selected key.
+   - [ ] Verify keys are available in all import menus in order to pin content by selected ke; the import link should contain the selected key.
 
    ### `Add/Remove/Rotate keys`
 
-   - [ ] Verify when you click `Add`, it prompts for key name and generates a new key.
+   - [ ] Verify when you click `Add`, it prompts for a key name and generates a new key.
    - [ ] Verify clicking on `Add` and entering an existing key name shows a `This name cannot be used` error message.   
-   - [ ] Verify clicking on the Rotate key icon for the `self` key prompts for a key name.  Enter a valid name and click `Rotate`.  Confirm the key is created with your entered name, and original hash, and a new `self` key (with a new hash value) is generated.
-   - [ ] Verify clicking on the 3-dots menu to the right of a key gives you two options: `Export key` and `Remove key`.  Choose `Export key` and confirm you get prompted to save the key.  Click `Save` and ensure the key is saved to disk. Delete the key from `brave://settings/ipfs/keys` and now click `Add` to confirm the same key as the original, is added from disk.
+   - [ ] Verify clicking on the Rotate key icon for the `self` key prompts for a key name.  Enter a valid, unique name and click `Rotate`.  Confirm the key is created with your entered name, original hash, and a new `self` key (with a new hash value) is generated.
+   - [ ] Verify clicking on the 3-dots menu to the right of a key gives you two options: `Export key` and `Remove key`.  Choose `Export key` and confirm you get prompted to save the key.  Click `Save` and ensure the key is saved to disk. Delete the key from `brave://settings/ipfs/keys` and now click `Add` to confirm the same key as the original is added from disk.
    - [ ] Verify clicking on the 3-dots menu and choosing `Remove key` removes the key from the UI.
-
 
 ***
 
