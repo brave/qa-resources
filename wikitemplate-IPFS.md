@@ -137,9 +137,9 @@
 
 ## Gateway
 
-- [ ] Verify, on a new profile, you can change the IPFS public gateway address to `https://cloudflare-ipfs.com/` via `Settings -> IPFS -> Change`.
+- [ ] Verify, on a new profile, you can change the IPFS public gateway address to `https://cf-ipfs.com/` via `Settings -> IPFS -> Change`.
 - [ ] Verify visiting `ipns://en.wikipedia-on-ipfs.org` loads the interstitial page.
-- [ ] Verify selecting `Use a public gateway` with `ipns://en.wikipedia-on-ipfs.org` loaded opens `https://cloudflare-ipfs.com/ipns/en.wikipedia-on-ipfs.org/wiki/`.
+- [ ] Verify selecting `Use a public gateway` with `ipns://en.wikipedia-on-ipfs.org` loaded opens `https://en-wikipedia--on--ipfs-org.ipns.cf-ipfs.com/wiki/`.
 - [ ] Verify, on a new profile, you can load `https://en.wikipedia-on-ipfs.org`, switch `Method to resolve IPFS resources` to either `Gateway` or `Local node` in `brave://settings/ipfs`, and then see an `Open using IPFS` badge/icon in the URL bar.
 - [ ] Verify clicking on `Open using IPFS` on `https://blog.ipfs.io/24-uncensorable-wikipedia` loads `ipfs://bafybeiaieqdmhtnehaau7kqoj2lmdfqc7juk34cjyb7dxr35vahp22bquu/24-uncensorable-wikipedia/`.
 
