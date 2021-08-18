@@ -3,10 +3,25 @@
 
 ## Installation & Setup
 
-   ### `go-updater node update`
+   ### `IPFS installation`
 
    - [ ] Verify going to `brave://ipfs` and clicking on `Install and start` installs and shows the latest [`go-ipfs` release](https://github.com/ipfs/go-ipfs/blob/master/CHANGELOG.md), via the `Version:` section under `Node info`.
-   - [ ] Verify, using the above profile, that restarting Brave with `--use-dev-goupdater-url`, and clicking on `Restart` via `brave://ipfs` downloads and installs the latest in-development (release) candidate.
+
+   ### `Seed profile`
+
+  - [ ] Load `ipns://en.wikipedia-on-ipfs.org`.
+  - [ ] Choose `Use a local node`.
+  - [ ] Run the `IPNS Keys` (add/rotate) section.
+  - [ ] Run the `Import and Sharing` (page, image, text, video) section.
+
+   ### `go-updater node update`
+   
+  - [ ] Verify, using the above profile, that restarting Brave with `--use-dev-goupdater-url`, and clicking on `Restart` via `brave://ipfs` downloads and installs the latest in-development (release) candidate.
+  - [ ] Confirm that `Method to resolve IPFS resources` is `Local node` in `brave://settings/ipfs`.
+  - [ ] Confirm that keys and imports are intact, post-migration.
+  - [ ] Confirm that brave://ipfs-internals shows `Node is not running` under `IPFS node status`, with a `Start` button.
+  - [ ] Click on `Start`.
+  - [ ] Confirm the node starts, and paths and version info are correct.
 
    ### `Config`
 
