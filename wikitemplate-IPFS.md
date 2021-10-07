@@ -15,7 +15,7 @@
   - [ ] Run the `Import and Sharing` (page, image, text, video) section.
 
    ### `go-updater node update`
-   
+
   - [ ] Verify, using the above profile, that restarting Brave with `--use-dev-goupdater-url`, and clicking on `Restart` via `brave://ipfs` downloads and installs the latest in-development (release) candidate.
   - [ ] Confirm that `Method to resolve IPFS resources` is `Local node` in `brave://settings/ipfs`.
   - [ ] Confirm that keys and imports are intact, post-migration.
@@ -110,9 +110,9 @@
    - [ ] Verify the import folder opens upon successful import.
    - [ ] Verify the shareable link is copied to the clipboard, and opens when pasting into a new tab.
 
-## "Open using IPFS" badge in address bar
+## Address bar
 
-## Badge shown only when IPFS support is enabled
+### Badge shown only when IPFS support is enabled
 
 - [ ] Verify, on a new profile, you can load `https://en.wikipedia-on-ipfs.org`, switch `Method to resolve IPFS resources` to either `Gateway` or `Local node` in `brave://settings/ipfs`, and then see an `Open using IPFS` badge/icon in the URL bar.
 
@@ -127,21 +127,15 @@
 - [ ] Verify clicking on `Open using IPFS` on `https://en.wikipedia-on-ipfs.org/wiki/Asia/#Economy` loads `ipns://en.wikipedia-on-ipfs.org/wiki/Asia/#Economy` in a new tab.
 - [ ] Verify clicking on `Open using IPFS` on `https://blog.ipfs.io/24-uncensorable-wikipedia` loads `ipns://blog.ipfs.io/24-uncensorable-wikipedia/` in a new tab.
 
+### Protocol info popup
+
+- [ ] Load `ipns://brantly.eth` while using `Local node` for the resolver, and confirm there's a clickable info badge "IPFS" to the left of the URL, with on click pop-up that says `This content was loaded over the IPFS protocol.`
+
 ## Automatic redirects to IPFS
 
-### Redirect via configured IPFS gateway
-
-   - [ ] Via `brave://settings/ipfs`, set `Redirect IPFS resources to the configured IPFS gateway` to `On`.  Load `https://ipfs.io/ipfs/QmbWqxBEKC3P8tqsKc98xmWNzrzDtRLMiMPL8wBuTGsMnR` and confirm it redirects to
-   `ipfs://bafybeigdyrzt5sfp7udm7hu76uh7y26nf3efuylqabf3oclgtqy55fbzdi`.
-
-### Redirect via DNSLink
-
-   - [ ] Verify with `Automatically redirect to IPFS pages via DNSLink when possible` set to `On`, visiting `https://en.wikipedia-on-ipfs.org/wiki` redirects to `ipns://en.wikipedia-on-ipfs.org/wiki`.
-
-### Interstitial page (`Ask` mode in `brave://settings/ipfs`)
-
-   - [ ] Verify when loading an IPFS/IPNS resource it triggers an interstitial page with the choice to install and use via local node or a public gateway.
-   - [ ] Load `ipns://brantly.eth` while using `Local node` for the resolver, and confirm there's a clickable info badge "IPFS" to the left of the URL, with on click pop-up that says `This content was loaded over the IPFS protocol.`
+- [ ] Via `brave://settings/ipfs`, set `Redirect IPFS resources to the configured IPFS gateway` to `On`.
+  - [ ] Load `https://ipfs.io/ipfs/QmbWqxBEKC3P8tqsKc98xmWNzrzDtRLMiMPL8wBuTGsMnR` and confirm it redirects to `ipfs://bafybeigdyrzt5sfp7udm7hu76uh7y26nf3efuylqabf3oclgtqy55fbzdi`.
+  - [ ] Load  `https://en.wikipedia-on-ipfs.org/wiki/` and confirm it redirects to `ipns://en.wikipedia-on-ipfs.org/wiki/`.
 
 
 ## IPFS Companion
@@ -172,14 +166,15 @@
 
 ## The interstitial page
 
-- [ ] Verify visiting `ipns://en.wikipedia-on-ipfs` loads the interstitial page.
-- [ ] Verify selecting `Use a public gateway` loads `https://cf-ipfs.com/ipns/en.wikipedia-on-ipfs.org/wiki/` which then redirect to unique Origin at `https://en-wikipedia--on--ipfs-org.ipns.cf-ipfs.com/wiki/`.
-- [ ] Verify selecting `Use local node` loads `ipns://en.wikipedia-on-ipfs.org/wiki/`.
+- [ ] Confirm a fresh profile has `Method to resolve IPFS resources` set to `Ask` in `brave://settings/ipfs`.
+  - [ ] Verify visiting `ipfs://bafybeigdyrzt5sfp7udm7hu76uh7y26nf3efuylqabf3oclgtqy55fbzdi` loads the interstitial page.
+  - [ ] Verify visiting `ipns://en.wikipedia-on-ipfs.org` in a new tab loads the same interstitial page.
+    - [ ] Verify selecting `Use a public gateway` loads `https://cf-ipfs.com/ipns/en.wikipedia-on-ipfs.org/wiki/` which then redirect to unique Origin at `https://en-wikipedia--on--ipfs-org.ipns.cf-ipfs.com/wiki/`.
+    - [ ] Verify selecting `Use local node` loads `ipns://en.wikipedia-on-ipfs.org/wiki/`.
 
 ### Public Path gateway
 
-- [ ] Verify, on a new profile, you can't change the IPFS public gateway address to `https://cloudflare-ipfs.com/` via `Settings -> IPFS -> IPFS public gateway address
- -> Change`.
+- [ ] Verify, on a new profile, you can't change the IPFS public gateway address to `https://cloudflare-ipfs.com/` via `Settings -> IPFS -> IPFS public gateway address -> Change`.
 - [ ] An error stating `Only a valid IPFS gateway with Origin isolation enabled can be used in Brave` is displayed ([example](https://github.com/brave/brave-browser/issues/18212#issuecomment-923632150)).
 
 ### Public Subdomain Gateway
@@ -249,7 +244,7 @@
    ### `Add/Remove/Rotate keys`
 
    - [ ] Verify when you click `Add`, it prompts for a key name and generates a new key.
-   - [ ] Verify clicking on `Add` and entering an existing key name shows a `This name cannot be used` error message.   
+   - [ ] Verify clicking on `Add` and entering an existing key name shows a `This name cannot be used` error message.
    - [ ] Verify clicking on the Rotate key icon for the `self` key prompts for a key name.  Enter a valid, unique name and click `Rotate`.  Confirm the key is created with your entered name, original hash, and a new `self` key (with a new hash value) is generated.
    - [ ] Verify clicking on the 3-dots menu to the right of a key gives you two options: `Export key` and `Remove key`.  Choose `Export key` and confirm you get prompted to save the key.  Click `Save` and ensure the key is saved to disk. Delete the key from `brave://settings/ipfs/keys` and now click `Add` to confirm the same key as the original is added from disk.
    - [ ] Verify clicking on the 3-dots menu and choosing `Remove key` removes the key from the UI.
