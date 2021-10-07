@@ -19,7 +19,7 @@
   - [ ] Verify, using the above profile, that restarting Brave with `--use-dev-goupdater-url`, and clicking on `Restart` via `brave://ipfs` downloads and installs the latest in-development (release) candidate.
   - [ ] Confirm that `Method to resolve IPFS resources` is `Local node` in `brave://settings/ipfs`.
   - [ ] Confirm that keys and imports are intact, post-migration.
-  - [ ] Confirm that brave://ipfs-internals shows `Node is not running` under `IPFS node status`, with a `Start` button.
+  - [ ] Confirm that `brave://ipfs-internals` shows `Node is not running` under `IPFS node status`, with a `Start` button.
   - [ ] Click on `Start`.
   - [ ] Confirm the node starts, and paths and version info are correct.
 
