@@ -75,7 +75,7 @@
 - [ ] Visit https://jsfiddle.net/bkf50r8v/13/, ensure 3 blocked items are listed in Shields. Result window should show `got canvas fingerprint 0` and `got webgl fingerprint 00`
 - [ ] Test that audio fingerprint is blocked at https://audiofingerprint.openwpm.com/ only when `Block all fingerprinting protection` is on
 - [ ] Test that Brave browser isn't detected via user-agent, on https://www.whatismybrowser.com.  The site **will** say "Looks like Brave on [Windows/Linux/macOS]", and yet, "But it's announcing that it's Chrome [version] on [platform]"
-- [ ] Test that https://diafygi.github.io/webrtc-ips/ doesn't leak IP address when `Block all fingerprinting protection` is on
+- [ ] Test that https://diafygi.github.io/webrtc-ips/ doesn't leak IP address for each option under `Settings -> Privacy and Security -> WebRTC IP handling policy`
 
 ### Brave Ads
 
@@ -174,7 +174,7 @@
 - [ ] Visit https://check.torproject.org in a Tor window, ensure it shows a success message for using a Tor exit node
 - [ ] Visit https://check.torproject.org in a Tor window, note down exit node IP address. Do a hard refresh (Ctrl+Shift+R/Cmd+Shift+R), ensure exit IP changes after page reloads
 - [ ] Visit https://check.torproject.org in a Tor window, note down exit node IP address. Click `New Tor connection for this site` in app menu, ensure the exit node IP address changes after page is reloaded
-- [ ] Visit https://protonirockerxow.onion & https://brave5t5rjjg3s6k.onion/ in a Tor window and ensure both pages resolve
+- [ ] Visit https://protonirockerxow.onion, https://brave4u7jddbv7cyviptqjc7jusxh72uik7zt6adtckl5f4nwy2v72qd.onion/, and https://search.brave4u7jddbv7cyviptqjc7jusxh72uik7zt6adtckl5f4nwy2v72qd.onion/ in a Tor window and ensure all pages resolve
 - [ ] Visit https://browserleaks.com/geo in a Tor window, ensure location isn't shown
 - [ ] Verify Torrent viewer doesn't load in a Tor window
 - [ ] Ensure you are able to download a file in a Tor window. Verify all Download/Cancel, Download/Retry and Download works in Tor window
@@ -238,6 +238,6 @@
 
 ## Hardware Wallet Test (To be checked on each major CR bump)
 
-- [ ] Verify you can link hardware wallet using Trezor and unlock the wallet 
+- [ ] Verify you can link hardware wallet using Trezor and unlock the wallet
 - [ ] Verify you can link hardware wallet using Ledger Nano and unlock the wallet
 - [ ] Verify you can perform a transaction with hardware wallet using Ledger Nano or Trezor

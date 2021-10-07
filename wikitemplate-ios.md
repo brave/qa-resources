@@ -61,7 +61,7 @@
 ## History
 
 - [ ] On youtube.com, thestar.com (or any other site using push state nav), navigate the site and verify history is added. Also, note if the progress bar activates and shows progress
-- [ ] Settings > Brave Shields & Privacy > Clear Private Data, and clear all. Check only the history is cleared and favourites are retained
+- [ ] Settings > Brave Shields & Privacy > Clear Private Data, and clear all. Check only the browser cache/history is cleared and favourites are retained
 
 ## Shields Settings
 
@@ -69,7 +69,7 @@
 
 ## Site hacks
 
-- [ ] Verify https://www.twitch.tv/adobe sub-page loads a video and you can play it
+- [ ] Verify https://www.twitch.tv/ sub-page loads a video and you can play it
 
 ## Downloads
 
@@ -102,36 +102,7 @@
 ## Brave Rewards/Ads
 
 - [ ] Verify wallet is auto-created after enabling rewards
-- [ ] Verify account balance shows correct BAT and USD value
-- [ ] Verify actions taken (claiming grant, tipping, auto-contribute) display in wallet panel
-- [ ] Verify grant details are shown in detailed view when a grant is claimed
-- [ ] Verify monthly budget shows correct BAT and USD value
-- [ ] Verify you can exclude a publisher from the auto-contribute table via left swipe
-- [ ] Verify you can exclude a publisher by using the toggle on the Rewards Panel
-- [ ] Verify you can remove excluded sites via `Restore All` button
-- [ ] Verify when you click on the BR panel while on a site, the panel displays site-specific information (site favicon, domain, attention %)
-- [ ] Verify when you click on `Send a tip`, the custom tip banner displays
-- [ ] Verify you can make a one-time tip and they display in tips panel
-- [ ] Verify you can make a recurring tip and they display in tips panel
-- [ ] Verify you can tip a verified publisher
-- [ ] Verify you can tip a verified YouTube/Twitter/GitHub/Reddit creator
-- [ ] Verify tip panel shows a verified checkmark for a verified publisher/verified YouTube/Twitter/GitHub/Reddit creator
-- [ ] Verify tip panel shows a message about the unverified publisher
-- [ ] Verify BR panel shows the message about an unverified publisher
-- [ ] Verify you can perform a contribution
-- [ ] Verify if you disable auto-contribute you are still able to tip regular sites and YouTube/Twitter/Github creators
-- [ ] Verify that disabling Rewards and enabling it again does not lose state
-- [ ] Verify that disabling auto-contribute and enabling it again does not lose state
-- [ ] Verify disabling `Allow contribution to videos` option doesn't list any YouTube creator in ac list
-- [ ] Adjust min page time/visit in settings. Visit some sites and YouTube channels to verify they are added to the table after the specified settings
-- [ ] Verify you can `Hide Brave Rewards Icon` works and doesn't show rewards button when not enabled
-- [ ] Upgrade from an older version
-  - [ ] Verify the wallet balance (if available) is retained
-  - [ ] Verify auto-contribute list is not lost after upgrade
-  - [ ] Verify tips list is not lost after upgrade
-  - [ ] Verify wallet panel transactions list is not lost after upgrade
-### Brave Ads
-- [ ] Verify ads is auto-enabled when rewards is enabled for the supported region
+- [ ] Verify when you click on the BR panel while on a site, the panel displays if the site is verified or not
 - [ ] Verify ads are only shown when the app is being used
 - [ ] Verify ad notification are shown based on ads per hour setting
 - [ ] Verify clicking on an ad notification shows the landing page

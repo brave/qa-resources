@@ -2,16 +2,16 @@
 
 - [ ]  Check signature: If OS Run `"spctl --assess --verbose /Applications/Brave Browser.app"` and make sure it returns `accepted`.
 - [ ] Ensured that the following executables work as expected
-   - [ ] `Brave-Browser-universal.dmg`
-      - [ ] Check executable size, should be `~470mb`
-   - [ ] `Brave-Browser-universal.pkg`
-       - [ ] Check executable size, should be `~470mb`
+   - [ ] `Brave-Browser-arm64.dmg`
+      - [ ] Check executable size, should be `~290mb`
+   - [ ] `Brave-Browser-arm64.pkg`
+       - [ ] Check executable size, should be `~290mb`
    - [ ] `Brave-Browser-x64.dmg`
-       - [ ] Check executable size, should be `~270mb`
+       - [ ] Check executable size, should be `~290mb`
    - [ ] `Brave-Browser-x64.pkg`
-       - [ ] Check executable size, should be `~270mb`
+       - [ ] Check executable size, should be `~290mb`
 - [ ] Visited `brave://version` and ensure the following:
-   - [ ] `arm64` is being displayed when installing via `universal` binary on `M1` mac
+   - [ ] `arm64` is being displayed when installing via `arm64` binary on `M1` mac
    - [ ] `x86_64 translated` is being displayed when installing via `x64` binary on `M1` mac using `Rosetta`
 
 ### Widevine
@@ -22,7 +22,7 @@
 #### Components
 - [ ]   Delete Adblock folder from browser profile and restart browser. Visit `brave://components` and verify `Brave Ad Block Updater` downloads and update the component. Repeat for all Brave components
 
-#### Upgrade - `Brave-Browser-universal.dmg`
+#### Upgrade - `Brave-Browser-arm64.dmg`
 
 - [ ] Make sure that data from the last version appears in the new version OK
 - [ ] Ensure that `brave://version` lists the expected Brave & Chromium versions
