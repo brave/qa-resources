@@ -68,21 +68,19 @@ Pre-Requisite: Put previous build shortcut on the home screen. Also, have severa
 - [ ] Turning HTTPS Everywhere off and shields off both disable the redirect to `https://https-everywhere.badssl.com/`
 - [ ] Check that toggling to blocking and allow ads works as expected
 - [ ] Verify that clicking through a cert error in `https://badssl.com/` works
-- [ ] Visit `https://brianbondy.com/` and then turn on script blocking, nothing should load. Allow it from the script blocking UI in the URL bar and it should work.
+- [ ] Visit `https://twitter.com/` and then turn on script blocking, nothing should load. Allow it from the script blocking UI in the URL bar and it should work.
 - [ ] Verify that default Bravery settings take effect on pages with no site settings
 - [ ] Verify that 3rd party storage results are blank at `https://jsfiddle.net/7ke9r14a/7/` when 3rd party cookies are blocked
 - [ ] Choose a DNS provider from the list in Settings | Privacy | Use Secure DNS, load `https://browserleaks.com/dns`, and verify your ISP's DNS resolvers aren't detected and shown; only your chosen DoH provider should appear.
 - [ ] Run all six test configurations on `https://dev-pages.brave.software/storage/ephemeral-storage.html` and confirm results are as expected per each test listed.
 ### Fingerprint Tests
   - [ ] Visit `https://browserleaks.com/webrtc`, ensure 2 blocked items are listed in shields
-  - [ ] Test that https://diafygi.github.io/webrtc-ips/ doesn't leak IP address for each option under `Settings -> Privacy and Security -> WebRTC IP handling policy`
+  - [ ] Test that `https://diafygi.github.io/webrtc-ips/` doesn't leak IP address for each option under `Settings -> Privacy and Security -> WebRTC IP handling policy`
 
 ## Content Tests
 
 - [ ] Go to `https://brianbondy.com/` and click on the twitter icon on the top right. Verify that context menus work in the new twitter tab
-- [ ] Go to `https://trac.torproject.org/projects/tor/login` and make sure that the password can be saved. Make sure the saved password is auto-populated when you visit the site again
-- [ ] Open a GitHub issue and type some misspellings, make sure they aren't autocorrected
-- [ ] Open an email on `http://mail.google.com/` or inbox.google.com and click on a link. Make sure it works
+- [ ] Go to `https://feedly.com` and make sure that the password can be saved. Make sure the saved password is auto-populated when you visit the site again
 - [ ] Verify that `https://mixed-script.badssl.com/` shows up as grey not red (no mixed content scripts are run)
 
 ## Brave Rewards/Ads
@@ -96,24 +94,21 @@ Pre-Requisite: Put previous build shortcut on the home screen. Also, have severa
 - [ ] Verify you can exclude a publisher by using the toggle on the Rewards Panel
 - [ ] Verify you can remove excluded sites via `Restore All` button
 - [ ] Verify when you click on the BR panel while on a site, the panel displays site-specific information (site favicon, domain, attention %)
-- [ ] Verify when you click on `Send a tip`, the custom tip banner displays
 - [ ] Verify you can make a one-time tip and they display in tips panel
 - [ ] Verify you can make a recurring tip and they display in tips panel
 - [ ] Verify you can tip a verified publisher
 - [ ] Verify you can tip a verified YouTube creator
 - [ ] Verify tip panel shows a verified check mark for a verified publisher/verified YouTube creator
-- [ ] Verify tip panel shows a message about the unverified publisher
-- [ ] Verify BR panel shows the message about an unverified publisher
+- [ ] Verify tip panel and BR panel shows a message about the unverified publisher
 - [ ] Verify you can perform a contribution
 - [ ] Verify if you disable auto-contribute you are still able to tip regular sites and YouTube creators
-- [ ] Verify that disabling Rewards and enabling it again does not lose state
 - [ ] Verify that disabling auto-contribute and enabling it again does not lose state
 - [ ] Verify unchecking `Allow contribution to videos` option doesn't list any YouTube creator in ac list
 - [ ] Adjust min visit/time in settings. Visit some sites and YouTube channels to verify they are added to the table after the specified settings
 - [ ] Verify you can reset rewards from advance setting. Resetting should delete wallet and bring it back to the pre-optin state
 - [ ] Verify on BR panel `Verify wallet` button loads verify wallet page when balance in >=15 BAT. 
 - [ ] Verify user still able to connect to existing Uphold account via panel even when balance is < 15 BAT
-- [ ] Verify you are able to disconnect/re-connect a user wallet when min balance is available
+- [ ] Verify you are able to disconnect/re-connect a user wallet
 - [ ] Upgrade from an older version
   - [ ] Verify the wallet balance (if available) is retained
   - [ ] Verify auto-contribute list is not lost after upgrade
