@@ -39,46 +39,16 @@
 - [ ] Make sure context menu items on content work inside an editable control (input, textarea, or contenteditable)
 - [ ] Context menu: verify you can Open in Background Tab, and Open in Private Tab
 
-## Find on page
+## Downloads
 
-- [ ] Verify search box is shown when selected via the share menu
-- [ ] Verify successful find
-- [ ] Verify forward and backward find navigation
-- [ ] Verify failed to find shows 0 results
-
-## Private Mode
-
-- [ ] Create private tab, go to http://google.com, search for 'yumyums', exit private mode, go to http://google.com search box and begin typing 'yumyums' and verify that word is not in the autocomplete list
-- [ ] Verify enabling `Private Browsing Only` shows warn message about sessions being lost in normal mode
-- [ ] Verify switching from `Private Browsing Only` to normal mode doesn't retain any sessions from before
+- [ ] Verify that you can save an image from a site
+- [ ] Verify that you are able to save a gif image
 
 ## Reader Mode
 
 - [ ] Visit http://theverge.com, open any article, verify the reader mode icon is shown in the URL bar
 - [ ] Verify tapping on the reader mode icon opens the article in reader mode
 - [ ] Edit reader mode settings and open different pages in reader mode and verify if the setting is retained across each article
-
-## History
-
-- [ ] On youtube.com, thestar.com (or any other site using push state nav), navigate the site and verify history is added. Also, note if the progress bar activates and shows progress
-- [ ] Settings > Brave Shields & Privacy > Clear Private Data, and clear all. Check only the browser cache/history is cleared and favourites are retained
-
-## Shields Settings
-
-- [ ] Enable all switches in settings and visit a site and disable block scripts. Kill and relaunch the app and verify if the site shield settings are retained
-
-## Site hacks
-
-- [ ] Verify https://www.twitch.tv/ sub-page loads a video and you can play it
-
-## Downloads
-
-- [ ] Verify that you can save an image from a site
-- [ ] Verify that you are able to save a gif image
-
-## Fullscreen
-
-- [ ] Verify that entering HTML5 fullscreen works. And pressing restore to go back exits full screen. (youtube.com)
 
 ## Gestures
 
@@ -91,21 +61,25 @@
 - [ ] Verify tapping on 1Password on the slide-out keyboard launches 1Password App and able to select the stored credentials
 - [ ] Verify tapping on bitwarden password manager in the autofill field launches the app and auto-fills the stored data
 
+## Shields Settings
+
+- [ ] Enable all switches in settings and visit a site and disable block scripts. Kill and relaunch the app and verify if the site shield settings are retained
+
 ## Browser Lock
 
-- [ ] Verify enabling browser passcode settings asks for passcode confirmation followed by reconfirm
-- [ ] Verify swipe up/swipe down with browser in focus doesn't ask for passcode confirmation
-- [ ] Verify clicking on set passcode asks for the pin to unlock before setting a new passcode
+- [ ] Verify browser lock enables device passcode to be lock/unlock the browser
+- [ ] Verify swipe up/swipe down with browser in focus doesn't ask for device passcode
+- [ ] Verify cancel passcode shows unlock message
 - [ ] Remove the app from memory and relaunch, enter a wrong passcode, the browser should not be unlocked
-- [ ] Verify cancel fingerprint confirmation shows enter passcode window when fingerprint unlock is set up on the device
+- [ ] Verify cancel fingerprint confirmation/face unlock shows enter passcode window when fingerprint/face unlock is set up on the device
 
 ## Brave Rewards/Ads
 
 - [ ] Verify wallet is auto-created after enabling rewards
 - [ ] Verify when you click on the BR panel while on a site, the panel displays if the site is verified or not
 - [ ] Verify ads are only shown when the app is being used
-- [ ] Verify ad notification are shown based on ads per hour setting
 - [ ] Verify clicking on an ad notification shows the landing page
+- [ ] Verify inline-ads show on Brave News and is correctly redeemed from the server
 - [ ] Verify `view`,`clicked` and `landed` and `dismiss` states are logged based on the action
 
 ## Sync
@@ -116,8 +90,29 @@
 - [ ] Verify that bookmarks from other devices on the chain show up on the mobile device after sync completes
 - [ ] Verify newly created bookmarks get synced to all devices on the sync chain
 - [ ] Verify existing bookmarks before joining sync chain also gets sync'd to all devices on the sync chain
+- [ ] Verify histroy sync is disabled by default. Enabling it starts sync'ing history items as well (limited to 200 entries)
 - [ ] Verify sync works on an upgrade profile and new bookmarks added post-upgrade sync's across devices on the chain
 - [ ] Verify you can create a standalone sync chain with one device
+
+## Playlist & Autoplay
+
+- [ ] Verify Playlist is enabled by default on a clean install
+- [ ] Verify when a site with audio/video is detected, playlist button is shown in URL bar and a notification badge on the menu
+- [ ] Verify clicking the playlist button adds audio/video to playlist and initiates offline play
+- [ ] Verify able to add audio/video to playlist via share menu
+- [ ] Verify able to add audio/video to playlist via long press context menu
+- [ ] Verify Autoplay is enabled by default
+- [ ] Verify with autoplay enabled, able to play audio/video automatically
+- [ ] Verify with background audio enabled, able to play audio/video with device locked or app in background
+
+## Brave News
+
+- [ ] Verify Brave News opt-in is shown on a clean install
+- [ ] Verify once opted-in Brave news starts showing artciles
+- [ ] Verify promoted content is shown on Brave News
+- [ ] Verify in-line ads are shown on Brave News
+- [ ] Verify able to add custom RSS feed to the list of sources
+- [ ] Verify able to disable content from a particular publisher by long press on the card
 
 ## Bravery settings
 
@@ -127,21 +122,17 @@
 - [ ] Check that toggling to blocking and allow ads works as expected
 - [ ] Verify that clicking through a cert error in https://badssl.com/ works
 - [ ] Verify that Safe Browsing works (https://www.raisegame.com/)
-- [ ] Turning Safe Browsing off and shields off both disable safe browsing for https://www.raisegame.com/
-- [ ] Enable block script globally from settings, Visit https://blizzard.com/, nothing should load. Tap on Shields and disable block script, the page should load properly
-- [ ] Verify that preferences default Bravery settings take effect on pages with no site settings
-- [ ] Verify that 3rd party storage results are blank at https://jsfiddle.net/7ke9r14a/7/ when 3rd party cookies are blocked
+- [ ] Enable block script globally from settings, Visit https://twitter.com/, nothing should load. Tap on Shields and disable block script, the page should load properly
+- [ ] Verify that preferences default Brave Shields settings take effect on pages with no site settings
 ### Fingerprint Tests
-  - [ ] Verify that turning on fingerprinting protection in preferences shows 1 fingerprint blocked at https://browserleaks.com/canvas . Verify that turning it off in the Bravery menu shows 0 fingerprints blocked
+  - [ ] Verify that turning on fingerprinting protection in preferences shows 3 fingerprint blocked at https://browserleaks.com/canvas . Verify that turning it off in the Bravery menu shows 0 fingerprints blocked
   - [ ] Verify that audio fingerprint is blocked at https://audiofingerprint.openwpm.com/ when fingerprinting protection is on
   - [ ] Verify that https://diafygi.github.io/webrtc-ips/ doesn't leak IP address when `Block all fingerprinting protection` is on
 
 ## Content tests
 
-- [ ] Go to https://brianbondy.com/ and click on the twitter icon on the top right. Verify that context menus work in the new twitter tab
-- [ ] Load twitter and click on a tweet so the popup div shows. Click to dismiss and repeat with another div. Make sure it shows
-- [ ] Go to https://trac.torproject.org/projects/tor/login and make sure that the password can be saved.  Make sure the saved password is auto-populated when you visit the site again
-- [ ] Open an email on http://mail.google.com/ or inbox.google.com and click on a link. Make sure it works
+- [ ] Go to https://feedly.com/ and make sure that the password can be saved.  Make sure the saved password is auto-populated when you visit the site again
+- [ ] Open an email on http://mail.google.com/ or `inbox.google.com` and click on a link. Make sure it works
 - [ ] Verify that PDF is loaded over https at https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf
 - [ ] Verify that PDF is loaded over HTTP at http://www.pdf995.com/samples/pdf.pdf
 - [ ] Verify that https://mixed-script.badssl.com/ shows up as grey not red (no mixed content scripts are run)
@@ -158,10 +149,6 @@
 ## App linker
 
 - [ ] Long press on a link in the Twitter app to get the share picker, choose Brave. Verify Brave doesn't crash after opening the link
-
-## Background
-
-- [ ] Start loading a page, background the app, wait >5 sec, then bring to front, Verify splash screen is not shown
 
 ## Session storage
 
