@@ -90,7 +90,7 @@
 - [ ] Verify that bookmarks from other devices on the chain show up on the mobile device after sync completes
 - [ ] Verify newly created bookmarks get synced to all devices on the sync chain
 - [ ] Verify existing bookmarks before joining sync chain also gets sync'd to all devices on the sync chain
-- [ ] Verify histroy sync is disabled by default. Enabling it starts sync'ing history items as well (limited to 200 entries)
+- [ ] Verify history sync is disabled by default. Enabling it starts sync'ing history items as well (limited to 200 entries)
 - [ ] Verify sync works on an upgrade profile and new bookmarks added post-upgrade sync's across devices on the chain
 - [ ] Verify you can create a standalone sync chain with one device
 
@@ -101,14 +101,14 @@
 - [ ] Verify clicking the playlist button adds audio/video to playlist and initiates offline play
 - [ ] Verify able to add audio/video to playlist via share menu
 - [ ] Verify able to add audio/video to playlist via long press context menu
-- [ ] Verify Autoplay is enabled by default
-- [ ] Verify with autoplay enabled, able to play audio/video automatically
+- [ ] Verify Autoplay is disabled by default
+- [ ] Verify with Autoplay enabled, able to play audio/video automatically
 - [ ] Verify with background audio enabled, able to play audio/video with device locked or app in background
 
 ## Brave News
 
 - [ ] Verify Brave News opt-in is shown on a clean install
-- [ ] Verify once opted-in Brave news starts showing artciles
+- [ ] Verify once opted-in Brave news starts showing articles
 - [ ] Verify promoted content is shown on Brave News
 - [ ] Verify in-line ads are shown on Brave News
 - [ ] Verify able to add custom RSS feed to the list of sources
