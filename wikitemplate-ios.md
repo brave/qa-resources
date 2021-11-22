@@ -37,7 +37,7 @@
 - [ ] Make sure context menu items on content work with no selected text
 - [ ] Make sure context menu items on content work with selected text
 - [ ] Make sure context menu items on content work inside an editable control (input, textarea, or contenteditable)
-- [ ] Context menu: verify you can `Open in New Tab` and `Open in Private Tab`
+- [ ] Verify you can open links in a new tab or private tab. Ensure you can open links in background tabs.
 
 ## Downloads
 
@@ -133,7 +133,7 @@
 
 ## Content tests
 
-- [ ] Go to `https://www.gmail.com` and make sure that the password can be saved.  Make sure the saved password is auto-populated when you visit the site again.
+- [ ] Go to `https://feedly.com` and make sure that the password can be saved.  Make sure the saved password is auto-populated when you visit the site again.
 - [ ] Open an email on `https://mail.google.com` and tap on a link. Make sure it works.
 - [ ] Verify that PDF is loaded over `HTTPS` at `https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf`
 - [ ] Verify that PDF is loaded over `HTTP` at `http://www.pdf995.com/samples/pdf.pdf`
