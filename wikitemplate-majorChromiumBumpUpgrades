@@ -1,0 +1,41 @@
+As per process, QA runs through the following cases to ensure that the major chromium bump that's about to get merged into `master` doesn't regress the `Nightly` channel. Once the major chromoium bump is merged into `master`, QA will run through a full manual pass on `Windows` & `Android`.
+
+### Startup & Components
+
+- [ ] Verify that Brave is only contacting `*.brave.com` endpoints on first launch using either `Charles Proxy`, `Fiddler`, `Wireshark` or `LittleSnitch` (or a similar application)
+- [ ] Remove the following component folders and ensure that they're being re-downloaded after restarting the browser:
+  - [ ] `afalakplffnnnlkncjhbmahjfjhmlkal`: `AutoplayWhitelist.dat`, `ExtensionWhitelist.dat`, `ReferrerWhitelist.json` and `Greaselion.json`
+  - [ ] `CertificateRevocation`
+  - [ ] `cffkpbalmllkdoenhmdmpbkajipdjfam`: `rs-ABPFilterParserData.dat` & `regional_catalog.json` (AdBlock)
+  - [ ] `gccbbckogglekeggclmmekihdgdpdgoe`: (Sponsored New Tab Images)
+  - [ ] `jicbkmdloagakknpihibphagfckhjdih`: `speedreader-updater.dat`
+  - [ ] `oofiananboodjbbmdelgdommihjbkfag`: HTTPSE
+  - [ ] `Safe Browsing`
+- [ ] Restart the browser, load `brave://components`, wait for 8 mins and verify that no component shows any errors
+
+**Note:** Always double check `brave://components` to make sure there's no errors/missing version numbers
+
+### Upgrade
+
+- [x] Make sure that data from the last version appears in the new version OK
+- [x] Ensure that `brave://version` lists the expected Brave & Chromium versions
+- [x] With data from the last version, verify that:
+  - [x] Bookmarks on the bookmark toolbar and bookmark folders can be opened
+  - [x] Cookies are preserved
+  - [x] Installed extensions are retained and work correctly
+  - [x] Opened tabs can be reloaded
+  - [x] Stored passwords are preserved
+  - [x] Sync chain created in previous version is retained
+  - [x] Social media-blocking buttons changes are retained
+  - [x] Rewards
+    - [x] Wallet balance is retained
+    - [x] Auto-contribute list is retained
+    - [x] Both Tips and Monthly Contributions are retained
+    - [x] Wallet panel transactions list is retained
+    - [x] Changes to rewards settings are retained
+    - [x] Ensure that Auto Contribute is not being enabled when upgrading to a new version if AC was disabled
+  - [x] Ads
+    - [x] Both `Estimated pending rewards` & `Ad notifications received this month` are retained
+    - [x] Changes to ads settings are retained
+    - [x] Ensure that ads are not being enabled when upgrading to a new version if they were disabled
+    - [x] Ensure that ads are not disabled when upgrading to a new version if they were enabled
