@@ -7,6 +7,7 @@
 ## Startup
 
 - [ ] Verify that Brave is only contacting `*.brave.com` endpoints on first launch using either `Charles Proxy`, `Fiddler` or `Wireshark` (or a similar application)
+  - [ ] Verify that opening a NTP doesn't trigger any outbound connections related to widgets without user interaction
 
 ## Visual look
 

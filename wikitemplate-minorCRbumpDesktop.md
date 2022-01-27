@@ -32,6 +32,7 @@
 #### Startup & Components
 
 - [ ] Verify that Brave is only contacting `*.brave.com` endpoints on first launch using either `Charles Proxy`, `Fiddler`, `Wireshark` or `LittleSnitch` (or a similar application)
+  - [ ] Verify that opening a NTP doesn't trigger any outbound connections related to widgets without user interaction
 - [ ] Delete Adblock folder from browser profile and restart browser. Visit `brave://components` and verify `Brave Ad Block Updater` downloads and update the component. Repeat for all Brave components
 
 ### Upgrade
