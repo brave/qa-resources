@@ -187,7 +187,7 @@ def laptop_testruns(milestonever):
 
 def laptop_hf_testruns(milestonever):
 
-    wiki_laptop_hf = open("wikitemplate-minorCRbumpDesktop.md", "r")
+    wiki_laptop_hf = open("wikitemplate-ReducedDesktop.md", "r")
     laptop_hf_template = wiki_laptop_hf.read()
     wiki_macOS_arm = open("wikitemplate-macOS-arm64.md", "r")
     macOS_arm64 = wiki_macOS_arm.read()
@@ -313,6 +313,139 @@ def laptop_hf_testruns(milestonever):
     if args.test is None:
         bc_repo.create_issue(title=linTitle,
                                  body=laptop_hf_template,
+                                 milestone=bc_milestone[milestonever],
+                                 labels=linList)
+
+    return 0
+
+def laptop_CRminor_testruns(milestonever):
+
+    wiki_laptop_CRminor = open("wikitemplate-minorCRbumpDesktop.md", "r")
+    laptop_CRminor_template = wiki_laptop_CRminor.read()
+    wiki_macOS_arm = open("wikitemplate-macOS-arm64.md", "r")
+    macOS_arm64 = wiki_macOS_arm.read()
+
+    for issue in bc_repo.get_issues(
+        milestone=bc_milestone[milestonever], sort="created",
+            direction="asc", state="closed"):
+        if("pull" not in issue.html_url):
+            original_issue_title = issue.title
+            issue_title = original_issue_title
+            if(original_issue_title[0].islower()):
+                lower = original_issue_title[0]
+                upper = original_issue_title[0].upper()
+                issue_title = original_issue_title.replace(lower, upper, 1)
+
+            labels = issue.get_labels()
+            label_names = []
+
+            for label in labels:
+                label_names.append(label.name)
+            if("release-notes/include" in label_names and
+                    "QA/No" not in label_names and
+                    "tests" not in label_names):
+                output_line = " - " + issue_title + ".([#" +\
+                    str(issue.number) + "](" + issue.html_url + "))"
+                release_notes.append(output_line)
+
+            if("QA/Yes" in label_names and "QA/No" not in label_names and
+                    "tests" not in label_names):
+                output_line = " - [ ] " + issue_title + ".([#" +\
+                        str(issue.number) + "](" + issue.html_url + "))"
+                checklist.append(output_line)
+                if("QA Pass-macOS" not in label_names and
+                        "OS/Windows" not in label_names and
+                        "OS/Linux" not in label_names and
+                        "QA/No" not in label_names and
+                        "tests" not in label_names):
+                    mac_checklist.append(output_line)
+
+                if("QA Pass-Win64" not in label_names and
+                        "OS/macOS" not in label_names and
+                        "OS/Linux" not in label_names and
+                        "QA/No" not in label_names and
+                        "tests" not in label_names):
+                    win64_checklist.append(output_line)
+
+                if("QA Pass-Linux" not in label_names and
+                        "OS/Windows" not in label_names and
+                        "OS/macOS" not in label_names and
+                        "QA/No" not in label_names and
+                        "tests" not in label_names):
+                    linux_checklist.append(output_line)
+
+    print("\nRelease Notes ")
+    for line in release_notes:
+        print(line)
+    print("")
+
+    print("\nMac Checklist (Intel):")
+    print(laptop_CRminor_template)
+    print("")
+    macTitle = "Manual test run on macOS (Intel) for " + milestonever
+    macList = ["OS/macOS",
+               "release-notes/exclude",
+               "tests",
+               "QA/Yes",
+               "OS/Desktop"]
+
+    if args.test is None:
+        bc_repo.create_issue(title=macTitle,
+                                 body=laptop_CRminor_template,
+                                 milestone=bc_milestone[milestonever],
+                                 labels=macList)
+
+    print("--------------------------------------------------------\n")
+
+    print("Mac Checklist(arm64):")
+    print(macOS_arm64)
+    print("")
+    macarm64Title = "Manual test run on macOS (arm64) for " + milestonever
+    macarm64List = ["OS/macOS-arm64",
+               "release-notes/exclude",
+               "tests",
+               "QA/Yes",
+               "OS/Desktop"]
+
+    if args.test is None:
+        bc_repo.create_issue(title=macarm64Title,
+                                 body=macOS_arm64,
+                                 milestone=bc_milestone[milestonever],
+                                 labels=macarm64List)
+
+    print("--------------------------------------------------------\n")
+
+    print("Win64 Checklist:")
+    print(laptop_CRminor_template)
+    print("")
+    winTitle = "Manual test run on Windows x64 for " + milestonever
+    winList = ["OS/Windows",
+               "release-notes/exclude",
+               "tests", 
+               "QA/Yes",
+               "OS/Desktop"]
+
+    if args.test is None:
+        bc_repo.create_issue(title=winTitle,
+                                 body=laptop_CRminor_template,
+                                 milestone=bc_milestone[milestonever],
+                                 labels=winList)
+
+    print("--------------------------------------------------------\n")
+
+    print("Linux Checklist:")
+    print(laptop_CRminor_template)
+    print("")
+    linTitle = "Manual test run on Linux for " + milestonever
+    linList = ["OS/Linux",
+               "release-notes/exclude",
+               "tests",
+               "QA/Yes",
+               "OS/Desktop"]
+
+    if args.test is None:
+        bc_repo.create_issue(title=linTitle,
+                                 body=laptop_CRminor_template,
                                  milestone=bc_milestone[milestonever],
                                  labels=linList)
 
@@ -445,7 +578,7 @@ def android_testruns(milestonever):
 
 def android_hf_testruns(milestonever):
 
-    wiki_android_hf = open("wikitemplate-minorCRbumpAndroid.md", "r")
+    wiki_android_hf = open("wikitemplate-ReducedAndroid.md", "r")
     android_hf_template = wiki_android_hf.read()
     wiki_android_x86 = open("wikitemplate-android-x86.md", "r")
     android_x86_template = wiki_android_x86.read()
@@ -545,6 +678,132 @@ def android_hf_testruns(milestonever):
     if args.test is None:
         bc_repo.create_issue(title=AndroidTabtitle,
                                   body=android_hf_template,
+                                  milestone=bc_milestone[milestonever],
+                                  labels=AndroidTablist)
+
+
+    print("--------------------------------------------------------\n")
+
+    print("Android x86 Checklist:")
+    print(android_x86_template)
+    print("")
+    Androidx86title = "Manual test run on Android x86 for " + milestonever
+    Androidx86list = ["x86",
+                      "release-notes/exclude",
+                      "tests",
+                      "QA/Yes",
+                      "OS/Android"]
+
+    if args.test is None:
+        bc_repo.create_issue(title=Androidx86title,
+                                  body=android_x86_template,
+                                  milestone=bc_milestone[milestonever],
+                                  labels=Androidx86list)
+
+    return 0
+
+def android_CRminor_testruns(milestonever):
+
+    wiki_android_CRminor = open("wikitemplate-minorCRbumpAndroid.md", "r")
+    android_CRminor_template = wiki_android_CRminor.read()
+    wiki_android_x86 = open("wikitemplate-android-x86.md", "r")
+    android_x86_template = wiki_android_x86.read()
+
+    for issue in bc_repo.get_issues(
+            milestone=bc_milestone[milestonever],
+            sort="created",
+            direction="asc",
+            state="closed"):
+        if("pull" not in issue.html_url):
+            original_issue_title = issue.title
+            issue_title = original_issue_title
+            if(original_issue_title[0].islower()):
+                lower = original_issue_title[0]
+                upper = original_issue_title[0].upper()
+                issue_title = original_issue_title.replace(lower, upper, 1)
+
+            labels = issue.get_labels()
+            label_names = []
+
+            for label in labels:
+                label_names.append(label.name)
+            if("QA/Yes" in label_names and 
+                    "OS/Android" in label_names and
+                    "tests" not in label_names and
+                    "QA/No" not in label_names):
+                output_line = " - " + issue_title + ".([#" +\
+                    str(issue.number) + "])" + issue.html_url + "))"
+                release_notes.append(output_line)
+
+            if("QA/Yes" in label_names and "QA/No" not in label_names):
+                output_line = " - [ ] " + issue_title + ". ([#" +\
+                    str(issue.number) + "](" + issue.html_url + "))"
+                checklist.append(output_line)
+                checklist.append(issue.html_url)
+                if("QA Pass - Android ARM" not in label_names and
+                        "checked by qa" not in label_names and
+                        "tests" not in label_names and
+                        "x86" not in label_names and
+                        "tablet-specific" not in label_names):
+                    android_arm_checklist.append(output_line)
+
+                if("QA Pass - Android x86" not in label_names and
+                        "checked by qa" not in label_names and
+                        "tests" not in label_names and
+                        "ARM" not in label_names and
+                        "tablet-specific" not in label_names and
+                        "bug/ads" not in label_names and
+                        "bug/BR" not in label_names):
+                    android_x86_checklist.append(output_line)
+
+                if("QA Pass - Android Tab" not in label_names and
+                        "checked by qa" not in label_names and
+                        "tests" not in label_names and
+                        "x86" not in label_names and
+                        "phone-specific" not in label_names):
+                    android_tab_checklist.append(output_line)
+
+    print("\nRelease Notes:")
+    for line in release_notes:
+        print(line)
+    print("")
+
+    print("\nChecklist:")
+    for line in checklist:
+        print(line)
+    print("")
+
+    print("\nAndroid ARM Checklist:")
+    print(android_CRminor_template)
+    print("")
+    AndroidARMtitle = "Manual test run on Android ARM  for " + milestonever
+    AndroidARMlist = ["ARM",
+                      "release-notes/exclude",
+                      "tests",
+                      "QA/Yes",
+                      "OS/Android"]
+
+    if args.test is None:
+        bc_repo.create_issue(title=AndroidARMtitle,
+                                  body=android_CRminor_template,
+                                  milestone=bc_milestone[milestonever],
+                                  labels=AndroidARMlist)
+
+    print("--------------------------------------------------------\n")
+
+    print("Android Tab Checklist:")
+    print(android_CRminor_template)
+    print("")
+    AndroidTabtitle = "Manual test run on Android Tab  for " + milestonever
+    AndroidTablist = ["ARM",
+                      "release-notes/exclude",
+                      "tests",
+                      "QA/Yes",
+                      "OS/Android"]
+
+    if args.test is None:
+        bc_repo.create_issue(title=AndroidTabtitle,
+                                  body=android_CRminor_template,
                                   milestone=bc_milestone[milestonever],
                                   labels=AndroidTablist)
 
@@ -835,7 +1094,7 @@ def ipfs_testruns(ipfs_rel):
 
 print("\n#######################################################################"
       "###################################################")
-print("\n For Desktop or Android minor CR bump use the HF selection to "
+print("\n For Desktop or Android minor CR bump only use the basic checks selection to "
       "generate testruns\n")
 
 length = 0
@@ -862,13 +1121,17 @@ print("#######################################################################"
 header = print("\nCreate test runs for:\n")
 laptop = print("1. Desktop Release (Full manual pass)")
 laptop_hf = print("2. Desktop Release (Reduced manual pass for" 
-                  " Hotfix/minor CR bump)")
-android = print("3. Android Release (Full manual pass)")
-android_hf = print("4. Android Release (Reduced manual pass for" 
-                  " Hotfix/minor CR bump)")
-ios = print("5. iOS Release")
-tor = print("6. Tor Release")
-ipfs = print("7. IPFS Release")
+                  " Hotfix)")
+laptop_CRminor = print("3. Desktop Release (Basic checks for" 
+                  " minor Chromium bump)")
+android = print("4. Android Release (Full manual pass)")
+android_hf = print("5. Android Release (Reduced manual pass for" 
+                  " Hotfix)")
+android_hf = print("6. Android Release (Basic checks for" 
+                  " minor Chromium bump)")
+ios = print("7. iOS Release")
+tor = print("8. Tor Release")
+ipfs = print("9. IPFS Release")
 
 select_checklist = input("\nChoose the platform for which you want to" +
                          " generate the test run: ")
@@ -884,12 +1147,20 @@ elif(select_checklist == "2"):
 elif(select_checklist == "3"):
     print("\nGenerating test runs for " +
           str(sorted(bc_milestone.keys())[0]))
-    android_testruns(sorted(bc_milestone.keys())[0])
+    laptop_CRminor_testruns(sorted(bc_milestone.keys())[0])
 elif(select_checklist == "4"):
     print("\nGenerating test runs for " +
           str(sorted(bc_milestone.keys())[0]))
+    android_testruns(sorted(bc_milestone.keys())[0])
+elif(select_checklist == "5"):
+    print("\nGenerating test runs for " +
+          str(sorted(bc_milestone.keys())[0]))
     android_hf_testruns(sorted(bc_milestone.keys())[0])
-elif (select_checklist == "5"):
+elif(select_checklist == "6"):
+    print("\nGenerating test runs for " +
+          str(sorted(bc_milestone.keys())[0]))
+    android_CRminor_testruns(sorted(bc_milestone.keys())[0])
+elif (select_checklist == "7"):
     generate_ios_test = print("\nGenerating test runs for iOS ",
                               sorted(ios_milestone.keys())[0])
     iOS_testruns()

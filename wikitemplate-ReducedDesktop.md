@@ -6,15 +6,34 @@
 
 - [ ]  Verify `Widevine Notification` is shown when you visit Netflix for the first time
 - [ ]  Test that you can stream on Netflix on a fresh profile after installing Widevine
+- [ ]  Verify `Widevine Notification` is shown when you visit HBO Max for the first time
+- [ ]  Test that you can stream on HBO Max on a fresh profile after installing Widevine
 
 ### Rewards
 
-- [ ] Verify that you are able to successfully join Rewards on a fresh profile
+- [ ] Verify that none of the reward endpoints are being contacted when a user visits a media publisher (`youtube.com`, `reddit.com`, `twitter.com`, `github.com`) and hasn't interacted with rewards
+  - [ ] Verify that `rewards.brave.com`, `pcdn.brave.com`, `grant.rewards.brave.com` or `api.rewards.brave.com` are not being contacted
+- [ ]  Verify account balance shows correct BAT and USD value
+- [ ]  Verify you are able to restore a wallet
+- [ ]  Verify actions taken (claiming grant, tipping, auto-contribute) display in wallet panel
+- [ ]  Verify when you click on the BR panel while on a site, the panel displays site specific information (site favicon, domain, attention %)
+- [ ]  Verify you are able to make one-time tip and they display in tips panel
+- [ ]  Verify you are able to make recurring tip and they display in tips panel
+- [ ]  Verify you can tip a verified publisher
+- [ ]  Verify you can tip a verified YouTube creator
+- [ ]  Verify you are able to perform a contribution
+- [ ]  Verify if you disable auto-contribute you are still able to tip regular sites and YouTube creators
 
 ## Update tests
 
 - [ ]  Verify visiting `brave://settings/help` triggers update check
 - [ ]  Verify once update is downloaded, prompts to `Relaunch` to install update
+
+#### Startup & Components
+
+- [ ] Verify that Brave is only contacting `*.brave.com` endpoints on first launch using either `Charles Proxy`, `Fiddler`, `Wireshark` or `LittleSnitch` (or a similar application)
+  - [ ] Verify that opening a NTP doesn't trigger any outbound connections related to widgets without user interaction
+- [ ] Delete Adblock folder from browser profile and restart browser. Visit `brave://components` and verify `Brave Ad Block Updater` downloads and update the component. Repeat for all Brave components
 
 ### Upgrade
 
