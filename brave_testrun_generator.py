@@ -776,7 +776,7 @@ def android_CRminor_testruns(milestonever):
     print("\nAndroid ARM Checklist:")
     print(android_CRminor_template)
     print("")
-    AndroidARMtitle = "Manual test run on Android ARM  for " + milestonever
+    AndroidARMtitle = "Manual test run on Android ARM for " + milestonever
     AndroidARMlist = ["ARM",
                       "release-notes/exclude",
                       "tests",
@@ -794,7 +794,7 @@ def android_CRminor_testruns(milestonever):
     print("Android Tab Checklist:")
     print(android_CRminor_template)
     print("")
-    AndroidTabtitle = "Manual test run on Android Tab  for " + milestonever
+    AndroidTabtitle = "Manual test run on Android Tab for " + milestonever
     AndroidTablist = ["ARM",
                       "release-notes/exclude",
                       "tests",
