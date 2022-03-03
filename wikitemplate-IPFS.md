@@ -158,7 +158,7 @@
    - [ ] `ipns://en.wikipedia-on-ipfs.org/wiki/Tokyo#Islands`
    - [ ] `ipns://docs.ipfs.io`
    - [ ] `ipns://brantly.eth` (ENS)
-   - [ ] `ipns://brave.crypto` (Unstoppable Domains)
+   - [ ] `ipns://brad.crypto` (Unstoppable Domains)
 
 ## Gateway choice
 
