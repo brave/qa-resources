@@ -93,14 +93,12 @@
    - [ ] Verify the import folder is opened upon successful completion.
    - [ ] Verify the shareable link starting with `https://dweb.link/ipfs/` is copied to the clipboard, and opens when pasting into a new tab.
    - [ ] Share the following filetypes:
-       - [ ] .avi
        - [ ] .txt
        - [ ] .json
        - [ ] .mpeg
        - [ ] .mp3
        - [ ] .mp4
        - [ ] .ogg
-       - [ ] .wav
        - [ ] .webm
 
    ### `Sharing a local folder using IPFS (without IPNS keys)`
@@ -179,9 +177,9 @@
 
 ### Public Subdomain Gateway
 
-- [ ] Verify, on a new profile, you can change the IPFS public gateway address to `https://cf-ipfs.com/` via `Settings -> IPFS -> IPFS public gateway address
+- [ ] Verify, on a new profile, you can change the IPFS public gateway address to `https://{YOUR-PUBLIC-GATEWAY}` via `Settings -> IPFS -> IPFS public gateway address
  -> Change`.
-- [ ] Verify opening `ipns://en.wikipedia-on-ipfs.org/wiki/` and selecting `Use a public gateway` loads `https://cf-ipfs.com/ipns/en.wikipedia-on-ipfs.org/wiki/` which then redirect to unique Origin at `https://en-wikipedia--on--ipfs-org.ipns.cf-ipfs.com/wiki/` Verify  loads `https://cf-ipfs.com/ipns/en.wikipedia-on-ipfs.org/wiki/` which then redirect to unique Origin at `https://en-wikipedia--on--ipfs-org.ipns.cf-ipfs.com/wiki/`.
+- [ ] Verify opening `ipns://en.wikipedia-on-ipfs.org/wiki/` and selecting `Use a public gateway` loads `https://{YOUR-PUBLIC-GATEWAY}/ipns/en.wikipedia-on-ipfs.org/wiki/` which then redirect to unique Origin at `https://en-wikipedia--on--ipfs-org.ipns.{YOUR-PUBLIC-GATEWAY}/wiki/` Verify  loads `https://cf-ipfs.com/ipns/en.wikipedia-on-ipfs.org/wiki/` which then redirect to unique Origin at `https://en-wikipedia--on--ipfs-org.ipns.{YOUR-PUBLIC-GATEWAY}/wiki/`.
 
 ### Protocol system handler/OS integration
 
