@@ -112,18 +112,18 @@
 
 ### Badge shown only when IPFS support is enabled
 
-- [ ] Verify, on a new profile, you can load `https://en.wikipedia-on-ipfs.org`, switch `Method to resolve IPFS resources` to either `Gateway` or `Local node` in `brave://settings/ipfs`, and then see an `Open using IPFS` badge/icon in the URL bar.
+- [ ] Verify, on a new profile, you can load `https://en.wikipedia-on-ipfs.org`, switch `Method to resolve IPFS resources` to either `Gateway` or `Local node` in `brave://settings/ipfs`, and then see an `IPFS` badge/icon in the URL bar.
 
 
 ### Badge on a public gateway
 
-- [ ] Verify that loading `https://dweb.link/ipfs/QmT5NvUtoM5nWFfrQdVrFtvGfKFmG7AHE8P34isapyhCxX/wiki/Mars.html` redirects you seamlessly to `https://bafybeicgmdpvw4duutrmdxl4a7gc52sxyuk7nz5gby77afwdteh3jc5bqa.ipfs.dweb.link/wiki/Mars.html`, and there's an `Open using IPFS` badge/button in the URL bar.  Confirm that clicking `Open using IPFS` goes to `ipfs://bafybeicgmdpvw4duutrmdxl4a7gc52sxyuk7nz5gby77afwdteh3jc5bqa/wiki/Mars.html`.
-- [ ] Verify that loading `https://ipfs.io/ipns/libp2p.io/` shows an `Open using IPFS` button in the URL bar, and clicking it redirects to `ipns://libp2p.io/`.  Confirm it resolves and loads.
+- [ ] Verify that loading `https://dweb.link/ipfs/QmT5NvUtoM5nWFfrQdVrFtvGfKFmG7AHE8P34isapyhCxX/wiki/Mars.html` redirects you seamlessly to `https://bafybeicgmdpvw4duutrmdxl4a7gc52sxyuk7nz5gby77afwdteh3jc5bqa.ipfs.dweb.link/wiki/Mars.html`, and there's an `IPFS` badge/button in the URL bar.  Confirm that clicking `IPFS` goes to `ipfs://bafybeicgmdpvw4duutrmdxl4a7gc52sxyuk7nz5gby77afwdteh3jc5bqa/wiki/Mars.html`.
+- [ ] Verify that loading `https://ipfs.io/ipns/libp2p.io/` shows an `IPFS` button in the URL bar, and clicking it redirects to `ipns://libp2p.io/`.  Confirm it resolves and loads.
 
 ### Badge on DNSlink websites
 
-- [ ] Verify clicking on `Open using IPFS` on `https://en.wikipedia-on-ipfs.org/wiki/Asia/#Economy` loads `ipns://en.wikipedia-on-ipfs.org/wiki/Asia/#Economy` in a new tab.
-- [ ] Verify clicking on `Open using IPFS` on `https://blog.ipfs.io/24-uncensorable-wikipedia` loads `ipns://blog.ipfs.io/24-uncensorable-wikipedia/` in a new tab.
+- [ ] Verify clicking on the `IPFS` badge/button on `https://en.wikipedia-on-ipfs.org/wiki/Asia/#Economy` loads `ipns://en.wikipedia-on-ipfs.org/wiki/Asia/#Economy` in a new tab.
+- [ ] Verify clicking on the `IPFS` badge/button on `https://blog.ipfs.io/24-uncensorable-wikipedia` loads `ipns://blog.ipfs.io/24-uncensorable-wikipedia/` in a new tab.
 
 ### Protocol info popup
 
