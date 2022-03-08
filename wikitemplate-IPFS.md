@@ -223,7 +223,7 @@
 
    ### `Publishing a local folder using an IPNS key`
 
-   - [ ] (after [brave/brave-browser#16998](https://github.com/brave/brave-browser/issues/16998) lands) Verify you're able to share a local file via `IPFS > Share local folder using IPNS -> self`.
+   - [ ] (after [brave/brave-browser#16998](https://github.com/brave/brave-browser/issues/16998) lands) Verify you're able to share a local folder via `IPFS > Share local folder using IPNS -> self`.
    - [ ] Verify once the file is imported, the import folder is opened and the file can be downloaded.
    - [ ] Once the import is successful, verify a shareable link starting with `https://dweb.link/ipns/` is copied to clipboard by opening a new tab and pasting from context menu or `CTRL+V`.
    - [ ] Verify you see the IPNS key (e.g. `k51q...`) before the `?filename=filename.ext` from the copied text.
