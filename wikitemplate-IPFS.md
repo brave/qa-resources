@@ -167,7 +167,7 @@
 - [ ] Confirm a fresh profile has `Method to resolve IPFS resources` set to `Ask` in `brave://settings/ipfs`.
   - [ ] Verify visiting `ipfs://bafybeigdyrzt5sfp7udm7hu76uh7y26nf3efuylqabf3oclgtqy55fbzdi` loads the interstitial page.
   - [ ] Verify visiting `ipns://en.wikipedia-on-ipfs.org` in a new tab loads the same interstitial page.
-    - [ ] Verify selecting `Use a public gateway` loads `https://cf-ipfs.com/ipns/en.wikipedia-on-ipfs.org/wiki/` which then redirect to unique Origin at `https://en-wikipedia--on--ipfs-org.ipns.cf-ipfs.com/wiki/`.
+    - [ ] Verify selecting `Use a public gateway` loads `https://dweb.link/ipns/en.wikipedia-on-ipfs.org/wiki/` which then redirect to unique Origin at `https://en-wikipedia--on--ipfs-org.ipns.dweb.link/wiki/`.
     - [ ] Verify selecting `Use local node` loads `ipns://en.wikipedia-on-ipfs.org/wiki/`.
 
 ### Public Path gateway
