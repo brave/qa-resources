@@ -40,7 +40,7 @@
 
 ## Import and Sharing
 
-- [ ] Prerequisites: Brave local node launched and local gateway configured.  On a new profile, loading `ipns://en.wikipedia-on-ipfs.org` and clicking `Use a Brave local IPFS node` on the interstitial page will set you up.
+- [ ] Prerequisites: Brave local IPFS node launched and local gateway configured.  On a new profile, loading `ipns://en.wikipedia-on-ipfs.org` and clicking `Use a Brave local IPFS node` on the interstitial page will set you up.
 
    ### `Importing a page via IPFS`
 
