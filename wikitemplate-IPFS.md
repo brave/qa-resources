@@ -10,14 +10,14 @@
    ### `Seed profile`
 
   - [ ] Load `ipns://en.wikipedia-on-ipfs.org`.
-  - [ ] Choose `Use a local node`.
+  - [ ] Choose `Use a Brave local IPFS node`.
   - [ ] Run the `IPNS Keys` (add/rotate) section.
   - [ ] Run the `Import and Sharing` (page, image, text, video) section.
 
    ### `go-updater node update`
 
   - [ ] Verify, using the above profile, that restarting Brave with `--use-dev-goupdater-url`, and clicking on `Restart` via `brave://ipfs` downloads and installs the latest in-development (release) candidate.
-  - [ ] Confirm that `Method to resolve IPFS resources` is `Local node` in `brave://settings/ipfs`.
+  - [ ] Confirm that `Method to resolve IPFS resources` is `Brave local IPFS node` in `brave://settings/ipfs`.
   - [ ] Confirm that keys and imports are intact, post-migration.
   - [ ] Confirm that `brave://ipfs-internals` shows `Node is not running` under `IPFS node status`, with a `Start` button.
   - [ ] Click on `Start`.
@@ -25,7 +25,7 @@
 
    ### `Config`
 
-  - [ ] Verify changing `Maximum IPFS cache size (GB)` on the `brave://settings/ipfs` page (set `Method to resolve IPFS resources` to `Local node` on `brave://settings/ipfs`), the new value is reflected on the diagnostic page (`brave://ipfs`) in the `Repo Stats -> Size` section.
+  - [ ] Verify changing `Maximum IPFS cache size (GB)` on the `brave://settings/ipfs` page (set `Method to resolve IPFS resources` to `Brave local IPFS node` on `brave://settings/ipfs`), the new value is reflected on the diagnostic page (`brave://ipfs`) in the `Repo Stats -> Size` section.
 
 ## Diagnostic page (`brave://ipfs`)
 
@@ -40,7 +40,7 @@
 
 ## Import and Sharing
 
-- [ ] Prerequisites: local node launched and local gateway configured.  On a new profile, loading `ipns://en.wikipedia-on-ipfs.org` and clicking `Use a local node` on the interstitial page will set you up.
+- [ ] Prerequisites: Brave local IPFS node launched and local gateway configured.  On a new profile, loading `ipns://en.wikipedia-on-ipfs.org` and clicking `Use a Brave local IPFS node` on the interstitial page will set you up.
 
    ### `Importing a page via IPFS`
 
@@ -112,7 +112,7 @@
 
 ### Badge shown only when IPFS support is enabled
 
-- [ ] Verify, on a new profile, you can load `https://en.wikipedia-on-ipfs.org`, switch `Method to resolve IPFS resources` to either `Gateway` or `Local node` in `brave://settings/ipfs`, and then see an `IPFS` badge/icon in the URL bar.
+- [ ] Verify, on a new profile, you can load `https://en.wikipedia-on-ipfs.org`, switch `Method to resolve IPFS resources` to either `Gateway` or `Brave local IPFS node` in `brave://settings/ipfs`, and then see an `IPFS` badge/icon in the URL bar.
 
 
 ### Badge on a public gateway
@@ -127,7 +127,7 @@
 
 ### Protocol info popup
 
-- [ ] Load `ipns://brantly.eth` while using `Local node` for the resolver, and confirm there's a clickable info badge "IPFS" to the left of the URL, with on click pop-up that says `This content was loaded over the IPFS protocol.`
+- [ ] Load `ipns://brantly.eth` while using `Brave local IPFS node` for the resolver, and confirm there's a clickable info badge "IPFS" to the left of the URL, with on click pop-up that says `This content was loaded over the IPFS protocol.`
 
 ## Automatic redirects to IPFS
 
@@ -145,7 +145,7 @@
 
 ## IPFS URLs
 
-- [ ] Ensure each of the following IPFS URLs load over both `Gateway` and `Local node` modes:
+- [ ] Ensure each of the following IPFS URLs load over both `Gateway` and `Brave local IPFS node` modes:
     - [ ] `ipfs://bafybeiemxf5abjwjbikoz4mc3a3dla6ual3jsgpdr4cjr3oz3evfyavhwq/wiki/Vincent_van_Gogh.html#Life`
     - [ ] `ipfs://bafybeigdyrzt5sfp7udm7hu76uh7y26nf3efuylqabf3oclgtqy55fbzdi/`
     - [ ] `ipfs://QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Tokyo_National_Museum.html`
@@ -153,7 +153,7 @@
 
 ## IPNS URLs
 
-- [ ] Ensure each of the following IPNS URLs load over both `Gateway` and `Local node` modes:
+- [ ] Ensure each of the following IPNS URLs load over both `Gateway` and `Brave local IPFS node` modes:
    - [ ] `ipns://en.wikipedia-on-ipfs.org`
    - [ ] `ipns://en.wikipedia-on-ipfs.org/wiki/Tokyo#Islands`
    - [ ] `ipns://docs.ipfs.io`
@@ -168,7 +168,7 @@
   - [ ] Verify visiting `ipfs://bafybeigdyrzt5sfp7udm7hu76uh7y26nf3efuylqabf3oclgtqy55fbzdi` loads the interstitial page.
   - [ ] Verify visiting `ipns://en.wikipedia-on-ipfs.org` in a new tab loads the same interstitial page.
     - [ ] Verify selecting `Use a public gateway` loads `https://dweb.link/ipns/en.wikipedia-on-ipfs.org/wiki/` which then redirect to unique Origin at `https://en-wikipedia--on--ipfs-org.ipns.dweb.link/wiki/`.
-    - [ ] Verify selecting `Use local node` loads `ipns://en.wikipedia-on-ipfs.org/wiki/`.
+    - [ ] Verify selecting `Use a Brave local IPFS node` loads `ipns://en.wikipedia-on-ipfs.org/wiki/`.
 
 ### Public Path gateway
 
@@ -197,13 +197,13 @@
 
 ## Peers
 
-- [ ] Prerequisites: local node launched and local gateway configured on two machines, locally networked (LAN, can be over Wi-Fi).
+- [ ] Prerequisites: Brave local IPFS node launched and local gateway configured on two machines, locally networked (LAN, can be over Wi-Fi).
 
    ### `Adding`; see [issue 15567](https://github.com/brave/brave-browser/issues/15567#issuecomment-867983572) for full setup steps
 
    - [ ] Verify when you go to `brave://settings/ipfs/peers` and click on the `Add` button, it prompts you to enter a new peer-connection string. Confirm that entering an incorrect string yields `This name is not valid` upon clicking `Submit`. (Acceptable ones are only CIDs or something like `**/p2p/**` format.)
    - [ ] Verify if a peer is added and node is started, it proposes to restart node to apply changes.
-   - [ ] Verify the local node is restarted by clicking `Restart` button; happen it shows error message and suggests to see more on diagnostic page.
+   - [ ] Verify the Brave local IPFS node is restarted by clicking `Restart` button; happen it shows error message and suggests to see more on diagnostic page.
    - [ ] Verify that `Peering.Peers` section of IPFS node config file got updated (either via `My Node → Settings → IPFS Config` or by manually inspecting `brave_ipfs/config` file).
 
    ### `Removing`
@@ -212,7 +212,7 @@
 
 ## IPNS Keys
 
-- [ ] Prerequisites: local node launched and local gateway configured. Go to `Settings -> IPFS`, there should be an available `Set up your IPNS keys` option, which opens `brave://settings/ipfs/keys`
+- [ ] Prerequisites: Brave local IPFS node launched and local gateway configured. Go to `Settings -> IPFS`, there should be an available `Set up your IPNS keys` option, which opens `brave://settings/ipfs/keys`
 
    ### `Publishing a local file using an IPNS key`
 
