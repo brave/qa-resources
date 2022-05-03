@@ -7,7 +7,7 @@
 - [ ] Open `New Private Window with Tor` and confirm that it starts without any errors.
 	- [ ] Navigate to `check.torproject.org` and verify that tor is working successfully.
 	- [ ] Navigate to `brave.com` and `http://brave4u7jddbv7cyviptqjc7jusxh72uik7zt6adtckl5f4nwy2v72qd.onion/` to check if the sites work correctly.
-- [ ] Load `brave.com` and `mail.protonmail.com` in a regular Window/Tab and ensure that clicking on `Open in Tor` correctly launches a Tor window and opens the appropriate `.onion` website.
+- [ ] Load `brave.com` and `mail.protonmail.com` in a regular Window/Tab and ensure that clicking the `Tor` button in the URL bar correctly launches a Tor window and opens the appropriate `.onion` website.
 
 ### MacOS
 - [ ] Navigate to `/Users/<user>/Library/Application Support/BraveSoftware/Brave-Browser-<channel>/cldoidikboihgcjfkhdeidbpclkineef/<version>`
@@ -23,7 +23,7 @@
 - [ ] Open `New Private Window with Tor` and confirm that it starts without any errors.
 	- [ ] Navigate to `check.torproject.org` and verify that tor is working successfully.
 	- [ ] Navigate to `brave.com` and `http://brave4u7jddbv7cyviptqjc7jusxh72uik7zt6adtckl5f4nwy2v72qd.onion/` to check if the sites work correctly.
-- [ ] Load `brave.com` and `mail.protonmail.com` in a regular Window/Tab and ensure that clicking on `Open in Tor` correctly launches a Tor window and opens the appropriate `.onion` website.
+- [ ] Load `brave.com` and `mail.protonmail.com` in a regular Window/Tab and ensure that clicking the `Tor` button in the URL bar correctly launches a Tor window and opens the appropriate `.onion` website.
 
 ### MacOS
 - [ ] Navigate to `/Users/<user>/Library/Application Support/BraveSoftware/Brave-Browser-<channel>/cldoidikboihgcjfkhdeidbpclkineef/<version>`
@@ -39,7 +39,7 @@
 - [ ] Open `New Private Window with Tor` and confirm that it starts without any errors.
 	- [ ] Navigate to `check.torproject.org` and verify that tor is working successfully.
 	- [ ] Navigate to `brave.com` and `http://brave4u7jddbv7cyviptqjc7jusxh72uik7zt6adtckl5f4nwy2v72qd.onion/` to check if the sites work correctly.
-- [ ] Load `brave.com` and `mail.protonmail.com` in a regular Window/Tab and ensure that clicking on `Open in Tor` correctly launches a Tor window and opens the appropriate `.onion` website.
+- [ ] Load `brave.com` and `mail.protonmail.com` in a regular Window/Tab and ensure that clicking the `Tor` button in the URL bar correctly launches a Tor window and opens the appropriate `.onion` website.
 
 ### MacOS
 - [ ] Navigate to `/Users/<user>/Library/Application Support/BraveSoftware/Brave-Browser-<channel>/cldoidikboihgcjfkhdeidbpclkineef/<version>`
@@ -55,7 +55,7 @@
 - [ ] Open `New Private Window with Tor` and confirm that it starts without any errors.
 	- [ ] Navigate to `check.torproject.org` and verify that tor is working successfully.
 	- [ ] Navigate to `brave.com` and `http://brave4u7jddbv7cyviptqjc7jusxh72uik7zt6adtckl5f4nwy2v72qd.onion/` to check if the sites work correctly.
-- [ ] Load `brave.com` and `mail.protonmail.com` in a regular Window/Tab and ensure that clicking on `Open in Tor` correctly launches a Tor window and opens the appropriate `.onion` website.
+- [ ] Load `brave.com` and `mail.protonmail.com` in a regular Window/Tab and ensure that clicking the `Tor` button in the URL bar correctly launches a Tor window and opens the appropriate `.onion` website.
 
 ### MacOS
 - [ ] Navigate to `/Users/<user>/Library/Application Support/BraveSoftware/Brave-Browser-<channel>/cldoidikboihgcjfkhdeidbpclkineef/<version>`
@@ -71,7 +71,7 @@
 - [ ] Open `New Private Window with Tor` and confirm that it starts without any errors.
 	- [ ] Navigate to `check.torproject.org` and verify that tor is working successfully.
 	- [ ] Navigate to `brave.com` and `http://brave4u7jddbv7cyviptqjc7jusxh72uik7zt6adtckl5f4nwy2v72qd.onion/` to check if the sites work correctly.
-- [ ] Load `brave.com` and `mail.protonmail.com` in a regular Window/Tab and ensure that clicking on `Open in Tor` correctly launches a Tor window and opens the appropriate `.onion` website.
+- [ ] Load `brave.com` and `mail.protonmail.com` in a regular Window/Tab and ensure that clicking the `Tor` button in the URL bar correctly launches a Tor window and opens the appropriate `.onion` website.
 
 ### MacOS
 - [ ] Navigate to `/Users/<user>/Library/Application Support/BraveSoftware/Brave-Browser-<channel>/cldoidikboihgcjfkhdeidbpclkineef/<version>`
