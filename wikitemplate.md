@@ -96,10 +96,10 @@
 
 - [ ] Verify that none of the reward endpoints are being contacted when a user visits a media publisher (`youtube.com`, `reddit.com`, `twitter.com`, `github.com`) and hasn't interacted with rewards
   - [ ] Verify that `rewards.brave.com`, `pcdn.brave.com`, `grant.rewards.brave.com` or `api.rewards.brave.com` are not being contacted
-- [ ] Verify you are able to create a new wallet.
-- [ ] Verify you are able to restore a wallet.
-- [ ] Verify account balance shows correct BAT and USD value.
-- [ ] Verify actions taken (claiming grant, tipping, auto-contribute) display in wallet panel.
+- [ ] Verify you are able to create a new Rewards profile.
+- [ ] Verify you are able to restore an old Rewards profile.
+- [ ] Verify BAT balance shows correct BAT and USD value.
+- [ ] Verify actions taken (claiming grant, tipping, auto-contribute) display in panel transactions list.
 - [ ] Verify AC monthly budget shows correct BAT and USD value.
 - [ ] Verify you are able to exclude a publisher from the auto-contribute table and popup list of sites.
 - [ ] Verify you are able to exclude a publisher by using the toggle on the Rewards Panel.
@@ -140,8 +140,8 @@
 - [ ] Verify that disabling Rewards and enabling it again does not lose state.
 - [ ] Adjust min visit/time in settings. Visit some sites to verify they are added to the table after the specified settings.
 - [ ] Uphold cases
-  - [ ] Verify you are able to connect a KYC'd Uphold wallet to Rewards.  
-  - [ ] Verify wallet balance in Brave updates when BAT is added to the Brave Browser card.
+  - [ ] Verify you are able to connect a KYC'd Uphold account to Rewards.  
+  - [ ] Verify balance in Brave updates when BAT is added to the Brave Browser card.
   - [ ] Verify if you only have user-controlled BAT (BAT in Uphold only), you can only tip KYC'd creators, any tips to non-KYC'd creators go to the Pending Contributions list.
   - [ ] Verify connected (verified but not KYC'd) publishers display messaging on panel and tip banner.
   - [ ] Verify you are able to perform an auto contribute using Uphold BAT.
@@ -225,10 +225,10 @@
   - [ ] Sync chain created in previous version is retained
   - [ ] Social media-blocking buttons changes are retained
   - [ ] Rewards
-    - [ ] Wallet balance is retained
+    - [ ] BAT balance is retained
     - [ ] Auto-contribute list is retained
     - [ ] Both Tips and Monthly Contributions are retained
-    - [ ] Wallet panel transactions list is retained
+    - [ ] Panel transactions list is retained
     - [ ] Changes to rewards settings are retained
     - [ ] Ensure that Auto Contribute is not being enabled when upgrading to a new version if AC was disabled
   - [ ] Ads

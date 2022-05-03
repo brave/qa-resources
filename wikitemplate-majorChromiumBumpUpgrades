@@ -29,10 +29,10 @@ As per process, QA runs through the following cases to ensure that the major chr
   - [x] Sync chain created in previous version is retained
   - [x] Social media-blocking buttons changes are retained
   - [x] Rewards
-    - [x] Wallet balance is retained
+    - [x] BAT balance is retained
     - [x] Auto-contribute list is retained
     - [x] Both Tips and Monthly Contributions are retained
-    - [x] Wallet panel transactions list is retained
+    - [x] Panel transactions list is retained
     - [x] Changes to rewards settings are retained
     - [x] Ensure that Auto Contribute is not being enabled when upgrading to a new version if AC was disabled
   - [x] Ads
