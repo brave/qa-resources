@@ -35,10 +35,10 @@
   - [ ] Sync chain created in previous version is retained 
   - [ ] Social media blocking buttons changes are retained
   - [ ] Rewards
-    - [ ] Wallet balance is retained
+    - [ ] BAT balance is retained
     - [ ] Auto-contribute list is retained
     - [ ] Both Tips and Monthly Contributions are retained
-    - [ ] Wallet panel transactions list is retained
+    - [ ] Panel transactions list is retained
     - [ ] Changes to rewards settings are retained
     - [ ] Ensure that Auto Contribute is not being enabled when upgrading to a new version if AC was disabled
   - [ ] Ads

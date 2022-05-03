@@ -13,9 +13,9 @@
 
 - [ ] Verify that none of the reward endpoints are being contacted when a user visits a media publisher (`youtube.com`, `reddit.com`, `twitter.com`, `github.com`) and hasn't interacted with rewards
   - [ ] Verify that `rewards.brave.com`, `pcdn.brave.com`, `grant.rewards.brave.com` or `api.rewards.brave.com` are not being contacted
-- [ ]  Verify account balance shows correct BAT and USD value
-- [ ]  Verify you are able to restore a wallet
-- [ ]  Verify actions taken (claiming grant, tipping, auto-contribute) display in wallet panel
+- [ ]  Verify BAT balance shows correct BAT and USD value
+- [ ]  Verify you are able to restore an old Rewards profile
+- [ ]  Verify actions taken (claiming grant, tipping, auto-contribute) display in panel transactions list
 - [ ]  Verify when you click on the BR panel while on a site, the panel displays site specific information (site favicon, domain, attention %)
 - [ ]  Verify you are able to make one-time tip and they display in tips panel
 - [ ]  Verify you are able to make recurring tip and they display in tips panel
@@ -48,10 +48,10 @@
   - [ ] Sync chain created in previous version is retained
   - [ ] Social media blocking buttons changes are retained
   - [ ] Rewards
-    - [ ] Wallet balance is retained
+    - [ ] BAT balance is retained
     - [ ] Auto-contribute list is retained
     - [ ] Both Tips and Monthly Contributions are retained
-    - [ ] Wallet panel transactions list is retained
+    - [ ] Panel transactions list is retained
     - [ ] Changes to rewards settings are retained
     - [ ] Ensure that Auto Contribute is not being enabled when upgrading to a new version if AC was disabled
   - [ ] Ads
