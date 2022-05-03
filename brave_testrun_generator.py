@@ -31,7 +31,6 @@ linux_checklist = []
 iPad_checklist = []
 iPhone_checklist = []
 iPhoneX_checklist = []
-android_x86_checklist = []
 android_arm_checklist = []
 android_tab_checklist = []
 crypto_wallet_checklist = []
@@ -455,8 +454,6 @@ def android_testruns(milestonever):
 
     wiki_android_file = open("wikitemplate-android.md", "r")
     android_template = wiki_android_file.read()
-    wiki_android_x86 = open("wikitemplate-android-x86.md", "r")
-    android_x86_template = wiki_android_x86.read()
 
     for issue in bc_repo.get_issues(
             milestone=bc_milestone[milestonever],
@@ -496,14 +493,6 @@ def android_testruns(milestonever):
                         "tablet-specific" not in label_names):
                     android_arm_checklist.append(output_line)
 
-                if("QA Pass - Android x86" not in label_names and
-                        "checked by qa" not in label_names and
-                        "tests" not in label_names and
-                        "ARM" not in label_names and
-                        "tablet-specific" not in label_names and
-                        "bug/ads" not in label_names and
-                        "bug/BR" not in label_names):
-                    android_x86_checklist.append(output_line)
 
                 if("QA Pass - Android Tab" not in label_names and
                         "checked by qa" not in label_names and
@@ -557,22 +546,6 @@ def android_testruns(milestonever):
                                   labels=AndroidTablist)
 
     print("--------------------------------------------------------\n")
-
-    print("Android x86 Checklist:")
-    print(android_x86_template)
-    print("")
-    Androidx86title = "Manual test run on Android x86 for " + milestonever
-    Androidx86list = ["x86",
-                      "release-notes/exclude",
-                      "tests",
-                      "QA/Yes",
-                      "OS/Android"]
-
-    if args.test is None:
-        bc_repo.create_issue(title=Androidx86title,
-                                  body=android_x86_template,
-                                  milestone=bc_milestone[milestonever],
-                                  labels=Androidx86list)
 
     return 0
 
@@ -580,8 +553,6 @@ def android_hf_testruns(milestonever):
 
     wiki_android_hf = open("wikitemplate-ReducedAndroid.md", "r")
     android_hf_template = wiki_android_hf.read()
-    wiki_android_x86 = open("wikitemplate-android-x86.md", "r")
-    android_x86_template = wiki_android_x86.read()
 
     for issue in bc_repo.get_issues(
             milestone=bc_milestone[milestonever],
@@ -620,15 +591,6 @@ def android_hf_testruns(milestonever):
                         "x86" not in label_names and
                         "tablet-specific" not in label_names):
                     android_arm_checklist.append(output_line)
-
-                if("QA Pass - Android x86" not in label_names and
-                        "checked by qa" not in label_names and
-                        "tests" not in label_names and
-                        "ARM" not in label_names and
-                        "tablet-specific" not in label_names and
-                        "bug/ads" not in label_names and
-                        "bug/BR" not in label_names):
-                    android_x86_checklist.append(output_line)
 
                 if("QA Pass - Android Tab" not in label_names and
                         "checked by qa" not in label_names and
@@ -684,30 +646,12 @@ def android_hf_testruns(milestonever):
 
     print("--------------------------------------------------------\n")
 
-    print("Android x86 Checklist:")
-    print(android_x86_template)
-    print("")
-    Androidx86title = "Manual test run on Android x86 for " + milestonever
-    Androidx86list = ["x86",
-                      "release-notes/exclude",
-                      "tests",
-                      "QA/Yes",
-                      "OS/Android"]
-
-    if args.test is None:
-        bc_repo.create_issue(title=Androidx86title,
-                                  body=android_x86_template,
-                                  milestone=bc_milestone[milestonever],
-                                  labels=Androidx86list)
-
     return 0
 
 def android_CRminor_testruns(milestonever):
 
     wiki_android_CRminor = open("wikitemplate-minorCRbumpAndroid.md", "r")
     android_CRminor_template = wiki_android_CRminor.read()
-    wiki_android_x86 = open("wikitemplate-android-x86.md", "r")
-    android_x86_template = wiki_android_x86.read()
 
     for issue in bc_repo.get_issues(
             milestone=bc_milestone[milestonever],
@@ -746,15 +690,6 @@ def android_CRminor_testruns(milestonever):
                         "x86" not in label_names and
                         "tablet-specific" not in label_names):
                     android_arm_checklist.append(output_line)
-
-                if("QA Pass - Android x86" not in label_names and
-                        "checked by qa" not in label_names and
-                        "tests" not in label_names and
-                        "ARM" not in label_names and
-                        "tablet-specific" not in label_names and
-                        "bug/ads" not in label_names and
-                        "bug/BR" not in label_names):
-                    android_x86_checklist.append(output_line)
 
                 if("QA Pass - Android Tab" not in label_names and
                         "checked by qa" not in label_names and
@@ -809,22 +744,6 @@ def android_CRminor_testruns(milestonever):
 
 
     print("--------------------------------------------------------\n")
-
-    print("Android x86 Checklist:")
-    print(android_x86_template)
-    print("")
-    Androidx86title = "Manual test run on Android x86 for " + milestonever
-    Androidx86list = ["x86",
-                      "release-notes/exclude",
-                      "tests",
-                      "QA/Yes",
-                      "OS/Android"]
-
-    if args.test is None:
-        bc_repo.create_issue(title=Androidx86title,
-                                  body=android_x86_template,
-                                  milestone=bc_milestone[milestonever],
-                                  labels=Androidx86list)
 
     return 0
 
