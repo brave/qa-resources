@@ -321,7 +321,7 @@ def laptop_CRminor_testruns(milestonever):
 
     wiki_laptop_CRminor = open("wikitemplate-minorCRbumpDesktop.md", "r")
     laptop_CRminor_template = wiki_laptop_CRminor.read()
-    wiki_macOS_arm = open("wikitemplate-macOS-arm64.md", "r")
+    wiki_macOS_arm = open("wikitemplate-minorCRbump-macOS-arm64.md", "r")
     macOS_arm64 = wiki_macOS_arm.read()
 
     for issue in bc_repo.get_issues(
