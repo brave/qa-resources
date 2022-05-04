@@ -366,13 +366,6 @@ def laptop_CRminor_testruns(milestonever):
                         "tests" not in label_names):
                     win64_checklist.append(output_line)
 
-                if("QA Pass-Linux" not in label_names and
-                        "OS/Windows" not in label_names and
-                        "OS/macOS" not in label_names and
-                        "QA/No" not in label_names and
-                        "tests" not in label_names):
-                    linux_checklist.append(output_line)
-
     print("\nRelease Notes ")
     for line in release_notes:
         print(line)
@@ -431,22 +424,6 @@ def laptop_CRminor_testruns(milestonever):
                                  labels=winList)
 
     print("--------------------------------------------------------\n")
-
-    print("Linux Checklist:")
-    print(laptop_CRminor_template)
-    print("")
-    linTitle = "Manual test run on Linux for " + milestonever
-    linList = ["OS/Linux",
-               "release-notes/exclude",
-               "tests",
-               "QA/Yes",
-               "OS/Desktop"]
-
-    if args.test is None:
-        bc_repo.create_issue(title=linTitle,
-                                 body=laptop_CRminor_template,
-                                 milestone=bc_milestone[milestonever],
-                                 labels=linList)
 
     return 0
 
