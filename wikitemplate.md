@@ -98,7 +98,7 @@
   - [ ] Verify that `rewards.brave.com`, `pcdn.brave.com`, `grant.rewards.brave.com` or `api.rewards.brave.com` are not being contacted
 - [ ] Verify you are able to create a new Rewards profile.
 - [ ] Verify you are able to restore an old Rewards profile.
-- [ ] Verify BAT balance shows correct BAT and USD value.
+- [ ] Verify Rewards balance shows correct BAT and USD value.
 - [ ] Verify actions taken (claiming grant, tipping, auto-contribute) display in panel transactions list.
 - [ ] Verify AC monthly budget shows correct BAT and USD value.
 - [ ] Verify you are able to exclude a publisher from the auto-contribute table and popup list of sites.
