@@ -17,18 +17,6 @@
   - [ ] No Chrome/Chromium words appear in site settings for `Location` / `Camera` / `Microphone` / `Augmented Reality`
   - [ ] No Chrome/Chromium icons are shown in normal or private tabs
 
-## Data
-Pre-Requisite: Put previous build shortcut on the home screen. Also, have several sites 'Added to home screen' (from 3 dots menu) and then upgrade to new build
-- [ ] Verify that data from the previous build appears in the updated build as expected (bookmarks, etc)
-- [ ] Verify that the cookies from the previous build are preserved after upgrade
-- [ ] Verify shortcut is still available on the home screen after upgrade
-- [ ] Verify sites added to home screen are still visible and able to be used after upgrade
-- [ ] Verify sync chain created in the previous version is still retained on upgrade
-- [ ] Verify settings changes done in the previous version are still retained on upgrade
-- [ ] Verify IPFS, ENS & Unstoppable Domain settings is retained after upgrade
-- [ ] Verify tab-group setting doesn't reset upon upgrade
-- [ ] Verify Clear Data on exit setting state from previous build is retained upon upgrade
-
 ## Custom tabs
 
 - [ ] Make sure Brave handles links from Gmail, Slack
@@ -150,3 +138,50 @@ Pre-Requisite: Put previous build shortcut on the home screen. Also, have severa
 ## Session storage
 
 - [ ] Verify that tabs restore when closed, including active tab
+
+## Upgrade from previous version
+
+Examples of pre-requisites before upgrading from previous version to the build being tested:
+
+ * visit several websites so `Top Tiles` under New Tab Page get updated/populated
+ * add several websites to the Android home screen via `Add to Home screen` (from the hamburger/setting menu)
+ * add several bookmarks include folders
+ * change/update several settings (Example: default search engine, adding a custom home page, changing site settings, changing several privacy settings etc..)
+ * create/enable a Brave Wallet (or restore if individual who's going through the upgrade has one available)
+ * enable Brave News and add/remove several sources
+ * change the default shield settings on varios websites (Example: enable script blocking/change FP/Ad blocking to strict, disable shields)
+ * Login into several websites and leave them opened
+ * Login into several websites and close the tabs so they're not opened when upgrading
+ * Login into a website and leave it as the active tab while upgrading
+ * enable/create a sync chain with several devices
+
+ **`Upgrade Cases`**
+
+- [ ] Ensure that `brave://version` displays both the correct Brave version and expected Chromium version
+- [ ] Ensure that bookmarks and folders from the previous release have been retained/can be loaded without issues
+- [ ] Ensure that previously opened tabs are retained and can be lazy loaded with out issues
+  - [ ] Ensure that websites that have been logged into and were opened while upgrading are still logged in (ensure cookies are not cleared/lost)
+- [ ] Ensure that websites that have been logged into but weren't open when upgrading are still logged in when loading in new tab (ensure cookies are not cleared/lost)
+- [ ] Ensure that the correct website loads as the active tab (as per the pre-requisites, this tab should be logged into a website)
+- [ ] Ensure that the shields settings from the previous versions are retained on each website
+- [ ] Ensure that saved passwords are being displayed under `Settings` -> `Passwords` and can be autofilled without issues
+- [ ] Ensure that the sync chain is preserved and syncing still works across the devices that have been added
+  - [ ] Ensure that sharing a links/tabs using `Send to your device` works as expected
+- [ ] Ensure that Brave News is still enabled and the sources changes from the previous release are retained
+- [ ] Ensure that the various setting changes via  `Settings` are retained (Example: enable script blocking/change FP/Ad blocking to strict, disable shields)
+  - [ ] Ensure that IPFS, ENS and Unstoppable Domain settings are retained from the previous version
+- [ ] Ensure that `History` is retained from the previous version
+- [ ] Ensure that the website shortcuts added via `Add to Home screen` are still visible on the Android home screen and tapping on icons loads the appropriate webpage
+- [ ] Ensure that the `Tab Group` setting doesn't reset/change after upgrading
+- [ ] Ensure that `Clear data on exit` is retained from the previous version
+- [ ] Rewards
+  - [ ] Wallet balance is retained
+  - [ ] Auto-contribute list is retained
+  - [ ] Both Tips and Monthly Contributions are retained
+  - [ ] Wallet panel transactions list is retained
+  - [ ] Changes to rewards settings are retained
+- [ ] Ads
+  - [ ] Both `Estimated pending rewards` & `Ad notifications received this month` are retained
+  - [ ] Changes to ads settings are retained
+  - [ ] Ensure that ads are not being enabled when upgrading to a new version if they were disabled
+  - [ ] Ensure that ads are not disabled when upgrading to a new version if they were enabled
