@@ -74,6 +74,10 @@
 - [ ] In `brave://settings/security`, choose a DNS provider from the providers listed under Use secure DNS, load `https://browserleaks.com/dns`, and verify your ISP's DNS resolvers aren't detected and shown; only your chosen DoH provider should appear.
 - [ ] Open a New Private Window with Tor, load `https://browserleaks.com/dns`, and verify your ISP's DNS resolvers aren't detected and shown.
 
+### TLS Pinning
+
+- [ ] Visit https://ssl-pinning.someblog.org/ and verify a pinning error is displayed
+
 ### Fingerprint Tests
 
 - [ ] Visit https://jsfiddle.net/bkf50r8v/13/, ensure 3 blocked items are listed in Shields. Result window should show `got canvas fingerprint 0` and `got webgl fingerprint 00`

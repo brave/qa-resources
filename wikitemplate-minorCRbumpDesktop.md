@@ -15,6 +15,10 @@
 
 - [ ] Verify that you are able to successfully join Rewards on a fresh profile
 
+### TLS Pinning
+
+- [ ] Visit https://ssl-pinning.someblog.org/ and verify a pinning error is displayed
+
 ## Update tests
 
 - [ ]  Verify visiting `brave://settings/help` triggers update check

@@ -28,6 +28,10 @@
 - [ ]  Verify you are able to perform a contribution
 - [ ]  Verify if you disable auto-contribute you are still able to tip regular sites and YouTube creators
 
+### TLS Pinning
+
+- [ ] Visit https://ssl-pinning.someblog.org/ and verify a pinning error is displayed
+
 ## Update tests
 
 - [ ]  Verify visiting `brave://settings/help` triggers update check
