@@ -40,6 +40,7 @@
 
 - [ ] Verify changing default settings are retained and don't cause the browser to crash
 - [ ] Verify bottom bar buttons (Home/Bookmark/Search/Tabs) work as expected
+- [ ] Verify items in hamburger menu/share menu to ensure nothing unexpected has been added
 
 ## IPFS, ENS & Unstoppable Domain
 
