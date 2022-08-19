@@ -18,6 +18,7 @@
 ### TLS Pinning
 
 - [ ] Visit https://ssl-pinning.someblog.org/ and verify a pinning error is displayed
+- [ ] Visit https://pinning-test.badssl.com/ and verify a pinning error is **not** displayed
 
 ## Update tests
 
