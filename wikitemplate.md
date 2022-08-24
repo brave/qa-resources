@@ -82,7 +82,6 @@
 ### Fingerprint Tests
 
 - [ ] Test that audio fingerprint is blocked at https://audiofingerprint.openwpm.com/ only when `Block all fingerprinting protection` is on
-- [ ] Test that Brave browser isn't detected via user-agent, on https://www.whatismybrowser.com.  The site **will** say "Looks like Brave on [Windows/Linux/macOS]", and yet, "But it's announcing that it's Chrome [version] on [platform]"
 - [ ] Test that https://diafygi.github.io/webrtc-ips/ doesn't leak IP address for each option under `Settings -> Privacy and Security -> WebRTC IP handling policy`
 
 ### Brave Ads
