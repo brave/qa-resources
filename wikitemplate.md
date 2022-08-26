@@ -27,7 +27,6 @@
 
 - [ ] Verify pdfium, Torrent viewer extensions are installed automatically on fresh profile and cannot be disabled (they don't show up in `brave://extensions`)
 - [ ] Verify older version of an extension gets updated to new version via Google server
-- [ ] Verify older version of an extension gets updated to new version via Brave server
 - [ ] Verify that `magnet` links and `.torrent` files correctly open WebTorrent and you're able to download the file(s)
   - **Tip:** Free torrents available via https://webtorrent.io/free-torrents
 
