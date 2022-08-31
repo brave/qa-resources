@@ -256,7 +256,6 @@
 - [ ] Verify the setting is enabled by default.
 - [ ] Verify disable/enable setting is retained between browser launch/restarts.
 - [ ] Verify setting state is retained during upgrade.
-- [ ] Verify you can't change the IPFS public gateway address to `https://cloudflare-ipfs.com/` (An error `Only a valid IPFS gateway with Origin isolation enabled can be used in Brave` is displayed – [example](https://github.com/brave/brave-browser/issues/18212#issuecomment-923632150)).
 - [ ] Verify you can change the IPFS public gateway address to `https://cf-ipfs.com/`  (passes the Origin isolation test).
 
 ### `IPFS/IPNS URI`
