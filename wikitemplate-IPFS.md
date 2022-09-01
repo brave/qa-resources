@@ -262,7 +262,7 @@
 
 - [ ] Verify visiting `ipfs://bafybeiemxf5abjwjbikoz4mc3a3dla6ual3jsgpdr4cjr3oz3evfyavhwq/wiki/Vincent_van_Gogh.html` for the first time triggers IPFS interstitial page to select public gateway to load the URI.
   - [ ] Verify selecting `Use a public gateway` loads `https://bafybeiemxf5abjwjbikoz4mc3a3dla6ual3jsgpdr4cjr3oz3evfyavhwq.ipfs.dweb.link/wiki/Vincent_van_Gogh.html` via public gateway.
-- [ ] Verify visiting `ipns://brave.crypto` brings up IPFS interstitial page.
-   - [ ] Verify selecting `Use a public gate` loads `https://brave-crypto.ipns.dweb.link` via public gateway.
+- [ ] Verify visiting `ipns://brad.crypto` brings up IPFS interstitial page (`ipfs://QmTiqc12wo2pBsGa9XsbpavkhrjFiyuSWsKyffvZqVGtut`)
+   - [ ] Verify selecting `Use a public gateway` loads `[https://brave-crypto.ipns.dweb.link](https://bafybeicp7gd7s4oljtcesmd7e6vypunw26mv3f5ass5ud7b6jrfebc4ux4.ipfs.dweb.link/)` via public gateway.
 - [ ] Verify when setting is disabled, loading an `ipfs://` URI or `ipns://` URI doesn't show any interstitial page.
 - [ ] Verify `ipfs://` URI or `ipns://` URI doesn't load on a private tab even when the setting is enabled.
