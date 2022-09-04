@@ -48,9 +48,9 @@ ios_key = sorted(ios_milestone.keys())
 
 def laptop_testruns(milestonever):
 
-    wiki_laptop_file = open("wikitemplate.md", "r")
+    wiki_laptop_file = open("WikiTemplate/Desktop/wikitemplate.md", "r")
     laptop_template = wiki_laptop_file.read()
-    wiki_macOS_arm = open("wikitemplate-macOS-arm64.md", "r")
+    wiki_macOS_arm = open("WikiTemplate/Desktop/wikitemplate-macOS-arm64.md", "r")
     macOS_arm64 = wiki_macOS_arm.read()
 
     for issue in bc_repo.get_issues(
@@ -186,9 +186,9 @@ def laptop_testruns(milestonever):
 
 def laptop_hf_testruns(milestonever):
 
-    wiki_laptop_hf = open("wikitemplate-ReducedDesktop.md", "r")
+    wiki_laptop_hf = open("WikiTemplate/Desktop/Reduced/wikitemplate-ReducedDesktop.md", "r")
     laptop_hf_template = wiki_laptop_hf.read()
-    wiki_macOS_arm = open("wikitemplate-macOS-arm64.md", "r")
+    wiki_macOS_arm = open("WikiTemplate/Desktop/wikitemplate-macOS-arm64.md", "r")
     macOS_arm64 = wiki_macOS_arm.read()
 
     for issue in bc_repo.get_issues(
@@ -319,9 +319,9 @@ def laptop_hf_testruns(milestonever):
 
 def laptop_CRminor_testruns(milestonever):
 
-    wiki_laptop_CRminor = open("wikitemplate-minorCRbumpDesktop.md", "r")
+    wiki_laptop_CRminor = open("WikiTemplate/Desktop/Minor_CR_Bump/wikitemplate-minorCRbumpDesktop.md", "r")
     laptop_CRminor_template = wiki_laptop_CRminor.read()
-    wiki_macOS_arm = open("wikitemplate-minorCRbump-macOS-arm64.md", "r")
+    wiki_macOS_arm = open("WikiTemplate/Desktop/Minor_CR_Bump/wikitemplate-minorCRbump-macOS-arm64.md", "r")
     macOS_arm64 = wiki_macOS_arm.read()
 
     for issue in bc_repo.get_issues(
@@ -427,9 +427,43 @@ def laptop_CRminor_testruns(milestonever):
 
     return 0
 
+def crypto_desktop(milestonever):
+
+    wiki_laptop_crypto = open("WikiTemplate/Crypto/wikitemplate-cryptoDesktop.md", "r")
+    laptop_crypto_template = wiki_laptop_crypto.read()
+
+    for issue in bc_repo.get_issues(
+        milestone=bc_milestone[milestonever], sort="created",
+            direction="asc", state="closed"):
+        if("pull" not in issue.html_url):
+            original_issue_title = issue.title
+            issue_title = original_issue_title
+            if(original_issue_title[0].islower()):
+                lower = original_issue_title[0]
+                upper = original_issue_title[0].upper()
+                issue_title = original_issue_title.replace(lower, upper, 1)
+
+    print(laptop_crypto_template)
+    print("")
+
+    DesktopCryptoTitle = "Desktop Crypto Wallet Regression test run for " + milestonever
+    DesktopCryptoList = ["OS/Windows",
+               "release-notes/exclude",
+               "tests",
+               "QA/Yes",
+               "OS/Desktop"]
+
+    if args.test is None:
+        bc_repo.create_issue(title=DesktopCryptoTitle,
+                                 body=laptop_crypto_template,
+                                 milestone=bc_milestone[milestonever],
+                                 labels=DesktopCryptoList)
+
+    return 0
+
 def android_testruns(milestonever):
 
-    wiki_android_file = open("wikitemplate-android.md", "r")
+    wiki_android_file = open("WikiTemplate/Android/wikitemplate-android.md", "r")
     android_template = wiki_android_file.read()
 
     for issue in bc_repo.get_issues(
@@ -528,7 +562,7 @@ def android_testruns(milestonever):
 
 def android_hf_testruns(milestonever):
 
-    wiki_android_hf = open("wikitemplate-ReducedAndroid.md", "r")
+    wiki_android_hf = open("WikiTemplate/Android/wikitemplate-ReducedAndroid.md", "r")
     android_hf_template = wiki_android_hf.read()
 
     for issue in bc_repo.get_issues(
@@ -627,7 +661,7 @@ def android_hf_testruns(milestonever):
 
 def android_CRminor_testruns(milestonever):
 
-    wiki_android_CRminor = open("wikitemplate-minorCRbumpAndroid.md", "r")
+    wiki_android_CRminor = open("WikiTemplate/Android/wikitemplate-minorCRbumpAndroid.md", "r")
     android_CRminor_template = wiki_android_CRminor.read()
 
     for issue in bc_repo.get_issues(
@@ -724,9 +758,46 @@ def android_CRminor_testruns(milestonever):
 
     return 0
 
+def crypto_android(milestonever):
+
+  
+    wiki_android_crypto = open("WikiTemplate/Crypto/wikitemplate-cryptoAndroid.md", "r")
+    android_crypto_template = wiki_android_crypto.read()
+
+    for issue in bc_repo.get_issues(
+            milestone=bc_milestone[milestonever],
+            sort="created",
+            direction="asc",
+            state="closed"):
+        if("pull" not in issue.html_url):
+            original_issue_title = issue.title
+            issue_title = original_issue_title
+            if(original_issue_title[0].islower()):
+                lower = original_issue_title[0]
+                upper = original_issue_title[0].upper()
+                issue_title = original_issue_title.replace(lower, upper, 1)
+
+    print("Crypto Wallet Android Checklist:")
+    print(android_crypto_template)
+    print("")
+    AndroidCryptotitle = "Android Crypto Wallet Regression test run for " + milestonever
+    AndroidCryptolist = ["ARM",
+                      "release-notes/exclude",
+                      "tests",
+                      "QA/Yes",
+                      "OS/Android"]
+
+    if args.test is None:
+        bc_repo.create_issue(title=AndroidCryptotitle,
+                                  body=android_crypto_template,
+                                  milestone=bc_milestone[milestonever],
+                                  labels=AndroidCryptolist)
+
+    return 0
+
 def iOS_testruns():
 
-    wikitemplate_ios = open("wikitemplate-ios.md", "r")
+    wikitemplate_ios = open("WikiTemplate/iOS/wikitemplate-ios.md", "r")
     ios_template = wikitemplate_ios.read()
     ios_key = sorted(ios_milestone.keys())[0]
 
@@ -780,8 +851,8 @@ def iOS_testruns():
     print("\nRelease Notes:")
     print(release_notes)
     for line in release_notes:
-        relline += line +"\n"
-        print(relline)
+        line += line +"\n"
+        print(line)
     print("")
 
     print("\niPad Checklist:")
@@ -838,16 +909,51 @@ def iOS_testruns():
 
     return 
 
+def crypto_iOS():
+    
+    wiki_iOS_crypto = open("WikiTemplate/Crypto/wikitemplate-cryptoiOS.md", "r")
+    iOS_crypto_template = wiki_iOS_crypto.read()
+    ios_key = sorted(ios_milestone.keys())[0]
+
+
+    for issue in ios_repo.get_issues(milestone=ios_milestone[ios_key],
+                                     sort="created",
+                                     direction="asc",
+                                     state="closed"):
+        if("pull" not in issue.html_url):
+            original_issue_title = issue.title
+            issue_title = original_issue_title
+        if(original_issue_title[0].islower()):
+            lower = original_issue_title[0]
+            upper = original_issue_title[0].upper()
+            issue_title = original_issue_title.replace(lower, upper, 1)
+    
+    print(iOS_crypto_template)
+    print("")
+    CyprotiOS_Title = "iOS Crypto Wallet Regression test run for " + ios_key +\
+        " on iPhone"
+    CryptoiOS_List = ["iphone",
+                 "release-notes/exclude",
+                 "tests",
+                 "QA/Yes"]
+
+    if args.test is None:
+        ios_repo.create_issue(title=CyprotiOS_Title,
+                              body=iOS_crypto_template,
+                              milestone=ios_milestone[ios_key],
+                              labels=CryptoiOS_List)
+
+    return 0
+
 def tor_testruns(tor_rel):
 
-
-    macOS_intel_wiki = open("wikitemplate-tor-macOS(Intel).md", "r")
+    macOS_intel_wiki = open("WikiTemplate/Tor/wikitemplate-tor-macOS(Intel).md", "r")
     macOS_intel_template = macOS_intel_wiki.read()
-    macOS_arm64_wiki = open("wikitemplate-tor-macOS(arm64).md", "r")
+    macOS_arm64_wiki = open("WikiTemplate/Tor/wikitemplate-tor-macOS(arm64).md", "r")
     macOS_arm64_template = macOS_arm64_wiki.read()
-    win_tor_wiki = open("wikitemplate-tor-Windows.md", "r")
+    win_tor_wiki = open("WikiTemplate/Tor/wikitemplate-tor-Windows.md", "r")
     windows_template = win_tor_wiki.read()
-    linux_tor_wiki = open("wikitemplate-tor-Linux.md", "r")
+    linux_tor_wiki = open("WikiTemplate/Tor/wikitemplate-tor-Linux.md", "r")
     linux_template = linux_tor_wiki.read()
 
     print("\nMac Checklist (Intel):")
@@ -928,7 +1034,7 @@ def tor_testruns(tor_rel):
 
 def ipfs_testruns(ipfs_rel):
 
-    ipfs_wiki = open("wikitemplate-IPFS.md", "r")
+    ipfs_wiki = open("WikiTemplate/IPFS/wikitemplate-IPFS.md", "r")
     ipfs_template = ipfs_wiki.read()
 
     print("\nMac Checklist (Intel/arm64):")
@@ -988,6 +1094,7 @@ def ipfs_testruns(ipfs_rel):
 
     return 0
 
+
 print("\n#######################################################################"
       "###################################################")
 print("\n For Desktop or Android minor CR bump only use the basic checks selection to "
@@ -1016,18 +1123,19 @@ print("#######################################################################"
 
 header = print("\nCreate test runs for:\n")
 laptop = print("1. Desktop Release (Full manual pass)")
-laptop_hf = print("2. Desktop Release (Reduced manual pass for" 
-                  " Hotfix)")
+laptop_hf = print("2. Desktop Release (Reduced manual pass for Hotfix)")
 laptop_CRminor = print("3. Desktop Release (Basic checks for" 
                   " minor Chromium bump)")
 android = print("4. Android Release (Full manual pass)")
-android_hf = print("5. Android Release (Reduced manual pass for" 
-                  " Hotfix)")
+android_hf = print("5. Android Release (Reduced manual pass for Hotfix)")
 android_hf = print("6. Android Release (Basic checks for" 
                   " minor Chromium bump)")
 ios = print("7. iOS Release")
-tor = print("8. Tor Release")
-ipfs = print("9. IPFS Release")
+cyrpto_desktop = print("8. Crypto Wallet - Desktop")
+cyrpto_android = print("9. Crypto Wallet - Android")
+cyrpto_ios = print("10. Crypto Wallet - iOS")
+tor = print("11. Tor Release")
+ipfs = print("12. IPFS Release")
 
 select_checklist = input("\nChoose the platform for which you want to" +
                          " generate the test run: ")
@@ -1056,11 +1164,23 @@ elif(select_checklist == "6"):
     print("\nGenerating test runs for " +
           str(sorted(bc_milestone.keys())[0]))
     android_CRminor_testruns(sorted(bc_milestone.keys())[0])
-elif (select_checklist == "7"):
+elif(select_checklist == "7"):
     generate_ios_test = print("\nGenerating test runs for iOS ",
                               sorted(ios_milestone.keys())[0])
     iOS_testruns()
-elif (select_checklist == "Tor" or select_checklist == "tor"):
+elif(select_checklist == "8"):
+    generate_ios_test = print("\nGenerating Desktop Crypto Wallet Test run for",
+                              sorted(bc_milestone.keys())[0])
+    crypto_desktop(sorted(bc_milestone.keys())[0])
+elif(select_checklist == "9"):
+    generate_ios_test = print("\nGenerating Android Crypto Wallet Test run for",
+                              sorted(bc_milestone.keys())[0])
+    crypto_android(sorted(bc_milestone.keys())[0])
+elif(select_checklist == "10"):
+    generate_ios_test = print("\nGenerating iOS Crypto Wallet Test run for",
+                              sorted(ios_milestone.keys())[0])
+    crypto_iOS()
+elif(select_checklist == "Tor" or select_checklist == "tor"):
     tormilestone = [s for s in bc_milestone if "Tor" in s]
     if (len(tormilestone) == 0):
         torkey = ""
@@ -1071,7 +1191,7 @@ elif (select_checklist == "Tor" or select_checklist == "tor"):
         generate_ios_test = print("\nGenerating test runs for Tor",
                               (tormilestone)[0])
         tor_testruns(torkey)
-elif (select_checklist == "IPFS" or select_checklist == "ipfs"):
+elif(select_checklist == "IPFS" or select_checklist == "ipfs"):
     ipfsmilestone = [i for i in bc_milestone if "IPFS" in i]
     if (len(ipfsmilestone) == 0):
         ipfskey = ""
@@ -1085,3 +1205,4 @@ elif (select_checklist == "IPFS" or select_checklist == "ipfs"):
 else:
     print("Incorrect selection. " + select_checklist + " is not a valid input\n")
     exit()
+

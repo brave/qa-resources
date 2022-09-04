@@ -18,25 +18,25 @@ As per process, QA runs through the following cases to ensure that the major chr
 
 ### Upgrade
 
-- [x] Make sure that data from the last version appears in the new version OK
-- [x] Ensure that `brave://version` lists the expected Brave & Chromium versions
-- [x] With data from the last version, verify that:
-  - [x] Bookmarks on the bookmark toolbar and bookmark folders can be opened
-  - [x] Cookies are preserved
-  - [x] Installed extensions are retained and work correctly
-  - [x] Opened tabs can be reloaded
-  - [x] Stored passwords are preserved
-  - [x] Sync chain created in previous version is retained
-  - [x] Social media-blocking buttons changes are retained
-  - [x] Rewards
-    - [x] BAT balance is retained
-    - [x] Auto-contribute list is retained
-    - [x] Both Tips and Monthly Contributions are retained
-    - [x] Panel transactions list is retained
-    - [x] Changes to rewards settings are retained
-    - [x] Ensure that Auto Contribute is not being enabled when upgrading to a new version if AC was disabled
-  - [x] Ads
-    - [x] Both `Estimated pending rewards` & `Ad notifications received this month` are retained
-    - [x] Changes to ads settings are retained
-    - [x] Ensure that ads are not being enabled when upgrading to a new version if they were disabled
-    - [x] Ensure that ads are not disabled when upgrading to a new version if they were enabled
+- [ ] Make sure that data from the last version appears in the new version OK
+- [ ] Ensure that `brave://version` lists the expected Brave & Chromium versions
+- [ ] With data from the last version, verify that:
+  - [ ] Bookmarks on the bookmark toolbar and bookmark folders can be opened
+  - [ ] Cookies are preserved
+  - [ ] Installed extensions are retained and work correctly
+  - [ ] Opened tabs can be reloaded
+  - [ ] Stored passwords are preserved
+  - [ ] Sync chain created in previous version is retained
+  - [ ] Social media-blocking buttons changes are retained
+  - [ ] Rewards
+    - [ ] BAT balance is retained
+    - [ ] Auto-contribute list is retained
+    - [ ] Both Tips and Monthly Contributions are retained
+    - [ ] Panel transactions list is retained
+    - [ ] Changes to rewards settings are retained
+    - [ ] Ensure that Auto Contribute is not being enabled when upgrading to a new version if AC was disabled
+  - [ ] Ads
+    - [ ] Both `Estimated pending rewards` & `Ad notifications received this month` are retained
+    - [ ] Changes to ads settings are retained
+    - [ ] Ensure that ads are not being enabled when upgrading to a new version if they were disabled
+    - [ ] Ensure that ads are not disabled when upgrading to a new version if they were enabled
