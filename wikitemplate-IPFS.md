@@ -256,7 +256,6 @@
 - [ ] Verify the setting is enabled by default.
 - [ ] Verify disable/enable setting is retained between browser launch/restarts.
 - [ ] Verify setting state is retained during upgrade.
-- [ ] Verify you can change the IPFS public gateway address to `https://cf-ipfs.com/`  (passes the Origin isolation test).
 
 ### `IPFS/IPNS URI`
 
