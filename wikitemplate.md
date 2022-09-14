@@ -30,6 +30,10 @@
 - [ ] Verify that `magnet` links and `.torrent` files correctly open WebTorrent and you're able to download the file(s)
   - **Tip:** Free torrents available via https://webtorrent.io/free-torrents
 
+### IPFS
+
+- [ ] Load `vitalik.eth`.  Click on `Proceed using Infura server`. Click on `Use a Brave local IPFS node`.  Verify the content loads from `ipfs://bafybeigsn4u4nv4uyskxhewakk5m2j2lluzhsbsayp76zh7nbqznrxwm7e/`.
+
 ### Chrome Web Store (CWS)
 
 - [ ] Verify that installing https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb from CWS displays the `Brave has not reviewed the extension.` warning via the "Add Extension" modal
