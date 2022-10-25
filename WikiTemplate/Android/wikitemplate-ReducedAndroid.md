@@ -30,7 +30,6 @@
 - [ ] Verify you can tip a verified YouTube creator
 - [ ] Verify you are able to perform a contribution
 - [ ] Verify if you disable auto-contribute you are still able to tip regular sites and YouTube creators
-- [ ] Verify on BR panel that the `Verify wallet` button only enables when balance is >=15 BAT
 - [ ] Verify you can reset rewards from advance setting. Resetting should delete wallet and bring it back to the pre-optin state
 
 ## Brave Shields

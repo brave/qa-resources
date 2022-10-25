@@ -96,9 +96,7 @@
 - [ ] Verify unchecking `Allow contribution to videos` option doesn't list any YouTube creator in ac list
 - [ ] Adjust min visit/time in settings. Visit some sites and YouTube channels to verify they are added to the table after the specified settings
 - [ ] Verify you can reset rewards from advance setting. Resetting should delete wallet and bring it back to the pre-optin state
-- [ ] Verify on BR panel `Verify wallet` button loads verify wallet page when balance in >=2 BAT.
-- [ ] Verify user still able to connect to existing Uphold account via panel even when balance is < 2 BAT
-- [ ] Verify you are able to disconnect/re-connect a user wallet
+- [ ] Verify you are able to connect, disconnect, and re-connect a KYC'd user wallet (Uphold, Gemini, etc.)
 - [ ] Upgrade from an older version
   - [ ] Verify the wallet balance (if available) is retained
   - [ ] Verify auto-contribute list is not lost after upgrade
