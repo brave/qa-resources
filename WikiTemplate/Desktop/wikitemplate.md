@@ -103,56 +103,27 @@
 
 ### Rewards
 
-- [ ] Verify that none of the reward endpoints are being contacted when a user visits a media publisher (`youtube.com`, `reddit.com`, `twitter.com`, `github.com`) and hasn't interacted with rewards
+- [ ] Verify that none of the reward endpoints are being contacted when a user visits a media creator (`youtube.com`, `reddit.com`, `twitter.com`, `github.com`) and hasn't joined rewards
   - [ ] Verify that `rewards.brave.com`, `pcdn.brave.com`, `grant.rewards.brave.com` or `api.rewards.brave.com` are not being contacted
-- [ ] Verify you are able to create a new Rewards profile.
-- [ ] Verify Rewards balance shows correct BAT and USD value.
-- [ ] Verify actions taken (claiming grant, tipping, auto-contribute) display in panel transactions list.
-- [ ] Verify AC monthly budget shows correct BAT and USD value.
-- [ ] Verify you are able to exclude a publisher from the auto-contribute table and popup list of sites.
-- [ ] Verify you are able to exclude a publisher by using the toggle on the Rewards Panel.
-- [ ] Verify you are able to perform an auto contribution.
-  - [ ] Verify auto contribution is reflected in the rewards widget on the new-tab page (NTP).
-- [ ] Verify monthly statement shows expected data.
-- [ ] Verify when you click on the BR panel while on a site, the panel displays site-specific information (site favicon, domain, attention %).
-- [ ] Verify BR panel shows message about an unverified publisher.
-- [ ] Verify one time and monthly tip banners show a message about unverified publisher.
-- [ ] Verify one time tip and monthly tip banners show a verified checkmark for a verified creator.
-- [ ] Verify when you click on `Send a tip`, the custom tip banner displays if set up.
-  - [ ] Verify custom tip banner is also displayed for monthly contribution.
-- [ ] Verify you are able to make one-time tip and they display in Tips panel.
-  - [ ] Verify tip is reflected in the rewards widget on the NTP.
-  - [ ] Verify when you tip an unverified publisher, the one time tip is recorded in the Pending Contributions list.
-- [ ] Verify you are able to make recurring tip and they display in Monthly Contributions panel.
-  - [ ] Verify you are able to adjust your recurring tip amount from the BR panel.
-  - [ ] Verify recurring tip is reflected in the rewards widget on the NTP.
-- [ ] Verify you can tip a verified website.
-  - [ ] Verify the website displays in the auto-contribute list after specified amount of time/visits per settings.
-- [ ] Verify you can tip a verified YouTube creator.
-  - [ ] Verify the YouTube creator displays in the auto-contribute list after specified amount of time/visits per settings.
-- [ ] Verify you can tip a verified Vimeo creator.
-  - [ ] Verify the Vimeo creator displays in the auto-contribute list after specified amount of time/visits per settings.
-- [ ] Verify you can tip a verified Twitch creator.
-  - [ ] Verify the Twitch creator displays in the auto-contribute list after specified amount of time/visits per settings.
-- [ ] Verify you can tip a verified Twitter user from the panel.
-- [ ] Verify you can tip a verified Twitter user via inline tip button.
-  - [ ] Verify the in-line tip button is spaced properly.
-- [ ] Verify you can tip a verified GitHub user from the panel.
-- [ ] Verify you can tip a verified GitHub user via inline tip button.
-  - [ ] Verify the GitHub creator displays in the auto-contribute list after specified amount of time/visits per settings.
-- [ ] Verify you can tip a verified Reddit user from the panel.
-- [ ] Verify you can tip a verified Reddit user via inline tip button.
-- [ ] Verify if you disable auto-contribute you are still able to tip creators.
-- [ ] Verify if auto-contribute is disabled AC does not occur.
-- [ ] Verify if Rewards is disabled AC does not occur.
-- [ ] Verify that disabling Rewards and enabling it again does not lose state.
-- [ ] Adjust min visit/time in settings. Visit some sites to verify they are added to the table after the specified settings.
-- [ ] Uphold cases
-  - [ ] Verify you are able to connect a KYC'd Uphold account to Rewards.  
-  - [ ] Verify balance in Brave updates when BAT is added to the Brave Browser card.
-  - [ ] Verify if you only have user-controlled BAT (BAT in Uphold only), you can only tip KYC'd creators, any tips to non-KYC'd creators go to the Pending Contributions list.
-  - [ ] Verify connected (verified but not KYC'd) publishers display messaging on panel and tip banner.
-  - [ ] Verify you are able to perform an auto contribute using Uphold BAT.
+- [ ] Verify you are able to create a new Rewards profile and are in the unverified state by default
+  - [ ] Verify when you visit a creator in this state the panel shows a prompt to connect a custodian and no BAT information (earnings, balance, etc) is displayed
+  - [ ] Verify when you click on an in-line tip button in this state, the tip banner indicates you must connect a custodian
+  - [ ] Verify when you view the NTP widget in this state it shows a prompt to connect a custodian and no BAT information (earnings, balance, etc) is displayed
+  - [ ] Verify when you visit brave://rewards in this state there are no Auto Contribution, Tipping, or wallet panels on this page
+  - [ ] Verify you can toggle ads off/on from this page and the panel and NTP widget respond accordingly
+  - [ ] Verify you can toggle rewards off/on from the panel and the brave://rewards page and NTP widget respond accordingly
+- [ ] Verify you are able to connect a custodian
+  - [ ] Verify Rewards balance shows correct BAT and USD value on brave://rewards, panel, and NTP widget after you connect
+  - [ ] Verify when you click on the BR panel while on a site, the panel displays site-specific information (site favicon, domain, attention %)
+  - [ ] Verify BR panel and tip banner shows message about an unverified creator
+  - [ ] Verify BR panel and tip banner shows message about a creator with a different custodian
+  - [ ] Verify you are able to tip a creator who has the same custodian as you
+  - [ ] Verify you are able to perform an auto contribution
+  - [ ] Verify if you disable auto-contribute you are still able to tip creators
+  - [ ] Verify if auto-contribute is disabled AC does not occur
+  - [ ] Verify that there is no "Disconnect" option once connected to a custodian
+- [ ] Verify that you are able to reset rewards
+  - [ ] Verify after rewards are reset, the panel, brave://rewards page, and NTP widget to back to the unverified state
 
 ### Social-media blocking settings
 

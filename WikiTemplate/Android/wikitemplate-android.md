@@ -73,36 +73,26 @@
 - [ ] Go to `https://feedly.com` and make sure that the password can be saved. Make sure the saved password is auto-populated when you visit the site again
 - [ ] Verify that `https://mixed-script.badssl.com/` shows up as grey not red (no mixed content scripts are run)
 
-## Brave Rewards/Ads
+## Brave Rewards
 
-- [ ] Verify wallet is auto-created after enabling rewards(either via Panel or Rewards page)
-- [ ] Verify account balance shows correct BAT and USD value
-- [ ] Verify actions taken (claiming grant, tipping, auto-contribute) display in wallet panel
-- [ ] Verify grant details are shown in expanded view when a grant is claimed
-- [ ] Verify monthly budget shows correct BAT and USD value
-- [ ] Verify you can exclude a publisher from the auto-contribute table by clicking on the trash bin icon in the auto-contribute table
-- [ ] Verify you can exclude a publisher by using the toggle on the Rewards Panel
-- [ ] Verify you can remove excluded sites via `Restore All` button
-- [ ] Verify when you click on the BR panel while on a site, the panel displays site-specific information (site favicon, domain, attention %)
-- [ ] Verify you can make a one-time tip and they display in tips panel
-- [ ] Verify you can make a recurring tip and they display in tips panel
-- [ ] Verify you can tip a verified publisher
-- [ ] Verify you can tip a verified YouTube creator
-- [ ] Verify tip panel shows a verified check mark for a verified publisher/verified YouTube creator
-- [ ] Verify tip panel and BR panel shows a message about the unverified publisher
-- [ ] Verify you can perform a contribution
-- [ ] Verify if you disable auto-contribute you are still able to tip regular sites and YouTube creators
-- [ ] Verify that disabling auto-contribute and enabling it again does not lose state
-- [ ] Verify unchecking `Allow contribution to videos` option doesn't list any YouTube creator in ac list
-- [ ] Adjust min visit/time in settings. Visit some sites and YouTube channels to verify they are added to the table after the specified settings
-- [ ] Verify you can reset rewards from advance setting. Resetting should delete wallet and bring it back to the pre-optin state
-- [ ] Verify you are able to connect, disconnect, and re-connect a KYC'd user wallet (Uphold, Gemini, etc.)
-- [ ] Upgrade from an older version
-  - [ ] Verify the wallet balance (if available) is retained
-  - [ ] Verify auto-contribute list is not lost after upgrade
-  - [ ] Verify tips list is not lost after upgrade
-  - [ ] Verify wallet panel transactions list is not lost after upgrade
-### Brave Ads
+- [ ] Verify you are able to create a new Rewards profile and are in the unverified state by default
+  - [ ] Verify when you visit a creator in this state the panel shows a prompt to connect a custodian and no BAT information (earnings, balance, etc) is displayed
+  - [ ] Verify when you visit brave://rewards in this state there are no Auto Contribution, Tipping, or wallet panels on this page
+  - [ ] Verify you can toggle ads off/on from this page and the panel responds accordingly
+  - [ ] Verify you can toggle rewards off/on from the panel and the brave://rewards page responds accordingly
+- [ ] Verify you are able to connect a custodian
+  - [ ] Verify Rewards balance shows correct BAT and USD value on brave://rewards and panel after you connect
+  - [ ] Verify when you click on the BR panel while on a site, the panel displays site-specific information (site favicon, domain, attention %)
+  - [ ] Verify BR panel and tip banner shows message about an unverified creator
+  - [ ] Verify you are able to tip a creator who has the same custodian as you
+  - [ ] Verify you are able to perform an auto contribution
+  - [ ] Verify if you disable auto-contribute you are still able to tip creators
+  - [ ] Verify if auto-contribute is disabled AC does not occur
+  - [ ] Verify that there is no "Disconnect" option once connected to a custodian
+- [ ] Verify that you are able to reset rewards
+
+## Brave Ads
+
 - [ ] Verify ads is auto-enabled when rewards is enabled for the supported region
 - [ ] Verify ads are only shown when the app is being used
 - [ ] Verify ad notification are shown based on ads per hour setting

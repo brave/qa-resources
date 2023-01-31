@@ -15,17 +15,19 @@
 
 ### Rewards
 
-- [ ] Verify that none of the reward endpoints are being contacted when a user visits a media publisher (`youtube.com`, `reddit.com`, `twitter.com`, `github.com`) and hasn't interacted with rewards
+- [ ] Verify that none of the reward endpoints are being contacted when a user visits a media creator (`youtube.com`, `reddit.com`, `twitter.com`, `github.com`) and hasn't joined rewards
   - [ ] Verify that `rewards.brave.com`, `pcdn.brave.com`, `grant.rewards.brave.com` or `api.rewards.brave.com` are not being contacted
-- [ ]  Verify Rewards balance shows correct BAT and USD value
-- [ ]  Verify actions taken (claiming grant, tipping, auto-contribute) display in panel transactions list
-- [ ]  Verify when you click on the BR panel while on a site, the panel displays site specific information (site favicon, domain, attention %)
-- [ ]  Verify you are able to make one-time tip and they display in tips panel
-- [ ]  Verify you are able to make recurring tip and they display in tips panel
-- [ ]  Verify you can tip a verified publisher
-- [ ]  Verify you can tip a verified YouTube creator
-- [ ]  Verify you are able to perform a contribution
-- [ ]  Verify if you disable auto-contribute you are still able to tip regular sites and YouTube creators
+- [ ] Verify you are able to create a new Rewards profile and are in the unverified state by default
+  - [ ] Verify when you visit a creator in this state the panel shows a prompt to connect a custodian and no BAT information (earnings, balance, etc) is displayed
+  - [ ] Verify when you visit brave://rewards in this state there are no Auto Contribution, Tipping, or wallet panels on this page
+  - [ ] Verify you can toggle ads off/on from this page and the panel and NTP widget respond accordingly
+  - [ ] Verify you can toggle rewards off/on from the panel and the brave://rewards page and NTP widget respond accordingly
+- [ ] Verify you are able to connect a custodian
+  - [ ] Verify Rewards balance shows correct BAT and USD value on brave://rewards, panel, and NTP widget after you connect
+  - [ ] Verify when you click on the BR panel while on a site, the panel displays site-specific information (site favicon, domain, attention %)
+  - [ ] Verify you are able to tip a creator who has the same custodian as you
+  - [ ] Verify you are able to perform an auto contribution
+  - [ ] Verify if you disable auto-contribute you are still able to tip creators
 
 ### TLS Pinning
 
