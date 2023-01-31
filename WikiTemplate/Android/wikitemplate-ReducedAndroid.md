@@ -21,16 +21,17 @@
 
 ### Rewards
 
-- [ ] Verify account balance shows correct BAT and USD value
-- [ ] Verify actions taken (claiming grant, tipping, auto-contribute) display in wallet panel
-- [ ] Verify when you click on the BR panel while on a site, the panel displays site specific information (site favicon, domain, attention %)
-- [ ] Verify you are able to make one-time tip and they display in tips panel
-- [ ] Verify you are able to make recurring tip and they display in tips panel
-- [ ] Verify you can tip a verified publisher
-- [ ] Verify you can tip a verified YouTube creator
-- [ ] Verify you are able to perform a contribution
-- [ ] Verify if you disable auto-contribute you are still able to tip regular sites and YouTube creators
-- [ ] Verify you can reset rewards from advance setting. Resetting should delete wallet and bring it back to the pre-optin state
+- [ ] Verify you are able to create a new Rewards profile and are in the unverified state by default
+  - [ ] Verify when you visit a creator in this state the panel shows a prompt to connect a custodian and no BAT information (earnings, balance, etc) is displayed
+  - [ ] Verify when you visit brave://rewards in this state there are no Auto Contribution, Tipping, or wallet panels on this page
+  - [ ] Verify you can toggle ads off/on from this page and the panel responds accordingly
+  - [ ] Verify you can toggle rewards off/on from the panel and the brave://rewards page responds accordingly
+- [ ] Verify you are able to connect a custodian
+  - [ ] Verify Rewards balance shows correct BAT and USD value on brave://rewards and panel after you connect
+  - [ ] Verify when you click on the BR panel while on a site, the panel displays site-specific information (site favicon, domain, attention %)
+  - [ ] Verify you are able to tip a creator who has the same custodian as you
+  - [ ] Verify you are able to perform an auto contribution
+  - [ ] Verify if you disable auto-contribute you are still able to tip creators
 
 ## Brave Shields
 
