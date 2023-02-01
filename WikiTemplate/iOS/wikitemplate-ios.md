@@ -59,6 +59,7 @@
 ## Password Managers
 
 - [ ] Verify tapping on 1Password on the slide-out keyboard launches 1Password app and you're able to select the stored credentials
+- [ ] Verify tapping on iCloud Keychain on the slide-out keyboard launches keychain app and auto-fills the stored data
 - [ ] Verify tapping on Bitwarden password manager in the autofill field launches the app and auto-fills the stored data
 
 ## Shields Settings
@@ -116,13 +117,11 @@
 
 ## Bravery settings
 
-- [ ] Check that HTTPS Everywhere works by loading `http://https-everywhere.badssl.com/`
-- [ ] Turning HTTPS Everywhere off or shields off both disable the redirect to `https://https-everywhere.badssl.com/`
 - [ ] Check that block ad and unblock ad works on `http://slashdot.org`
 - [ ] Check that toggling to blocking and allow ads works as expected
 - [ ] Verify that tapping through a cert error in `https://badssl.com` works
-- [ ] Verify that Safe Browsing works `https://www.raisegame.com`
-- [ ] Enable `Block Scripts` globally from `Settings`.  Visit `https://twitter.com`, nothing should load. Tap on `Shields` and disable `Block Scripts`; the page should load properly.
+- [ ] Verify that Safe Browsing works with `https://testsafebrowsing.appspot.com/`
+- [ ] Enable `Block Scripts` globally from `Settings`.  Visit `https://www.blizzard.com`, JS elements should not load. Tap on `Shields` and disable `Block Scripts`; the page should load properly.
 - [ ] Verify that default Brave Shields settings take effect on pages with no site settings
 
 ### Fingerprint Tests
@@ -138,7 +137,6 @@
 - [ ] Verify that PDF is loaded over `HTTPS` at `https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf`
 - [ ] Verify that PDF is loaded over `HTTP` at `http://www.pdf995.com/samples/pdf.pdf`
 - [ ] Verify that `https://mixed-script.badssl.com` shows up as grey, not red (no mixed-content scripts are run)
-- [ ] Verify that search results from `https://startpage.com` open in a new tab (due to target being _blank_)
 
 ## WebAuthn
 
