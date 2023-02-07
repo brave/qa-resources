@@ -4,15 +4,11 @@
    - [ ] `Brave-Browser-arm64.dmg`
       - [ ] Check executable size, should be `~290mb`
       - [ ]  Check signature: If OS Run `spctl --assess --verbose` for the installed version and make sure it returns `accepted`.
-   - [ ] `Brave-Browser-x64.dmg`
-       - [ ] Check executable size, should be `~290mb`
-       - [ ]  Check signature: If OS Run `spctl --assess --verbose` for the installed version and make sure it returns `accepted`.
    - [ ] `Brave-Browser-universal.dmg`
        - [ ] Check executable size, should be `~500mb`
        - [ ]  Check signature: If OS Run `spctl --assess --verbose` for the installed version and make sure it returns `accepted`.
 - [ ] Visited `brave://version` and ensure the following:
    - [ ] `arm64` is being displayed when installing via `arm64` and `universal` binaries on `M1` mac
-   - [ ] `x86_64 translated` is being displayed when installing via `x64` binary on `M1` mac using `Rosetta`
 
 ### Widevine
 
