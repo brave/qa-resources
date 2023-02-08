@@ -7,9 +7,10 @@ As per process, QA runs through the following cases to ensure that the major chr
 - [ ] Remove the following component folders and ensure that they're being re-downloaded after restarting the browser:
   - [ ] `afalakplffnnnlkncjhbmahjfjhmlkal`: `AutoplayWhitelist.dat`, `ExtensionWhitelist.dat`, `ReferrerWhitelist.json` and `Greaselion.json`
   - [ ] `CertificateRevocation`
-  - [ ] `cffkpbalmllkdoenhmdmpbkajipdjfam`: `rs-ABPFilterParserData.dat` & `regional_catalog.json` (AdBlock)
   - [ ] `gccbbckogglekeggclmmekihdgdpdgoe`: (Sponsored New Tab Images)
-  - [ ] `jicbkmdloagakknpihibphagfckhjdih`: `speedreader-updater.dat`
+  - [ ] `gkboaolpopklhgplhaaiboijnklogmbc`: Brave Ad Block List Catalog
+  - [ ] `iodkpdagapdfkphljnddpjlldadblomo`: Brave Ad Block Updater
+  - [ ] `mfddibmblmbccpadfndgakiopmmhebop`: Brave Ad Block List Catalog
   - [ ] `oofiananboodjbbmdelgdommihjbkfag`: HTTPSE
   - [ ] `Safe Browsing`
 - [ ] Restart the browser, load `brave://components`, wait for 8 mins and verify that no component shows any errors
