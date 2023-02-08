@@ -449,6 +449,7 @@ def crypto_desktop(milestonever):
     DesktopCryptoTitle = "Desktop Crypto Wallet Regression test run for " + milestonever
     DesktopCryptoList = ["OS/Windows",
                "release-notes/exclude",
+               "feature/web3/wallet",
                "tests",
                "QA/Yes",
                "OS/Desktop"]
@@ -784,6 +785,7 @@ def crypto_android(milestonever):
     AndroidCryptolist = ["ARM",
                       "release-notes/exclude",
                       "tests",
+                      "feature/web3/wallet",
                       "QA/Yes",
                       "OS/Android"]
 
@@ -935,6 +937,7 @@ def crypto_iOS():
     CryptoiOS_List = ["iphone",
                  "release-notes/exclude",
                  "tests",
+                 "Epic: Brave Wallet",
                  "QA/Yes"]
 
     if args.test is None:
@@ -1046,7 +1049,7 @@ def ipfs_testruns(ipfs_rel):
                "tests",
                "QA/Yes",
                "OS/Desktop",
-               "feature/ipfs"]
+               "feature/web3/ipfs"]
 
     if args.test is None:
         bc_repo.create_issue(title=macTitle,
@@ -1065,7 +1068,7 @@ def ipfs_testruns(ipfs_rel):
                "tests", 
                "QA/Yes",
                "OS/Desktop",
-               "feature/ipfs"]
+               "feature/web3/ipfs"]
 
     if args.test is None:
         bc_repo.create_issue(title=winTitle,
@@ -1084,7 +1087,7 @@ def ipfs_testruns(ipfs_rel):
                "tests",
                "QA/Yes",
                "OS/Desktop",
-               "feature/ipfs"]
+               "feature/web3/ipfs"]
 
     if args.test is None:
         bc_repo.create_issue(title=linTitle,
@@ -1115,7 +1118,7 @@ while ioslength < len(ios_key):
 print("\nNOTE:")
 print("\n For Tor Release make sure you type \"Tor\" or \"tor\" instead "
       "of the number")
-print("\n For IPFS Release make sure you type \"IPFS\" or \"ipfs\" instead "
+print("\n For IPFS Release make sure you type \"IPFS/KUBO \" or \"ipfs/kubo\" instead "
       "of the number")
 
 print("#######################################################################"
@@ -1191,7 +1194,8 @@ elif(select_checklist == "Tor" or select_checklist == "tor"):
         generate_ios_test = print("\nGenerating test runs for Tor",
                               (tormilestone)[0])
         tor_testruns(torkey)
-elif(select_checklist == "IPFS" or select_checklist == "ipfs"):
+elif(select_checklist == "IPFS" or select_checklist == "ipfs" 
+                    or select_checklist == "KUBO" or select_checklist == "kubo"):
     ipfsmilestone = [i for i in bc_milestone if "IPFS" in i]
     if (len(ipfsmilestone) == 0):
         ipfskey = ""
