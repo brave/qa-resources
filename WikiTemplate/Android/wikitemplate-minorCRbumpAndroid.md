@@ -35,10 +35,10 @@ Pre-Requisite: Visit several websites so Top Tiles under New Tab Page get update
   - [ ] Top Tiles under New Tab Page are preserved
   - [ ] Home screen shortcuts are preserved
   - [ ] Rewards
-    - [ ] Wallet balance is retained
+    - [ ] BAT balance is retained
     - [ ] Auto-contribute list is retained
     - [ ] Both Tips and Monthly Contributions are retained
-    - [ ] Wallet panel transactions list is retained
+    - [ ] Summary panel transactions list is retained
     - [ ] Changes to rewards settings are retained
   - [ ] Ads
     - [ ] Both `Estimated pending rewards` & `Ad notifications received this month` are retained

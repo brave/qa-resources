@@ -23,7 +23,7 @@
 
 - [ ] Verify you are able to create a new Rewards profile and are in the unverified state by default
   - [ ] Verify when you visit a creator in this state the panel shows a prompt to connect a custodian and no BAT information (earnings, balance, etc) is displayed
-  - [ ] Verify when you visit brave://rewards in this state there are no Auto Contribution, Tipping, or wallet panels on this page
+  - [ ] Verify when you visit brave://rewards in this state there are no Auto Contribution, Tipping, or summary panels on this page
   - [ ] Verify you can toggle ads off/on from this page and the panel responds accordingly
   - [ ] Verify you can toggle rewards off/on from the panel and the brave://rewards page responds accordingly
 - [ ] Verify you are able to connect a custodian
@@ -64,10 +64,10 @@ Pre-Requisite: Visit several websites so Top Tiles under New Tab Page get update
   - [ ] Top Tiles under New Tab Page are preserved
   - [ ] Home screen shortcuts are preserved
   - [ ] Rewards
-    - [ ] Wallet balance is retained
+    - [ ] BAT balance is retained
     - [ ] Auto-contribute list is retained
     - [ ] Both Tips and Monthly Contributions are retained
-    - [ ] Wallet panel transactions list is retained
+    - [ ] Summary panel transactions list is retained
     - [ ] Changes to rewards settings are retained
   - [ ] Ads
     - [ ] Both `Estimated pending rewards` & `Ad notifications received this month` are retained
