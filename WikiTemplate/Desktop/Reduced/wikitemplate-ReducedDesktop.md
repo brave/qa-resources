@@ -19,7 +19,7 @@
   - [ ] Verify that `rewards.brave.com`, `pcdn.brave.com`, `grant.rewards.brave.com` or `api.rewards.brave.com` are not being contacted
 - [ ] Verify you are able to create a new Rewards profile and are in the unverified state by default
   - [ ] Verify when you visit a creator in this state the panel shows a prompt to connect a custodian and no BAT information (earnings, balance, etc) is displayed
-  - [ ] Verify when you visit brave://rewards in this state there are no Auto Contribution, Tipping, or wallet panels on this page
+  - [ ] Verify when you visit brave://rewards in this state there are no Auto Contribution, Tipping, or summary panels on this page
   - [ ] Verify you can toggle ads off/on from this page and the panel and NTP widget respond accordingly
   - [ ] Verify you can toggle rewards off/on from the panel and the brave://rewards page and NTP widget respond accordingly
 - [ ] Verify you are able to connect a custodian
