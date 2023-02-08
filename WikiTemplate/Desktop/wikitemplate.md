@@ -44,7 +44,6 @@
 - [ ] Test that you can print a PDF
 - [ ] Test that PDF is loaded over HTTPS at https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf
 - [ ] Test that PDF is loaded over HTTP at http://www.pdf995.com/samples/pdf.pdf
-- [ ] Test that https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.105.6357&rep=rep1&type=pdf opens without issues
 
 ### Widevine
 
