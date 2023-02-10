@@ -40,6 +40,8 @@
   - [ ] Stored passwords are preserved
   - [ ] Sync chain created in previous version is retained 
   - [ ] Social media blocking buttons changes are retained
+  - [ ] Custom Filters under brave://settings/shields/filters are retained
+  - [ ] Custom Lists under brave://settings/shields/filters are retained
   - [ ] Rewards
     - [ ] BAT balance is retained
     - [ ] Auto-contribute list is retained
@@ -67,3 +69,5 @@ Pre-requisite: Make sure that the previous version is installed using the univer
   - [ ] Stored passwords are preserved
   - [ ] Sync chain created in previous version is retained 
   - [ ] Social media blocking buttons changes are retained 
+  - [ ] Custom Filters under brave://settings/shields/filters are retained
+  - [ ] Custom Lists under brave://settings/shields/filters are retained
