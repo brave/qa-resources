@@ -10,6 +10,25 @@
 
 - [ ] Verify that both `chrome://` and `about://` forward to `brave://` (run through several internal pages)
 
+### Adblock lists and filters
+
+ - [ ] Navigate to `brave://adblock` and confirm you are redirected to `brave://settings/shields/filters`
+ - [ ] Filter lists
+   - [ ] Type "cookie" into the "Filter lists" search box, and verify that the list is filtered down to just the `Easylist-Cookie List - Filter Obtrusive Cookie Notices`
+   - [ ] Enable the `Easylist-Cookie List` and refresh the page
+   - [ ] Expand the regional filter lists and verify that the cookie list is still enabled
+ - [ ] Add custom filter lists
+   - [ ] Enter `https://raw.githubusercontent.com/ryanbr/fanboy-adblock/master/fanboy-antifonts.txt` into `Enter filter list URL` and press `Add`
+   - [ ] Ensure that the `Custom lists` table appears, with the newly added entry; `Last updated` should be now (e.g. `0 seconds ago`)
+   - [ ] Refresh the page after a few seconds and ensure that the `Last updated` time reflects the time that has passed
+   - [ ] Use the dropdown next to the entry and verify that all options (`Update now`, `View source`, `Unsubscribe`) are shown
+     - [ ] Pressing the `Update now` button should update the timestamp appropriately
+     - [ ] `View source` should open the text of the filter list
+     - [ ] `Unsubscribe` should delete the entry from the list and hide the table once again
+ - [ ] Add custom filter lists
+   - [ ] The `Create custom filters` section should be visible with a text box and `Save changes` button
+   - [ ] Adding text to the box, pressing `Save changes`, and refreshing the page should result in the same text appearing in the box after the reload
+
 ### Importing
 
 - [ ] Verify that you can import `History`, `Favorites/Bookmarks` and `Passwords` from Google Chrome
@@ -202,6 +221,8 @@
   - [ ] Stored passwords are preserved
   - [ ] Sync chain created in previous version is retained
   - [ ] Social media-blocking buttons changes are retained
+  - [ ] Custom filters under brave://settings/shields/filters are retained
+  - [ ] Custom lists under brave://settings/shields/filters are retained
   - [ ] Rewards
     - [ ] BAT balance is retained
     - [ ] Auto-contribute list is retained
