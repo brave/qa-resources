@@ -1,4 +1,4 @@
-As per process, QA runs through the following cases to ensure that the major chromium bump that's about to get merged into `master` doesn't regress the `Nightly` channel. Once the major chromoium bump is merged into `master`, QA will run through a full manual pass on `Windows` & `Android`.
+As per process, QA runs through the following cases to ensure that the major chromium bump that's about to get merged into `master` doesn't regress the `Nightly` channel. Once the major chromium bump is merged into `master`, QA will run through a full manual pass on `Windows` & `Android`.
 
 ### Startup & Components
 
