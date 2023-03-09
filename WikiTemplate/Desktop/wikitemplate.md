@@ -25,7 +25,7 @@
      - [ ] Pressing the `Update now` button should update the timestamp appropriately
      - [ ] `View source` should open the text of the filter list
      - [ ] `Unsubscribe` should delete the entry from the list and hide the table once again
- - [ ] Add custom filter lists
+ - [ ] Create custom filters
    - [ ] The `Create custom filters` section should be visible with a text box and `Save changes` button
    - [ ] Adding text to the box, pressing `Save changes`, and refreshing the page should result in the same text appearing in the box after the reload
 
