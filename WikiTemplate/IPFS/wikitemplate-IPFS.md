@@ -125,6 +125,11 @@
 - [ ] Verify clicking on the `IPFS` badge/button on `https://en.wikipedia-on-ipfs.org/wiki/Asia/#Economy` loads `ipns://en.wikipedia-on-ipfs.org/wiki/Asia/#Economy` in a new tab.
 - [ ] Verify clicking on the `IPFS` badge/button on `https://blog.ipfs.io/24-uncensorable-wikipedia` loads `ipns://blog.ipfs.io/24-uncensorable-wikipedia/` in a new tab.
 
+### Badge only on real IPFS resources
+
+- [ ] Verify https://github.com/ipns/google.com  shows no `IPFS` badge/icon in the URL bar (`/ipns/google.com` → `google.com` is not a valid CID, nor it is a DNS name with DNSLink TXT record → not IPFS resource)
+- [ ] Verify https://github.com/ipfs/boxo shows no `IPFS` badge/icon in the URL bar (`ipfs/boxo` → `boxo` is not a valid CID → not IPFS resource → no purple button)
+
 ### Protocol info popup
 
 - [ ] Load `ipns://brantly.eth` while using `Brave local IPFS node` for the resolver, and confirm there's a clickable info badge "IPFS" to the left of the URL, with on click pop-up that says `This content was loaded over the IPFS protocol.`
