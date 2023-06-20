@@ -122,8 +122,8 @@
 
 ### Badge on DNSlink websites
 
-- [ ] Verify clicking on the `IPFS` badge/button on `https://en.wikipedia-on-ipfs.org/wiki/Asia/#Economy` loads `ipns://en.wikipedia-on-ipfs.org/wiki/Asia/#Economy` in a new tab.
-- [ ] Verify clicking on the `IPFS` badge/button on `https://blog.ipfs.io/24-uncensorable-wikipedia` loads `ipns://blog.ipfs.io/24-uncensorable-wikipedia/` in a new tab.
+- [ ] Verify clicking on the `IPFS` badge/button on https://blog.ipfs.tech loads `ipns://blog.ipfs.tech` in a new tab.
+- [ ] Verify clicking on the `IPFS` badge/button on https://en.wikipedia-on-ipfs.org/wiki/Asia/?foo=bar#Economy loads `ipns://en.wikipedia-on-ipfs.org/wiki/Asia/?foo=bar#Economy` in a new tab.
 
 ### Badge only on real IPFS resources
 
