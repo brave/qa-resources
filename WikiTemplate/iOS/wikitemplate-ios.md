@@ -44,13 +44,15 @@
 - [ ] Verify all actions work in context menu when long pressing on tab icon
 - [ ] Verify `Recently Closed Tabs` is opened when long pressing `+` icon in tab view
 
-## Search
+## Navigation
 
 - [ ] Verify search works from the search box on NTP
 - [ ] Verify searching using voice search icon
 - [ ] Verify changing search engine in settings will update search queries for regular and private tabs
 - [ ] Verify tapping on arrow icon for the suggested searches will only populate that search query in the search box
 - [ ] Verify scanning QR Code from the search box will higlight scanned url
+- [ ] Verify all actions in url box using Top Bar mode
+- [ ] Verify searching page content using `Find in Page`
       
 ## Downloads
 
@@ -62,6 +64,7 @@
 - [ ] Visit `http://theverge.com`, open any article, verify the reader mode icon is shown in the URL bar
 - [ ] Verify tapping on the reader mode icon opens the article in reader mode
 - [ ] Edit reader mode settings and open different pages in reader mode and verify if the setting is retained across each article
+- [ ] Verify reader mode works with Top bar enabled
 
 ## Gestures
 
@@ -124,7 +127,7 @@
 - [ ] Verify with background audio enabled, able to play audio/video with device locked or app in background
 - [ ] Verify Playlist media works with CarPlay on iOS devices
 - [ ] Verify playback gestures are working in Playlist
-- [ ] Verify adding shared folder to playlist using https://playlist.brave.com/bsa-sample. Verify all actions on shared folder are working
+- [ ] Verify adding shared folder to playlist using `https://playlist.brave.com/bsa-sample`. Verify all actions on shared folder are working
 
 ## Brave News
 
