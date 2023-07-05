@@ -32,6 +32,7 @@
 - [ ] Verify editing favourites and changing their URLs updates the favicons accordingly
 - [ ] Verify that you can remove favourites
 - [ ] Verify that you can add new favourites from the `Share with...` menu
+- [ ] Verify adding Favorites Widget to home screen and ensured favorites are updated
 
 ## Context menus
 
@@ -51,8 +52,10 @@
 - [ ] Verify changing search engine in settings will update search queries for regular and private tabs
 - [ ] Verify tapping on arrow icon for the suggested searches will only populate that search query in the search box
 - [ ] Verify scanning QR Code from the search box will higlight scanned url
-- [ ] Verify all actions in url box using Top Bar mode
+- [ ] Verify all actions in tool bar using Top Bar mode
 - [ ] Verify searching page content using `Find in Page`
+- [ ] Verify certificate viewer works in url bar
+- [ ] Verify navigating social media and video sites does not cause loading issues when scrolling or reloading pages.
       
 ## Downloads
 
@@ -114,7 +117,6 @@
 - [ ] Verify `Sync Internals` page data is populated when connected to sync chain
 - [ ] Verify when using `Delete Sync Account` will remove all devices from sync chain
 
-
 ## Playlist & Autoplay
 
 - [ ] Verify Playlist is enabled by default on a clean install
@@ -136,11 +138,20 @@
 - [ ] Verify inline-content ads are shown on Brave News
 - [ ] Verify able to add custom RSS feed to the list of sources. Ensure this is working when entering custom URL manually and through the share menu when at a blog page
 - [ ] Verify able to hide content from sources within the `Popular Sources` and `Suggested` categories by long-press on the card
+- [ ] Verify adding Top News Brave widget to home screen will display news articles. Ensure tapping on news articles will load in brave.
+
+## VPN
+
+- [ ] Verify purchasing VPN subscription will install VPN profile and establish connection
+- [ ] Verify tunneling works by navigating to `https://ipinfo.io`
+- [ ] Verify changing server region will update VPN connection
+- [ ] Verify changing protocol from WireGuard to IKEv2
+- [ ] Verify `Reset Configuration` will not change the region 
 
 ## Bravery settings
 
 - [ ] Check that block ad and unblock ad works on `http://slashdot.org`
-- [ ] Check that toggling to blocking and allow ads works as expected. Ensured pre-roll ads are removed on `youtube.com`
+- [ ] Check that toggling to blocking and allow ads works as expected. Ensure pre-roll ads are removed on `youtube.com`
 - [ ] Verify that tapping through a cert error in `https://badssl.com` works
 - [ ] Verify Safe Browsing protection on `https://testsafebrowsing.appspot.com/` in the iOS
 - [ ] Verify debounce/deAMP settings using `https://dev-pages.brave.software/navigation-tracking/debouncing.html`
@@ -151,9 +162,9 @@
 
 ### Fingerprint Tests
 
-  - [ ] Verify that the audio fingerprint is blocked at `https://audiofingerprint.openwpm.com` when fingerprinting protection is on
-  - [ ] Verify that `https://diafygi.github.io/webrtc-ips/` doesn't leak IP address when `Block all fingerprinting protection` is on
-  - [ ] Verify fingerprinting test cases in `https://dev-pages.brave.software/fingerprinting/farbling.html`
+- [ ] Verify that the audio fingerprint is blocked at `https://audiofingerprint.openwpm.com` when fingerprinting protection is on
+- [ ] Verify that `https://diafygi.github.io/webrtc-ips/` doesn't leak IP address when `Block all fingerprinting protection` is on
+- [ ] Verify fingerprinting test cases in `https://dev-pages.brave.software/fingerprinting/farbling.html`
 
 ## Content tests
 
@@ -179,3 +190,10 @@
 ## Session storage
 
 - [ ] Verify that tabs restore when closed, including active tab
+
+## Navigation [iPad]
+
+- [ ] Verify user is able to navigate/search using connected hardware keyboard
+- [ ] Verify long pressing CMD key will display keyboard shortcuts
+- [ ] Ensure the keyboard shortcuts are working
+- [ ] Ensure using Brave with `Split View` & `Split Over` works with other apps
