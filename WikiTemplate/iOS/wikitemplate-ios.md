@@ -24,7 +24,7 @@
 - [ ] Verify that you can delete a bookmark in edit mode
 - [ ] Verify that you can delete a bookmark folder with bookmarks inside
 - [ ] Verify adding a bookmark domain, subpaths is retained and you are successfully able to visit the domain subpath in a new tab
-- [ ] Verify adding bookmark for many open tabs works
+- [ ] Verify adding bookmark for many open tabs works. Ensured opening all bookmarks in `Saved tabs` folder will load all the tabs
 - [ ] Verify import/export bookmarks works
 
 ## Favourites
@@ -32,7 +32,7 @@
 - [ ] Verify editing favourites and changing their URLs updates the favicons accordingly
 - [ ] Verify that you can remove favourites
 - [ ] Verify that you can add new favourites from the `Share with...` menu
-- [ ] Verify adding Favorites Widget to home screen and ensured favorites are updated
+- [ ] Verify adding Favorites Widget to home screen and ensure favorites are updated on the widget accordingly
 
 ## Context menus
 
@@ -51,11 +51,10 @@
 - [ ] Verify searching using voice search icon
 - [ ] Verify changing search engine in settings will update search queries for regular and private tabs
 - [ ] Verify tapping on arrow icon for the suggested searches will only populate that search query in the search box
-- [ ] Verify scanning QR Code from the search box will higlight scanned url
+- [ ] Verify scanning QR code from the search box will higlight scanned url
 - [ ] Verify all actions in tool bar using Top Bar mode
 - [ ] Verify searching page content using `Find in Page`
-- [ ] Verify certificate viewer works in url bar
-- [ ] Verify navigating social media and video sites does not cause loading issues when scrolling or reloading pages.
+- [ ] Verify navigating social media and video sites does not cause loading issues when scrolling or reloading pages
       
 ## Downloads
 
@@ -67,7 +66,7 @@
 - [ ] Visit `http://theverge.com`, open any article, verify the reader mode icon is shown in the URL bar
 - [ ] Verify tapping on the reader mode icon opens the article in reader mode
 - [ ] Edit reader mode settings and open different pages in reader mode and verify if the setting is retained across each article
-- [ ] Verify reader mode works with Top bar enabled
+- [ ] Verify reader mode works with tool bar on top enabled
 
 ## Gestures
 
@@ -99,7 +98,7 @@
 - [ ] Verify ads are only shown while the app is being used
 - [ ] Verify tapping on an ad notification shows the landing page
 - [ ] Verify inline-content ads show on Brave News and are correctly redeemed from the server
-- [ ] Verify `view`, `clicked`, `landed`, `dismiss`, and `downvote` confirmation states are logged based on the action. Ensured these are working for inline ads, ad notifications and NTP-SI Images.
+- [ ] Verify `view`, `clicked`, `landed`, `dismiss`, and `downvote` confirmation states are logged based on the action. Ensured these are working for inline ads, ad notifications and Sponsored Images.
 
 ## Sync
 
@@ -115,7 +114,7 @@
 - [ ] Verify starting sync chain using Other Devices segmented tab. Ensured enabling `open tabs` will display tabs from other devices
 - [ ] Verify sharing pages with `Send To Your Devices`
 - [ ] Verify `Sync Internals` page data is populated when connected to sync chain
-- [ ] Verify when using `Delete Sync Account` will remove all devices from sync chain
+- [ ] Verify when using `Delete Sync Account` will remove all devices connected to sync chain
 
 ## Playlist & Autoplay
 
@@ -146,7 +145,7 @@
 - [ ] Verify tunneling works by navigating to `https://ipinfo.io`
 - [ ] Verify changing server region will update VPN connection
 - [ ] Verify changing protocol from WireGuard to IKEv2
-- [ ] Verify `Reset Configuration` will not change the region 
+- [ ] Verify `Reset Configuration` will reset everything but the region selected
 
 ## Bravery settings
 
@@ -158,6 +157,7 @@
 - [ ] Verify Block Cookie Consent Notices works when navigating to `https://amazon.co.uk`
 - [ ] Verify switch to app dialogs are suppressed when loading `reddit.com`, `twitter.com` and `google.com/maps`
 - [ ] Enable `Block Scripts` globally from `Settings`.  Visit `https://blizzard.com` and confirm the carousel is disabled at the top of the page. Tap on `Shields` and disable `Block Scripts`; the page content should load properly
+- [ ] Ensure blocking ads work using `Standard` and `Aggressive` settings
 - [ ] Verify that default Brave Shields settings take effect on pages with no site settings
 
 ### Fingerprint Tests
@@ -173,7 +173,7 @@
 - [ ] Verify that PDF is loaded over `HTTPS` at `https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf`
 - [ ] Verify that PDF is loaded over `HTTP` at `http://www.pdf995.com/samples/pdf.pdf`
 - [ ] Verify that `https://mixed-script.badssl.com` shows up as grey, not red (no mixed-content scripts are run)
-- [ ] Verify that search results from `https://startpage.com` open in a new tab (due to target being _blank_)
+- [ ] Verify certificate viewer works in url bar
 
 ## WebAuthn
 
