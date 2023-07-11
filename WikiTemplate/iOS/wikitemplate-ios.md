@@ -25,13 +25,13 @@
 - [ ] Verify that you can delete a bookmark folder with bookmarks inside
 - [ ] Verify adding a bookmark domain, subpaths is retained and you are successfully able to visit the domain subpath in a new tab
 - [ ] Verify adding bookmark for many open tabs works. Ensured opening all bookmarks in `Saved tabs` folder will load all the tabs
-- [ ] Verify import/export bookmarks works
+- [ ] Verify import and export bookmarks works
 
-## Favourites
+## Favorites
 
-- [ ] Verify editing favourites and changing their URLs updates the favicons accordingly
-- [ ] Verify that you can remove favourites
-- [ ] Verify that you can add new favourites from the `Share with...` menu
+- [ ] Verify editing favorites and changing their URLs updates the favicons accordingly
+- [ ] Verify that you can remove favorites
+- [ ] Verify that you can add new favorites from the `Share with...` menu
 - [ ] Verify adding Favorites Widget to home screen and ensure favorites are updated on the widget accordingly
 
 ## Context menus
@@ -48,14 +48,21 @@
 ## Navigation
 
 - [ ] Verify search works from the search box on NTP
-- [ ] Verify searching using voice search icon
+- [ ] Verify able to perform voice search by pressing the microphone icon in URL bar
 - [ ] Verify changing search engine in settings will update search queries for regular and private tabs
 - [ ] Verify tapping on arrow icon for the suggested searches will only populate that search query in the search box
 - [ ] Verify scanning QR code from the search box will higlight scanned url
-- [ ] Verify all actions in tool bar using Top Bar mode
-- [ ] Verify searching page content using `Find in Page`
+- [ ] Verify all actions in toolbar both in top and bottom positions
+- [ ] Verify searching page content using `Find in Page` works
 - [ ] Verify navigating social media and video sites does not cause loading issues when scrolling or reloading pages
-      
+
+## Navigation [iPad]
+
+- [ ] Verify user is able to navigate/search using connected hardware keyboard
+- [ ] Verify long pressing CMD key will display keyboard shortcuts
+- [ ] Ensure the keyboard shortcuts are working
+- [ ] Ensure using Brave with `Split View` & `Split Over` works with other apps
+
 ## Downloads
 
 - [ ] Verify that you can save an image from a site
@@ -66,7 +73,7 @@
 - [ ] Visit `http://theverge.com`, open any article, verify the reader mode icon is shown in the URL bar
 - [ ] Verify tapping on the reader mode icon opens the article in reader mode
 - [ ] Edit reader mode settings and open different pages in reader mode and verify if the setting is retained across each article
-- [ ] Verify reader mode works with tool bar on top enabled
+- [ ] Verify reader mode works when toolbar is set as Top Bar and Bottom Bar
 
 ## Gestures
 
@@ -98,7 +105,7 @@
 - [ ] Verify ads are only shown while the app is being used
 - [ ] Verify tapping on an ad notification shows the landing page
 - [ ] Verify inline-content ads show on Brave News and are correctly redeemed from the server
-- [ ] Verify `view`, `clicked`, `landed`, `dismiss`, and `downvote` confirmation states are logged based on the action. Ensured these are working for inline ads, ad notifications and Sponsored Images.
+- [ ] Verify `view`, `clicked`, `landed`, `dismiss`, and `downvote` confirmation states are logged based on the action. Ensure these are working for inline ads, ad notifications and sponsored images.
 
 ## Sync
 
@@ -111,8 +118,8 @@
 - [ ] Verify history sync is disabled by default. Enabling it starts sync'ing history items as well (limited to 200 entries)
 - [ ] Verify sync works on an upgraded profile and new bookmarks added post-upgrade sync across devices on the chain
 - [ ] Verify you can create a standalone Sync chain with one device
-- [ ] Verify starting sync chain using Other Devices segmented tab. Ensured enabling `open tabs` will display tabs from other devices
-- [ ] Verify sharing pages with `Send To Your Devices`
+- [ ] Verify starting sync chain using segmented tab for other devices. Ensure enabling `Open Tabs` will display tabs from other devices
+- [ ] Verify sharing pages with `Send To Your Devices` works as expected
 - [ ] Verify `Sync Internals` page data is populated when connected to sync chain
 - [ ] Verify when using `Delete Sync Account` will remove all devices connected to sync chain
 
@@ -121,14 +128,14 @@
 - [ ] Verify Playlist is enabled by default on a clean install
 - [ ] Verify when a site with audio/video is detected, `Playlist` button is shown in URL bar and a notification badge on the menu
 - [ ] Verify clicking the `Playlist` button adds audio/video to playlist and initiates offline play
-- [ ] Verify adding audio/video to playlist via share menu
-- [ ] Verify adding audio/video to playlist via long press context menu
+- [ ] Verify adding audio/video to playlist via share menu works as expected
+- [ ] Verify adding audio/video to playlist via long press context menu works as expected
 - [ ] Verify Autoplay is enabled by default
 - [ ] Verify with Autoplay enabled, able to play audio/video automatically
 - [ ] Verify with background audio enabled, able to play audio/video with device locked or app in background
 - [ ] Verify Playlist media works with CarPlay on iOS devices
 - [ ] Verify playback gestures are working in Playlist
-- [ ] Verify adding shared folder to playlist using `https://playlist.brave.com/bsa-sample`. Verify all actions on shared folder are working
+- [ ] Verify adding shared folder to playlist using https://playlist.brave.com/bsa-sample works. Verify all actions on shared folder are working
 
 ## Brave News
 
@@ -144,7 +151,7 @@
 - [ ] Verify purchasing VPN subscription will install VPN profile and establish connection
 - [ ] Verify tunneling works by navigating to `https://ipinfo.io`
 - [ ] Verify changing server region will update VPN connection
-- [ ] Verify changing protocol from WireGuard to IKEv2
+- [ ] Verify changing protocol from WireGuard to IKEv2 works as expected
 - [ ] Verify `Reset Configuration` will reset everything but the region selected
 
 ## Bravery settings
@@ -190,10 +197,3 @@
 ## Session storage
 
 - [ ] Verify that tabs restore when closed, including active tab
-
-## Navigation [iPad]
-
-- [ ] Verify user is able to navigate/search using connected hardware keyboard
-- [ ] Verify long pressing CMD key will display keyboard shortcuts
-- [ ] Ensure the keyboard shortcuts are working
-- [ ] Ensure using Brave with `Split View` & `Split Over` works with other apps
