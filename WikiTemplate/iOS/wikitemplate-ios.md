@@ -41,7 +41,7 @@
 - [ ] Make sure context menu items on content work with selected text
 - [ ] Make sure context menu items on content work inside an editable control (input, textarea, or contenteditable)
 - [ ] Verify you can open links in a new tab or private tab. Ensure you can open links in background tabs
-- [ ] Verify all actions work in context menu when long pressing on `+` in the tool bar
+- [ ] Verify all actions work in context menu when long pressing on `+` in the toolbar
 - [ ] Verify all actions work in context menu when long pressing on tab icon
 - [ ] Verify `Recently Closed Tabs` is opened when long pressing `+` icon in tab view
 
@@ -70,7 +70,7 @@
 
 ## Reader Mode
 
-- [ ] Visit `http://theverge.com`, open any article, verify the reader mode icon is shown in the URL bar
+- [ ] Visit `https://theverge.com`, open any article, verify the reader mode icon is shown in the URL bar
 - [ ] Verify tapping on the reader mode icon opens the article in reader mode
 - [ ] Edit reader mode settings and open different pages in reader mode and verify if the setting is retained across each article
 - [ ] Verify reader mode works when toolbar is set as Top Bar and Bottom Bar
@@ -135,7 +135,7 @@
 - [ ] Verify with background audio enabled, able to play audio/video with device locked or app in background
 - [ ] Verify Playlist media works with CarPlay on iOS devices
 - [ ] Verify playback gestures are working in Playlist
-- [ ] Verify adding shared folder to playlist using https://playlist.brave.com/bsa-sample works. Verify all actions on shared folder are working
+- [ ] Verify adding shared folder to playlist using `https://playlist.brave.com/bsa-sample` works. Verify all actions on shared folder are working
 
 ## Brave News
 
@@ -144,7 +144,7 @@
 - [ ] Verify inline-content ads are shown on Brave News
 - [ ] Verify able to add custom RSS feed to the list of sources. Ensure this is working when entering custom URL manually and through the share menu when at a blog page
 - [ ] Verify able to hide content from sources within the `Popular Sources` and `Suggested` categories by long-press on the card
-- [ ] Verify adding Top News Brave widget to home screen will display news articles. Ensure tapping on news articles will load in brave.
+- [ ] Verify adding Top News Brave widget to home screen will display news articles. Ensure tapping on news articles will load in brave
 
 ## VPN
 
@@ -157,12 +157,12 @@
 ## Bravery settings
 
 - [ ] Check that block ad and unblock ad works on `http://slashdot.org`
-- [ ] Check that toggling to blocking and allow ads works as expected. Ensure pre-roll ads are removed on `youtube.com`
+- [ ] Check that toggling to blocking and allow ads works as expected. Ensure pre-roll ads are removed on `https://youtube.com`
 - [ ] Verify that tapping through a cert error in `https://badssl.com` works
 - [ ] Verify Safe Browsing protection on `https://testsafebrowsing.appspot.com/` in the iOS
 - [ ] Verify debounce/deAMP settings using `https://dev-pages.brave.software/navigation-tracking/debouncing.html`
 - [ ] Verify Block Cookie Consent Notices works when navigating to `https://amazon.co.uk`
-- [ ] Verify switch to app dialogs are suppressed when loading `reddit.com`, `twitter.com` and `google.com/maps`
+- [ ] Verify switch to app dialogs are suppressed when loading `https://reddit.com`, `https://twitter.com` and `https://google.com/maps`
 - [ ] Enable `Block Scripts` globally from `Settings`.  Visit `https://blizzard.com` and confirm the carousel is disabled at the top of the page. Tap on `Shields` and disable `Block Scripts`; the page content should load properly
 - [ ] Ensure blocking ads work using `Standard` and `Aggressive` settings
 - [ ] Verify that default Brave Shields settings take effect on pages with no site settings
@@ -176,7 +176,7 @@
 ## Content tests
 
 - [ ] Go to `https://feedly.com` and make sure that the password can be saved.  Make sure the saved password is auto-populated when you visit the site again.
-- [ ] Open an email on `https://mail.google.com` and tap on a link. Make sure it works.
+- [ ] Open an email on `https://mail.google.com` and tap on a link. Make sure it works
 - [ ] Verify that PDF is loaded over `HTTPS` at `https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf`
 - [ ] Verify that PDF is loaded over `HTTP` at `http://www.pdf995.com/samples/pdf.pdf`
 - [ ] Verify that `https://mixed-script.badssl.com` shows up as grey, not red (no mixed-content scripts are run)
@@ -192,7 +192,7 @@
 
 ## App linker
 
-- [ ] Long-press on a link in the Twitter app to get the share picker, choose Brave. Verify Brave doesn't crash after opening the link.
+- [ ] Long-press on a link in the Twitter app to get the share picker, choose Brave. Verify Brave doesn't crash after opening the link
 
 ## Session storage
 
