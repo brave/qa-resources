@@ -24,12 +24,15 @@
 - [ ] Verify that you can delete a bookmark in edit mode
 - [ ] Verify that you can delete a bookmark folder with bookmarks inside
 - [ ] Verify adding a bookmark domain, subpaths is retained and you are successfully able to visit the domain subpath in a new tab
+- [ ] Verify adding bookmark for many open tabs works. Ensured opening all bookmarks in `Saved tabs` folder will load all the tabs
+- [ ] Verify import and export bookmarks works
 
-## Favourites
+## Favorites
 
-- [ ] Verify editing favourites and changing their URLs updates the favicons accordingly
-- [ ] Verify that you can remove favourites
-- [ ] Verify that you can add new favourites from the `Share with...` menu
+- [ ] Verify editing favorites and changing their URLs updates the favicons accordingly
+- [ ] Verify that you can remove favorites
+- [ ] Verify that you can add new favorites from the `Share with...` menu
+- [ ] Verify adding Favorites Widget to home screen and ensure favorites are updated on the widget accordingly
 
 ## Context menus
 
@@ -37,7 +40,28 @@
 - [ ] Make sure context menu items on content work with no selected text
 - [ ] Make sure context menu items on content work with selected text
 - [ ] Make sure context menu items on content work inside an editable control (input, textarea, or contenteditable)
-- [ ] Verify you can open links in a new tab or private tab. Ensure you can open links in background tabs.
+- [ ] Verify you can open links in a new tab or private tab. Ensure you can open links in background tabs
+- [ ] Verify all actions work in context menu when long pressing on `+` in the toolbar
+- [ ] Verify all actions work in context menu when long pressing on tab icon
+- [ ] Verify `Recently Closed Tabs` is opened when long pressing `+` icon in tab view
+
+## Navigation
+
+- [ ] Verify search works from the search box on NTP
+- [ ] Verify able to perform voice search by pressing the microphone icon in URL bar
+- [ ] Verify changing search engine in settings will update search queries for regular and private tabs
+- [ ] Verify tapping on arrow icon for the suggested searches will only populate that search query in the search box
+- [ ] Verify scanning QR code from the search box will higlight scanned url
+- [ ] Verify all actions in toolbar both in top and bottom positions
+- [ ] Verify searching page content using `Find in Page` works
+- [ ] Verify navigating social media and video sites does not cause loading issues when scrolling or reloading pages
+
+## Navigation [iPad]
+
+- [ ] Verify user is able to navigate/search using connected hardware keyboard
+- [ ] Verify long pressing CMD key will display keyboard shortcuts
+- [ ] Ensure the keyboard shortcuts are working
+- [ ] Ensure using Brave with `Split View` & `Split Over` works with other apps
 
 ## Downloads
 
@@ -46,9 +70,10 @@
 
 ## Reader Mode
 
-- [ ] Visit `http://theverge.com`, open any article, verify the reader mode icon is shown in the URL bar
+- [ ] Visit `https://theverge.com`, open any article, verify the reader mode icon is shown in the URL bar
 - [ ] Verify tapping on the reader mode icon opens the article in reader mode
 - [ ] Edit reader mode settings and open different pages in reader mode and verify if the setting is retained across each article
+- [ ] Verify reader mode works when toolbar is set as Top Bar and Bottom Bar
 
 ## Gestures
 
@@ -80,7 +105,7 @@
 - [ ] Verify ads are only shown while the app is being used
 - [ ] Verify tapping on an ad notification shows the landing page
 - [ ] Verify inline-content ads show on Brave News and are correctly redeemed from the server
-- [ ] Verify `view`,`clicked`, `landed`, and `dismiss` states are logged based on the action
+- [ ] Verify `view`, `clicked`, `landed`, `dismiss`, and `downvote` confirmation states are logged based on the action. Ensure these are working for inline ads, ad notifications and sponsored images.
 
 ## Sync
 
@@ -90,55 +115,72 @@
 - [ ] Verify that bookmarks from other devices on the chain show up on the mobile device after sync completes
 - [ ] Verify newly created bookmarks get synced to all devices on the Sync chain
 - [ ] Verify existing bookmarks before joining Sync chain also gets sync'd to all devices on the Sync chain
-- [ ] Verify history sync is disabled by default. Enabling it starts sync'ing history items as well (limited to 200 entries).
+- [ ] Verify history sync is disabled by default. Enabling it starts sync'ing history items as well (limited to 200 entries)
 - [ ] Verify sync works on an upgraded profile and new bookmarks added post-upgrade sync across devices on the chain
 - [ ] Verify you can create a standalone Sync chain with one device
+- [ ] Verify starting sync chain using segmented tab for other devices. Ensure enabling `Open Tabs` will display tabs from other devices
+- [ ] Verify sharing pages with `Send To Your Devices` works as expected
+- [ ] Verify `Sync Internals` page data is populated when connected to sync chain
+- [ ] Verify when using `Delete Sync Account` will remove all devices connected to sync chain
 
 ## Playlist & Autoplay
 
 - [ ] Verify Playlist is enabled by default on a clean install
 - [ ] Verify when a site with audio/video is detected, `Playlist` button is shown in URL bar and a notification badge on the menu
 - [ ] Verify clicking the `Playlist` button adds audio/video to playlist and initiates offline play
-- [ ] Verify able to add audio/video to playlist via share menu
-- [ ] Verify able to add audio/video to playlist via long press context menu
-- [ ] Verify Autoplay is disabled by default
+- [ ] Verify adding audio/video to playlist via share menu works as expected
+- [ ] Verify adding audio/video to playlist via long press context menu works as expected
+- [ ] Verify Autoplay is enabled by default
 - [ ] Verify with Autoplay enabled, able to play audio/video automatically
 - [ ] Verify with background audio enabled, able to play audio/video with device locked or app in background
+- [ ] Verify Playlist media works with CarPlay on iOS devices
+- [ ] Verify playback gestures are working in Playlist
+- [ ] Verify adding shared folder to playlist using `https://playlist.brave.com/bsa-sample` works. Verify all actions on shared folder are working
 
 ## Brave News
 
 - [ ] Verify Brave News opt-in is shown on a clean install
 - [ ] Verify once opted-in Brave News starts showing articles
-- [ ] Verify promoted content is shown on Brave News
 - [ ] Verify inline-content ads are shown on Brave News
-- [ ] Verify able to add custom RSS feed to the list of sources
-- [ ] Verify able to disable content from a particular publisher by long-press on the card
+- [ ] Verify able to add custom RSS feed to the list of sources. Ensure this is working when entering custom URL manually and through the share menu when at a blog page
+- [ ] Verify able to hide content from sources within the `Popular Sources` and `Suggested` categories by long-press on the card
+- [ ] Verify adding Top News Brave widget to home screen will display news articles. Ensure tapping on news articles will load in brave
+
+## VPN
+
+- [ ] Verify purchasing VPN subscription will install VPN profile and establish connection
+- [ ] Verify tunneling works by navigating to `https://ipinfo.io`
+- [ ] Verify changing server region will update VPN connection
+- [ ] Verify changing protocol from WireGuard to IKEv2 works as expected
+- [ ] Verify `Reset Configuration` will reset everything but the region selected
 
 ## Bravery settings
 
-- [ ] Check that HTTPS Everywhere works by loading `http://https-everywhere.badssl.com/`
-- [ ] Turning HTTPS Everywhere off or shields off both disable the redirect to `https://https-everywhere.badssl.com/`
 - [ ] Check that block ad and unblock ad works on `http://slashdot.org`
-- [ ] Check that toggling to blocking and allow ads works as expected
+- [ ] Check that toggling to blocking and allow ads works as expected. Ensure pre-roll ads are removed on `https://youtube.com`
 - [ ] Verify that tapping through a cert error in `https://badssl.com` works
-- [ ] Verify that Safe Browsing works `https://www.raisegame.com`
-- [ ] Enable `Block Scripts` globally from `Settings`.  Visit `https://twitter.com`, nothing should load. Tap on `Shields` and disable `Block Scripts`; the page should load properly.
+- [ ] Verify Safe Browsing protection on `https://testsafebrowsing.appspot.com/` in the iOS
+- [ ] Verify debounce/deAMP settings using `https://dev-pages.brave.software/navigation-tracking/debouncing.html`
+- [ ] Verify Block Cookie Consent Notices works when navigating to `https://amazon.co.uk`
+- [ ] Verify switch to app dialogs are suppressed when loading `https://reddit.com`, `https://twitter.com` and `https://google.com/maps`
+- [ ] Enable `Block Scripts` globally from `Settings`.  Visit `https://blizzard.com` and confirm the carousel is disabled at the top of the page. Tap on `Shields` and disable `Block Scripts`; the page content should load properly
+- [ ] Ensure blocking ads work using `Standard` and `Aggressive` settings
 - [ ] Verify that default Brave Shields settings take effect on pages with no site settings
 
 ### Fingerprint Tests
 
-  - [ ] Verify that turning on fingerprinting protection in preferences shows `3 fingerprints blocked` at `https://browserleaks.com/canvas`. Verify that turning it off in the Bravery menu shows `0 fingerprints blocked`.
-  - [ ] Verify that the audio fingerprint is blocked at `https://audiofingerprint.openwpm.com` when fingerprinting protection is on
-  - [ ] Verify that `https://diafygi.github.io/webrtc-ips/` doesn't leak IP address when `Block all fingerprinting protection` is on
+- [ ] Verify that the audio fingerprint is blocked at `https://audiofingerprint.openwpm.com` when fingerprinting protection is on
+- [ ] Verify that `https://diafygi.github.io/webrtc-ips/` doesn't leak IP address when `Block all fingerprinting protection` is on
+- [ ] Verify fingerprinting test cases in `https://dev-pages.brave.software/fingerprinting/farbling.html`
 
 ## Content tests
 
 - [ ] Go to `https://feedly.com` and make sure that the password can be saved.  Make sure the saved password is auto-populated when you visit the site again.
-- [ ] Open an email on `https://mail.google.com` and tap on a link. Make sure it works.
+- [ ] Open an email on `https://mail.google.com` and tap on a link. Make sure it works
 - [ ] Verify that PDF is loaded over `HTTPS` at `https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf`
 - [ ] Verify that PDF is loaded over `HTTP` at `http://www.pdf995.com/samples/pdf.pdf`
 - [ ] Verify that `https://mixed-script.badssl.com` shows up as grey, not red (no mixed-content scripts are run)
-- [ ] Verify that search results from `https://startpage.com` open in a new tab (due to target being _blank_)
+- [ ] Verify certificate viewer works in url bar
 
 ## WebAuthn
 
@@ -150,7 +192,7 @@
 
 ## App linker
 
-- [ ] Long-press on a link in the Twitter app to get the share picker, choose Brave. Verify Brave doesn't crash after opening the link.
+- [ ] Long-press on a link in the Twitter app to get the share picker, choose Brave. Verify Brave doesn't crash after opening the link
 
 ## Session storage
 
