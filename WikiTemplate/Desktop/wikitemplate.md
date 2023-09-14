@@ -56,7 +56,7 @@
 ### Chrome Web Store (CWS)
 
 - [ ] Verify that installing https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb from CWS displays the `Brave has not reviewed the extension.` warning via the "Add Extension" modal
-- [ ] Verify that installing https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd from CWS doesn't display the `Brave has not reviewed the extension.` warning via the "Add Extension" modal
+- [ ] Verify that installing https://chrome.google.com/webstore/detail/1password-%E2%80%93-password-mana/aeblfdkhhhdcdjpifhhbdiojplfjncoa from CWS doesn't display the `Brave has not reviewed the extension.` warning via the "Add Extension" modal
 
 ### PDF
 
