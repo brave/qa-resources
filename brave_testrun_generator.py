@@ -425,6 +425,22 @@ def laptop_CRminor_testruns(milestonever):
 
     print("--------------------------------------------------------\n")
 
+    print("Linux Checklist:")
+    print(laptop_CRminor_template)
+    print("")
+    linTitle = "Manual test run on Linux for " + milestonever
+    linList = ["OS/Linux",
+               "release-notes/exclude",
+               "tests",
+               "QA/Yes",
+               "OS/Desktop"]
+
+    if args.test is None:
+        bc_repo.create_issue(title=linTitle,
+                                 body=laptop_CRminor_template,
+                                 milestone=bc_milestone[milestonever],
+                                 labels=linList)
+
     return 0
 
 def crypto_desktop(milestonever):
@@ -1126,19 +1142,19 @@ print("#######################################################################"
 
 header = print("\nCreate test runs for:\n")
 laptop = print("1. Desktop Release (Full manual pass)")
-laptop_hf = print("2. Desktop Release (Reduced manual pass for Hotfix)")
-laptop_CRminor = print("3. Desktop Release (Basic checks for" 
-                  " minor Chromium bump)")
-android = print("4. Android Release (Full manual pass)")
-android_hf = print("5. Android Release (Reduced manual pass for Hotfix)")
-android_hf = print("6. Android Release (Basic checks for" 
-                  " minor Chromium bump)")
-ios = print("7. iOS Release")
-cyrpto_desktop = print("8. Crypto Wallet - Desktop")
-cyrpto_android = print("9. Crypto Wallet - Android")
-cyrpto_ios = print("10. Crypto Wallet - iOS")
-tor = print("11. Tor Release")
-ipfs = print("12. IPFS Release")
+#laptop_hf = print("2. Desktop Release (Reduced manual pass for Hotfix)")
+laptop_CRminor = print("2. Desktop Release (Basic checks for" 
+                  " hotfix/minor Chromium bump)")
+android = print("3. Android Release (Full manual pass)")
+#android_hf = print("5. Android Release (Reduced manual pass for Hotfix)")
+android_hf = print("4. Android Release (Basic checks for" 
+                  " hotfix/minor Chromium bump)")
+ios = print("5. iOS Release")
+cyrpto_desktop = print("6. Crypto Wallet - Desktop")
+cyrpto_android = print("7. Crypto Wallet - Android")
+cyrpto_ios = print("8. Crypto Wallet - iOS")
+tor = print("9. Tor Release")
+ipfs = print("10. IPFS Release")
 
 select_checklist = input("\nChoose the platform for which you want to" +
                          " generate the test run: ")
@@ -1147,39 +1163,39 @@ if(select_checklist == "1"):
     print("\nGenerating test runs for " +
           str(sorted(bc_milestone.keys())[0]))
     laptop_testruns(sorted(bc_milestone.keys())[0])
+#elif(select_checklist == "2"):
+#    print("\nGenerating test runs for " +
+#          str(sorted(bc_milestone.keys())[0]))
+#    laptop_hf_testruns(sorted(bc_milestone.keys())[0])
 elif(select_checklist == "2"):
     print("\nGenerating test runs for " +
           str(sorted(bc_milestone.keys())[0]))
-    laptop_hf_testruns(sorted(bc_milestone.keys())[0])
+    laptop_CRminor_testruns(sorted(bc_milestone.keys())[0])
 elif(select_checklist == "3"):
     print("\nGenerating test runs for " +
           str(sorted(bc_milestone.keys())[0]))
-    laptop_CRminor_testruns(sorted(bc_milestone.keys())[0])
+    android_testruns(sorted(bc_milestone.keys())[0])
+#elif(select_checklist == "5"):
+#    print("\nGenerating test runs for " +
+#          str(sorted(bc_milestone.keys())[0]))
+#    android_hf_testruns(sorted(bc_milestone.keys())[0])
 elif(select_checklist == "4"):
     print("\nGenerating test runs for " +
           str(sorted(bc_milestone.keys())[0]))
-    android_testruns(sorted(bc_milestone.keys())[0])
-elif(select_checklist == "5"):
-    print("\nGenerating test runs for " +
-          str(sorted(bc_milestone.keys())[0]))
-    android_hf_testruns(sorted(bc_milestone.keys())[0])
-elif(select_checklist == "6"):
-    print("\nGenerating test runs for " +
-          str(sorted(bc_milestone.keys())[0]))
     android_CRminor_testruns(sorted(bc_milestone.keys())[0])
-elif(select_checklist == "7"):
+elif(select_checklist == "5"):
     generate_ios_test = print("\nGenerating test runs for iOS ",
                               sorted(ios_milestone.keys())[0])
     iOS_testruns()
-elif(select_checklist == "8"):
+elif(select_checklist == "6"):
     generate_ios_test = print("\nGenerating Desktop Crypto Wallet Test run for",
                               sorted(bc_milestone.keys())[0])
     crypto_desktop(sorted(bc_milestone.keys())[0])
-elif(select_checklist == "9"):
+elif(select_checklist == "7"):
     generate_ios_test = print("\nGenerating Android Crypto Wallet Test run for",
                               sorted(bc_milestone.keys())[0])
     crypto_android(sorted(bc_milestone.keys())[0])
-elif(select_checklist == "10"):
+elif(select_checklist == "8"):
     generate_ios_test = print("\nGenerating iOS Crypto Wallet Test run for",
                               sorted(ios_milestone.keys())[0])
     crypto_iOS()
