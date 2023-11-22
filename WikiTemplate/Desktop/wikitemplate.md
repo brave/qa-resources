@@ -194,7 +194,6 @@
   - [ ] `cffkpbalmllkdoenhmdmpbkajipdjfam`: `rs-ABPFilterParserData.dat` & `regional_catalog.json` (AdBlock)
   - [ ] `gccbbckogglekeggclmmekihdgdpdgoe`: (Sponsored New Tab Images)
   - [ ] `jicbkmdloagakknpihibphagfckhjdih`: `speedreader-updater.dat`
-  - [ ] `oofiananboodjbbmdelgdommihjbkfag`: HTTPSE
   - [ ] `Safe Browsing`
 - [ ] Restart the browser, load `brave://components`, wait for 8 mins and verify that no component shows any errors
 
