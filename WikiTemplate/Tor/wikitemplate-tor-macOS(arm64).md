@@ -1,4 +1,4 @@
-### **`macOS 12.x Monterey`**
+### **`macOS 14.x Sonoma`**
 
 ### Tor Client Updater
 
@@ -14,7 +14,7 @@
 - [ ] Run `codesign -vvvv tor-<version-tor>-darwin-brave-<version-brave>` to confirm codesign is valid
 - [ ] For MacOS Catalina (10.15+) - Run `spctl -a -vv -t install tor-<version-tor>-darwin-brave-<version-brave>` to verify that the binary is notarized.
 
-### **`macOS 11.x Big Sur`**
+### **`macOS 13.x Ventura`**
 
 ### Tor Client Updater
 
