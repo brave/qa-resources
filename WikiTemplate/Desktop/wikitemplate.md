@@ -98,7 +98,6 @@
 
 - [ ] Visit https://fmarier.github.io/brave-testing/query-filter.html in a Private window and run the tests as directed
 
-
 ### TLS Pinning
 
 - [ ] Visit https://ssl-pinning.someblog.org/ and verify a pinning error is displayed
