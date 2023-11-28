@@ -131,6 +131,7 @@
   - [ ] Verify Rewards balance shows correct BAT and USD value on brave://rewards, panel, and NTP widget after you connect
   - [ ] Verify when you click on the BR panel while on a site, the panel displays site-specific information (site favicon, domain, attention %)
   - [ ] Verify BR panel shows message about an unverified creator
+  - [ ] Verify "Send Contribution" button is grayed out on the panel for an unverified creator and the tip banner cannot be accessed
   - [ ] Verify tip banner shows message about a creator with a different custodian
   - [ ] Verify you are able to tip a creator who has the same custodian as you
   - [ ] Verify you are able to perform an auto contribution
