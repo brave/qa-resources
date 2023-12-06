@@ -67,6 +67,10 @@
   - [ ] Visit `https://browserleaks.com/webrtc`, ensure 2 blocked items are listed in shields
   - [ ] Test that `https://diafygi.github.io/webrtc-ips/` doesn't leak IP address for each option under `Settings -> Privacy and Security -> WebRTC IP handling policy`
 
+### Query Filter
+
+- [ ] Visit https://fmarier.github.io/brave-testing/query-filter.html in a Private window and run the tests as directed
+
 ## Content Tests
 
 - [ ] Go to `https://brianbondy.com/` and click on the twitter icon on the top right. Verify that context menus work in the new twitter tab
