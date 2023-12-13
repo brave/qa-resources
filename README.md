@@ -51,7 +51,7 @@
     
    - For browser-laptop:
     
-    - In the terminal type <code>python3 braveautogen.py --test true</code> and select Enter/Return. This just displays the output in the terminal and does NOT create github issues. 
+    - In the terminal type <code>python3 brave_testrun_generator.py --test true</code> and select Enter/Return. This just displays the output in the terminal and does NOT create github issues. 
     - To create github issues, leave off the <code>--test true</code> flag and github issues will be created and assigned out.
 
   - For Android:
