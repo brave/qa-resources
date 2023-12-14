@@ -82,8 +82,7 @@
 - [ ] Verify you are able to create a new Rewards profile and are in the unverified state by default
   - [ ] Verify when you visit a creator in this state the panel shows a prompt to connect a custodian and no BAT information (earnings, balance, etc) is displayed
   - [ ] Verify when you visit brave://rewards in this state there are no Auto Contribution, Tipping, or summary panels on this page
-  - [ ] Verify you can toggle ads off/on from this page and the panel responds accordingly
-  - [ ] Verify you can toggle rewards off/on from the panel and the brave://rewards page responds accordingly
+  - [ ] Verify you can toggle notification ads off/on from the "Manage Brave Ads" panel on brave://rewards
 - [ ] Verify you are able to connect a custodian
   - [ ] Verify Rewards balance shows correct BAT and USD value on brave://rewards and panel after you connect
   - [ ] Verify when you click on the BR panel while on a site, the panel displays site-specific information (site favicon, domain, attention %)
