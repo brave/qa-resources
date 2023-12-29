@@ -79,6 +79,8 @@
 
 ## Brave Rewards
 
+- [ ] Verify that none of the reward endpoints are being contacted when a user visits a media creator (`youtube.com`, `reddit.com`, `twitter.com`, `github.com`) and hasn't joined rewards
+  - [ ] Verify that `rewards.brave.com`, `pcdn.brave.com`, `grant.rewards.brave.com` or `api.rewards.brave.com` are not being contacted
 - [ ] Verify you are able to create a new Rewards profile and are in the unverified state by default
   - [ ] Verify when you visit a creator in this state the panel shows a prompt to connect a custodian and no BAT information (earnings, balance, etc) is displayed
   - [ ] Verify when you visit brave://rewards in this state there are no Auto Contribution, Tipping, or summary panels on this page
@@ -87,13 +89,17 @@
 - [ ] Verify you are able to connect a custodian
   - [ ] Verify Rewards balance shows correct BAT and USD value on brave://rewards and panel after you connect
   - [ ] Verify when you click on the BR panel while on a site, the panel displays site-specific information (site favicon, domain, attention %)
-  - [ ] Verify BR panel and tip banner shows message about an unverified creator
+  - [ ] Verify BR panel shows message about an unverified creator
+  - [ ] Verify "Send Contribution" button is grayed out on the panel for an unverified creator and the tip banner cannot be accessed
+  - [ ] Verify tip banner shows message about a creator with a different custodian
   - [ ] Verify you are able to tip a creator who has the same custodian as you
   - [ ] Verify you are able to perform an auto contribution
   - [ ] Verify if you disable auto-contribute you are still able to tip creators
   - [ ] Verify if auto-contribute is disabled AC does not occur
   - [ ] Verify that there is no "Disconnect" option once connected to a custodian
 - [ ] Verify that you are able to reset rewards
+  - [ ] Verify that after rewards are reset, you are now in the non-opted in state
+  - [ ] Verify you can re-join rewards, the panel and brave://rewards page are now in the unverified state
 
 ## Brave Ads
 
