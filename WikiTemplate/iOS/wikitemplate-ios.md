@@ -105,7 +105,7 @@
 - [ ] Verify ads are only shown while the app is being used
 - [ ] Verify tapping on an ad notification shows the landing page
 - [ ] Verify inline-content ads show on Brave News and are correctly redeemed from the server
-- [ ] Verify `view`, `clicked`, `landed`, `dismiss`, and `downvote` confirmation states are logged based on the action. Ensure these are working for inline ads, ad notifications and sponsored images.
+- [ ] Verify `view`, `clicked`, `landed` and `dismiss` confirmation states are logged based on the action. Ensure these are working for inline ads, ad notifications and New Tab Page ads.
 
 ## Sync
 
