@@ -180,7 +180,7 @@
 - [ ] Verify that PDF is loaded over `HTTPS` at `https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf`
 - [ ] Verify that PDF is loaded over `HTTP` at `http://www.pdf995.com/samples/pdf.pdf`
 - [ ] Verify that `https://mixed-script.badssl.com` shows up as grey, not red (no mixed-content scripts are run)
-- [ ] Verify certificate viewer works in url bar
+- [ ] Verify that "Security Certificate" is shown in the main menu for secured websites
 
 ## WebAuthn
 
