@@ -38,7 +38,24 @@
 
 ## Chat functionality
 
+- [ ] Ensure `Summarize this page` and `Suggest questions...` suggestions are presented when using Leo on website
+- [ ] Ensure `Use page context for response` switch is enabled by default
+- [ ] Ensure disabling page context switch will remove suggestions
+- [ ] Ensure that suggested questions are displayed when using `Suggest questions`
+- [ ] Ensure that suggested questions are not lost when toggling the page context switch in chat
+- [ ] Ensure `Suggest questions` works after page is summarized
+- [ ] Ensure new chat icon is not displayed for new conversations
+- [ ] Ensure new conversation is started when using new chat icon in main chat window and in settings menu
+- [ ] Ensure changing default model in settings will not switch when starting new conversation in existing tab
+- [ ] Ensure chat model used is updated in a new tab after changing default models in settings
+- [ ] Ensure all menu items and buttons are displayed correctly and functional
+- [ ] Ensure there are no issues with the chat UI when using dark theme or Night mode
+- [ ] Ensure there are no issues using free model after using reachs rate limit
+
 ## Feedback UI
+
+- [ ] Ensure long pressing on responses from Leo will open feedback context menu
+- [ ] Ensure each option works in chat response feedback menu
 
 ## Ask Leo in search suggestion
 
