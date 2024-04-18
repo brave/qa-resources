@@ -25,8 +25,7 @@
 ## Tab Groups
 
 - [ ] Ensure tab-group is enabled by default
-- [ ] Verify toggling tab-group setting doesn't trigger a relaunch request
-- [ ] Verify tab-group is not reverted back to default setting after browser restart
+- [ ] Verify tab-group is not reverted back to default setting when changing it and then restarting the browser
 
 ## Developer Tools
 
