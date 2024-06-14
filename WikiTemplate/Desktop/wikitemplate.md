@@ -56,7 +56,6 @@
 ### Chrome Web Store (CWS)
 
 - [ ] Verify that installing https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb from CWS displays the `Brave has not reviewed the extension.` warning via the "Add Extension" modal
-- [ ] Verify that installing https://chrome.google.com/webstore/detail/1password-%E2%80%93-password-mana/aeblfdkhhhdcdjpifhhbdiojplfjncoa from CWS doesn't display the `Brave has not reviewed the extension.` warning via the "Add Extension" modal
 
 ### PDF
 
@@ -95,6 +94,10 @@
 - [ ] In `brave://settings/security`, choose a DNS provider from the providers listed under Use secure DNS, load `https://browserleaks.com/dns`, and verify your ISP's DNS resolvers aren't detected and shown; only your chosen DoH provider should appear.
 - [ ] Open a New Private Window with Tor, load `https://browserleaks.com/dns`, and verify your ISP's DNS resolvers aren't detected and shown.
 
+### Query Filter
+
+- [ ] Visit https://fmarier.github.io/brave-testing/query-filter.html in a Private window and run the tests as directed
+
 ### TLS Pinning
 
 - [ ] Visit https://ssl-pinning.someblog.org/ and verify a pinning error is displayed
@@ -125,30 +128,27 @@
   - [ ] Verify that `rewards.brave.com`, `pcdn.brave.com`, `grant.rewards.brave.com` or `api.rewards.brave.com` are not being contacted
 - [ ] Verify you are able to create a new Rewards profile and are in the unverified state by default
   - [ ] Verify when you visit a creator in this state the panel shows a prompt to connect a custodian and no BAT information (earnings, balance, etc) is displayed
-  - [ ] Verify when you click on an in-line tip button in this state, the tip banner indicates you must connect a custodian
   - [ ] Verify when you view the NTP widget in this state it shows a prompt to connect a custodian and no BAT information (earnings, balance, etc) is displayed
   - [ ] Verify when you visit brave://rewards in this state there are no Auto Contribution, Tipping, or summary panels on this page
-  - [ ] Verify you can toggle ads off/on from this page and the panel and NTP widget respond accordingly
-  - [ ] Verify you can toggle rewards off/on from the panel and the brave://rewards page and NTP widget respond accordingly
+  - [ ] Verify you can toggle notification ads off/on from the "Manage Brave Ads" panel on brave://rewards 
 - [ ] Verify you are able to connect a custodian
   - [ ] Verify Rewards balance shows correct BAT and USD value on brave://rewards, panel, and NTP widget after you connect
   - [ ] Verify when you click on the BR panel while on a site, the panel displays site-specific information (site favicon, domain, attention %)
-  - [ ] Verify BR panel and tip banner shows message about an unverified creator
-  - [ ] Verify BR panel and tip banner shows message about a creator with a different custodian
+  - [ ] Verify BR panel shows message about an unverified creator
+  - [ ] Verify "Send Contribution" button is grayed out on the panel for an unverified creator and the tip banner cannot be accessed
+  - [ ] Verify tip banner shows message about a creator with a different custodian
   - [ ] Verify you are able to tip a creator who has the same custodian as you
   - [ ] Verify you are able to perform an auto contribution
   - [ ] Verify if you disable auto-contribute you are still able to tip creators
   - [ ] Verify if auto-contribute is disabled AC does not occur
   - [ ] Verify that there is no "Disconnect" option once connected to a custodian
 - [ ] Verify that you are able to reset rewards
-  - [ ] Verify after rewards are reset, the panel, brave://rewards page, and NTP widget to back to the unverified state
+  - [ ] Verify that after rewards are reset, you are now in the non-opted in state
+  - [ ] Verify you can re-join rewards and the panel, brave://rewards page, and NTP widget are now in the unverified state
 
 ### Social-media blocking settings
 
 - [ ] Verify individual `Social media blocking` buttons works as intended when enabled/disabled by visiting https://fmarier.github.io/brave-testing/social-widgets.html
-- [ ] visit `brave://settings/privacy` -> `Site and Shields Settings` -> `Cookies and site data` and ensure that
-  - [ ] both `https://[*.]firebaseapp.com` & `https://accounts.google.com` are added into `Sites that can always use cookies` when `Allow Google login buttons on third party sites` is enabled
-  - [ ] both `https://[*.]firebaseapp.com` & `https://accounts.google.com` are removed from `Sites that can always use cookies` when `Allow Google login buttons on third party sites` is disabled
 - [ ] ensure that you can log in into https://www.expensify.com while `Allow use of third-party cookies for legacy Google Sign-In` is enabled
 - [ ] ensure that once `Allow use of third-party cookies for legacy Google Sign-In` has been disabled, you can't log in into https://www.expensify.com
 

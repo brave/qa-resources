@@ -105,7 +105,7 @@
 - [ ] Verify ads are only shown while the app is being used
 - [ ] Verify tapping on an ad notification shows the landing page
 - [ ] Verify inline-content ads show on Brave News and are correctly redeemed from the server
-- [ ] Verify `view`, `clicked`, `landed`, `dismiss`, and `downvote` confirmation states are logged based on the action. Ensure these are working for inline ads, ad notifications and sponsored images.
+- [ ] Verify `view`, `clicked`, `landed` and `dismiss` confirmation states are logged based on the action. Ensure these are working for inline ads, ad notifications and New Tab Page ads.
 
 ## Sync
 
@@ -180,7 +180,7 @@
 - [ ] Verify that PDF is loaded over `HTTPS` at `https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf`
 - [ ] Verify that PDF is loaded over `HTTP` at `http://www.pdf995.com/samples/pdf.pdf`
 - [ ] Verify that `https://mixed-script.badssl.com` shows up as grey, not red (no mixed-content scripts are run)
-- [ ] Verify certificate viewer works in url bar
+- [ ] Verify that "Security Certificate" is shown in the main menu for secured websites
 
 ## WebAuthn
 
