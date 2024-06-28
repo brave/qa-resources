@@ -28,16 +28,17 @@
   <li><p>In the qa-resources folder, create a file called <code>github.secret</code>. To do this in your Terminal session change directory to qa-resources if you are not already inside the directory. Then type <code>touch github.secret</code> and select Enter/Return.</p></li>
   <li><p>Next, you have to create a github key. 
   
-   - Login to your github account and navigate to <code>https://github.com/settings/profile</code></p>
-   - Open new tab and navigate to <code>https://github.com/settings/tokens </code></p>
-   - Click on **Generate new token** button. Give the token a meaningful name and select the checkboxes below for your token.</p>
-   - Select ‘Generate token’ button. Your token is now generated, it looks similar to an SHA. Copy the token. Do not exit this page yet.</p>
+   - Login to your github account and navigate to <code>https://github.com/settings/token</code></p>
+   - Select **`Tokens (Classic)`**</p>
+   - Click on **`Generate new token`** button.</p>
+   - Give the token a meaningful name and select **`gist`**, **`repo`**, **`workflow`** checkboxes below for your token.</p>
+   - Select **`Generate token`** button. Your token is now generated, it looks similar to an SHA. Copy the token. Do not exit this page yet.</p></li>
 <li><p>Add this token to your github.secret file. 
   
    - To do this, in your Terminal session change directory to qa-resources if you are not already inside the directory. </p>
    - Then type <code>vi github.secret</code> and select Enter/Return.</p>
    - Since you’ve already copied your token, type <code>i</code>  and paste your token. Then hit the Esc key.</p>
-   - Now type <code>:wq</code> to save and exit the file.
+   - Now type <code>:wq</code> to save and exit the file.</p>
    - If you want to verify that the token was saved correctly, you can type <code>cat github.secret</code> and your token will display.</p></li>
   </ol>
 
