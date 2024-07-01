@@ -11,7 +11,6 @@ As per process, QA runs through the following cases to ensure that the major chr
   - [ ] `gkboaolpopklhgplhaaiboijnklogmbc`: Brave Ad Block List Catalog
   - [ ] `iodkpdagapdfkphljnddpjlldadblomo`: Brave Ad Block Updater
   - [ ] `mfddibmblmbccpadfndgakiopmmhebop`: Brave Ad Block List Catalog
-  - [ ] `oofiananboodjbbmdelgdommihjbkfag`: HTTPSE
   - [ ] `Safe Browsing`
 - [ ] Restart the browser, load `brave://components`, wait for 8 mins and verify that no component shows any errors
 

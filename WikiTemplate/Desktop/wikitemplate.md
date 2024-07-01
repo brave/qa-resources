@@ -193,7 +193,7 @@
   - [ ] `CertificateRevocation`
   - [ ] `cffkpbalmllkdoenhmdmpbkajipdjfam`: `rs-ABPFilterParserData.dat` & `regional_catalog.json` (AdBlock)
   - [ ] `gccbbckogglekeggclmmekihdgdpdgoe`: (Sponsored New Tab Images)
-  - [ ] `oofiananboodjbbmdelgdommihjbkfag`: HTTPSE
+  - [ ] `jicbkmdloagakknpihibphagfckhjdih`: `speedreader-updater.dat`
   - [ ] `Safe Browsing`
 - [ ] Restart the browser, load `brave://components`, wait for 8 mins and verify that no component shows any errors
 
