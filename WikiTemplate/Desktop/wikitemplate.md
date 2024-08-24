@@ -51,7 +51,7 @@
 
 ### IPFS
 
-- [ ] Load `vitalik.eth`.  Click on `Proceed using Infura server`. Click on `Use a Brave local IPFS node`.  Verify the content loads from `ipfs://bafybeigsn4u4nv4uyskxhewakk5m2j2lluzhsbsayp76zh7nbqznrxwm7e/`.
+- [ ] Load `vitalik.eth`.  Click on `Proceed using Infura server`. Confirm no IPFS interstitial page is shown. Verify the content is loaded via public gateway.
 
 ### Chrome Web Store (CWS)
 
