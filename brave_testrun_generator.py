@@ -50,8 +50,8 @@ def laptop_testruns(milestonever):
 
     wiki_laptop_file = open("WikiTemplate/Desktop/wikitemplate.md", "r")
     laptop_template = wiki_laptop_file.read()
-    wiki_macOS_arm = open("WikiTemplate/Desktop/wikitemplate-macOS-arm64.md", "r")
-    macOS_arm64 = wiki_macOS_arm.read()
+    wiki_macOS_intel = open("WikiTemplate/Desktop/wikitemplate-macOS-x64.md", "r")
+    macOS_x64 = wiki_macOS_intel.read()
 
     for issue in bc_repo.get_issues(
         milestone=bc_milestone[milestonever], sort="created",
@@ -81,12 +81,12 @@ def laptop_testruns(milestonever):
                 output_line = " - [ ] " + issue_title + ".([#" +\
                         str(issue.number) + "](" + issue.html_url + "))"
                 checklist.append(output_line)
-                if("QA Pass-macOS" not in label_names and
+                if("QA Pass-macOS-arm64" not in label_names and
                         "OS/Windows" not in label_names and
                         "OS/Linux" not in label_names and
                         "QA/No" not in label_names and
                         "tests" not in label_names):
-                    mac_checklist.append(output_line)
+                    macarm64_checklist.append(output_line)
 
                 if("QA Pass-Win64" not in label_names and
                         "OS/macOS" not in label_names and
@@ -112,26 +112,8 @@ def laptop_testruns(milestonever):
         print(line)
     print("")
 
-    print("\nMac Checklist (Intel):")
+    print("\nMac Checklist (arm64):")
     print(laptop_template)
-    print("")
-    macTitle = "Manual test run on macOS (Intel) for " + milestonever
-    macList = ["OS/macOS",
-               "release-notes/exclude",
-               "tests",
-               "QA/Yes",
-               "OS/Desktop"]
-
-    if args.test is None:
-        bc_repo.create_issue(title=macTitle,
-                                 body=laptop_template,
-                                 milestone=bc_milestone[milestonever],
-                                 labels=macList)
-
-    print("--------------------------------------------------------\n")
-
-    print("Mac Checklist (arm64):")
-    print(macOS_arm64)
     print("")
     macarm64Title = "Manual test run on macOS (arm64) for " + milestonever
     macarm64List = ["OS/macOS-arm64",
@@ -142,9 +124,27 @@ def laptop_testruns(milestonever):
 
     if args.test is None:
         bc_repo.create_issue(title=macarm64Title,
-                                 body=macOS_arm64,
+                                 body=laptop_template,
                                  milestone=bc_milestone[milestonever],
                                  labels=macarm64List)
+
+    print("--------------------------------------------------------\n")
+
+    print("Mac Checklist (x64):")
+    print(macOS_x64)
+    print("")
+    macx64Title = "Manual test run on macOS (x64) for " + milestonever
+    macx64List = ["OS/macOS",
+               "release-notes/exclude",
+               "tests",
+               "QA/Yes",
+               "OS/Desktop"]
+
+    if args.test is None:
+        bc_repo.create_issue(title=macTitle,
+                                 body=macOS_x64,
+                                 milestone=bc_milestone[milestonever],
+                                 labels=macx64List)
 
     print("--------------------------------------------------------\n")
 
@@ -188,8 +188,8 @@ def laptop_CRminor_testruns(milestonever):
 
     wiki_laptop_CRminor = open("WikiTemplate/Desktop/Minor_CR_Bump/wikitemplate-minorCRbumpDesktop.md", "r")
     laptop_CRminor_template = wiki_laptop_CRminor.read()
-    wiki_macOS_arm = open("WikiTemplate/Desktop/Minor_CR_Bump/wikitemplate-minorCRbump-macOS-arm64.md", "r")
-    macOS_arm64 = wiki_macOS_arm.read()
+    wiki_macOS_intel = open("WikiTemplate/Desktop/Minor_CR_Bump/wikitemplate-minorCRbump-macOS-x64.md", "r")
+    macOS_x64 = wiki_macOS_intel.read()
 
     for issue in bc_repo.get_issues(
         milestone=bc_milestone[milestonever], sort="created",
@@ -219,12 +219,12 @@ def laptop_CRminor_testruns(milestonever):
                 output_line = " - [ ] " + issue_title + ".([#" +\
                         str(issue.number) + "](" + issue.html_url + "))"
                 checklist.append(output_line)
-                if("QA Pass-macOS" not in label_names and
+                if("QA Pass-macOS-arm64" not in label_names and
                         "OS/Windows" not in label_names and
                         "OS/Linux" not in label_names and
                         "QA/No" not in label_names and
                         "tests" not in label_names):
-                    mac_checklist.append(output_line)
+                    macarm64_checklist.append(output_line)
 
                 if("QA Pass-Win64" not in label_names and
                         "OS/macOS" not in label_names and
@@ -238,26 +238,8 @@ def laptop_CRminor_testruns(milestonever):
         print(line)
     print("")
 
-    print("\nMac Checklist (Intel):")
+    print("\nMac Checklist (arm64):")
     print(laptop_CRminor_template)
-    print("")
-    macTitle = "Manual test run on macOS (Intel) for " + milestonever
-    macList = ["OS/macOS",
-               "release-notes/exclude",
-               "tests",
-               "QA/Yes",
-               "OS/Desktop"]
-
-    if args.test is None:
-        bc_repo.create_issue(title=macTitle,
-                                 body=laptop_CRminor_template,
-                                 milestone=bc_milestone[milestonever],
-                                 labels=macList)
-
-    print("--------------------------------------------------------\n")
-
-    print("Mac Checklist(arm64):")
-    print(macOS_arm64)
     print("")
     macarm64Title = "Manual test run on macOS (arm64) for " + milestonever
     macarm64List = ["OS/macOS-arm64",
@@ -268,9 +250,27 @@ def laptop_CRminor_testruns(milestonever):
 
     if args.test is None:
         bc_repo.create_issue(title=macarm64Title,
-                                 body=macOS_arm64,
+                                 body=laptop_CRminor_template,
                                  milestone=bc_milestone[milestonever],
                                  labels=macarm64List)
+
+    print("--------------------------------------------------------\n")
+
+    print("Mac Checklist(x64):")
+    print(macOS_x64)
+    print("")
+    macx64Title = "Manual test run on macOS (x64) for " + milestonever
+    macx64List = ["OS/macOS",
+               "release-notes/exclude",
+               "tests",
+               "QA/Yes",
+               "OS/Desktop"]
+
+    if args.test is None:
+        bc_repo.create_issue(title=macx64Title,
+                                 body=macOS_x64,
+                                 milestone=bc_milestone[milestonever],
+                                 labels=macx64List)
 
     print("--------------------------------------------------------\n")
 
