@@ -184,139 +184,6 @@ def laptop_testruns(milestonever):
 
     return 0 
 
-def laptop_hf_testruns(milestonever):
-
-    wiki_laptop_hf = open("WikiTemplate/Desktop/Reduced/wikitemplate-ReducedDesktop.md", "r")
-    laptop_hf_template = wiki_laptop_hf.read()
-    wiki_macOS_arm = open("WikiTemplate/Desktop/wikitemplate-macOS-arm64.md", "r")
-    macOS_arm64 = wiki_macOS_arm.read()
-
-    for issue in bc_repo.get_issues(
-        milestone=bc_milestone[milestonever], sort="created",
-            direction="asc", state="closed"):
-        if("pull" not in issue.html_url):
-            original_issue_title = issue.title
-            issue_title = original_issue_title
-            if(original_issue_title[0].islower()):
-                lower = original_issue_title[0]
-                upper = original_issue_title[0].upper()
-                issue_title = original_issue_title.replace(lower, upper, 1)
-
-            labels = issue.get_labels()
-            label_names = []
-
-            for label in labels:
-                label_names.append(label.name)
-            if("release-notes/include" in label_names and
-                    "QA/No" not in label_names and
-                    "tests" not in label_names):
-                output_line = " - " + issue_title + ".([#" +\
-                    str(issue.number) + "](" + issue.html_url + "))"
-                release_notes.append(output_line)
-
-            if("QA/Yes" in label_names and "QA/No" not in label_names and
-                    "tests" not in label_names):
-                output_line = " - [ ] " + issue_title + ".([#" +\
-                        str(issue.number) + "](" + issue.html_url + "))"
-                checklist.append(output_line)
-                if("QA Pass-macOS" not in label_names and
-                        "OS/Windows" not in label_names and
-                        "OS/Linux" not in label_names and
-                        "QA/No" not in label_names and
-                        "tests" not in label_names):
-                    mac_checklist.append(output_line)
-
-                if("QA Pass-Win64" not in label_names and
-                        "OS/macOS" not in label_names and
-                        "OS/Linux" not in label_names and
-                        "QA/No" not in label_names and
-                        "tests" not in label_names):
-                    win64_checklist.append(output_line)
-
-                if("QA Pass-Linux" not in label_names and
-                        "OS/Windows" not in label_names and
-                        "OS/macOS" not in label_names and
-                        "QA/No" not in label_names and
-                        "tests" not in label_names):
-                    linux_checklist.append(output_line)
-
-    print("\nRelease Notes ")
-    for line in release_notes:
-        print(line)
-    print("")
-
-    print("\nMac Checklist (Intel):")
-    print(laptop_hf_template)
-    print("")
-    macTitle = "Manual test run on macOS (Intel) for " + milestonever
-    macList = ["OS/macOS",
-               "release-notes/exclude",
-               "tests",
-               "QA/Yes",
-               "OS/Desktop"]
-
-    if args.test is None:
-        bc_repo.create_issue(title=macTitle,
-                                 body=laptop_hf_template,
-                                 milestone=bc_milestone[milestonever],
-                                 labels=macList)
-
-    print("--------------------------------------------------------\n")
-
-    print("Mac Checklist(arm64):")
-    print(macOS_arm64)
-    print("")
-    macarm64Title = "Manual test run on macOS (arm64) for " + milestonever
-    macarm64List = ["OS/macOS-arm64",
-               "release-notes/exclude",
-               "tests",
-               "QA/Yes",
-               "OS/Desktop"]
-
-    if args.test is None:
-        bc_repo.create_issue(title=macarm64Title,
-                                 body=macOS_arm64,
-                                 milestone=bc_milestone[milestonever],
-                                 labels=macarm64List)
-
-    print("--------------------------------------------------------\n")
-
-    print("Win64 Checklist:")
-    print(laptop_hf_template)
-    print("")
-    winTitle = "Manual test run on Windows x64 for " + milestonever
-    winList = ["OS/Windows",
-               "release-notes/exclude",
-               "tests", 
-               "QA/Yes",
-               "OS/Desktop"]
-
-    if args.test is None:
-        bc_repo.create_issue(title=winTitle,
-                                 body=laptop_hf_template,
-                                 milestone=bc_milestone[milestonever],
-                                 labels=winList)
-
-    print("--------------------------------------------------------\n")
-
-    print("Linux Checklist:")
-    print(laptop_hf_template)
-    print("")
-    linTitle = "Manual test run on Linux for " + milestonever
-    linList = ["OS/Linux",
-               "release-notes/exclude",
-               "tests",
-               "QA/Yes",
-               "OS/Desktop"]
-
-    if args.test is None:
-        bc_repo.create_issue(title=linTitle,
-                                 body=laptop_hf_template,
-                                 milestone=bc_milestone[milestonever],
-                                 labels=linList)
-
-    return 0
-
 def laptop_CRminor_testruns(milestonever):
 
     wiki_laptop_CRminor = open("WikiTemplate/Desktop/Minor_CR_Bump/wikitemplate-minorCRbumpDesktop.md", "r")
@@ -572,105 +439,6 @@ def android_testruns(milestonever):
                                   body=android_template,
                                   milestone=bc_milestone[milestonever],
                                   labels=AndroidTablist)
-
-    print("--------------------------------------------------------\n")
-
-    return 0
-
-def android_hf_testruns(milestonever):
-
-    wiki_android_hf = open("WikiTemplate/Android/wikitemplate-ReducedAndroid.md", "r")
-    android_hf_template = wiki_android_hf.read()
-
-    for issue in bc_repo.get_issues(
-            milestone=bc_milestone[milestonever],
-            sort="created",
-            direction="asc",
-            state="closed"):
-        if("pull" not in issue.html_url):
-            original_issue_title = issue.title
-            issue_title = original_issue_title
-            if(original_issue_title[0].islower()):
-                lower = original_issue_title[0]
-                upper = original_issue_title[0].upper()
-                issue_title = original_issue_title.replace(lower, upper, 1)
-
-            labels = issue.get_labels()
-            label_names = []
-
-            for label in labels:
-                label_names.append(label.name)
-            if("QA/Yes" in label_names and 
-                    "OS/Android" in label_names and
-                    "tests" not in label_names and
-                    "QA/No" not in label_names):
-                output_line = " - " + issue_title + ".([#" +\
-                    str(issue.number) + "])" + issue.html_url + "))"
-                release_notes.append(output_line)
-
-            if("QA/Yes" in label_names and "QA/No" not in label_names):
-                output_line = " - [ ] " + issue_title + ". ([#" +\
-                    str(issue.number) + "](" + issue.html_url + "))"
-                checklist.append(output_line)
-                checklist.append(issue.html_url)
-                if("QA Pass - Android ARM" not in label_names and
-                        "checked by qa" not in label_names and
-                        "tests" not in label_names and
-                        "x86" not in label_names and
-                        "tablet-specific" not in label_names):
-                    android_arm_checklist.append(output_line)
-
-                if("QA Pass - Android Tab" not in label_names and
-                        "checked by qa" not in label_names and
-                        "tests" not in label_names and
-                        "x86" not in label_names and
-                        "phone-specific" not in label_names):
-                    android_tab_checklist.append(output_line)
-
-    print("\nRelease Notes:")
-    for line in release_notes:
-        print(line)
-    print("")
-
-    print("\nChecklist:")
-    for line in checklist:
-        print(line)
-    print("")
-
-    print("\nAndroid ARM Checklist:")
-    print(android_hf_template)
-    print("")
-    AndroidARMtitle = "Manual test run on Android ARM  for " + milestonever
-    AndroidARMlist = ["ARM",
-                      "release-notes/exclude",
-                      "tests",
-                      "QA/Yes",
-                      "OS/Android"]
-
-    if args.test is None:
-        bc_repo.create_issue(title=AndroidARMtitle,
-                                  body=android_hf_template,
-                                  milestone=bc_milestone[milestonever],
-                                  labels=AndroidARMlist)
-
-    print("--------------------------------------------------------\n")
-
-    print("Android Tab Checklist:")
-    print(android_hf_template)
-    print("")
-    AndroidTabtitle = "Manual test run on Android Tab  for " + milestonever
-    AndroidTablist = ["ARM",
-                      "release-notes/exclude",
-                      "tests",
-                      "QA/Yes",
-                      "OS/Android"]
-
-    if args.test is None:
-        bc_repo.create_issue(title=AndroidTabtitle,
-                                  body=android_hf_template,
-                                  milestone=bc_milestone[milestonever],
-                                  labels=AndroidTablist)
-
 
     print("--------------------------------------------------------\n")
 
@@ -1163,10 +931,6 @@ if(select_checklist == "1"):
     print("\nGenerating test runs for " +
           str(sorted(bc_milestone.keys())[0]))
     laptop_testruns(sorted(bc_milestone.keys())[0])
-#elif(select_checklist == "2"):
-#    print("\nGenerating test runs for " +
-#          str(sorted(bc_milestone.keys())[0]))
-#    laptop_hf_testruns(sorted(bc_milestone.keys())[0])
 elif(select_checklist == "2"):
     print("\nGenerating test runs for " +
           str(sorted(bc_milestone.keys())[0]))
@@ -1175,10 +939,6 @@ elif(select_checklist == "3"):
     print("\nGenerating test runs for " +
           str(sorted(bc_milestone.keys())[0]))
     android_testruns(sorted(bc_milestone.keys())[0])
-#elif(select_checklist == "5"):
-#    print("\nGenerating test runs for " +
-#          str(sorted(bc_milestone.keys())[0]))
-#    android_hf_testruns(sorted(bc_milestone.keys())[0])
 elif(select_checklist == "4"):
     print("\nGenerating test runs for " +
           str(sorted(bc_milestone.keys())[0]))
