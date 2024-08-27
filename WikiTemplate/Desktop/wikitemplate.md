@@ -57,6 +57,24 @@
 
 - [ ] Verify that installing https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb from CWS displays the `Brave has not reviewed the extension.` warning via the "Add Extension" modal
 
+### Manifest V2 Extensions
+
+- [ ] Under `brave://settings/extensions/v2` toggle "Enable NoScript" on. Be sure to turn off any other extensions listed here if they are on.
+     - [ ] Navigate to https://underpassapp.com/StopTheScript/noscript.html and confirm that the page says "JavaScript is disabled".
+     - [ ] Confirm you can open the extension's panel without any errors.
+- [ ] Under `brave://settings/extensions/v2` toggle "Enable uBlock Origin" on. Be sure to turn off any other extensions listed here if they are on.
+     - [ ] Navigate to a site which contains ads and toggle shields off. Reload the page and confirm ads are still blocked.
+     - [ ] Confirm you can open the extension's panel without any errors.
+     - [ ] Confirm panel reflects that items are blocked as expected.     
+- [ ] Under `brave://settings/extensions/v2` toggle "Enable uMatrix" on. Be sure to turn off any other extensions listed here if they are on.
+     - [ ] Navigate to a site which contains ads and toggle shields off. Reload the page and confirm ads are still blocked.
+     - [ ] Confirm you can open the extension's panel without any errors.
+     - [ ] Confirm panel reflects that items are blocked as expected.     
+- [ ] Under `brave://settings/extensions/v2` toggle "Enable AdGuard" on. Be sure to turn off any other extensions listed here if they are on.
+     - [ ] Navigate to a site which contains ads and toggle shields off. Reload the page and confirm ads are still blocked.
+     - [ ] Confirm you can open the extension's panel without any errors.
+     - [ ] Confirm panel reflects that items are blocked as expected.     
+
 ### PDF
 
 - [ ] Test that you can print a PDF
