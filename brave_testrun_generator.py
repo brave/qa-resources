@@ -141,7 +141,7 @@ def laptop_testruns(milestonever):
                "OS/Desktop"]
 
     if args.test is None:
-        bc_repo.create_issue(title=macTitle,
+        bc_repo.create_issue(title=macx64Title,
                                  body=macOS_x64,
                                  milestone=bc_milestone[milestonever],
                                  labels=macx64List)
