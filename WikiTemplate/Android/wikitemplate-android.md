@@ -57,6 +57,7 @@
 - [ ] Turning HTTPS Everywhere off and shields off both disable the redirect to `https://https-everywhere.badssl.com/`
 - [ ] Check that toggling to blocking and allow ads works as expected
 - [ ] Verify that clicking through a cert error in `https://badssl.com/` works
+- [ ] Verify that Safe Browsing protection is enabled in `https://testsafebrowsing.appspot.com`
 - [ ] Visit `https://twitter.com/` and then turn on script blocking, nothing should load. Allow it from the script blocking UI in the URL bar and it should work.
 - [ ] Verify that default Bravery settings take effect on pages with no site settings
 - [ ] Verify that 3rd party storage results are blank at `https://jsfiddle.net/7ke9r14a/7/` when 3rd party cookies are blocked
