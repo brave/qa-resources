@@ -49,9 +49,10 @@
 
 - [ ] Verify search works from the search box on NTP
 - [ ] Verify able to perform voice search by pressing the microphone icon in URL bar
+- [ ] Verify that searching for `javascript:alert(123)` via the omnibox doesn't do anything/trigger a JS modal
 - [ ] Verify changing search engine in settings will update search queries for regular and private tabs
 - [ ] Verify tapping on arrow icon for the suggested searches will only populate that search query in the search box
-- [ ] Verify scanning QR code from the search box will higlight scanned url
+- [ ] Verify scanning QR code from the search box will highlight scanned url
 - [ ] Verify all actions in toolbar both in top and bottom positions
 - [ ] Verify searching page content using `Find in Page` works
 - [ ] Verify navigating social media and video sites does not cause loading issues when scrolling or reloading pages
@@ -78,6 +79,7 @@
 ## Gestures
 
 - [ ] Verify pinch to zoom in/out gestures work on `https://www.homedepot.com`
+- [ ] Verify that the `Page Zoom` handler under `Settings` works
 - [ ] Verify that navigating to a different origin resets the zoom
 - [ ] Swipe back and forward to navigate, verify this works as expected
 
@@ -164,8 +166,10 @@
 - [ ] Verify Block Cookie Consent Notices works when navigating to `https://amazon.co.uk`
 - [ ] Verify switch to app dialogs are suppressed when loading `https://reddit.com`, `https://twitter.com` and `https://google.com/maps`
 - [ ] Enable `Block Scripts` globally from `Settings`.  Visit `https://blizzard.com` and confirm the carousel is disabled at the top of the page. Tap on `Shields` and disable `Block Scripts`; the page content should load properly
+- [ ] Enable `Block Scripts` via shields panel under `https://blizzard.com` and then load `https://kkarikos.github.io` and ensure that `Block Scripts` isn't persisting on other websites/navigation.
 - [ ] Ensure blocking ads work using `Standard` and `Aggressive` settings
 - [ ] Verify that default Brave Shields settings take effect on pages with no site settings
+- [ ] Verify that the `Cloudflare` CAPTCHA check under `https://browser-compat.turnstile.workers.dev` passes when clicking on `Verify you are human`.
 
 ### Fingerprint Tests
 
@@ -197,3 +201,5 @@
 ## Session storage
 
 - [ ] Verify that tabs restore when closed, including active tab
+- [ ] Verify that Brave restores/loads without any obvious performance issues when creating a large profile using the following `QA Debug` settings:
+  - [ ] `Load all QA Links`, `Create 1000 Tabs`, `Create 1000 Bookmark Entries`, `Create 1000 History Entries`
