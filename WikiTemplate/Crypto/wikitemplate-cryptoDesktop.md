@@ -29,7 +29,7 @@
 - [ ] Verify when a Dapp connection is revoked, panel shows a `Disconnected` state notification
 - [ ] Verify selecting `Connected Sites` from panel menu loads `brave://settings/content/<Network>` for Ethereum/Solana based on selected account
 - [ ] Verify selecting `View on Block explorer` from panel loads the corresponding account's details on the network block explorer
-- [ ] Verify selecting `Help Center` opens a new tab and loads `https://support.brave.com/hc/en-us/articles/4415497656461-Brave-Walllet-FAQ`
+- [ ] Verify selecting `Help Center` opens a new tab and loads `https://support.brave.app/hc/en-us/articles/4415497656461-Brave-Walllet-FAQ`
 - [ ] Verify you are able to lock the wallet from panel menu
 - [ ] Verify clicking on the expand button on the top-left of panel loads the wallet page in a new tab
 
