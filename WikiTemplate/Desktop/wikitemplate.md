@@ -42,13 +42,6 @@
 - [ ] Verify selecting `Manage custom filters` opens `brave://adblock` in a NTP
 - [ ] Verify removing the rule from `brave://adblock` reflects the change on the website, after reload
 
-### Extensions/Plugins
-
-- [ ] Verify pdfium, Torrent viewer extensions are installed automatically on fresh profile and cannot be disabled (they don't show up in `brave://extensions`)
-- [ ] Verify older version of an extension gets updated to new version via Google server
-- [ ] Verify that `magnet` links and `.torrent` files correctly open WebTorrent and you're able to download the file(s)
-  - **Tip:** Free torrents available via https://webtorrent.io/free-torrents
-
 ### IPFS
 
 - [ ] Load `vitalik.eth`.  Click on `Proceed using Infura server`. Confirm no IPFS interstitial page is shown. Verify the content is loaded via public gateway.
@@ -56,6 +49,7 @@
 ### Chrome Web Store (CWS)
 
 - [ ] Verify that installing https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb from CWS displays the `Brave has not reviewed the extension.` warning via the "Add Extension" modal
+- [ ] Verify older version of an extension gets updated to new version via Google server
 
 ### Manifest V2 Extensions
 
@@ -191,7 +185,6 @@
 - [ ] Visit https://check.torproject.org in a Tor window, note down exit node IP address. Click `New Tor connection for this site` in app menu, ensure the exit node IP address changes after page is reloaded
 - [ ] Visit https://protonmailrmez3lotccipshtkleegetolb73fuirgj7r4o4vfu7ozyd.onion, https://brave4u7jddbv7cyviptqjc7jusxh72uik7zt6adtckl5f4nwy2v72qd.onion/, and https://search.brave4u7jddbv7cyviptqjc7jusxh72uik7zt6adtckl5f4nwy2v72qd.onion/ in a Tor window and ensure all pages resolve
 - [ ] Visit https://browserleaks.com/geo in a Tor window, ensure location isn't shown
-- [ ] Verify Torrent viewer doesn't load in a Tor window
 - [ ] Ensure you are able to download a file in a Tor window. Verify all Download/Cancel, Download/Retry and Download works in Tor window
 
 ### Cookie and Cache
