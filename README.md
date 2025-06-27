@@ -82,8 +82,6 @@ Current open milestones for iOS
 NOTE:
 
 For Tor Release make sure you type "Tor" or "tor" instead of the number
-
-For IPFS Release make sure you type "IPFS/KUBO " or "ipfs/kubo" instead of the number
 ##########################################################################################################################
 
 Create test runs for:
@@ -97,7 +95,6 @@ Create test runs for:
 7. Crypto Wallet - Android
 8. Crypto Wallet - iOS
 9. Tor Release
-10. IPFS Release
 
 Choose the platform for which you want to generate the test run:
 ```
