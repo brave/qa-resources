@@ -183,6 +183,10 @@
 - [ ] Visit https://browserleaks.com/geo in a Tor window, ensure location isn't shown
 - [ ] Ensure you are able to download a file in a Tor window. Verify all Download/Cancel, Download/Retry and Download works in Tor window
 
+### Profile Tests
+
+- [ ] Verify that clicking on the "profile avatars" under both Private Browsing and Tor doesn't crash.
+
 ### Cookie and Cache
 
 - [ ] Go to http://samy.pl/evercookie/ and set an evercookie. Check that going to prefs, clearing site data and cache, and going back to the evercookie site does not remember the old evercookie value
