@@ -819,69 +819,6 @@ def tor_testruns(tor_rel):
 
     return 0
 
-def ipfs_testruns(ipfs_rel):
-
-    ipfs_wiki = open("WikiTemplate/IPFS/wikitemplate-IPFS.md", "r")
-    ipfs_template = ipfs_wiki.read()
-
-    print("\nMac Checklist (Intel/arm64):")
-    print(ipfs_template)
-    print("")
-    macTitle = "Manual test run on macOS (Intel/arm64) for " + ipfs_rel
-    macList = ["OS/macOS",
-               "release-notes/exclude",
-               "tests",
-               "QA/Yes",
-               "OS/Desktop",
-               "feature/web3/ipfs"]
-
-    if args.test is None:
-        bc_repo.create_issue(title=macTitle,
-                                 body=ipfs_template,
-                                 milestone=bc_milestone[ipfs_rel],
-                                 labels=macList)
-
-    print("--------------------------------------------------------\n")
-
-    print("Win64 Checklist:")
-    print(ipfs_template)
-    print("")
-    winTitle = "Manual test run on Windows x64 & x86 for " + ipfs_rel
-    winList = ["OS/Windows",
-               "release-notes/exclude",
-               "tests", 
-               "QA/Yes",
-               "OS/Desktop",
-               "feature/web3/ipfs"]
-
-    if args.test is None:
-        bc_repo.create_issue(title=winTitle,
-                                 body=ipfs_template,
-                                 milestone=bc_milestone[ipfs_rel],
-                                 labels=winList)
-
-    print("--------------------------------------------------------\n")
-
-    print("Linux Checklist:")
-    print(ipfs_template)
-    print("")
-    linTitle = "Manual test run on Linux for " + ipfs_rel
-    linList = ["OS/Linux",
-               "release-notes/exclude",
-               "tests",
-               "QA/Yes",
-               "OS/Desktop",
-               "feature/web3/ipfs"]
-
-    if args.test is None:
-        bc_repo.create_issue(title=linTitle,
-                                 body=ipfs_template,
-                                 milestone=bc_milestone[ipfs_rel],
-                                 labels=linList)
-
-    return 0
-
-
 print("\n#######################################################################"
       "###################################################")
 print("\n For Desktop or Android minor CR bump only use the basic checks selection to "
@@ -902,8 +839,6 @@ while ioslength < len(ios_key):
 print("\nNOTE:")
 print("\n For Tor Release make sure you type \"Tor\" or \"tor\" instead "
       "of the number")
-print("\n For IPFS Release make sure you type \"IPFS/KUBO \" or \"ipfs/kubo\" instead "
-      "of the number")
 
 print("#######################################################################"
       "###################################################")
@@ -922,7 +857,6 @@ cyrpto_desktop = print("6. Crypto Wallet - Desktop")
 cyrpto_android = print("7. Crypto Wallet - Android")
 cyrpto_ios = print("8. Crypto Wallet - iOS")
 tor = print("9. Tor Release")
-ipfs = print("10. IPFS Release")
 
 select_checklist = input("\nChoose the platform for which you want to" +
                          " generate the test run: ")
@@ -970,19 +904,6 @@ elif(select_checklist == "Tor" or select_checklist == "tor"):
         generate_ios_test = print("\nGenerating test runs for Tor",
                               (tormilestone)[0])
         tor_testruns(torkey)
-elif(select_checklist == "IPFS" or select_checklist == "ipfs" 
-                    or select_checklist == "KUBO" or select_checklist == "kubo"):
-    ipfsmilestone = [i for i in bc_milestone if "IPFS" in i]
-    if (len(ipfsmilestone) == 0):
-        ipfskey = ""
-        print("No IPFS milestone exists. Please create milestone "
-              "and then generate test runs")
-    else:
-        ipfskey = ipfsmilestone[0]
-        generate_ipfs_test = print("\nGenerating test runs for",
-                                (ipfsmilestone)[0])
-        ipfs_testruns(ipfskey)
 else:
     print("Incorrect selection. " + select_checklist + " is not a valid input\n")
     exit()
-
