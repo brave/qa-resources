@@ -52,11 +52,6 @@
 
      - In the terminal type <code>python3 brave_testrun_generator.py --test true</code> and select Enter/Return.
      - Follow options on screen to simulate generating test runs. It will just displays the output in the terminal and does NOT create GitHub issues. 
-
-  - For Tor/IPFS:
-
-     - Ensure milestones are created before running the test run generator.
-     - Selecting the number option won't generate test runs for Tor/IPFS, need to type in `Tor/IPFS` respectively. 
      
 </p></li>
 </ol>

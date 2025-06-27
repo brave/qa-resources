@@ -42,10 +42,6 @@
 - [ ] Verify selecting `Manage custom filters` opens `brave://adblock` in a NTP
 - [ ] Verify removing the rule from `brave://adblock` reflects the change on the website, after reload
 
-### IPFS
-
-- [ ] Load `vitalik.eth`.  Click on `Proceed using Infura server`. Confirm no IPFS interstitial page is shown. Verify the content is loaded via public gateway.
-
 ### Chrome Web Store (CWS)
 
 - [ ] Verify that installing https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb from CWS displays the `Brave has not reviewed the extension.` warning via the "Add Extension" modal
