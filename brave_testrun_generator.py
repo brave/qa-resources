@@ -19,7 +19,6 @@ print("Rate Limit: " + str(limit))
 print("Rate Remaining: " + str(remaining))
 
 bc_repo = g.get_organization("brave").get_repo("brave-browser")
-ios_repo = g.get_organization("brave").get_repo("brave-ios")
 
 checklist = []
 release_notes = []
@@ -40,7 +39,7 @@ for bcmilestone in bc_repo.get_milestones(state="open"):
     bc_milestone.update({bcmilestone.title: bcmilestone})
 
 ios_milestone = {}
-for iosmilestone in ios_repo.get_milestones(state="open"):
+for iosmilestone in bc_repo.get_milestones(state="open"):
     ios_milestone.update({iosmilestone.title: iosmilestone})
 
 laptop_key = sorted(bc_milestone.keys())
@@ -588,7 +587,7 @@ def iOS_testruns():
     ios_key = sorted(ios_milestone.keys())[0]
 
 
-    for issue in ios_repo.get_issues(milestone=ios_milestone[ios_key],
+    for issue in bc_repo.get_issues(milestone=ios_milestone[ios_key],
                                      sort="created",
                                      direction="asc",
                                      state="closed"):
@@ -652,7 +651,7 @@ def iOS_testruns():
                  "QA/Yes"]
 
     if args.test is None:
-        ios_repo.create_issue(title=iPad_Title,
+        bc_repo.create_issue(title=iPad_Title,
                               body=ios_template,
                               milestone=ios_milestone[ios_key],
                               labels=iPad_List)
@@ -670,7 +669,7 @@ def iOS_testruns():
                    "QA/Yes"]
 
     if args.test is None:
-        ios_repo.create_issue(title=iPhone_Title,
+        bc_repo.create_issue(title=iPhone_Title,
                               body=ios_template,
                               milestone=ios_milestone[ios_key],
                               labels=iPhone_List)
@@ -688,7 +687,7 @@ def iOS_testruns():
                     "QA/Yes"]
 
     if args.test is None:
-        ios_repo.create_issue(title=iPhoneX_Title,
+        bc_repo.create_issue(title=iPhoneX_Title,
                               body=ios_template,
                               milestone=ios_milestone[ios_key],
                               labels=iPhoneX_List)
@@ -702,7 +701,7 @@ def crypto_iOS():
     ios_key = sorted(ios_milestone.keys())[0]
 
 
-    for issue in ios_repo.get_issues(milestone=ios_milestone[ios_key],
+    for issue in bc_repo.get_issues(milestone=ios_milestone[ios_key],
                                      sort="created",
                                      direction="asc",
                                      state="closed"):
@@ -725,7 +724,7 @@ def crypto_iOS():
                  "QA/Yes"]
 
     if args.test is None:
-        ios_repo.create_issue(title=CyprotiOS_Title,
+        bc_repo.create_issue(title=CyprotiOS_Title,
                               body=iOS_crypto_template,
                               milestone=ios_milestone[ios_key],
                               labels=CryptoiOS_List)
