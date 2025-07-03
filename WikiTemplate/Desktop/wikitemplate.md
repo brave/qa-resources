@@ -31,7 +31,7 @@
 
 ### Importing
 
-- [ ] Verify that you can import `History`, `Extensions` and `Passwords` from Google Chrome
+- [ ] Verify that you can import `History`, `Favorites/Bookmarks` and `Extensions` from Google Chrome
 - [ ] Verify that you can import `History` and `Bookmarks` from Firefox
 - [ ] Verify that you can import `Favorites/Bookmarks` from Microsoft Edge
 - [ ] Verify that importing bookmarks using `Bookmark HTML File` retains the folder structure on a clean profile
