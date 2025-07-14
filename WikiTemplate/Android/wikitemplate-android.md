@@ -79,23 +79,21 @@
 
 ## Brave Rewards
 
-- [ ] Verify that none of the reward endpoints are being contacted when a user visits a media creator (`youtube.com`, `reddit.com`, `twitter.com`, `github.com`) and hasn't joined rewards
+- [ ] Verify that none of the reward endpoints are being contacted when a user visits a media creator (examples: `youtube.com`, `reddit.com`, `x.com`) and hasn't joined rewards
   - [ ] Verify that `rewards.brave.com`, `pcdn.brave.com`, `grant.rewards.brave.com` or `api.rewards.brave.com` are not being contacted
-- [ ] Verify that you are able to create a new Rewards profile and you are in the unverified state by default
-  - [ ] Verify that when you visit a creator in this state the panel shows a prompt to connect a custodian and no BAT information (earnings, balance, etc) is displayed
-  - [ ] Verify that when you visit `brave://rewards` in this state there are no Auto Contribution, Tipping, or summary panels on this page
-  - [ ] Verify that you can toggle notification ads off/on from the "Manage Brave Ads" panel on `brave://rewards`
-- [ ] Verify that you are able to connect a custodian
-  - [ ] Verify that the Rewards balance shows the correct BAT and USD value on brave://rewards and panel after you connect
-  - [ ] Verify that when you tap on the BR panel while on a site, the panel displays site-specific information (site favicon, domain, attention %)
-  - [ ] Verify that the BR panel shows a message about an unverified creator
-  - [ ] Verify that the "Send Contribution" button is grayed out on the panel for an unverified creator and the tip banner cannot be accessed
-  - [ ] Verify that the tip banner shows a message about a creator with a different custodian
-  - [ ] Verify that you are able to tip a creator who has the same custodian as you
+- [ ] Verify you are able to create a new Rewards profile and are in the unverified state by default
+  - [ ] Verify when you visit a creator in this state the panel shows a prompt to connect a custodian and no BAT information (earnings, balance, etc) is displayed
+  - [ ] Verify when you visit brave://rewards and/or the panel in this state you are able to scroll to the "Explore" section
+  - [ ] Verify you can toggle ad types off/on from the "Ads Settings" panel on brave://rewards or the panel
+- [ ] Verify you are able to connect a custodian or self custody
+  - [ ] Verify Rewards balance shows correct BAT value on brave://rewards and panel after you connect
+  - [ ] Verify when you click on the BR panel while on a verified creator site, the panel displays a "Contribute" button
+  - [ ] Verify when you click on the BR panel while on a non-verified creator site, the panel does not display a "Contribute" button
+  - [ ] Verify you are able to tip a creator who has the same custodian as you
   - [ ] Verify that there is no "Disconnect" option once connected to a custodian
 - [ ] Verify that you are able to reset rewards
   - [ ] Verify that after rewards are reset, you are now in the non-opted in state
-  - [ ] Verify that you can re-join rewards, the panel and brave://rewards page are now in the unverified state
+  - [ ] Verify you can re-join rewards and the panel, brave://rewards page, and NTP widget are now in the unverified state
 
 ## Brave Ads
 
@@ -169,12 +167,12 @@ Examples of pre-requisites before upgrading from the previous version to the bui
 - [ ] Verify that the website shortcuts added via `Add to Home screen` are still visible on the Android home screen and tapping on icons loads the appropriate webpage
 - [ ] Verify that the `Tab Group` setting doesn't reset/change after upgrading
 - [ ] Verify that `Clear data on exit` is retained from the previous version
-- [ ] Rewards
-  - [ ] Verify that BAT balance is retained
-  - [ ] Verify that both Tips and Monthly Contributions are retained
-  - [ ] Verify that the Summary panel transactions list is retained
-- [ ] Ads
-  - [ ] Verify that both `Estimated pending rewards` & `Ad notifications received this month` are retained
-  - [ ] Verify that changes to Ads settings are retained
-  - [ ] Verify that Ads are not being enabled when upgrading to a new version if they were disabled
-  - [ ] Verify that Ads are not being disabled when upgrading to a new version if they were enabled
+  - [ ] Rewards
+    - [ ] Connection to custodian or self custody is retained
+    - [ ] BAT balance is retained
+    - [ ] Recurring contributions (if set up) are retained
+  - [ ] Ads
+    - [ ] `Ads received this month` value is retained
+    - [ ] Changes to ads settings are retained
+    - [ ] Ensure that ads are not disabled when upgrading to a new version if they were enabled
+    - [ ] Ensure that ads are not being enabled when upgrading to a new version if they were disabled
