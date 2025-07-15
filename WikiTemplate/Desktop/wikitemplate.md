@@ -138,6 +138,7 @@
   - [ ] Verify when you visit a creator in this state the panel shows a prompt to connect a custodian and no BAT information (earnings, balance, etc) is displayed
   - [ ] Verify when you view the NTP widget in this state it shows a prompt to connect a custodian and no BAT information (earnings, balance, etc) is displayed
   - [ ] Verify when you visit brave://rewards and/or the panel in this state you are able to scroll to the "Explore" section
+  - [ ] Verify that the cards display on brave://rewards and the panel via the "Explore" section
   - [ ] Verify you can toggle ad types off/on from the "Ads Settings" panel on brave://rewards or the panel
 - [ ] Verify you are able to connect a custodian or self custody
   - [ ] Verify Rewards balance shows correct BAT value on brave://rewards, panel, and NTP widget after you connect
