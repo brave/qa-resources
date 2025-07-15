@@ -132,23 +132,19 @@
 
 ### Rewards
 
-- [ ] Verify that none of the reward endpoints are being contacted when a user visits a media creator (`youtube.com`, `reddit.com`, `twitter.com`, `github.com`) and hasn't joined rewards
+- [ ] Verify that none of the reward endpoints are being contacted when a user visits a media creator (examples: `youtube.com`, `reddit.com`, `x.com`) and hasn't joined rewards
   - [ ] Verify that `rewards.brave.com`, `pcdn.brave.com`, `grant.rewards.brave.com` or `api.rewards.brave.com` are not being contacted
 - [ ] Verify you are able to create a new Rewards profile and are in the unverified state by default
   - [ ] Verify when you visit a creator in this state the panel shows a prompt to connect a custodian and no BAT information (earnings, balance, etc) is displayed
   - [ ] Verify when you view the NTP widget in this state it shows a prompt to connect a custodian and no BAT information (earnings, balance, etc) is displayed
-  - [ ] Verify when you visit brave://rewards in this state there are no Auto Contribution, Tipping, or summary panels on this page
-  - [ ] Verify you can toggle notification ads off/on from the "Manage Brave Ads" panel on brave://rewards 
-- [ ] Verify you are able to connect a custodian
-  - [ ] Verify Rewards balance shows correct BAT and USD value on brave://rewards, panel, and NTP widget after you connect
-  - [ ] Verify when you click on the BR panel while on a site, the panel displays site-specific information (site favicon, domain, attention %)
-  - [ ] Verify BR panel shows message about an unverified creator
-  - [ ] Verify "Send Contribution" button is grayed out on the panel for an unverified creator and the tip banner cannot be accessed
-  - [ ] Verify tip banner shows message about a creator with a different custodian
+  - [ ] Verify when you visit brave://rewards and/or the panel in this state you are able to scroll to the "Explore" section
+  - [ ] Verify that the cards display on brave://rewards and the panel via the "Explore" section
+  - [ ] Verify you can toggle ad types off/on from the "Ads Settings" panel on brave://rewards or the panel
+- [ ] Verify you are able to connect a custodian or self custody
+  - [ ] Verify Rewards balance shows correct BAT value on brave://rewards, panel, and NTP widget after you connect
+  - [ ] Verify when you click on the BR panel while on a verified creator site, the panel displays a "Contribute" button
+  - [ ] Verify when you click on the BR panel while on a non-verified creator site, the panel does not display a "Contribute" button
   - [ ] Verify you are able to tip a creator who has the same custodian as you
-  - [ ] Verify you are able to perform an auto contribution
-  - [ ] Verify if you disable auto-contribute you are still able to tip creators
-  - [ ] Verify if auto-contribute is disabled AC does not occur
   - [ ] Verify that there is no "Disconnect" option once connected to a custodian
 - [ ] Verify that you are able to reset rewards
   - [ ] Verify that after rewards are reset, you are now in the non-opted in state
@@ -233,14 +229,11 @@
   - [ ] Custom filters under brave://settings/shields/filters are retained
   - [ ] Custom lists under brave://settings/shields/filters are retained
   - [ ] Rewards
+    - [ ] Connection to custodian or self custody is retained
     - [ ] BAT balance is retained
-    - [ ] Auto-contribute list is retained
-    - [ ] Both Tips and Monthly Contributions are retained
-    - [ ] Panel transactions list is retained
-    - [ ] Changes to rewards settings are retained
-    - [ ] Ensure that Auto Contribute is not being enabled when upgrading to a new version if AC was disabled
+    - [ ] Recurring contributions (if set up) are retained
   - [ ] Ads
-    - [ ] Both `Estimated pending rewards` & `Ad notifications received this month` are retained
+    - [ ] `Ads received this month` value is retained
     - [ ] Changes to ads settings are retained
-    - [ ] Ensure that ads are not being enabled when upgrading to a new version if they were disabled
     - [ ] Ensure that ads are not disabled when upgrading to a new version if they were enabled
+    - [ ] Ensure that ads are not being enabled when upgrading to a new version if they were disabled

@@ -37,17 +37,14 @@
   - [ ] Custom filters under brave://settings/shields/filters are retained
   - [ ] Custom lists under brave://settings/shields/filters are retained
   - [ ] Rewards
+    - [ ] Connection to custodian or self custody is retained
     - [ ] BAT balance is retained
-    - [ ] Auto-contribute list is retained
-    - [ ] Both Tips and Monthly Contributions are retained
-    - [ ] Panel transactions list is retained
-    - [ ] Changes to rewards settings are retained
-    - [ ] Ensure that Auto Contribute is not being enabled when upgrading to a new version if AC was disabled
+    - [ ] Recurring contributions (if set up) are retained
   - [ ] Ads
-    - [ ] Both `Estimated pending rewards` & `Ad notifications received this month` are retained
+    - [ ] `Ads received this month` value is retained
     - [ ] Changes to ads settings are retained
+    - [ ] Ensure that ads are not disabled when upgrading to a new version if they were enabled
     - [ ] Ensure that ads are not being enabled when upgrading to a new version if they were disabled
-    - [ ] Ensure that ads are not disabled when upgrading to a new version if they were enabled 
 
 #### Upgrade - `Brave-Browser-universal.dmg`
 

@@ -35,13 +35,11 @@ Pre-Requisite: Visit several websites so Top Tiles under New Tab Page get update
   - [ ] Top Tiles under New Tab Page are preserved
   - [ ] Home screen shortcuts are preserved
   - [ ] Rewards
+    - [ ] Connection to custodian or self custody is retained
     - [ ] BAT balance is retained
-    - [ ] Auto-contribute list is retained
-    - [ ] Both Tips and Monthly Contributions are retained
-    - [ ] Summary panel transactions list is retained
-    - [ ] Changes to rewards settings are retained
+    - [ ] Recurring contributions (if set up) are retained
   - [ ] Ads
-    - [ ] Both `Estimated pending rewards` & `Ad notifications received this month` are retained
+    - [ ] `Ads received this month` value is retained
     - [ ] Changes to ads settings are retained
-    - [ ] Ensure that ads are not being enabled when upgrading to a new version if they were disabled
     - [ ] Ensure that ads are not disabled when upgrading to a new version if they were enabled
+    - [ ] Ensure that ads are not being enabled when upgrading to a new version if they were disabled
