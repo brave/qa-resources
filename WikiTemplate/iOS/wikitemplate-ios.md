@@ -2,10 +2,25 @@
 ## Installer
 
 - [ ] Check that installer is close to the size of the last release
-- [ ] Check the Brave version in About and make sure it is EXACTLY as expected
+- [ ] Check the Brave version in About and also in `brave://version` to make sure it is EXACTLY as expected
 
-## Data
-
+## Data & Upgrade
+- [ ] Ensure generating app usage and site data and changing some settings/preferences before migrating
+   - [ ] Login to some sites including Google
+   - [ ] Change some global defaults around
+   - [ ] Load some tabs and set some per-site settings
+   - [ ] Add some bookmarks, folders and favorites
+   - [ ] Join a sync chain and enable some sync settings
+   - [ ] Change default SE and change some QSE preferences
+   - [ ] Add some widgets to the Home Screen
+   - [ ] Change the Brave app icon
+   - [ ] Add some media to Playlist
+   - [ ] Enable VPN/Leo Premium subscription
+   - [ ] Change Leo Default Model
+   - [ ] Enable Shortcut Button and change preference
+   - [ ] Enable `Keep Private Tabs` setting and load some sites in private tabs
+   - [ ] Customize the main menu layout (add/remove/reorder actions)
+   - [ ] Enable some filter lists in `Content Filtering` including some YouTube filters
 - [ ] Verify that data from the previous build appears in the updated build as expected (bookmarks, history, etc.)
 - [ ] Verify that cookies from the previous build are preserved after upgrade
 - [ ] Verify saved passwords are retained after upgrade
@@ -66,7 +81,8 @@
 
 ## Downloads
 
-- [ ] Verify that you can save an image from a site
+- [ ] Verify that you can save an image from a site using `Save to Photos` via context menu
+- [ ] Verify downloading images via `Download` button in the snack bar on sites such as `https://unsplash.com`
 - [ ] Verify that you are able to save a GIF image
 
 ## Reader Mode
@@ -75,6 +91,13 @@
 - [ ] Verify tapping on the reader mode icon opens the article in reader mode
 - [ ] Edit reader mode settings and open different pages in reader mode and verify if the setting is retained across each article
 - [ ] Verify reader mode works when toolbar is set as Top Bar and Bottom Bar
+
+## Brave Translate
+
+- [ ] Ensure translate button is shown in the URL bar
+- [ ] Ensure translate callout is shown on first use
+- [ ] Verify pages are translated
+- [ ] Verify using another language in the translate drop down and ensure page translation is applied accordingly
 
 ## Gestures
 
@@ -86,6 +109,7 @@
 ## Password Managers
 
 - [ ] Verify tapping on 1Password on the slide-out keyboard launches 1Password app and you're able to select the stored credentials
+- [ ] Verify Brave passwords and autofill are working when enabled
 - [ ] Verify tapping on Bitwarden password manager in the autofill field launches the app and auto-fills the stored data
 
 ## Shields Settings
@@ -128,16 +152,17 @@
 ## Playlist & Autoplay
 
 - [ ] Verify Playlist is enabled by default on a clean install
-- [ ] Verify when a site with audio/video is detected, `Playlist` button is shown in URL bar and a notification badge on the menu
+- [ ] Verify when a site with audio/video is detected, `Playlist` button is shown in URL bar
 - [ ] Verify clicking the `Playlist` button adds audio/video to playlist and initiates offline play
 - [ ] Verify adding audio/video to playlist via share menu works as expected
 - [ ] Verify adding audio/video to playlist via long press context menu works as expected
+- [ ] Verify videos over 90 mins are saved offline successfully
 - [ ] Verify Autoplay is enabled by default
 - [ ] Verify with Autoplay enabled, able to play audio/video automatically
 - [ ] Verify with background audio enabled, able to play audio/video with device locked or app in background
 - [ ] Verify Playlist media works with CarPlay on iOS devices
 - [ ] Verify playback gestures are working in Playlist
-- [ ] Verify adding shared folder to playlist using `https://playlist.brave.com/bsa-sample` works. Verify all actions on shared folder are working
+- [ ] Verify playback timer works
 
 ## Brave News
 
@@ -170,6 +195,8 @@
 - [ ] Ensure blocking ads work using `Standard` and `Aggressive` settings
 - [ ] Verify that default Brave Shields settings take effect on pages with no site settings
 - [ ] Verify that the `Cloudflare` CAPTCHA check under `https://browser-compat.turnstile.workers.dev` passes when clicking on `Verify you are human`.
+- [ ] Verify applying scriptlets test in https://dev-pages.brave.software/filtering/scriptlets.html
+- [ ] Verify testing blocking policies in https://dev-pages.brave.software/filtering/network-requests.html
 
 ### Fingerprint Tests
 
