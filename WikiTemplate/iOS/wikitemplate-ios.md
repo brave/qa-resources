@@ -41,6 +41,7 @@
 - [ ] Verify adding a bookmark domain, subpaths is retained and you are successfully able to visit the domain subpath in a new tab
 - [ ] Verify adding bookmark for many open tabs works. Ensured opening all bookmarks in `Saved tabs` folder will load all the tabs
 - [ ] Verify import and export bookmarks works
+- [ ] Verify browser data such as bookmarks, history and passwords are ported over when using `Import Browsing Data` flow
 
 ## Favorites
 
@@ -71,7 +72,9 @@
 - [ ] Verify all actions in toolbar both in top and bottom positions
 - [ ] Verify searching page content using `Find in Page` works
 - [ ] Verify navigating social media and video sites does not cause loading issues when scrolling or reloading pages
-- [ ] Verify `tel://` URL scheme is working and phone app is launched and the dialogs can be suppressed
+- [ ] Verify `tel:` URL scheme is working and phone app is launched and the dialogs can be suppressed
+- [ ] Verify handling external links via the app switcher dialog. Ensure this can be suppressed
+- [ ] Verify target="_blank" links are opened in a new tab on `https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_a_target`
 
 ## Navigation [iPad]
 
@@ -164,7 +167,7 @@
 - [ ] Verify with background audio enabled, able to play audio/video with device locked or app in background
 - [ ] Verify Playlist media works with CarPlay on iOS devices
 - [ ] Verify playback gestures are working in Playlist
-- [ ] Verify playback timer works
+- [ ] Verify playback settings like shuffle and timer are working
 
 ## Brave News
 
