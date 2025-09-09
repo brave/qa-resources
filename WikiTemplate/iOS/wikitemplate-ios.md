@@ -71,6 +71,7 @@
 - [ ] Verify all actions in toolbar both in top and bottom positions
 - [ ] Verify searching page content using `Find in Page` works
 - [ ] Verify navigating social media and video sites does not cause loading issues when scrolling or reloading pages
+- [ ] Verify `tel://` URL scheme is working and phone app is launched and the dialogs can be suppressed
 
 ## Navigation [iPad]
 
@@ -84,6 +85,7 @@
 - [ ] Verify that you can save an image from a site using `Save to Photos` via context menu
 - [ ] Verify downloading images via `Download` button in the snack bar on sites such as `https://unsplash.com`
 - [ ] Verify that you are able to save a GIF image
+- [ ] Verify downloading wallet passes as well as .pkpass files 
 
 ## Reader Mode
 
