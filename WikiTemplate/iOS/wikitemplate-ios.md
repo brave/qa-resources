@@ -22,6 +22,7 @@
    - [ ] Customize the main menu layout (add/remove/reorder actions)
    - [ ] Enable some filter lists in `Content Filtering` including some YouTube filters
 - [ ] Verify that data from the previous build appears in the updated build as expected (bookmarks, history, etc.)
+- [ ] Verify that all the preferences above are retained after migration
 - [ ] Verify that cookies from the previous build are preserved after upgrade
 - [ ] Verify saved passwords are retained after upgrade
 - [ ] Verify stats are retained after upgrade
