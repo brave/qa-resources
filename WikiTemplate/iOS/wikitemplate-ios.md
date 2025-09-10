@@ -75,7 +75,7 @@
 - [ ] Verify navigating social media and video sites does not cause loading issues when scrolling or reloading pages
 - [ ] Verify `tel:` URL scheme is working and phone app is launched and the dialogs can be suppressed
 - [ ] Verify handling external links via the app switcher dialog. Ensure this can be suppressed
-- [ ] Verify target="_blank" links are opened in a new tab on `https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_a_target`
+- [ ] Verify `target="_blank"` links are opened in a new tab on `https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_a_target`
 
 ## Navigation [iPad]
 
