@@ -188,7 +188,7 @@ def laptop_CRminor_testruns(milestonever):
     wiki_laptop_CRminor = open("WikiTemplate/Desktop/Minor_CR_Bump/wikitemplate-minorCRbumpDesktop.md", "r")
     laptop_CRminor_template = wiki_laptop_CRminor.read()
     wiki_macOS_intel = open("WikiTemplate/Desktop/Minor_CR_Bump/wikitemplate-minorCRbump-macOS-x64.md", "r")
-    macOS_x64 = wiki_macOS_intel.read()
+    #macOS_x64 = wiki_macOS_intel.read()
 
     for issue in bc_repo.get_issues(
         milestone=bc_milestone[milestonever], sort="created",
@@ -255,23 +255,23 @@ def laptop_CRminor_testruns(milestonever):
 
     print("--------------------------------------------------------\n")
 
-    print("Mac Checklist(x64):")
-    print(macOS_x64)
-    print("")
-    macx64Title = "Manual test run on macOS (x64) for " + milestonever
-    macx64List = ["OS/macOS",
-               "release-notes/exclude",
-               "tests",
-               "QA/Yes",
-               "OS/Desktop"]
-
-    if args.test is None:
-        bc_repo.create_issue(title=macx64Title,
-                                 body=macOS_x64,
-                                 milestone=bc_milestone[milestonever],
-                                 labels=macx64List)
-
-    print("--------------------------------------------------------\n")
+    #print("Mac Checklist(x64):")
+    #print(macOS_x64)
+    #print("")
+    #macx64Title = "Manual test run on macOS (x64) for " + milestonever
+    #macx64List = ["OS/macOS",
+    #           "release-notes/exclude",
+    #           "tests",
+    #           "QA/Yes",
+    #           "OS/Desktop"]
+ #
+    #if args.test is None:
+    #    bc_repo.create_issue(title=macx64Title,
+    #                             body=macOS_x64,
+    #                             milestone=bc_milestone[milestonever],
+    #                             labels=macx64List)
+ #
+ #    print("--------------------------------------------------------\n")
 
     print("Win64 Checklist:")
     print(laptop_CRminor_template)
