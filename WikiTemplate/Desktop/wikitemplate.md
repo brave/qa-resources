@@ -106,6 +106,12 @@
 
 - [ ] Visit https://fmarier.github.io/brave-testing/query-filter.html in a Private window and run the tests as directed
 
+### Scrollable Tab Strip
+
+- [ ] Enable brave://flags/#brave-scrollable-tab-strip, relaunch browser as required
+- [ ] Create 50+ tabs in a single window 
+- [ ] Confirm when the tab strip overflows it is scrollable
+
 ### TLS Pinning
 
 - [ ] Visit https://ssl-pinning.someblog.org/ and verify a pinning error is displayed
