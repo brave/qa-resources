@@ -16,6 +16,10 @@ As per process, QA runs through the following cases to ensure that the major chr
 
 **Note:** Always double check `brave://components` to make sure there's no errors/missing version numbers
 
+### Linux Only (Deb Repository Check)
+
+ - [ ] Run through STR/Cases outlined via https://github.com/brave/brave-browser/issues/54299#issue-4220669261 and ensure that Brave's deb repository isn't being overwritten.
+
 ### Upgrade
 
 - [ ] Make sure that data from the last version appears in the new version OK
