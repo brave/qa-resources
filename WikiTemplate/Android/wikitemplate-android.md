@@ -74,7 +74,6 @@
 
 ### Fingerprint Tests
 
-- [ ] Verify that 2 blocked items are listed in `Brave Shields` by visiting `https://browserleaks.com/webrtc`.
 - [ ] Verify that `https://diafygi.github.io/webrtc-ips/` does not expose the user's IP address for any option listed under `Settings → Brave Shields & privacy → WebRTC IP handling policy`.
 
 ### Query Filter
@@ -123,7 +122,6 @@
 - [ ] Verify that it is possible to create a Sync chain with only one device.
 - [ ] Verify that you can set up a Sync chain on the device and connect additional devices using either a QR code or code words.
 - [ ] Verify that once the Sync chain is set up, only `Bookmarks` and `Passwords` are enabled by default under `Sync Options`.
-- [ ] Verify that toggling `Sync everything` on will activate all other switches.
 - [ ] Verify that bookmarks created before joining the Sync chain are also synchronized across all connected devices.
 - [ ] Verify that `Autofill` data is synchronized to all devices when the option is turned on.
 - [ ] Verify that `History` is synchronized across all devices and that tabs from other devices are displayed there.
