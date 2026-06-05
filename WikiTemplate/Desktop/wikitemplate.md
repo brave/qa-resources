@@ -108,9 +108,11 @@
 
 ### Scrollable Tab Strip
 
-- [ ] Enable brave://flags/#brave-scrollable-tab-strip, relaunch browser as required
-- [ ] Create 50+ tabs in a single window 
-- [ ] Confirm when the tab strip overflows it is scrollable
+- [ ] Confirm "Use scrollable tab strip" setting is available under the "Tabs" section of brave://settings/appearance and is disabled by default
+- [ ] Confirm this setting can be enabled and works as expected for various values of "Minimum tab width"
+- [ ] Confirm you can enable the "Show scroll buttons on horizontal tab strip" and the buttons display and work as expected
+- [ ] Confirm you can toggle "Show scroll buttons on horizontal tab strip" off and still scroll the tab strip
+- [ ] Confirm you can disable "Use scrollable tab strip" and the tab strip no longer scrolls
 
 ### TLS Pinning
 
