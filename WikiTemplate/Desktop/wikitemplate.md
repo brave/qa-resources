@@ -159,8 +159,8 @@
 ### Social-media blocking settings
 
 - [ ] Verify individual `Social media blocking` buttons works as intended when enabled/disabled by visiting https://fmarier.github.io/brave-testing/social-widgets.html
-- [ ] ensure that you can log in into https://www.expensify.com while `Allow use of third-party cookies for legacy Google Sign-In` is enabled
-- [ ] ensure that once `Allow use of third-party cookies for legacy Google Sign-In` has been disabled, you can't log in into https://www.expensify.com
+- [ ] ensure that you can log in into https://www.charthop.com while `Allow use of third-party cookies for legacy Google Sign-In` is enabled
+- [ ] ensure that once `Allow use of third-party cookies for legacy Google Sign-In` has been disabled, you can't log in into https://www.charthop.com
 
 ### Sync
 
