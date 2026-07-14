@@ -159,9 +159,12 @@
 
 - [ ] Verify Playlist is enabled by default on a clean install
 - [ ] Verify when a site with audio/video is detected, `Playlist` button is shown in URL bar
-- [ ] Verify clicking the `Playlist` button adds audio/video to playlist and initiates offline play
-- [ ] Verify adding audio/video to playlist via share menu works as expected
-- [ ] Verify adding audio/video to playlist via long press context menu works as expected
+- [ ] Verify clicking the `Playlist` button adds audio/video to Playlist and initiates offline play
+- [ ] Verify adding audio/video to Playlist via share menu works as expected
+- [ ] Verify adding audio/video to Playlist via long press context menu works as expected
+- [ ] While connected to VPN with server region set to an EU country, verify adding audio/video to Playlist works and items play correctly when opened from Playlist
+- [ ] While connected to VPN with server region set to an EU country, verify playback is not disrupted on the source site after adding to Playlist using the various `Add to Playlist` methods
+- [ ] While connected to VPN with server region set to Japan, verify adding audio/video to Playlist works and items play correctly when opened from Playlist
 - [ ] Verify videos over 90 mins are saved offline successfully
 - [ ] Verify Autoplay is enabled by default
 - [ ] Verify with Autoplay enabled, able to play audio/video automatically
