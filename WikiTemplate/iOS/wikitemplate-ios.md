@@ -162,8 +162,8 @@
 - [ ] Verify clicking the `Playlist` button adds audio/video to playlist and initiates offline play
 - [ ] Verify adding audio/video to playlist via share menu works as expected
 - [ ] Verify adding audio/video to playlist via long press context menu works as expected
-- [ ] Verify adding audio/video to playlist in EU regions via VPN. Ensure that playback is working when opening playlist.
-- [ ] Verify playback is not disrupted on the site after adding to playlist using the various `Add to Playlist` methods for EU regions. 
+- [ ] Verify adding audio/video to playlist in EU regions via VPN. Ensure that playback/streaming is working when opening playlist
+- [ ] Verify playback is not disrupted on the site after adding to playlist using the various `Add to Playlist` methods for EU regions
 - [ ] Verify videos over 90 mins are saved offline successfully
 - [ ] Verify Autoplay is enabled by default
 - [ ] Verify with Autoplay enabled, able to play audio/video automatically
