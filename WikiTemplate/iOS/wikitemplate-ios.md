@@ -159,7 +159,7 @@
 
 - [ ] Verify Playlist is enabled by default on a clean install
 - [ ] Verify when a site with audio/video is detected, `Playlist` button is shown in URL bar
-- [ ] Verify clicking the `Playlist` button adds audio/video to playlist and initiates offline play
+- [ ] Verify clicking the `Playlist` button adds audio/video to Playlist and initiates offline play
 - [ ] Verify adding audio/video to Playlist via share menu works as expected
 - [ ] Verify adding audio/video to Playlist via long press context menu works as expected
 - [ ] While connected to VPN with server region set to an EU country, verify adding audio/video to Playlist works and items play correctly when opened from Playlist
