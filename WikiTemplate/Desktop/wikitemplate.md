@@ -6,10 +6,6 @@
   - [ ] If macOS, using `universal` binary run `spctl --assess --verbose` for the installed version and make sure it returns `accepted` 
   - [ ] If Windows right click on the `brave_installer-x64.exe` and go to Properties, go to the Digital Signatures tab and double click on the signature.  Make sure it says "The digital signature is OK" in the popup window
 
-### About pages
-
-- [ ] Verify that both `chrome://` and `about://` forward to `brave://` (run through several internal pages)
-
 ### Adblock lists and filters
 
  - [ ] Navigate to `brave://adblock` and confirm you are redirected to `brave://settings/shields/filters`
@@ -42,11 +38,6 @@
 - [ ] Verify selecting `Manage custom filters` opens `brave://adblock` in a NTP
 - [ ] Verify removing the rule from `brave://adblock` reflects the change on the website, after reload
 
-### Chrome Web Store (CWS)
-
-- [ ] Verify that installing https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb from CWS displays the `Brave has not reviewed the extension.` warning via the "Add Extension" modal
-- [ ] Verify older version of an extension gets updated to new version via Google server
-
 ### Manifest V2 Extensions
 
 - [ ] Under `brave://settings/extensions/v2` toggle "Enable NoScript" on. Be sure to turn off any other extensions listed here if they are on.
@@ -65,30 +56,16 @@
      - [ ] Confirm you can open the extension's panel without any errors.
      - [ ] Confirm panel reflects that items are blocked as expected.     
 
-### PDF
-
-- [ ] Test that you can print a PDF
-- [ ] Test that PDF is loaded over HTTPS at https://basicattentiontoken.org/BasicAttentionTokenWhitePaper-4.pdf
-- [ ] Test that PDF is loaded over HTTP at http://www.pdf995.com/samples/pdf.pdf
-
 ### Widevine
 
 - [ ] Verify `Widevine Notification` is shown when you visit Netflix for the first time
 - [ ] Test that you can stream on Netflix on a fresh profile after installing Widevine
-- [ ] Verify `Widevine Notification` is shown when you visit HBO Max for the first time
-- [ ] Test that you can stream on HBO Max on a fresh profile after installing Widevine
 - [ ] If macOS, run the above Widevine tests for both `arm64` and `universal` builds
 
 ### Geolocation
 
 - [ ] Check that https://browserleaks.com/geo works and shows correct location
 - [ ] Check that https://html5demos.com/geo/ works but doesn't require an accurate location
-
-### Crash Reporting
-
-- [ ] Check that loading `brave://crash` & `brave://gpucrash` causes the new tab to crash
-- [ ] Check that `brave://crashes` lists the `Uploaded Crash Report ID` once the report has been submitted
-- [ ] Verify the crash ID matches the report on Backtrace using `_rxid equal [ value ]`
 
 ### Bravery settings
 
@@ -106,14 +83,6 @@
 
 - [ ] Visit https://fmarier.github.io/brave-testing/query-filter.html in a Private window and run the tests as directed
 
-### Scrollable Tab Strip
-
-- [ ] Confirm "Use scrollable tab strip" setting is available under the "Tabs" section of brave://settings/appearance and is disabled by default
-- [ ] Confirm this setting can be enabled and works as expected for various values of "Minimum tab width"
-- [ ] Confirm you can enable the "Show scroll buttons on horizontal tab strip" and the buttons display and work as expected
-- [ ] Confirm you can toggle "Show scroll buttons on horizontal tab strip" off and still scroll the tab strip
-- [ ] Confirm you can disable "Use scrollable tab strip" and the tab strip no longer scrolls
-
 ### TLS Pinning
 
 - [ ] Visit https://ssl-pinning.someblog.org/ and verify a pinning error is displayed
@@ -125,35 +94,20 @@
 
 ### Brave Ads
 
-- [ ] Verify when you enable Rewards from panel or `brave://rewards`, Ads are enabled by default
-- [ ] Verify Ads UI (panel, settings, etc) shows when in a region with Ads support
-- [ ] Verify Ads UI (panel, settings, etc) does not show when in a region without Ads support. Verify the Ads panel does show the 'Sorry! Ads are not yet available in your region.' message.
-- [ ] Verify when the system language is English, the Browser language is French, and you are in one of the supported regions, Ad notifications are still served to you.
-- [ ] Verify you are served Ad notifications when Ads are enabled
-  - [ ] Verify ad earnings are reflected in the rewards widget on the NTP.
-- [ ] Verify when Ads are toggled off, there are no Ad messages in the logs
-- [ ] Verify when Rewards are toggled off (but Ads were not explicitly toggled off), there are no Ads logs recorded
-- [ ] Verify view/click/dismiss/landed ad notifications show in `confirmations.json`
-- [ ] Verify pages you browse to are being classified in the logs
-- [ ] Verify tokens are redeemed by viewing the logs (you can use `--rewards=debug=true` to shorten redemption time)
-- [ ] Verify Ad is not shown if a tab is playing media and is only shown after it stops playing
+- [ ] In rewards-connected state: Verify pages you browse to are being classified in the logs.
+- [ ] In rewards-connected state: Verify Notification Ad is served and `view` confirmation is sent. Click the ad and verify `click` confirmation is sent.
+- [ ] In rewards-connected state: Verify New Tab Page Ad is served and `view` confirmation is sent. Click the ad and verify `click` confirmation is sent.
+- [ ] In rewards-connected state: Verify tokens are redeemed by checking the logs for `Redeem payment tokens` (you can use `--rewards=debug=true` to shorten redemption time).
 
 ### Rewards
 
-- [ ] Verify that none of the reward endpoints are being contacted when a user visits a media creator (examples: `youtube.com`, `reddit.com`, `x.com`) and hasn't joined rewards
-  - [ ] Verify that `rewards.brave.com`, `pcdn.brave.com`, `grant.rewards.brave.com` or `api.rewards.brave.com` are not being contacted
 - [ ] Verify you are able to create a new Rewards profile and are in the unverified state by default
   - [ ] Verify when you visit a creator in this state the panel shows a prompt to connect a custodian and no BAT information (earnings, balance, etc) is displayed
-  - [ ] Verify when you view the NTP widget in this state it shows a prompt to connect a custodian and no BAT information (earnings, balance, etc) is displayed
   - [ ] Verify when you visit brave://rewards and/or the panel in this state you are able to scroll to the "Explore" section
-  - [ ] Verify that the cards display on brave://rewards and the panel via the "Explore" section
-  - [ ] Verify you can toggle ad types off/on from the "Ads Settings" panel on brave://rewards or the panel
 - [ ] Verify you are able to connect a custodian or self custody
   - [ ] Verify Rewards balance shows correct BAT value on brave://rewards, panel, and NTP widget after you connect
-  - [ ] Verify when you click on the BR panel while on a verified creator site, the panel displays a "Contribute" button
   - [ ] Verify when you click on the BR panel while on a non-verified creator site, the panel does not display a "Contribute" button
   - [ ] Verify you are able to tip a creator who has the same custodian as you
-  - [ ] Verify that there is no "Disconnect" option once connected to a custodian
 - [ ] Verify that you are able to reset rewards
   - [ ] Verify that after rewards are reset, you are now in the non-opted in state
   - [ ] Verify you can re-join rewards and the panel, brave://rewards page, and NTP widget are now in the unverified state
@@ -182,18 +136,12 @@
 
 - [ ] Visit https://check.torproject.org in a Tor window, ensure it shows a success message for using a Tor exit node
 - [ ] Visit https://check.torproject.org in a Tor window, note down exit node IP address. Do a hard refresh (Ctrl+Shift+R/Cmd+Shift+R), ensure exit IP changes after page reloads
-- [ ] Visit https://check.torproject.org in a Tor window, note down exit node IP address. Click `New Tor connection for this site` in app menu, ensure the exit node IP address changes after page is reloaded
-- [ ] Visit https://protonmailrmez3lotccipshtkleegetolb73fuirgj7r4o4vfu7ozyd.onion, https://brave4u7jddbv7cyviptqjc7jusxh72uik7zt6adtckl5f4nwy2v72qd.onion/, and https://search.brave4u7jddbv7cyviptqjc7jusxh72uik7zt6adtckl5f4nwy2v72qd.onion/ in a Tor window and ensure all pages resolve
 - [ ] Visit https://browserleaks.com/geo in a Tor window, ensure location isn't shown
-- [ ] Ensure you are able to download a file in a Tor window. Verify all Download/Cancel, Download/Retry and Download works in Tor window
+
 
 ### Profile Tests
 
 - [ ] Verify that clicking on the "profile avatars" under both Private Browsing and Tor doesn't crash.
-
-### Cookie and Cache
-
-- [ ] Go to http://samy.pl/evercookie/ and set an evercookie. Check that going to prefs, clearing site data and cache, and going back to the evercookie site does not remember the old evercookie value
 
 ### Chromium/Brave GPU
 
@@ -203,24 +151,6 @@
 
 - [ ] Verify that Brave is only contacting `*.brave.com` endpoints on first launch using either `Charles Proxy`, `Fiddler`, `Wireshark` or `LittleSnitch` (or a similar application)
   - [ ] Verify that opening a NTP doesn't trigger any outbound connections related to widgets without user interaction
-- [ ] Remove the following component folders and ensure that they're being re-downloaded after restarting the browser:
-  - [ ] `afalakplffnnnlkncjhbmahjfjhmlkal`: `AutoplayWhitelist.dat`, `ExtensionWhitelist.dat`, `ReferrerWhitelist.json` and `Greaselion.json`
-  - [ ] `CertificateRevocation`
-  - [ ] `cffkpbalmllkdoenhmdmpbkajipdjfam`: `rs-ABPFilterParserData.dat` & `regional_catalog.json` (AdBlock)
-  - [ ] `gccbbckogglekeggclmmekihdgdpdgoe`: (Sponsored New Tab Images)
-  - [ ] `Safe Browsing`
-- [ ] Restart the browser, load `brave://components`, wait for 8 mins and verify that no component shows any errors
-
-**Note:** Always double check `brave://components` to make sure there's no errors/missing version numbers
-
-### Session storage
-
-- [ ] Temporarily move away your browser profile and test that a new profile is created on browser relaunch
-  - macOS - `~/Library/Application\ Support/BraveSoftware/`
-  - Windows - `%userprofile%\appdata\Local\BraveSoftware\`
-  - Linux(Ubuntu) - `~/.config/BraveSoftware/`
-- [ ] Test that both windows and tabs are being restored, including the current active tab
-- [ ] Ensure that tabs are being lazy loaded when a previous session is being restored
 
 ### Upgrade
 
