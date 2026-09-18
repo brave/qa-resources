@@ -5,16 +5,6 @@
   - [ ] If macOS, using `universal` binary run `spctl --assess --verbose` for the installed version and make sure it returns `accepted` 
   - [ ] If Windows right click on the `brave_installer-x64.exe` and go to Properties, go to the Digital Signatures tab and double click on the signature.  Make sure it says "The digital signature is OK" in the popup window
 
-### Widevine
-
-- [ ]  Verify `Widevine Notification` is shown when you visit Netflix for the first time
-- [ ]  Test that you can stream on Netflix on a fresh profile after installing Widevine
-- [ ]  If macOS, run the above Widevine tests for both `arm64` and `universal` builds
-
-### Rewards
-
-- [ ] Verify that you are able to successfully join Rewards on a fresh profile
-
 ### TLS Pinning
 
 - [ ] Visit https://ssl-pinning.someblog.org/ and verify a pinning error is displayed
